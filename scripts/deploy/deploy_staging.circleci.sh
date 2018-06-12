@@ -12,7 +12,7 @@ then
   cd ..
 
   # The fully built site is already available at /tmp/build.
-  cp -a /tmp/build/_site/. out/.
+  cp -a ~/repo/_site/. out/.
 
   mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
   cd out
