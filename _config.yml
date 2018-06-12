@@ -70,4 +70,4 @@ collections:
 plugins:
   - jekyll-remote-theme
 
-remote_theme: mangothecat/sdg-theme
+remote_theme: brockfanning/sdg-theme@asset-yaml-blocks
