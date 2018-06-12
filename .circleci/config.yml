@@ -1,0 +1,36 @@
+# Python CircleCI 2.0 configuration file
+version: 2
+jobs:
+  deploy:
+    # The build job does compile the Jekyll site, so Ruby is needed.
+    docker:
+      - image: circleci/ruby:2.5.1
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          key: test-dependencies-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install Ruby dependencies
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
+      - save_cache:
+          key: test-dependencies-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Build the Jekyll site
+          command: bundle exec jekyll build
+      - add_ssh_keys:
+          fingerprints:
+            - "da:1f:58:b7:8b:3c:c5:dc:f5:7c:35:73:e2:05:7a:32"
+      - run:
+          name: Deploy to Github
+          command: bash scripts/deploy/deploy_staging.circleci.sh
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: develop
