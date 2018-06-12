@@ -512,7 +512,7 @@ var indicatorView = function (model, options) {
       var id = indicatorId.replace('indicator', '');
       $(el).append($('<a />').text('Download Headline CSV')
       .attr({
-        'href': '{{ site.remotedatabaseurl }}/headline/' + id + '.csv',
+        'href': 'http://brock.tips/sdg-data/headline/' + id + '.csv',
         'download': headlineId + '.csv',
         'title': 'Download headline data as CSV',
         'class': 'btn btn-primary btn-download',
@@ -524,7 +524,7 @@ var indicatorView = function (model, options) {
   this.createSourceButton = function(indicatorId, el) {
     $(el).append($('<a />').text('Download Source CSV')
     .attr({
-      'href': '{{ site.remotedatabaseurl }}/data/' + indicatorId + '.csv',
+      'href': 'http://brock.tips/sdg-data/data/' + indicatorId + '.csv',
       'download': indicatorId + '.csv',
       'title': 'Download source data as CSV',
       'class': 'btn btn-primary btn-download',
