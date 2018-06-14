@@ -8,13 +8,19 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - run:
+          name: Any additional provisioning.
+          command: bash scripts/provision/provision.circleci.sh
       - restore_cache:
-          key: test-dependencies-{{ checksum "Gemfile.lock" }}
+          key: test-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package-lock.json" }}
       - run:
           name: Install Ruby dependencies
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
+      - run:
+          name: Install front-end libraries.
+          command: npm install
       - save_cache:
-          key: test-dependencies-{{ checksum "Gemfile.lock" }}
+          key: test-dependencies-{{ checksum "Gemfile.lock" }}-{{ checksum "package-lock.json" }}
           paths:
             - vendor/bundle
       - run:
