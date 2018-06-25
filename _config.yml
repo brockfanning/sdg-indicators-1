@@ -26,6 +26,8 @@ jekyll_get_data:
     # directory: 'remotedata'
   - data: schema
     json: 'http://brock.tips/sdg-data/meta/schema.json'
+  - data: translations
+    json: 'http://brock.tips/sdg-translations/translations.json'
 
 analytics:
   ga_prod: ''
@@ -67,7 +69,15 @@ collections:
   goals:
     output: true
 
+defaults:
+  # This sets the default language of all files to English.
+  -
+    scope:
+      path: ""
+    values:
+      language: en
+
 plugins:
   - jekyll-remote-theme
 
-remote_theme: brockfanning/sdg-theme@asset-yaml-blocks
+remote_theme: brockfanning/sdg-theme@multilingual
