@@ -69,13 +69,11 @@ collections:
   goals:
     output: true
 
-defaults:
-  # This sets the default language of all files to English.
-  -
-    scope:
-      path: ""
-    values:
-      language: en
+# The list of languages that are translated. The first one is the default.
+languages:
+  - en
+  - es
+  - fr
 
 plugins:
   - jekyll-remote-theme
