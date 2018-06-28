@@ -1195,6 +1195,13 @@ footer {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
+.language-toggle {
+  float: right; }
+  .language-toggle li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px; }
+
 #accessibility-nav {
   width: 25%;
   padding-top: 10px;
