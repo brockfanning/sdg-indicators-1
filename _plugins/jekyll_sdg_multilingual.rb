@@ -1,4 +1,5 @@
-module SDG_Meta_I18n
+# TODO: Move this to rubygems.org?
+module JekyllSdgMultilingual
   class Generator < Jekyll::Generator
     safe true
     priority :low
