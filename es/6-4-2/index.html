@@ -14,7 +14,7 @@
         
         
         <title>
-        Needs translation 6.4.2 - Needs translation  - 
+        Indicador 6.4.2 - Gol  - 
         </title>
         <meta name="description" content="">
         <meta property="og:description" content="">
@@ -42,18 +42,18 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180709063532">
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180709121710">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
 <body>
 <!-- <div class="container"> -->
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Needs translation</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag">Needs translation</strong>
-    Needs translation
+    <strong class="phase-tag">Alfa</strong>
+    Este es un sitio web de desarrollo. Agradecemos sus comentarios.
   </div>
 </div>
 
@@ -63,7 +63,7 @@
   <div class="container">
 
     <a class="navbar-brand" href="/sdg-indicators-1/es/" id="home">
-      <img src="/sdg-indicators-1/assets/img/SDG_logo.png" alt="Needs translation - Needs translation" />
+      <img src="/sdg-indicators-1/assets/img/SDG_logo.png" alt="Objetivos de Desarrollo Sostenible - 17 Metas para transformar nuestro mundo" />
     </a>
 
   <div class='hidden visible-xs float-right'>
@@ -83,27 +83,27 @@
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu">Needs translation</span></li>
-        <li><span data-target="search">Needs translation</span></li>
+        <li><span data-target="menu">Menú</span></li>
+        <li><span data-target="search">Buscar</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu">
         <li class="nav-link active" >
-          <a href="/sdg-indicators-1/es/">Needs translation</a>
+          <a href="/sdg-indicators-1/es/">Metas</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/reporting-status">Needs translation</a>
+          <a href="/sdg-indicators-1/es/reporting-status">Estado de informes</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/about">Needs translation</a>
+          <a href="/sdg-indicators-1/es/about">Acerca de</a>
         <li class="nav-link" >
-            <a href="/sdg-indicators-1/es/publications">Needs translation</a>
+            <a href="/sdg-indicators-1/es/publications">Publicaciones</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/guidance">Needs translation</a>
+          <a href="/sdg-indicators-1/es/guidance">Dirección</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/faq">Needs translation</a>
+          <a href="/sdg-indicators-1/es/faq">Preguntas más frecuentes</a>
         </li>
 <!--        <li class="nav-link" >
           <a href="/sdg-indicators-1/news">News &amp; Events</a>
@@ -134,8 +134,8 @@
       </div>
       <div class="variable-options">
         <div>
-          <button data-type="select">Needs translation</button>
-          <button data-type="clear">Needs translation</button>
+          <button data-type="select">Seleccionar todo</button>
+          <button data-type="clear">Limpiar todo</button>
         </div>
         <% _.each(seriesItem.values, function(item) { %>
           <label><input type="checkbox" value="<%=item.value%>" data-field="<%=seriesItem.field%>" /><%=item.value%></label>
@@ -143,10 +143,10 @@
       </div>
       
       <% if(allowedFields.indexOf(seriesItem.field) == -1) { %> 
-        <div class="variable-hint">Needs translation
+        <div class="variable-hint">Disponible cuando se selecciona '<%= _.findWhere(edges, { To: seriesItem.field }).From %>'
         </div>
         <div class="no-data-hint">
-          Needs translation
+          No hay opciones disponibles debido a los filtros anteriores
         </div>
       <% }%>
 
@@ -156,7 +156,7 @@
 
 <script type="text/template" id="units_template">
   <% if(units.length) { %>
-    <h5>Needs translation</h5>
+    <h5>Tipo de unidades</h5>
     <% _.each(units, function(unitsItem, index) { %>
       <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <% if(!index) { %>checked="checked"<% } %> /> <%=unitsItem%></label>
     <% }); %>
@@ -185,17 +185,17 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <a href="/sdg-indicators-1/" title="Needs translation">
-          <img src="/sdg-indicators-1/assets/img/goals/es/6.png" alt=" - Needs translation " />
+        <a href="/sdg-indicators-1/" title="Ver la lista de indicadores de este objetivo">
+          <img src="/sdg-indicators-1/assets/img/goals/es/6.png" alt=" - Gol " />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
           <a href="/sdg-indicators-1/">
-            <span class="hidden-sm hidden-md hidden-lg">Needs translation 6: </span>Nivel de estrés por escasez de agua: extracción de agua dulce como proporción de los recursos de agua dulce disponibles
+            <span class="hidden-sm hidden-md hidden-lg">Gol 6: </span>Nivel de estrés por escasez de agua: extracción de agua dulce como proporción de los recursos de agua dulce disponibles
           </a>
         </h1>
-        <h2>Needs translation 6.4.2: Nivel de estrés por escasez de agua: extracción de agua dulce como proporción de los recursos de agua dulce disponibles</h2>
+        <h2>Indicador 6.4.2: Nivel de estrés por escasez de agua: extracción de agua dulce como proporción de los recursos de agua dulce disponibles</h2>
       </div>
     </div>
   </div>
@@ -203,10 +203,10 @@
 
 <div id="main-content" class="container goal-6">
   <ol class="breadcrumb">
-  <li><a href="/sdg-indicators-1/">Needs translation</a></li>
+  <li><a href="/sdg-indicators-1/">Casa</a></li>
   
-      <li><a href="/sdg-indicators-1/" title="06_clean Water And Sanitation">Needs translation </a></li>
-      <li class="active">Needs translation 6.4.2</li>
+      <li><a href="/sdg-indicators-1/" title="06_clean Water And Sanitation">Gol </a></li>
+      <li class="active">Indicador 6.4.2</li>
   
 </ol>
   
@@ -240,17 +240,17 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Metadatos nacionales</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Metadatos globales</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Fuentes</a>
           </li>
           
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Editar</a>
           </li>
           
         </ul>
@@ -262,7 +262,7 @@
             <div > <!-- formerly class="collapsible expanded" -->
               <!-- <h3 tabindex='0'>National Metadata</h3> -->
               <article>
-                <p>Needs translation</p>
+                <p>Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de US más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de US, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de US.</p>
                   <table class="table table-hover">
   
   
@@ -280,7 +280,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Indicador disponible </th>
         <td>
           
             
@@ -292,7 +292,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Descripción del indicador </th>
         <td>
           
             
@@ -304,7 +304,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Cobertura geográfica </th>
         <td>
           
             
@@ -316,7 +316,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Unidad de medida </th>
         <td>
           
             
@@ -328,7 +328,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Definiciones </th>
         <td>
           
             
@@ -340,7 +340,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Cálculos </th>
         <td>
           
             
@@ -352,7 +352,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Otra información </th>
         <td>
           
             
@@ -364,7 +364,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Datos actualizados por última vez </th>
         <td>
           
             
@@ -385,7 +385,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Metadatos actualizados por última vez </th>
         <td>
           
             
@@ -494,7 +494,7 @@
             <div> <!-- formerly <div class="collapsible expanded"> -->
               <!-- <h3 tabindex='0'>Global Metadata</h3> -->
               <article>
-                <p>Needs translation</p>
+                <p>Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. <a href="https://unstats.un.org/sdgs/metadata/">La</a> División de Estadística de las Naciones Unidas proporciona <a href="https://unstats.un.org/sdgs/metadata/">los metadatos globales completos</a> .</p>
                 <table class="table table-hover">
   
   
@@ -503,7 +503,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Nombre del indicador </th>
         <td>
           
             Level of water stress: freshwater withdrawal as a proportion of available freshwater resources
@@ -515,7 +515,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Número de indicador </th>
         <td>
           
             6.4.2
@@ -527,7 +527,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Nombre de destino </th>
         <td>
           
             By 2030, substantially increase water-use efficiency across all sectors and ensure sustainable withdrawals and supply of freshwater to address water scarcity and substantially reduce the number of people suffering from water scarcity.
@@ -539,7 +539,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Número objetivo </th>
         <td>
           
             6.4
@@ -551,7 +551,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Descripción del indicador global </th>
         <td>
           
             The ratio between total freshwater withdrawn by all major sectors and total renewable freshwater resources, after having taken into account environmental water requirements. Main sectors, as defined by ISIC standards, can include for example agriculture; forestry and fishing; manufacturing; electricity industry; and municipalities. This indicator is also known as water withdrawal intensity. The indicator builds on MDG indicator 7.5 and also accounts for environmental water requirements.This indicator provides an estimate of pressure by all sectors on the country's renewable freshwater resources. A low level of water stress indicates a situation where the combined withdrawal by all sectors is marginal in relation to the resources, and has therefore little potential impact on the sustainability of the resources or on the potential competition between users. A high level of water stress indicates a situation where the combined withdrawal by all sectors represents a substantial share of the total renewable freshwater resources, with potentially larger impacts on the sustainability of the resources and potential situations of conflicts and competition between users. Total renewable freshwater resources (TRWR) are expressed as the sum of internal and external renewable water resources. The terms "water resources" and "water withdrawal" are understood here as freshwater resources and freshwater withdrawal. Internal renewable water resources are defined as the long-term average annual flow of rivers and recharge of groundwater for a given country generated from endogenous precipitation. External renewable water resources refer to the flows of water entering the country, taking into consideration the quantity of flows reserved to upstream and downstream countries through agreements or treaties (and, where available, the reduction of flow due to upstream withdrawal). Total freshwater withdrawal (TWW) is the volume of freshwater extracted from its source (rivers, lakes, aquifers) for agriculture, industries and municipalities. It is estimated at the country level for the following three main sectors: agriculture, municipalities (including domestic water withdrawal) and industries. Freshwater withdrawal includes primary freshwater (not withdrawn before), secondary freshwater (previously withdrawn and returned to rivers and groundwater) and fossil groundwater. It does not include non-conventional water, i.e. direct use of treated wastewater, direct use of agricultural drainage water and desalinated water. TWW is in general calculated as being the sum of total water withdrawal by sector minus direct use of wastewater, direct use of agricultural drainage water and use of desalinated water. Environmental water requirements (Env.) are established in order to protect the basic environmental services of freshwater ecosystems. Methods of computation of Env. are extremely variable. For the purpose of the SDG indicator, Env. are expressed as a percentage of the available water resources. More details on method of calculation of the above variables can be found at http://www.fao.org/nr/water/aquastat/water_res/index.stm or http://www.fao.org/nr/water/aquastat/data/wrs/readPdf.html?f=AFG-WRS_eng.pdf.
@@ -563,7 +563,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Nivel designado por la ONU </th>
         <td>
           
             2
@@ -575,7 +575,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Agencia de custodia de la ONU </th>
         <td>
           
             
@@ -587,7 +587,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Enlace a los metadatos de la ONU </th>
         <td>
           
             
@@ -597,7 +597,7 @@
 
             
               <a href="http://unstats.un.org/sdgs/files/metadata-compilation/Metadata-Goal-6.pdf" target="_blank">
-                Link <span class="visuallyhidden">Needs translation</span>
+                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
               </a>
             
             
@@ -717,8 +717,8 @@
           
           <div role="tabpanel" class="tab-pane" id="edit">
             <div class="edit-container">
-              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/data/indicator_6-4-2.csv">Needs translation</a>
-              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/meta/6-4-2.md">Needs translation</a>
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/data/indicator_6-4-2.csv">Editar datos</a>
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/meta/6-4-2.md">Editar metadatos</a>
             </div>
           </div>
           
@@ -732,10 +732,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-9">
-        <a href="mailto:FN-OMB-OIRA-SDGs@omb.eop.gov">Needs translation</a> | <a class="twitter-follow-button" href="https://twitter.com/StatsClaudie?ref_src=twsrc%5Etfw" data-show-count="false">@StatsClaudie</a>
+        <a href="mailto:FN-OMB-OIRA-SDGs@omb.eop.gov">Contáctenos</a> | <a class="twitter-follow-button" href="https://twitter.com/StatsClaudie?ref_src=twsrc%5Etfw" data-show-count="false">@StatsClaudie</a>
       </div>
       <div class="col-xs-3 text-right">
-        <a href="/sdg-indicators-1/faq/">Needs translation</a> | <a href="/sdg-indicators-1/about/cookies-and-privacy/">Needs translation</a>
+        <a href="/sdg-indicators-1/faq/">Preguntas más frecuentes</a> | <a href="/sdg-indicators-1/about/cookies-and-privacy/">Galletas</a>
       </div>
     </div>
   </div>
@@ -768,21 +768,21 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
-<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180709063532'></script> -->
+<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180709121710'></script> -->
 
 <script src="/sdg-indicators-1/assets/js/lib/d3-simple-slider.min.js"></script>
 <script src="/sdg-indicators-1/assets/js/plugins/jquery.sdgMap.js"></script>
-<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/event.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/search.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/menu.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/event.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/search.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/menu.js?v=20180709121710"></script>
 <script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
 <script src="/sdg-indicators-1/assets/js/lib/modernizr-custom.js"></script>
 <script>

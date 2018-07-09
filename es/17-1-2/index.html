@@ -14,7 +14,7 @@
         
         
         <title>
-        Needs translation 17.1.2 - Needs translation  - 
+        Indicador 17.1.2 - Gol  - 
         </title>
         <meta name="description" content="">
         <meta property="og:description" content="">
@@ -42,18 +42,18 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180709063532">
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180709121710">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
 <body>
 <!-- <div class="container"> -->
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Needs translation</a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag">Needs translation</strong>
-    Needs translation
+    <strong class="phase-tag">Alfa</strong>
+    Este es un sitio web de desarrollo. Agradecemos sus comentarios.
   </div>
 </div>
 
@@ -63,7 +63,7 @@
   <div class="container">
 
     <a class="navbar-brand" href="/sdg-indicators-1/es/" id="home">
-      <img src="/sdg-indicators-1/assets/img/SDG_logo.png" alt="Needs translation - Needs translation" />
+      <img src="/sdg-indicators-1/assets/img/SDG_logo.png" alt="Objetivos de Desarrollo Sostenible - 17 Metas para transformar nuestro mundo" />
     </a>
 
   <div class='hidden visible-xs float-right'>
@@ -83,27 +83,27 @@
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu">Needs translation</span></li>
-        <li><span data-target="search">Needs translation</span></li>
+        <li><span data-target="menu">Menú</span></li>
+        <li><span data-target="search">Buscar</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu">
         <li class="nav-link active" >
-          <a href="/sdg-indicators-1/es/">Needs translation</a>
+          <a href="/sdg-indicators-1/es/">Metas</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/reporting-status">Needs translation</a>
+          <a href="/sdg-indicators-1/es/reporting-status">Estado de informes</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/about">Needs translation</a>
+          <a href="/sdg-indicators-1/es/about">Acerca de</a>
         <li class="nav-link" >
-            <a href="/sdg-indicators-1/es/publications">Needs translation</a>
+            <a href="/sdg-indicators-1/es/publications">Publicaciones</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/guidance">Needs translation</a>
+          <a href="/sdg-indicators-1/es/guidance">Dirección</a>
         </li>
         <li class="nav-link" >
-          <a href="/sdg-indicators-1/es/faq">Needs translation</a>
+          <a href="/sdg-indicators-1/es/faq">Preguntas más frecuentes</a>
         </li>
 <!--        <li class="nav-link" >
           <a href="/sdg-indicators-1/news">News &amp; Events</a>
@@ -134,8 +134,8 @@
       </div>
       <div class="variable-options">
         <div>
-          <button data-type="select">Needs translation</button>
-          <button data-type="clear">Needs translation</button>
+          <button data-type="select">Seleccionar todo</button>
+          <button data-type="clear">Limpiar todo</button>
         </div>
         <% _.each(seriesItem.values, function(item) { %>
           <label><input type="checkbox" value="<%=item.value%>" data-field="<%=seriesItem.field%>" /><%=item.value%></label>
@@ -143,10 +143,10 @@
       </div>
       
       <% if(allowedFields.indexOf(seriesItem.field) == -1) { %> 
-        <div class="variable-hint">Needs translation
+        <div class="variable-hint">Disponible cuando se selecciona '<%= _.findWhere(edges, { To: seriesItem.field }).From %>'
         </div>
         <div class="no-data-hint">
-          Needs translation
+          No hay opciones disponibles debido a los filtros anteriores
         </div>
       <% }%>
 
@@ -156,7 +156,7 @@
 
 <script type="text/template" id="units_template">
   <% if(units.length) { %>
-    <h5>Needs translation</h5>
+    <h5>Tipo de unidades</h5>
     <% _.each(units, function(unitsItem, index) { %>
       <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <% if(!index) { %>checked="checked"<% } %> /> <%=unitsItem%></label>
     <% }); %>
@@ -185,17 +185,17 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <a href="/sdg-indicators-1/" title="Needs translation">
-          <img src="/sdg-indicators-1/assets/img/goals/es/17.png" alt=" - Needs translation " />
+        <a href="/sdg-indicators-1/" title="Ver la lista de indicadores de este objetivo">
+          <img src="/sdg-indicators-1/assets/img/goals/es/17.png" alt=" - Gol " />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
           <a href="/sdg-indicators-1/">
-            <span class="hidden-sm hidden-md hidden-lg">Needs translation 17: </span>Proporción del presupuesto nacional financiado por impuestos internos
+            <span class="hidden-sm hidden-md hidden-lg">Gol 17: </span>Proporción del presupuesto nacional financiado por impuestos internos
           </a>
         </h1>
-        <h2>Needs translation 17.1.2: Proporción del presupuesto nacional financiado por impuestos internos</h2>
+        <h2>Indicador 17.1.2: Proporción del presupuesto nacional financiado por impuestos internos</h2>
       </div>
     </div>
   </div>
@@ -203,10 +203,10 @@
 
 <div id="main-content" class="container goal-17">
   <ol class="breadcrumb">
-  <li><a href="/sdg-indicators-1/">Needs translation</a></li>
+  <li><a href="/sdg-indicators-1/">Casa</a></li>
   
-      <li><a href="/sdg-indicators-1/" title="17_partnerships For The Goals">Needs translation </a></li>
-      <li class="active">Needs translation 17.1.2</li>
+      <li><a href="/sdg-indicators-1/" title="17_partnerships For The Goals">Gol </a></li>
+      <li class="active">Indicador 17.1.2</li>
   
 </ol>
   
@@ -240,17 +240,17 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Metadatos nacionales</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Metadatos globales</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Fuentes</a>
           </li>
           
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Needs translation</a>
+            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Editar</a>
           </li>
           
         </ul>
@@ -262,7 +262,7 @@
             <div > <!-- formerly class="collapsible expanded" -->
               <!-- <h3 tabindex='0'>National Metadata</h3> -->
               <article>
-                <p>Needs translation</p>
+                <p>Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de US más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de US, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de US.</p>
                   <table class="table table-hover">
   
   
@@ -280,7 +280,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Indicador disponible </th>
         <td>
           
             
@@ -292,7 +292,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Descripción del indicador </th>
         <td>
           
             
@@ -304,7 +304,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Cobertura geográfica </th>
         <td>
           
             
@@ -316,7 +316,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Unidad de medida </th>
         <td>
           
             
@@ -328,7 +328,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Definiciones </th>
         <td>
           
             
@@ -340,7 +340,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Cálculos </th>
         <td>
           
             
@@ -352,7 +352,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Otra información </th>
         <td>
           
             
@@ -364,7 +364,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Datos actualizados por última vez </th>
         <td>
           
             
@@ -385,7 +385,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Metadatos actualizados por última vez </th>
         <td>
           
             
@@ -494,7 +494,7 @@
             <div> <!-- formerly <div class="collapsible expanded"> -->
               <!-- <h3 tabindex='0'>Global Metadata</h3> -->
               <article>
-                <p>Needs translation</p>
+                <p>Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. <a href="https://unstats.un.org/sdgs/metadata/">La</a> División de Estadística de las Naciones Unidas proporciona <a href="https://unstats.un.org/sdgs/metadata/">los metadatos globales completos</a> .</p>
                 <table class="table table-hover">
   
   
@@ -503,7 +503,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Nombre del indicador </th>
         <td>
           
             Proportion of domestic budget funded by domestic taxes
@@ -515,7 +515,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Número de indicador </th>
         <td>
           
             17.1.2
@@ -527,7 +527,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Nombre de destino </th>
         <td>
           
             Strengthen domestic resource mobilization, including through international support to developing countries, to improve domestic capacity for tax and other revenue collection.
@@ -539,7 +539,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Número objetivo </th>
         <td>
           
             17.1
@@ -551,7 +551,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Descripción del indicador global </th>
         <td>
           
             Tax burden: Revenue in the form of taxes as defined under government finance statistics (GFS) code 11 as a share of total revenue. In GFS, taxes are classified into six major categories: (i) taxes on income, profits, and capital gains; (ii) taxes on payroll and workforce; (iii) taxes on property; (iv) taxes on goods and services; (v) taxes on international trade and transactions; and (vi) other taxes. (Source: IMF, Government Finance Statistics Manual 2014 (GFSM 2014), Table 4A.1, assessed Dec 28 2015) Concepts Tax burden concept may be disaggregated into the complementary concepts of: "direct taxes" or taxes that take into account individual circumstances of taxpayers (e.g., taxes on individual and corporate income), which can be calculated from the following detailed GFS revenue classifications: 111 Taxes on income, profits, and capital gains+1131 Recurrent taxes on immovable property+1132 Recurrent taxes on net wealth+1136 Other recurrent taxes on property; and "indirect taxes" or taxes that do not take into account individual circumstances of taxpayers (e.g., taxes imposed on goods and services), which can be calculated from the following detailed GFS revenue classifications 112 Taxes on payroll and workforce+114 Taxes on goods and services+115 Taxes on international trade and transactions+116 Other taxes. Tax burden is directly related to the wider concept of fiscal burden, which can be derived from combining two GFSM 2014 revenue codes: code 11 Taxes plus code 12, Social Contributions or, alternatively 11+121+122. These concepts can also be found in the 2008 System of National Accounts (2008 SNA). The coverage, timing, and valuation of tax revenue in GFSM 2014 and the 2008 SNA are identical, but the classification systems differ. The 2008 SNA classifies taxes according to their role in economic activities'namely: (i) taxes on production and imports (D2); (ii) current taxes on income, wealth, etc. (D5); and (iii) capital taxes (D91). The result is that some categories of taxes in GFS need to be allocated between two of the SNA tax categories according to whether they are payable by producers or final consumers, or whether they are current or capital taxes. A detailed description of the linkages between the GFS and the 2008 SNA categories of taxes is provided in Appendix 7 of the GFSM 2014.
@@ -563,7 +563,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Nivel designado por la ONU </th>
         <td>
           
             1
@@ -575,7 +575,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Agencia de custodia de la ONU </th>
         <td>
           
             
@@ -587,7 +587,7 @@
   
       
       <tr>
-        <th scope="row">Needs translation </th>
+        <th scope="row">Enlace a los metadatos de la ONU </th>
         <td>
           
             
@@ -597,7 +597,7 @@
 
             
               <a href="http://unstats.un.org/sdgs/files/metadata-compilation/Metadata-Goal-17.pdf" target="_blank">
-                Link <span class="visuallyhidden">Needs translation</span>
+                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
               </a>
             
             
@@ -717,8 +717,8 @@
           
           <div role="tabpanel" class="tab-pane" id="edit">
             <div class="edit-container">
-              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/data/indicator_17-1-2.csv">Needs translation</a>
-              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/meta/17-1-2.md">Needs translation</a>
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/data/indicator_17-1-2.csv">Editar datos</a>
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/meta/17-1-2.md">Editar metadatos</a>
             </div>
           </div>
           
@@ -732,10 +732,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-9">
-        <a href="mailto:FN-OMB-OIRA-SDGs@omb.eop.gov">Needs translation</a> | <a class="twitter-follow-button" href="https://twitter.com/StatsClaudie?ref_src=twsrc%5Etfw" data-show-count="false">@StatsClaudie</a>
+        <a href="mailto:FN-OMB-OIRA-SDGs@omb.eop.gov">Contáctenos</a> | <a class="twitter-follow-button" href="https://twitter.com/StatsClaudie?ref_src=twsrc%5Etfw" data-show-count="false">@StatsClaudie</a>
       </div>
       <div class="col-xs-3 text-right">
-        <a href="/sdg-indicators-1/faq/">Needs translation</a> | <a href="/sdg-indicators-1/about/cookies-and-privacy/">Needs translation</a>
+        <a href="/sdg-indicators-1/faq/">Preguntas más frecuentes</a> | <a href="/sdg-indicators-1/about/cookies-and-privacy/">Galletas</a>
       </div>
     </div>
   </div>
@@ -768,21 +768,21 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
-<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180709063532'></script> -->
+<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180709121710'></script> -->
 
 <script src="/sdg-indicators-1/assets/js/lib/d3-simple-slider.min.js"></script>
 <script src="/sdg-indicators-1/assets/js/plugins/jquery.sdgMap.js"></script>
-<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/event.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/search.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180709063532"></script>
-<script src="/sdg-indicators-1/assets/js/menu.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/event.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/search.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180709121710"></script>
+<script src="/sdg-indicators-1/assets/js/menu.js?v=20180709121710"></script>
 <script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
 <script src="/sdg-indicators-1/assets/js/lib/modernizr-custom.js"></script>
 <script>
