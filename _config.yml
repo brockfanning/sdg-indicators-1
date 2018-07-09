@@ -75,6 +75,14 @@ languages:
   - es
   - fr
 
+# This makes sure that all pages have a language.
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      language: "en"
+
 plugins:
   - jekyll-remote-theme
 
