@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js"><head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+        
+        
+        <title>
+        Needs translation 12.2.2 - Needs translation  - 
+        </title>
+        <meta name="description" content="">
+        <meta property="og:description" content="">
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+        <link rel="canonical" href="/">
+
+        
+
+        <!--[if IE 9]>
+        <script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
+        <![endif]-->
+        
+        <!-- Favicons ================================================== -->
+        <!-- 128x128 -->
+        <link rel="shortcut icon" type="image/ico" href="/sdg-indicators-1/assets/img/favicons/favicon.ico">
+        <link rel="icon" type="image/png" href="/sdg-indicators-1/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
+        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+        -->
+
+        
+
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180709063532">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    </head>
+<body>
+<!-- <div class="container"> -->
+
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Needs translation</a>
+<div id="disclaimer">
+  <div class="container">
+  <div class="alert alert-danger" role="alert">
+    <strong class="phase-tag">Needs translation</strong>
+    Needs translation
+  </div>
+</div>
+
+</div>
+
+<header role="banner">
+  <div class="container">
+
+    <a class="navbar-brand" href="/sdg-indicators-1/es/" id="home">
+      <img src="/sdg-indicators-1/assets/img/SDG_logo.png" alt="Needs translation - Needs translation" />
+    </a>
+
+  <div class='hidden visible-xs float-right'>
+    <ul id='accessibility-nav' class='contrast-switcher'></ul>
+    <div class="language-toggle-mobile">
+      <a href="#" onclick="$('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  Español
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-indicators-1/12-2-2/">English</a></li><li><a href="/sdg-indicators-1/fr/12-2-2/">Français</a></li></ul>
+
+    </div>
+  </div>
+
+    <nav class="navbar navbar-default" id="main-nav">
+
+      <ul class="top-level">
+        <li><span data-target="menu">Needs translation</span></li>
+        <li><span data-target="search">Needs translation</span></li>
+      </ul>
+
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu">
+        <li class="nav-link active" >
+          <a href="/sdg-indicators-1/es/">Needs translation</a>
+        </li>
+        <li class="nav-link" >
+          <a href="/sdg-indicators-1/es/reporting-status">Needs translation</a>
+        </li>
+        <li class="nav-link" >
+          <a href="/sdg-indicators-1/es/about">Needs translation</a>
+        <li class="nav-link" >
+            <a href="/sdg-indicators-1/es/publications">Needs translation</a>
+        </li>
+        <li class="nav-link" >
+          <a href="/sdg-indicators-1/es/guidance">Needs translation</a>
+        </li>
+        <li class="nav-link" >
+          <a href="/sdg-indicators-1/es/faq">Needs translation</a>
+        </li>
+<!--        <li class="nav-link" >
+          <a href="/sdg-indicators-1/news">News &amp; Events</a>
+        </li> -->
+        <li>
+          <a href="#" onclick="$('.language-toggle').toggle(); return false;">
+  <i class="fa fa-globe"></i>
+  Español
+  <i class="language-toggle fa fa-chevron-down"></i>
+  <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
+</a>
+<ul class="language-options language-toggle"><li><a href="/sdg-indicators-1/12-2-2/">English</a></li><li><a href="/sdg-indicators-1/fr/12-2-2/">Français</a></li></ul>
+
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+</header>
+
+<script type="text/template" id="item_template">
+  <% _.each(series, function(seriesItem) { %>
+    <div class="variable-selector<% if(allowedFields.indexOf(seriesItem.field) == -1) { %> disallowed child<% }%>" data-field="<%=seriesItem.field%>">
+      <button class='accessBtn' tabindex='0'><h5><%=seriesItem.field%><i class="fa fa-chevron-down"></i></h5></button>
+      <div class="bar">
+        <div class="selected"></div>
+      </div>
+      <div class="variable-options">
+        <div>
+          <button data-type="select">Needs translation</button>
+          <button data-type="clear">Needs translation</button>
+        </div>
+        <% _.each(seriesItem.values, function(item) { %>
+          <label><input type="checkbox" value="<%=item.value%>" data-field="<%=seriesItem.field%>" /><%=item.value%></label>
+        <% }); %>
+      </div>
+      
+      <% if(allowedFields.indexOf(seriesItem.field) == -1) { %> 
+        <div class="variable-hint">Needs translation
+        </div>
+        <div class="no-data-hint">
+          Needs translation
+        </div>
+      <% }%>
+
+    </div>
+  <% }); %>
+</script>
+
+<script type="text/template" id="units_template">
+  <% if(units.length) { %>
+    <h5>Needs translation</h5>
+    <% _.each(units, function(unitsItem, index) { %>
+      <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <% if(!index) { %>checked="checked"<% } %> /> <%=unitsItem%></label>
+    <% }); %>
+  <% } %>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="heading indicator goal-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 col-md-3 col-lg-2">
+        <a href="/sdg-indicators-1/" title="Needs translation">
+          <img src="/sdg-indicators-1/assets/img/goals/es/12.png" alt=" - Needs translation " />
+        </a>
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10">
+        <h1>
+          <a href="/sdg-indicators-1/">
+            <span class="hidden-sm hidden-md hidden-lg">Needs translation 12: </span>Consumo material interior en términos absolutos, consumo material interior per cápita y consumo material interior por PIB
+          </a>
+        </h1>
+        <h2>Needs translation 12.2.2: Consumo material interior en términos absolutos, consumo material interior per cápita y consumo material interior por PIB</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main-content" class="container goal-12">
+  <ol class="breadcrumb">
+  <li><a href="/sdg-indicators-1/">Needs translation</a></li>
+  
+      <li><a href="/sdg-indicators-1/" title="12_responsible Consumption And Production">Needs translation </a></li>
+      <li class="active">Needs translation 12.2.2</li>
+  
+</ol>
+  
+  <div class="row" id="page-content-row">
+    <div class="col-xs-12">
+      <div id="page-content">
+        
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>US personal consumption expenditure (goods) per capita in millions of US dollars</h2>
+    </div>
+  </div>
+  
+  <div class="row" id="indicatorData" data-indicatorid='indicator_12-2-2' data-id="12-2-2" data-country=""
+  data-charttitle="US personal consumption expenditure (goods) per capita in millions of US dollars" data-measurementunit="" data-datasource="" data-geographicalarea="" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+    
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Needs translation</h4>
+          <p>Needs translation</p>
+        </span>
+        <p>Needs translation</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/sdg-indicators-1/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
+    
+      
+      
+       
+ 
+
+<div id="headlineTable">
+  
+  <div id="datatables">
+    
+    <a href="http://brock.tips/sdg-data/headline/12-2-2.csv" class="btn btn-primary btn-download" download="indicator_12-2-2.csv" tabindex="0" role="button">Needs translation</a>
+    
+    <a href="http://brock.tips/sdg-data/data/12-2-2.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_12-2-2.csv' tabindex='0' role='button'>Needs translation</a>
+    
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2000</td>    
+          
+          
+          
+          <td class="table-value">8686</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>    
+          
+          
+          
+          <td class="table-value">8853</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>    
+          
+          
+          
+          <td class="table-value">9024</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>    
+          
+          
+          
+          <td class="table-value">9364</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>    
+          
+          
+          
+          <td class="table-value">9890</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>    
+          
+          
+          
+          <td class="table-value">10407</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>    
+          
+          
+          
+          <td class="table-value">10829</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>    
+          
+          
+          
+          <td class="table-value">11142</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>    
+          
+          
+          
+          <td class="table-value">11084</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>    
+          
+          
+          
+          <td class="table-value">10410</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>    
+          
+          
+          
+          <td class="table-value">10855</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>    
+          
+          
+          
+          <td class="table-value">11523</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>    
+          
+          
+          
+          <td class="table-value">11894</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>    
+          
+          
+          
+          <td class="table-value">12113</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>    
+          
+          
+          
+          <td class="table-value">12451</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>    
+          
+          
+          
+          <td class="table-value">12558</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>    
+          
+          
+          
+          <td class="table-value">12744</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+  
+</div>
+      
+
+      <section>
+        
+        
+        <p class="async-loading" data-img="/sdg-indicators-1/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Needs translation</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Needs translation</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Needs translation</a>
+            </li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+    
+    
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> Needs translation
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>    
+    
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/sdg-indicators-1/assets/img/loading.gif" alt="Needs translation" />
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+               
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="nav-item active">
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Needs translation</a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Needs translation</a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Needs translation</a>
+          </li>
+          
+          <li role="presentation" class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Needs translation</a>
+          </li>
+          
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="metadata">
+            <!-- National Metadata -->
+            <div > <!-- formerly class="collapsible expanded" -->
+              <!-- <h3 tabindex='0'>National Metadata</h3> -->
+              <article>
+                <p>Needs translation</p>
+                  <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+              </article>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="globalmetadata">
+            <!-- Global Metadata -->
+            <div> <!-- formerly <div class="collapsible expanded"> -->
+              <!-- <h3 tabindex='0'>Global Metadata</h3> -->
+              <article>
+                <p>Needs translation</p>
+                <table class="table table-hover">
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            12.2.2
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            By 2030, achieve the sustainable management and efficient use of natural resources.
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            12.2
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            Domestic Material Consumption (DMC) is a standard material flow accounting (MFA) indicator and reports the apparent consumption of materials in a national economy. It is calculated as direct imports (IM) of material plus domestic extraction (DE) of materials minus direct exports (EX) of materials measured in metric tonnes. DMC measures the amount of materials that are used in economic processes. It does not include materials that are mobilized the process of domestic extraction but do not enter the economic process. DMC is based on official economic statistics and it requires some modelling to adapt the source data to the methodological requirements of the MFA. The accounting standard and accounting methods are set out in the EUROSTAT guidebooks for MFA accounts in the latest edition of 2013. MFA accounting is also part of the central framework of the System of integrated EnvironmentalEconomic Accounts (SEEA).
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            2
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Needs translation </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="http://unstats.un.org/sdgs/files/metadata-compilation/Metadata-Goal-12.pdf" target="_blank">
+                Link <span class="visuallyhidden">Needs translation</span>
+              </a>
+            
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+              </article>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="sources">
+            <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+
+          </div>
+          
+          <div role="tabpanel" class="tab-pane" id="edit">
+            <div class="edit-container">
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/data/indicator_12-2-2.csv">Needs translation</a>
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/meta/12-2-2.md">Needs translation</a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9">
+        <a href="mailto:FN-OMB-OIRA-SDGs@omb.eop.gov">Needs translation</a> | <a class="twitter-follow-button" href="https://twitter.com/StatsClaudie?ref_src=twsrc%5Etfw" data-show-count="false">@StatsClaudie</a>
+      </div>
+      <div class="col-xs-3 text-right">
+        <a href="/sdg-indicators-1/faq/">Needs translation</a> | <a href="/sdg-indicators-1/about/cookies-and-privacy/">Needs translation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
+<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
+<!-- Google Analytics -->
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+
+</script>
+
+<!-- /.container </div> -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+<script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
+<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+<script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
+<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180709063532'></script> -->
+
+<script src="/sdg-indicators-1/assets/js/lib/d3-simple-slider.min.js"></script>
+<script src="/sdg-indicators-1/assets/js/plugins/jquery.sdgMap.js"></script>
+<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/event.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/search.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/menu.js?v=20180709063532"></script>
+<script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
+<script src="/sdg-indicators-1/assets/js/lib/modernizr-custom.js"></script>
+<script>
+$(function() {
+    if($('#indicatorData').length) {
+      var domData = $('#indicatorData').data();
+
+      $('.async-loading').each(function(i, obj) {
+          $(obj).append($('<img />').attr('src', $(obj).data('img')));
+      });
+
+      $.ajax({ 
+        url: 'http://brock.tips/sdg-data/comb/' + domData.id + '.json', 
+        success: function(res) { 
+
+          $('.async-loading').remove();
+          $('.async-loaded').show();
+
+          var model = new indicatorModel({
+            data: res.data,
+            edgesData: res.edges,
+            geoCodeRegEx: domData.geocoderegex,
+            showMap: domData.showmap,
+            country: domData.country,
+            indicatorId: domData.indicatorid,
+            shortIndicatorId: domData.id,
+            chartTitle: domData.charttitle,
+            measurementUnit: domData.measurementunit,
+            dataSource: domData.datasource,
+            geographicalArea: domData.geographicalarea,
+            showData: domData.showdata,
+            footnote: domData.footnote,
+            graphType: domData.graphtype
+          }),
+          view  = new indicatorView(model, {
+            rootElement: '#indicatorData',
+            legendElement: '#plotLegend',
+            maxChartHeight: 600,
+            tableColumnDefs: [
+              { maxCharCount: 25 }, // nowrap
+              { maxCharCount: 35, width: 200 },
+              { maxCharCount: Infinity, width: 250 }
+            ]
+          }),
+          controller = new indicatorController(model, view);
+          controller.initialise();
+        }
+      });
+    }
+
+    var switcher = new accessibilitySwitcher();
+
+
+});
+</script>
+
+</body>
+</html>
+
+  
