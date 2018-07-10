@@ -386,9 +386,9 @@ var indicatorView = function (model, options) {
         
         // TODO Merge this with the that.footerFields object used by table
         var graphFooterItems = [
-          'Source: ' + (that._model.dataSource ? that._model.dataSource : ''),
-          'Geographical Area: ' + (that._model.geographicalArea ? that._model.geographicalArea : ''),
-          'Unit of Measurement: ' + (that._model.measurementUnit ? that._model.measurementUnit : '')
+          translations.indicator.source + ': ' + (that._model.dataSource ? that._model.dataSource : ''),
+          translations.indicator.geographical_area + ': ' + (that._model.geographicalArea ? that._model.geographicalArea : ''),
+          translations.indicator.unit_of_measurement + ': ' + (that._model.measurementUnit ? that._model.measurementUnit : '')
         ];
         
         if(that._model.footnote) {
@@ -496,13 +496,20 @@ var indicatorView = function (model, options) {
   
   this.createDownloadButton = function(table, name, indicatorId, el) {
     if(window.Modernizr.blobconstructor) {
-      $(el).append($('<a />').text('Download ' + name + ' CSV')
+      var downloadKey = 'download_csv';
+      if (name == 'Chart') {
+        downloadKey = 'download_chart';
+      }
+      if (name == 'Table') {
+        downloadKey = 'download_table';
+      }
+      $(el).append($('<a />').text(translations.indicator[downloadKey])
       .attr({
         'href': URL.createObjectURL(new Blob([this.toCsv(table)], {
           type: 'text/csv'
         })),
         'download': indicatorId + '.csv',
-        'title': 'Download as CSV',
+        'title': translations.indicator.download_csv_title,
         'class': 'btn btn-primary btn-download',
         'tabindex': 0
       })
@@ -510,11 +517,11 @@ var indicatorView = function (model, options) {
     } else {
       var headlineId = indicatorId.replace('indicator', 'headline');
       var id = indicatorId.replace('indicator', '');
-      $(el).append($('<a />').text('Download Headline CSV')
+      $(el).append($('<a />').text(translations.indicator.download_headline)
       .attr({
         'href': 'http://brock.tips/sdg-data/headline/' + id + '.csv',
         'download': headlineId + '.csv',
-        'title': 'Download headline data as CSV',
+        'title': translations.indicator.download_headline_title,
         'class': 'btn btn-primary btn-download',
         'tabindex': 0
       }));
@@ -522,11 +529,11 @@ var indicatorView = function (model, options) {
   }
   
   this.createSourceButton = function(indicatorId, el) {
-    $(el).append($('<a />').text('Download Source CSV')
+    $(el).append($('<a />').text(translations.indicator.download_source)
     .attr({
       'href': 'http://brock.tips/sdg-data/data/' + indicatorId + '.csv',
       'download': indicatorId + '.csv',
-      'title': 'Download source data as CSV',
+      'title': translations.indicator.download_source_title,
       'class': 'btn btn-primary btn-download',
       'tabindex': 0
     }));

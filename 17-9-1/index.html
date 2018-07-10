@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js"><head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<html lang="en" class="no-js">
+    <head><script>
+  var translations = {};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         <!-- Basic Page Needs
         ================================================== -->
         <meta charset="utf-8">
@@ -42,11 +45,14 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180709132448">
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180710112327">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
 <body>
 <!-- <div class="container"> -->
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['indicator_search'] = 'Indicator search';</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
@@ -163,9 +169,7 @@
   <% } %>
 </script>
 
-
-
-
+<script>translations['indicator'] = {"select_all":"Select all","clear_all":"Clear all","variable_hint":"Available when '%field' is selected","no_data_hint":"No options available because of filters above","download_headline":"Download Headline CSV","download_headline_title":"Download headline data as CSV","download_source":"Download Source CSV","download_source_title":"Download source data as CSV","download_chart":"Download Chart CSV","download_table":"Download Table CSV","download_csv":"Download CSV","download_csv_title":"Download as CSV","source":"Source","sources":"Sources","geographical_area":"Geographical Area","unit_of_measurement":"Unit of Measurement","footnote":"Footnote","units_type":"Units type","dataset_size_warning":"There are too many datasets to show on the chart. Not all will be shown until you remove some selections.","view_indicator_list":"View this goal's indicator list","sub_categories":"Sub-categories","series_help":"Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.","legend_help":"Click on the legend to remove individual lines from the chart.","chart":"Chart","table":"Table","map":"Map","loading_map":"Loading map","national_metadata":"National Metadata","national_metadata_blurb":"This table provides metadata for the actual indicator available from %country_name statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from %country_adjective statistics, this table should be consulted for information on national methodology and other %country_adjective-specific metadata information.","global_metadata":"Global Metadata","global_metadata_blurb":"This table provides information on metadata for SDG indicators as defined by the UN Statistical Commission. <a href=\"https://unstats.un.org/sdgs/metadata/\">Complete global metadata</a> is provided by the UN Statistics Division.","edit":"Edit","edit_data":"Edit Data","edit_metadata":"Edit Metadata"};</script>
 
 
 
@@ -185,13 +189,13 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <a href="/sdg-indicators-1/" title="View this goal's indicator list">
-          <img src="/sdg-indicators-1/assets/img/goals/en/17.png" alt=" - Goal " />
+        <a href="/sdg-indicators-1/partnerships-for-the-goals" title="View this goal's indicator list">
+          <img src="/sdg-indicators-1/assets/img/goals/en/17.png" alt="Partnerships for the goals - Goal 17" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <a href="/sdg-indicators-1/">
+          <a href="/sdg-indicators-1/partnerships-for-the-goals">
             <span class="hidden-sm hidden-md hidden-lg">Goal 17: </span>Dollar value of financial and technical assistance (including through North-South, South-South and triangular cooperation) committed to developing countries
           </a>
         </h1>
@@ -205,7 +209,7 @@
   <ol class="breadcrumb">
   <li><a href="/sdg-indicators-1/">Home</a></li>
   
-      <li><a href="/sdg-indicators-1/" title="17_partnerships For The Goals">Goal </a></li>
+      <li><a href="/sdg-indicators-1/partnerships-for-the-goals" title="Strengthen the means of implementation and revitalize the global partnership for sustainable development">Goal 17</a></li>
       <li class="active">Indicator 17.9.1</li>
   
 </ol>
@@ -768,21 +772,21 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
-<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180709132448'></script> -->
+<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180710112327'></script> -->
 
 <script src="/sdg-indicators-1/assets/js/lib/d3-simple-slider.min.js"></script>
 <script src="/sdg-indicators-1/assets/js/plugins/jquery.sdgMap.js"></script>
-<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/event.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/search.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180709132448"></script>
-<script src="/sdg-indicators-1/assets/js/menu.js?v=20180709132448"></script>
+<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/event.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/search.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180710112327"></script>
+<script src="/sdg-indicators-1/assets/js/menu.js?v=20180710112327"></script>
 <script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
 <script src="/sdg-indicators-1/assets/js/lib/modernizr-custom.js"></script>
 <script>
