@@ -1199,7 +1199,7 @@ footer {
   display: none;
   position: absolute;
   z-index: 999;
-  left: 9px;
+  left: 12px;
   color: #222;
   background: #fff;
   border-radius: 3px;
@@ -1207,13 +1207,18 @@ footer {
   padding: .2em 1em .2em .2em;
   text-shadow: #f5f5f5 0 1px 0; }
   .language-options li {
-    padding: 5px; }
+    padding: 5px;
+    padding-left: 0; }
 
 .language-toggle-mobile {
   position: relative;
   clear: right;
   right: 15px;
   float: right; }
+  .language-toggle-mobile .language-options {
+    left: 9px; }
+    .language-toggle-mobile .language-options li {
+      padding-left: 5px; }
   .language-toggle-mobile a {
     text-transform: uppercase; }
 
