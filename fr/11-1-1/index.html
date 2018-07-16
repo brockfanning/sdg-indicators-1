@@ -43,7 +43,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180711043645">
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180716010714">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
 <body>
@@ -597,9 +597,131 @@
   
   
   
+  
       
       <tr>
-        <th scope="row">Indicateur disponible </th>
+        <th scope="row">Actual indicator available </th>
+        <td>
+          
+            Percentage of occupied housing units in urban areas  that are inadequate
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Actual indicator available - description </th>
+        <td>
+          
+            Percentage of occupied housing units in urban areas that are moderately inadequate, severely inadequate, and all inadequate.
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Date of national source publication </th>
+        <td>
+          
+            July 2017
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Graph status notes </th>
+        <td>
+          
+            Graphed
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Graph type description </th>
+        <td>
+          
+            Line graph
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Method of computation </th>
+        <td>
+          
+            access to improved sanitation facilities
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            Biennial, odd-numbered years
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Scheduled update by national source </th>
+        <td>
+          
+            October 2019
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">U.S. method of computation </th>
+        <td>
+          
+            2007-2013:  Using microdata of the American Housing Survey national public use files.  Tabulate ZADEQ (recoded adequacy of housing, values '2' and '3') for occupied units (STATUS='1') in urban areas (METRO3 IN['1','2','4','9']), weighted by WGT90GEO.  Percent of all occupied in urban areas.  See AHS codebook for full description of variables:  http://www.census.gov/programs-surveys/ahs/tech-documentation/codebooks/ahs-codebook.html
+2015 and later:  Using internal use file of the American Housing Survey.  Tabulate ADEQUACY (recoded adequacy of housing, values '2' and '3') for occupied units (INTSTATUS='1') in urban areas (URBAN_2010 IN('1','2')).  See online codebook at https://www.census.gov/data-tools/demo/codebook/ahs/ahsdict.html.
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Indicator variable </th>
+        <td>
+          
+            sv_inadqt_hs
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Variable description </th>
         <td>
           
             
@@ -611,7 +733,7 @@
   
       
       <tr>
-        <th scope="row">Description de l&#39;indicateur </th>
+        <th scope="row">Variable notes </th>
         <td>
           
             
@@ -623,7 +745,7 @@
   
       
       <tr>
-        <th scope="row">Couverture géographique </th>
+        <th scope="row">Indicator variable 2 </th>
         <td>
           
             
@@ -635,7 +757,7 @@
   
       
       <tr>
-        <th scope="row">Unité de mesure </th>
+        <th scope="row">Indicator variable 3 </th>
         <td>
           
             
@@ -647,7 +769,31 @@
   
       
       <tr>
-        <th scope="row">Définitions </th>
+        <th scope="row">Comments and limitations </th>
+        <td>
+          
+            Occupied housing units only.  No group quarters or homeless.  Slums and informal housing are not defined.
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Date metadata updated </th>
+        <td>
+          
+            October 5, 2017
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Disaggregation geography </th>
         <td>
           
             
@@ -659,7 +805,67 @@
   
       
       <tr>
-        <th scope="row">Calculs </th>
+        <th scope="row">Rationale interpretation </th>
+        <td>
+          
+             sufficient-living area (not overcrowded)
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Unit of measure </th>
+        <td>
+          
+            Percent of all occupied housing units (households)
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Disaggregation categories </th>
+        <td>
+          
+            Moderately inadequate (ZADEQ = '2'), Severely inadequate (ZADEQ='3'); For 2015  and later, variable name is ADEQUACY, but coding is the same.
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">International and national references </th>
+        <td>
+          
+            NA
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Time period </th>
+        <td>
+          
+            2007-2015
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Scheduled update by SDG team </th>
         <td>
           
             
@@ -671,7 +877,7 @@
   
       
       <tr>
-        <th scope="row">Les autres informations </th>
+        <th scope="row">Graph negative </th>
         <td>
           
             
@@ -683,103 +889,15 @@
   
       
       <tr>
-        <th scope="row">Données mises à jour en dernier </th>
+        <th scope="row">Variable unit label </th>
         <td>
           
-            
-            
-            
-            
-
-            
             
           
         </td>
         </tr>
         
       
-  
-      
-      
-  
-      
-      <tr>
-        <th scope="row">Dernière mise à jour des métadonnées </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-            
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -927,6 +1045,24 @@
       
   
       
+      <tr>
+        <th scope="row">Page in link to UN metadata </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
       
   
   
@@ -958,6 +1094,42 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+              </article>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="sources">
+            <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+  <div class="row no-gutters">
+  
+   
+    
+    <div class="col-md-6">
+      
+      <table class="table table-hover">
   
   
   
@@ -1022,14 +1194,9 @@
   
 </table>
 
-              </article>
-            </div>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="sources">
-            <!-- Count the non-empty sources (up to 5) -->
-
-
-
+    </div>
+    
+  </div>
 
 
           </div>
@@ -1087,21 +1254,21 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
-<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180711043645'></script> -->
+<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180716010714'></script> -->
 
 <script src="/sdg-indicators-1/assets/js/lib/d3-simple-slider.min.js"></script>
 <script src="/sdg-indicators-1/assets/js/plugins/jquery.sdgMap.js"></script>
-<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/event.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/search.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180711043645"></script>
-<script src="/sdg-indicators-1/assets/js/menu.js?v=20180711043645"></script>
+<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/event.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/search.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180716010714"></script>
+<script src="/sdg-indicators-1/assets/js/menu.js?v=20180716010714"></script>
 <script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
 <script src="/sdg-indicators-1/assets/js/lib/modernizr-custom.js"></script>
 <script>
