@@ -1213,14 +1213,21 @@ footer {
 .language-toggle-mobile {
   position: relative;
   clear: right;
-  right: 15px;
+  padding-top: 10px;
+  padding-right: 25px;
   float: right; }
   .language-toggle-mobile .language-options {
-    left: 9px; }
+    left: -36px; }
     .language-toggle-mobile .language-options li {
       padding-left: 5px; }
   .language-toggle-mobile a {
     text-transform: uppercase; }
+    .language-toggle-mobile a .language-toggle-text {
+      display: none; }
+    .language-toggle-mobile a .language-toggle {
+      display: none !important; }
+    .language-toggle-mobile a .fa-globe {
+      font-size: 2em; }
 
 .contrast-high .language-toggle-mobile .language-options a, .contrast-high ul.navbar-nav .language-options a {
   color: black; }
@@ -1228,7 +1235,6 @@ footer {
     color: black; }
 
 #accessibility-nav {
-  width: 25%;
   padding-top: 10px;
   padding-right: 20px;
   float: right;
@@ -1249,10 +1255,12 @@ footer {
         margin: auto;
         text-decoration: none; }
     #accessibility-nav li.contrast-default {
+      display: none;
       background: white; }
       #accessibility-nav li.contrast-default a {
         color: black; }
     #accessibility-nav li.contrast-high {
+      display: block;
       background: black; }
       #accessibility-nav li.contrast-high a {
         color: yellow; }
@@ -1260,6 +1268,10 @@ footer {
 /* example stuff */
 body.contrast-high {
   background-color: black; }
+  body.contrast-high #accessibility-nav li.contrast-default {
+    display: block; }
+  body.contrast-high #accessibility-nav li.contrast-high {
+    display: none; }
   body.contrast-high .table {
     background: black; }
   body.contrast-high .btn {

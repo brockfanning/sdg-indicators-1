@@ -41,14 +41,11 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180716011616">
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180727223221">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
 <body>
 <!-- <div class="container"> -->
-
-<script>translations['search'] = translations['search'] || {};
-    translations['search']['indicator_search'] = 'Búsqueda de indicador';</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
 <div id="disclaimer">
@@ -73,7 +70,7 @@
     <div class="language-toggle-mobile">
       <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  Español
+  <span class="language-toggle-text">Español</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
@@ -113,7 +110,7 @@
         <li>
           <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  Español
+  <span class="language-toggle-text">Español</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
@@ -121,6 +118,14 @@
 
         </li>
       </ul>
+
+      <div id="search" class="menu-target">
+  <label for="indicator_search">
+    <i class="fa fa-search" aria-hidden="true"></i><span>Buscar:</span>
+  </label>
+  <input id="indicator_search" title="Búsqueda de indicador" placeholder="Búsqueda de indicador" data-url="/sdg-indicators-1/es/indicators.json" data-pageurl="/sdg-indicators-1/es/search/?" />
+</div>
+
 
     </nav>
   </div>
@@ -163,7 +168,7 @@
 
     <div class="indicator-cards row no-gutters">
         <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-4-2"><span>12.4.2<span class="status danger">Explorando fuentes de datos</span></span> Desechos peligrosos generados per cápita y proporción de desechos peligrosos tratados, desglosados por tipo de tratamiento</a>
+          <a href="/sdg-indicators-1/es/12-1-1"><span>12.1.1<span class="status danger">Explorando fuentes de datos</span></span> Número de países con planes de acción nacionales de consumo y producción sostenibles incorporados como prioridad o meta en las políticas nacionales</a>
         </div>
     
     
@@ -181,79 +186,7 @@
 
     
         <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-5-1"><span>12.5.1<span class="status danger">Explorando fuentes de datos</span></span> Tasa nacional de reciclado, toneladas de material reciclado</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-7-1"><span>12.7.1<span class="status danger">Explorando fuentes de datos</span></span> Número de países que aplican políticas de adquisiciones públicas y planes de acción sostenibles</a>
-        </div>
-    </div>
-    
-    
-    
-
-    <div class="indicator-cards row no-gutters">
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-c-1"><span>12.c.1<span class="status danger">Explorando fuentes de datos</span></span> Cuantía de los subsidios a los combustibles fósiles por unidad de PIB (producción y consumo) y como proporción del total de los gastos nacionales en combustibles fósiles</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
           <a href="/sdg-indicators-1/es/12-2-2"><span>12.2.2<span class="status success">Reportado en línea</span></span> Consumo material interior en términos absolutos, consumo material interior per cápita y consumo material interior por PIB</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-4-1"><span>12.4.1<span class="status success">Reportado en línea</span></span> Número de partes en los acuerdos ambientales multilaterales internacionales relacionados con los desechos peligrosos y otros productos químicos, que cumplen sus compromisos y obligaciones de transmitir información como lo exige cada acuerdo pertinente</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-8-1"><span>12.8.1<span class="status danger">Explorando fuentes de datos</span></span> Grado en que i) la educación cívica mundial y ii) la educación para el desarrollo sostenible (incluida la educación sobre el cambio climático) se incorporan en: a) las políticas nacionales de educación; b) los planes de estudio; c) la formación del profesorado y d) la evaluación de los estudiantes</a>
-        </div>
-    </div>
-    
-    
-    
-
-    <div class="indicator-cards row no-gutters">
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-6-1"><span>12.6.1<span class="status danger">Explorando fuentes de datos</span></span> Número de empresas que publican informes sobre sostenibilidad</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-a-1"><span>12.a.1<span class="status danger">Explorando fuentes de datos</span></span> Cantidad de apoyo en materia de investigación y desarrollo prestado a los países en desarrollo para el consumo y la producción sostenibles y las tecnologías ecológicamente racionales</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/12-1-1"><span>12.1.1<span class="status danger">Explorando fuentes de datos</span></span> Número de países con planes de acción nacionales de consumo y producción sostenibles incorporados como prioridad o meta en las políticas nacionales</a>
         </div>
     
     
@@ -271,7 +204,79 @@
 
     <div class="indicator-cards row no-gutters">
         <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-4-1"><span>12.4.1<span class="status success">Reportado en línea</span></span> Número de partes en los acuerdos ambientales multilaterales internacionales relacionados con los desechos peligrosos y otros productos químicos, que cumplen sus compromisos y obligaciones de transmitir información como lo exige cada acuerdo pertinente</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-4-2"><span>12.4.2<span class="status danger">Explorando fuentes de datos</span></span> Desechos peligrosos generados per cápita y proporción de desechos peligrosos tratados, desglosados por tipo de tratamiento</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-5-1"><span>12.5.1<span class="status danger">Explorando fuentes de datos</span></span> Tasa nacional de reciclado, toneladas de material reciclado</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-6-1"><span>12.6.1<span class="status danger">Explorando fuentes de datos</span></span> Número de empresas que publican informes sobre sostenibilidad</a>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="indicator-cards row no-gutters">
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-7-1"><span>12.7.1<span class="status danger">Explorando fuentes de datos</span></span> Número de países que aplican políticas de adquisiciones públicas y planes de acción sostenibles</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-8-1"><span>12.8.1<span class="status danger">Explorando fuentes de datos</span></span> Grado en que i) la educación cívica mundial y ii) la educación para el desarrollo sostenible (incluida la educación sobre el cambio climático) se incorporan en: a) las políticas nacionales de educación; b) los planes de estudio; c) la formación del profesorado y d) la evaluación de los estudiantes</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-a-1"><span>12.a.1<span class="status danger">Explorando fuentes de datos</span></span> Cantidad de apoyo en materia de investigación y desarrollo prestado a los países en desarrollo para el consumo y la producción sostenibles y las tecnologías ecológicamente racionales</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
           <a href="/sdg-indicators-1/es/12-b-1"><span>12.b.1<span class="status danger">Explorando fuentes de datos</span></span> Número de estrategias o políticas de turismo sostenible y de planes de acción implantados que incluyen instrumentos de seguimiento y evaluación acordados</a>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="indicator-cards row no-gutters">
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/12-c-1"><span>12.c.1<span class="status danger">Explorando fuentes de datos</span></span> Cuantía de los subsidios a los combustibles fósiles por unidad de PIB (producción y consumo) y como proporción del total de los gastos nacionales en combustibles fósiles</a>
         </div>
     
     
@@ -321,21 +326,21 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
-<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180716011616'></script> -->
+<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180727223221'></script> -->
 
 <script src="/sdg-indicators-1/assets/js/lib/d3-simple-slider.min.js"></script>
 <script src="/sdg-indicators-1/assets/js/plugins/jquery.sdgMap.js"></script>
-<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/event.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/search.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/menu.js?v=20180716011616"></script>
+<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/event.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/search.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/menu.js?v=20180727223221"></script>
 <script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
 <script src="/sdg-indicators-1/assets/js/lib/modernizr-custom.js"></script>
 <script>

@@ -41,14 +41,11 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180716011616">
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20180727223221">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
 <body>
 <!-- <div class="container"> -->
-
-<script>translations['search'] = translations['search'] || {};
-    translations['search']['indicator_search'] = 'Búsqueda de indicador';</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
 <div id="disclaimer">
@@ -73,7 +70,7 @@
     <div class="language-toggle-mobile">
       <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  Español
+  <span class="language-toggle-text">Español</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
@@ -113,7 +110,7 @@
         <li>
           <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  Español
+  <span class="language-toggle-text">Español</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
@@ -121,6 +118,14 @@
 
         </li>
       </ul>
+
+      <div id="search" class="menu-target">
+  <label for="indicator_search">
+    <i class="fa fa-search" aria-hidden="true"></i><span>Buscar:</span>
+  </label>
+  <input id="indicator_search" title="Búsqueda de indicador" placeholder="Búsqueda de indicador" data-url="/sdg-indicators-1/es/indicators.json" data-pageurl="/sdg-indicators-1/es/search/?" />
+</div>
+
 
     </nav>
   </div>
@@ -163,52 +168,7 @@
 
     <div class="indicator-cards row no-gutters">
         <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-6-1"><span>4.6.1<span class="status success">Reportado en línea</span></span> Proporción de población en un grupo de edad determinado que alcanza por lo menos un nivel fijo de competencia funcional en a) alfabetización y b) aritmética elemental, desglosado por sexo</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-c-1"><span>4.c.1<span class="status success">Reportado en línea</span></span> Proporción de maestros en la enseñanza: a) preescolar; b) primaria; c) secundaria inferior y d) secundaria superior que han recibido al menos el mínimo de formación docente organizada (por ejemplo, formación pedagógica), requisitos de práctica previa a la docencia o durante su ejercicio para la enseñanza a un nivel dado en un país determinado</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
           <a href="/sdg-indicators-1/es/4-1-1"><span>4.1.1<span class="status success">Reportado en línea</span></span> Proporción de niños, niñas y adolescentes: a) en los grados 2/3; b) al final de la enseñanza primaria; y c) al final de la enseñanza secundaria inferior, que han alcanzado al menos un nivel mínimo de competencia en i) lectura y ii) matemáticas, desglosada por sexo</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-2-2"><span>4.2.2<span class="status success">Reportado en línea</span></span> Tasa de participación en la enseñanza organizada (un año antes de la edad oficial de ingreso en la enseñanza primaria), desglosada por sexo</a>
-        </div>
-    </div>
-    
-    
-    
-
-    <div class="indicator-cards row no-gutters">
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-2-2-wide"><span>4.2.2.wide<span class="status success">Reportado en línea</span></span> </a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-7-1"><span>4.7.1<span class="status success">Reportado en línea</span></span> Grado en que i) la educación cívica mundial y ii) la educación para el desarrollo sostenible, incluida la igualdad entre los géneros y los derechos humanos, se incorporan en todos los niveles en: a) las políticas nacionales de educación, b) los planes de estudio, c) la formación del profesorado y d) la evaluación de los estudiantes</a>
         </div>
     
     
@@ -226,7 +186,16 @@
 
     
         <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-a-1"><span>4.a.1<span class="status success">Reportado en línea</span></span> Proporción de escuelas con acceso a: a) electricidad; b) Internet con fines pedagógicos; c) computadoras con fines pedagógicos; d) infraestructura y materiales adaptados a los estudiantes con discapacidad; e) suministro básico de agua potable; f) instalaciones de saneamiento básicas segregadas por sexo; y g) instalaciones básicas para lavarse las manos (según las definiciones de los indicadores de WASH)</a>
+          <a href="/sdg-indicators-1/es/4-2-2"><span>4.2.2<span class="status success">Reportado en línea</span></span> Tasa de participación en la enseñanza organizada (un año antes de la edad oficial de ingreso en la enseñanza primaria), desglosada por sexo</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/4-2-2-wide"><span>4.2.2.wide<span class="status success">Reportado en línea</span></span> </a>
         </div>
     </div>
     
@@ -235,16 +204,7 @@
 
     <div class="indicator-cards row no-gutters">
         <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-b-1"><span>4.b.1<span class="status success">Reportado en línea</span></span> Volumen de la asistencia oficial para el desarrollo destinada a becas por sector y por tipo de estudio</a>
-        </div>
-    
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-5-1"><span>4.5.1<span class="status success">Reportado en línea</span></span> Índices de paridad (mujeres/hombres, zonas rurales y urbanas, quintil superior/inferior de recursos económicos, y otras características, como la situación en materia de discapacidad, los pueblos indígenas y los efectos de conflictos, a medida que se disponga de datos) para todos los indicadores de educación de esta lista que puedan desglosarse</a>
+          <a href="/sdg-indicators-1/es/4-3-1"><span>4.3.1<span class="status success">Reportado en línea</span></span> Tasa de participación de los jóvenes y adultos en la enseñanza académica y no académica, y en la capacitación en los 12 meses anteriores, desglosada por sexo</a>
         </div>
     
     
@@ -262,7 +222,52 @@
 
     
         <div class="col-md-6 col-lg-3">
-          <a href="/sdg-indicators-1/es/4-3-1"><span>4.3.1<span class="status success">Reportado en línea</span></span> Tasa de participación de los jóvenes y adultos en la enseñanza académica y no académica, y en la capacitación en los 12 meses anteriores, desglosada por sexo</a>
+          <a href="/sdg-indicators-1/es/4-5-1"><span>4.5.1<span class="status success">Reportado en línea</span></span> Índices de paridad (mujeres/hombres, zonas rurales y urbanas, quintil superior/inferior de recursos económicos, y otras características, como la situación en materia de discapacidad, los pueblos indígenas y los efectos de conflictos, a medida que se disponga de datos) para todos los indicadores de educación de esta lista que puedan desglosarse</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/4-6-1"><span>4.6.1<span class="status success">Reportado en línea</span></span> Proporción de población en un grupo de edad determinado que alcanza por lo menos un nivel fijo de competencia funcional en a) alfabetización y b) aritmética elemental, desglosado por sexo</a>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="indicator-cards row no-gutters">
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/4-7-1"><span>4.7.1<span class="status success">Reportado en línea</span></span> Grado en que i) la educación cívica mundial y ii) la educación para el desarrollo sostenible, incluida la igualdad entre los géneros y los derechos humanos, se incorporan en todos los niveles en: a) las políticas nacionales de educación, b) los planes de estudio, c) la formación del profesorado y d) la evaluación de los estudiantes</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/4-a-1"><span>4.a.1<span class="status success">Reportado en línea</span></span> Proporción de escuelas con acceso a: a) electricidad; b) Internet con fines pedagógicos; c) computadoras con fines pedagógicos; d) infraestructura y materiales adaptados a los estudiantes con discapacidad; e) suministro básico de agua potable; f) instalaciones de saneamiento básicas segregadas por sexo; y g) instalaciones básicas para lavarse las manos (según las definiciones de los indicadores de WASH)</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/4-b-1"><span>4.b.1<span class="status success">Reportado en línea</span></span> Volumen de la asistencia oficial para el desarrollo destinada a becas por sector y por tipo de estudio</a>
+        </div>
+    
+    
+    
+    
+
+    
+        <div class="col-md-6 col-lg-3">
+          <a href="/sdg-indicators-1/es/4-c-1"><span>4.c.1<span class="status success">Reportado en línea</span></span> Proporción de maestros en la enseñanza: a) preescolar; b) primaria; c) secundaria inferior y d) secundaria superior que han recibido al menos el mínimo de formación docente organizada (por ejemplo, formación pedagógica), requisitos de práctica previa a la docencia o durante su ejercicio para la enseñanza a un nivel dado en un país determinado</a>
         </div>
     </div>
     
@@ -310,21 +315,21 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
-<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180716011616'></script> -->
+<!-- <script src='/sdg-indicators-1/assets/js/sdg.js?v=20180727223221'></script> -->
 
 <script src="/sdg-indicators-1/assets/js/lib/d3-simple-slider.min.js"></script>
 <script src="/sdg-indicators-1/assets/js/plugins/jquery.sdgMap.js"></script>
-<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/event.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/search.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180716011616"></script>
-<script src="/sdg-indicators-1/assets/js/menu.js?v=20180716011616"></script>
+<script src="/sdg-indicators-1/assets/js/chartjs/rescaler.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/event.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/accessibility.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorDataStore.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorModel.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/mapView.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorView.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/indicatorController.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/search.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/reportingStatus.js?v=20180727223221"></script>
+<script src="/sdg-indicators-1/assets/js/menu.js?v=20180727223221"></script>
 <script src="/sdg-indicators-1/assets/js/lib/classList.js"></script>
 <script src="/sdg-indicators-1/assets/js/lib/modernizr-custom.js"></script>
 <script>
