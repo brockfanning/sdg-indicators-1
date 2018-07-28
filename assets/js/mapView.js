@@ -7,7 +7,7 @@ var mapView = function () {
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
-      serviceUrl: '/sdg-indicators-1/assets/js/us-states.geo.json',
+      serviceUrl: 'http://brock.tips/geojson-us-states/us-states.geo.json',
       nameProperty: 'NAME',
       idProperty: 'STUSPS',
       width: 710,
