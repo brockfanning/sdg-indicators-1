@@ -7,9 +7,12 @@ var mapView = function () {
     $('#map').sdgMap({
       geoData: geoData,
       geoCodeRegEx: geoCodeRegEx,
-      serviceUrl: '/sdg-indicators-1/assets/js/gz_2010_us_040_00_500k.json',
+      serviceUrl: 'http://brock.tips/geojson-us-states/us-states.geo.json',
       nameProperty: 'NAME',
-      idProperty: 'GEO_ID'
+      idProperty: 'STUSPS',
+      width: 710,
+      height: 350,
+      projectionFunc: d3.geoAlbersUsa,
     });
   }
 };

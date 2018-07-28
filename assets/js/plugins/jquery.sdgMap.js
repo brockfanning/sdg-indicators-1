@@ -1,5 +1,4 @@
 (function($, d3, window, document, undefined) {
-  console.log('hello');
 
   // Create the defaults once
   var pluginName = 'sdgMap',
@@ -8,7 +7,8 @@
       width: 590,
       height: 590,
       nameProperty: 'lad16nm',
-      idProperty: 'lad16cd'
+      idProperty: 'lad16cd',
+      projectionFunc: d3.geoMercator,
     };
 
   function Plugin(element, options) {
@@ -58,7 +58,7 @@
 
         initialiseUI.call(that);
 
-        projection = d3.geoMercator().fitSize([width, height], mapData);
+        projection = that.options.projectionFunc().fitSize([width, height], mapData);
         path = d3.geoPath().projection(projection);
 
         // Draw each geographical area as a path
@@ -237,7 +237,7 @@
       function clicked(d) {
         var x, y, k;
 
-        if(!this.isInScope(d)) {
+        if(!that.isInScope(d)) {
           return;
         }
 
