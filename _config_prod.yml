@@ -6,41 +6,43 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: U.K. Indicators For The Sustainable Development Goals
+title: U.S. Indicators For The Sustainable Development Goals
 description: Data Platform Prototype
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: production
-remotedatabaseurl: "https://sustainabledevelopment-uk.github.io/sdg-data"
+remotedatabaseurl: "http://brock.tips/sdg-data"
 # permalink: /news/:year/:month/:day/:title.html
 
 jekyll_get_data:
   - data: meta
-    json: 'https://sustainabledevelopment-uk.github.io/sdg-data/meta/all.json'
+    json: 'http://brock.tips/sdg-data/meta/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: headlines
-    json: 'https://sustainabledevelopment-uk.github.io/sdg-data/headline/all.json'
+    json: 'http://brock.tips/sdg-data/headline/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: schema
-    json: 'https://sustainabledevelopment-uk.github.io/sdg-data/meta/schema.json'
+    json: 'http://brock.tips/sdg-data/meta/schema.json'
+  - data: translations
+    json: 'http://brock.tips/sdg-translations/translations.json'
 
 analytics:
-  ga_prod: 'UA-108503280-1'
+  ga_prod: ''
 
 ###################################################################################################
 email_contacts:
-  questions: sustainabledevelopment@ons.gov.uk
-  suggestions: sustainabledevelopment@ons.gov.uk
-  functional: sustainabledevelopment@ons.gov.uk
+  questions: FN-OMB-OIRA-SDGs@omb.eop.gov
+  suggestions: FN-OMB-OIRA-SDGs@omb.eop.gov
+  functional: datagov@gsa.gov
 ###################################################################################################
 
 # Github Repo for Data
 repo_name: sdg-data
 branch: develop
-org_name: ONSdigital
+org_name: brockfanning
 
 # Build settings
 markdown: kramdown
@@ -51,8 +53,8 @@ exclude: [vendor, scripts, remotedata]
 # International Support
 # Eg name: Australia and adjective: Australian
 country:
-  name: UK
-  adjective: UK
+  name: US
+  adjective: US
 
 # Pages
 collections:
@@ -67,7 +69,24 @@ collections:
   goals:
     output: true
 
+# The list of languages that are translated. The first one is the default.
+languages:
+  - en
+  - es
+  - fr
+
+# This makes sure that all pages have a language.
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      language: "en"
+
 plugins:
   - jekyll-remote-theme
-    
-remote_theme: mangothecat/sdg-theme
+
+remote_theme: brockfanning/sdg-theme@multilingual
+
+custom_css:
+  - /assets/css/custom.css
