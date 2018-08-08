@@ -12,20 +12,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: production
-remotedatabaseurl: "http://brock.tips/sdg-data"
+remotedatabaseurl: "https://brock-code.github.io/sdg-data"
 # permalink: /news/:year/:month/:day/:title.html
 
 jekyll_get_data:
   - data: meta
-    json: 'http://brock.tips/sdg-data/meta/all.json'
+    json: 'https://brock-code.github.io/sdg-data/meta/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: headlines
-    json: 'http://brock.tips/sdg-data/headline/all.json'
+    json: 'https://brock-code.github.io/sdg-data/headline/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: schema
-    json: 'http://brock.tips/sdg-data/meta/schema.json'
+    json: 'https://brock-code.github.io/sdg-data/meta/schema.json'
   - data: translations
     json: 'http://brock.tips/sdg-translations/translations.json'
 
