@@ -6,10 +6,10 @@ git config --global user.name $GH_NAME
 # Git to use this key, we need to hack the SSH key:
 sed -i -e 's/Host gh-prod/Host gh-prod\n  HostName github.com/g' ~/.ssh/config
 # Now we can use "gh-prod" below to identify the SSH key to use.
-git clone git@gh-prod:$GH_ORG_PROD/sdg-indicators.git out
+git clone git@gh-prod:$GH_ORG_PROD/$GH_ORG_PROD.github.io.git out
 
 cd out
-git checkout gh-pages || git checkout --orphan gh-pages
+git checkout master || git checkout --orphan master
 git rm -rfq .
 cd ..
 
@@ -22,4 +22,4 @@ cd out
 git add -A
 git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
 
-git push origin gh-pages
+git push origin master
