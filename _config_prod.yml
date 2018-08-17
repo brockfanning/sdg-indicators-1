@@ -11,6 +11,7 @@ description: Data Platform Prototype
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
+data_dir_for_edits: data-wide
 environment: production
 remotedatabaseurl: "https://brock-code.github.io/sdg-data"
 # permalink: /news/:year/:month/:day/:title.html
