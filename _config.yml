@@ -11,6 +11,7 @@ description: Data Platform Prototype
 baseurl: "/sdg-indicators-1" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
+data_dir_for_edits: data-wide
 environment: staging
 remotedatabaseurl: "http://brock.tips/sdg-data"
 # permalink: /news/:year/:month/:day/:title.html
