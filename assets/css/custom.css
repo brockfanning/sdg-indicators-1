@@ -2,3 +2,22 @@
 #main-content #infoPanel {
   width: 710px;
 }
+
+.navbar-brand {
+  max-width: 375px;
+}
+
+header {
+  background: #fff;
+  border-bottom: solid 2px #CCC;
+}
+
+.goal-tiles h1 {
+  background-color: #205493;
+  color: white;
+  padding: 25px;
+  margin-top: 0;
+}
+.contrast-high .goal-tiles h1 {
+  background-color: black;
+}
