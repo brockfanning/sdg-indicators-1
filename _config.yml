@@ -80,8 +80,6 @@ menu:
     translation_key: guidance
   - path: /faq
     translation_key: faq
-  - path: /contact
-    translation_key: contact_us
 
 # The list of languages that are translated. The first one is the default.
 languages:
