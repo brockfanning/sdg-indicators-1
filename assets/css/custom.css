@@ -9,15 +9,14 @@
 
 header {
   background: #fff;
+  border-bottom: solid 2px #CCC;
 }
 
-.us-front-heading {
+.us-heading {
   background-color: #205493;
-  color: white;
-  padding: 40px;
-  margin-top: 0;
-  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.contrast-high .us-front-heading {
+.contrast-high .us-heading {
   background-color: black;
 }
