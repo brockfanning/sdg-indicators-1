@@ -70,6 +70,20 @@ collections:
   goals:
     output: true
 
+# Menu
+
+menu:
+  - permalink: /reporting-status
+    translation_key: reporting_status
+  - permalink: /about
+    translation_key: about
+  - permalink: /guidance
+    translation_key: guidance
+  - permalink: /faq
+    translation_key: faq
+  - permalink: mailto:FN-OMB-OIRA-SDGs@umd.eop.gov
+    translation_key: contact_us
+
 # The list of languages that are translated. The first one is the default.
 languages:
   - en
