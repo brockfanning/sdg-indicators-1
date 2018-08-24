@@ -9,15 +9,15 @@
 
 header {
   background: #fff;
-  border-bottom: solid 2px #CCC;
 }
 
-.goal-tiles h1 {
+.us-front-heading {
   background-color: #205493;
   color: white;
-  padding: 25px;
+  padding: 40px;
   margin-top: 0;
+  text-align: center;
 }
-.contrast-high .goal-tiles h1 {
+.contrast-high .us-front-heading {
   background-color: black;
 }
