@@ -3,34 +3,6 @@
       "id": "1",
       "title": "Éliminer la pauvreté sous toutes ses formes et partout dans le monde",
       "indicators": [{
-          "id": "1-5-4",
-          "title": "Proportion de gouvernements locaux qui adoptent et mettent en œuvre des stratégies locales de réduction des risques de catastrophe conformément aux stratégies nationales de réduction des risques de catastrophe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-5-4",
-          "status": "complete"
-        },{
-          "id": "1-4-1",
-          "title": "Proportion de la population vivant dans des ménages ayant accès aux services de base",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-4-1",
-          "status": "notstarted"
-        },{
-          "id": "1-a-2",
-          "title": "Proportion des dépenses publiques totales pour les services essentiels (éducation, santé et protection sociale)",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-a-2",
-          "status": "notstarted"
-        },{
-          "id": "1-3-1",
-          "title": "Proportion de la population couverte par les socles / systèmes de protection sociale, par sexe, distinguant les enfants, les chômeurs, les personnes âgées, les personnes handicapées, les femmes enceintes, les nouveau-nés, les victimes d&#39;accidents du travail et les pauvres et les vulnérables",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-3-1",
-          "status": "complete"
-        },{
           "id": "1-5-2",
           "title": "Pertes économiques directes liées aux catastrophes attribuées aux catastrophes par rapport au produit intérieur brut mondial (PIB)",
           "description": "",
@@ -38,11 +10,11 @@
           "href": "/sdg-indicators-1/fr/1-5-2",
           "status": "complete"
         },{
-          "id": "1-4-2",
-          "title": "Proportion de la population adulte totale ayant des droits fonciers sécurisés sur la terre, avec une documentation légalement reconnue et qui perçoivent leurs droits à la terre comme étant sécurisés, par sexe et par type de tenure",
+          "id": "1-a-1",
+          "title": "Proportion des ressources produites au pays allouées directement par le gouvernement aux programmes de réduction de la pauvreté",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-4-2",
+          "href": "/sdg-indicators-1/fr/1-a-1",
           "status": "notstarted"
         },{
           "id": "1-2-1",
@@ -59,18 +31,11 @@
           "href": "/sdg-indicators-1/fr/1-1-1",
           "status": "notstarted"
         },{
-          "id": "1-a-1",
-          "title": "Proportion des ressources produites au pays allouées directement par le gouvernement aux programmes de réduction de la pauvreté",
+          "id": "1-a-3",
+          "title": "Somme des subventions totales et des entrées non génératrices de dette directement allouées aux programmes de réduction de la pauvreté en proportion du PIB",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-a-1",
-          "status": "notstarted"
-        },{
-          "id": "1-2-2",
-          "title": "Proportion d&#39;hommes, de femmes et d&#39;enfants de tous âges vivant dans la pauvreté dans toutes ses dimensions selon les définitions nationales",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-2-2",
+          "href": "/sdg-indicators-1/fr/1-a-3",
           "status": "notstarted"
         },{
           "id": "1-5-1",
@@ -80,11 +45,39 @@
           "href": "/sdg-indicators-1/fr/1-5-1",
           "status": "complete"
         },{
-          "id": "1-a-3",
-          "title": "Somme des subventions totales et des entrées non génératrices de dette directement allouées aux programmes de réduction de la pauvreté en proportion du PIB",
+          "id": "1-3-1",
+          "title": "Proportion de la population couverte par les socles / systèmes de protection sociale, par sexe, distinguant les enfants, les chômeurs, les personnes âgées, les personnes handicapées, les femmes enceintes, les nouveau-nés, les victimes d&#39;accidents du travail et les pauvres et les vulnérables",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-a-3",
+          "href": "/sdg-indicators-1/fr/1-3-1",
+          "status": "complete"
+        },{
+          "id": "1-4-2",
+          "title": "Proportion de la population adulte totale ayant des droits fonciers sécurisés sur la terre, avec une documentation légalement reconnue et qui perçoivent leurs droits à la terre comme étant sécurisés, par sexe et par type de tenure",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/1-4-2",
+          "status": "notstarted"
+        },{
+          "id": "1-5-4",
+          "title": "Proportion de gouvernements locaux qui adoptent et mettent en œuvre des stratégies locales de réduction des risques de catastrophe conformément aux stratégies nationales de réduction des risques de catastrophe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/1-5-4",
+          "status": "complete"
+        },{
+          "id": "1-b-1",
+          "title": "Proportion des dépenses récurrentes et d&#39;investissement du gouvernement dans des secteurs qui profitent de façon disproportionnée aux femmes, aux groupes pauvres et vulnérables",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/1-b-1",
+          "status": "notstarted"
+        },{
+          "id": "1-4-1",
+          "title": "Proportion de la population vivant dans des ménages ayant accès aux services de base",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/1-4-1",
           "status": "notstarted"
         },{
           "id": "1-5-3",
@@ -94,11 +87,18 @@
           "href": "/sdg-indicators-1/fr/1-5-3",
           "status": "complete"
         },{
-          "id": "1-b-1",
-          "title": "Proportion des dépenses récurrentes et d&#39;investissement du gouvernement dans des secteurs qui profitent de façon disproportionnée aux femmes, aux groupes pauvres et vulnérables",
+          "id": "1-a-2",
+          "title": "Proportion des dépenses publiques totales pour les services essentiels (éducation, santé et protection sociale)",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/1-b-1",
+          "href": "/sdg-indicators-1/fr/1-a-2",
+          "status": "notstarted"
+        },{
+          "id": "1-2-2",
+          "title": "Proportion d&#39;hommes, de femmes et d&#39;enfants de tous âges vivant dans la pauvreté dans toutes ses dimensions selon les définitions nationales",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/1-2-2",
           "status": "notstarted"
         }]
     }
@@ -107,46 +107,18 @@
       "id": "2",
       "title": "Éliminer la faim, assurer la sécurité alimentaire, améliorer la nutrition et promouvoir l’agriculture durable",
       "indicators": [{
-          "id": "2-4-1",
-          "title": "Proportion de la superficie agricole dans une agriculture productive et durable",
+          "id": "2-1-2",
+          "title": "Prévalence de l&#39;insécurité alimentaire modérée ou grave dans la population, basée sur l&#39;échelle d&#39;expérience de l&#39;insécurité alimentaire (FIES)",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-4-1",
-          "status": "notstarted"
+          "href": "/sdg-indicators-1/fr/2-1-2",
+          "status": "complete"
         },{
-          "id": "2-b-2",
-          "title": "Subventions agricoles à l&#39;exportation",
+          "id": "2-a-2",
+          "title": "Flux officiels totaux (aide publique au développement et autres flux officiels) vers le secteur agricole",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-b-2",
-          "status": "notstarted"
-        },{
-          "id": "2-3-1",
-          "title": "Volume de production par unité de travail par classes d&#39;entreprises agricoles / pastorales / forestières",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-3-1",
-          "status": "notstarted"
-        },{
-          "id": "2-a-1",
-          "title": "L&#39;indice d&#39;orientation de l&#39;agriculture pour les dépenses publiques",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-a-1",
-          "status": "notstarted"
-        },{
-          "id": "2-3-2",
-          "title": "Revenu moyen des petits producteurs d&#39;aliments, selon le sexe et le statut indigène",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-3-2",
-          "status": "notstarted"
-        },{
-          "id": "2-1-1",
-          "title": "Prévalence de la sous-alimentation",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-1-1",
+          "href": "/sdg-indicators-1/fr/2-a-2",
           "status": "notstarted"
         },{
           "id": "2-2-2",
@@ -156,11 +128,46 @@
           "href": "/sdg-indicators-1/fr/2-2-2",
           "status": "complete"
         },{
+          "id": "2-a-1",
+          "title": "L&#39;indice d&#39;orientation de l&#39;agriculture pour les dépenses publiques",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/2-a-1",
+          "status": "notstarted"
+        },{
+          "id": "2-2-1",
+          "title": "Prévalence du retard de croissance (taille pour l&#39;âge &lt;-2 écart-type par rapport à la médiane des Normes de croissance de l&#39;enfant de l&#39;Organisation mondiale de la Santé (OMS)) chez les enfants de moins de 5 ans",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/2-2-1",
+          "status": "complete"
+        },{
           "id": "2-c-1",
           "title": "Indicateur des anomalies des prix alimentaires",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/2-c-1",
+          "status": "notstarted"
+        },{
+          "id": "2-3-2",
+          "title": "Revenu moyen des petits producteurs d&#39;aliments, selon le sexe et le statut indigène",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/2-3-2",
+          "status": "notstarted"
+        },{
+          "id": "2-b-2",
+          "title": "Subventions agricoles à l&#39;exportation",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/2-b-2",
+          "status": "notstarted"
+        },{
+          "id": "2-4-1",
+          "title": "Proportion de la superficie agricole dans une agriculture productive et durable",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/2-4-1",
           "status": "notstarted"
         },{
           "id": "2-5-1",
@@ -170,32 +177,25 @@
           "href": "/sdg-indicators-1/fr/2-5-1",
           "status": "notstarted"
         },{
-          "id": "2-a-2",
-          "title": "Flux officiels totaux (aide publique au développement et autres flux officiels) vers le secteur agricole",
+          "id": "2-3-1",
+          "title": "Volume de production par unité de travail par classes d&#39;entreprises agricoles / pastorales / forestières",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-a-2",
+          "href": "/sdg-indicators-1/fr/2-3-1",
           "status": "notstarted"
-        },{
-          "id": "2-1-2",
-          "title": "Prévalence de l&#39;insécurité alimentaire modérée ou grave dans la population, basée sur l&#39;échelle d&#39;expérience de l&#39;insécurité alimentaire (FIES)",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-1-2",
-          "status": "complete"
-        },{
-          "id": "2-2-1",
-          "title": "Prévalence du retard de croissance (taille pour l&#39;âge &lt;-2 écart-type par rapport à la médiane des Normes de croissance de l&#39;enfant de l&#39;Organisation mondiale de la Santé (OMS)) chez les enfants de moins de 5 ans",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/2-2-1",
-          "status": "complete"
         },{
           "id": "2-5-2",
           "title": "Proportion de races locales classées comme étant à risque, non à risque ou à un niveau inconnu de risque d&#39;extinction",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/2-5-2",
+          "status": "notstarted"
+        },{
+          "id": "2-1-1",
+          "title": "Prévalence de la sous-alimentation",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/2-1-1",
           "status": "notstarted"
         }]
     }
@@ -204,89 +204,12 @@
       "id": "3",
       "title": "Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge",
       "indicators": [{
-          "id": "3-c-1",
-          "title": "Densité et distribution des agents de santé",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-c-1",
-          "status": "complete"
-        },{
-          "id": "3-6-1",
-          "title": "Taux de mortalité dû aux accidents de la route",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-6-1",
-          "status": "complete"
-        },{
-          "id": "3-3-5",
-          "title": "Nombre de personnes nécessitant des interventions contre les maladies tropicales négligées",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-3-5",
-          "status": "notstarted"
-        },{
-          "id": "3-7-1",
-          "title": "Proportion de femmes en âge de procréer (âgées de 15 à 49 ans) qui ont besoin de planification familiale satisfaites des méthodes modernes",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-7-1",
-          "status": "complete"
-        },{
-          "id": "3-5-1",
-          "title": "Couverture des interventions thérapeutiques (services pharmacologiques, psychosociaux et de réadaptation et de suivi) pour les troubles liés à l&#39;utilisation de substances",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-5-1",
-          "status": "notstarted"
-        },{
           "id": "3-b-1",
           "title": "Proportion de la population cible couverte par tous les vaccins inclus dans leur programme national",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/3-b-1",
           "status": "notstarted"
-        },{
-          "id": "3-b-2",
-          "title": "Aide publique au développement totale nette pour la recherche médicale et les secteurs de la santé de base",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-b-2",
-          "status": "notstarted"
-        },{
-          "id": "3-8-2",
-          "title": "Proportion de la population ayant d&#39;importantes dépenses de santé des ménages en proportion des dépenses ou des revenus totaux des ménages",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-8-2",
-          "status": "notstarted"
-        },{
-          "id": "3-4-2",
-          "title": "Taux de mortalité par suicide",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-4-2",
-          "status": "complete"
-        },{
-          "id": "3-5-2",
-          "title": "Usage nocif de l&#39;alcool, défini selon le contexte national comme la consommation d&#39;alcool par habitant (15 ans et plus) dans une année civile en litres d&#39;alcool pur",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-5-2",
-          "status": "complete"
-        },{
-          "id": "3-3-4",
-          "title": "Incidence de l&#39;hépatite B par 100 000 habitants",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-3-4",
-          "status": "complete"
-        },{
-          "id": "3-a-1",
-          "title": "Prévalence normalisée selon l&#39;âge du tabagisme chez les personnes de 15 ans et plus",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-a-1",
-          "status": "complete"
         },{
           "id": "3-9-2",
           "title": "Taux de mortalité attribué à l&#39;eau insalubre, à l&#39;insalubrité et au manque d&#39;hygiène (exposition à des services d&#39;eau, d&#39;assainissement et d&#39;hygiène pour tous (EAH) non sécuritaires)",
@@ -295,88 +218,11 @@
           "href": "/sdg-indicators-1/fr/3-9-2",
           "status": "notstarted"
         },{
-          "id": "3-3-3",
-          "title": "Incidence du paludisme pour 1 000 habitants",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-3-3",
-          "status": "complete"
-        },{
-          "id": "3-4-1",
-          "title": "Taux de mortalité attribuable aux maladies cardiovasculaires, au cancer, au diabète ou aux maladies respiratoires chroniques",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-4-1",
-          "status": "complete"
-        },{
-          "id": "3-1-2",
-          "title": "Proportion d&#39;accouchements assistés par du personnel de santé qualifié",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-1-2",
-          "status": "complete"
-        },{
-          "id": "3-b-3",
-          "title": "Proportion d&#39;établissements de santé disposant d&#39;un ensemble de médicaments essentiels pertinents disponibles et abordables sur une base durable",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-b-3",
-          "status": "notstarted"
-        },{
-          "id": "3-1-1",
-          "title": "Ratio de mortalité maternelle",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-1-1",
-          "status": "notstarted"
-        },{
-          "id": "3-8-1",
-          "title": "Couverture des services de santé essentiels (définis comme la couverture moyenne des services essentiels basés sur des interventions traceurs incluant la santé génésique, maternelle, néonatale et infantile, les maladies infectieuses, les maladies non transmissibles et la capacité et l&#39;accès au service parmi la population générale et les plus défavorisées )",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-8-1",
-          "status": "notstarted"
-        },{
-          "id": "3-3-1",
-          "title": "Nombre de nouvelles infections par 1 000 habitants non infectés par le VIH, selon le sexe, l&#39;âge et les populations clés",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-3-1",
-          "status": "complete"
-        },{
-          "id": "3-2-2",
-          "title": "Taux de mortalité néonatale",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-2-2",
-          "status": "complete"
-        },{
           "id": "3-9-3",
           "title": "Taux de mortalité attribué à l&#39;empoisonnement involontaire",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/3-9-3",
-          "status": "complete"
-        },{
-          "id": "3-9-1",
-          "title": "Taux de mortalité attribué à la pollution des ménages et de l&#39;air ambiant",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-9-1",
-          "status": "notstarted"
-        },{
-          "id": "3-3-2",
-          "title": "Incidence de la tuberculose par 100 000 habitants",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-3-2",
-          "status": "complete"
-        },{
-          "id": "3-7-2",
-          "title": "Taux de natalité des adolescentes (âgées de 10 à 14 ans, âgées de 15 à 19 ans) pour 1 000 femmes de ce groupe d&#39;âge",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/3-7-2",
           "status": "complete"
         },{
           "id": "3-2-1",
@@ -392,6 +238,160 @@
           "keywords": "",
           "href": "/sdg-indicators-1/fr/3-d-1",
           "status": "notstarted"
+        },{
+          "id": "3-3-3",
+          "title": "Incidence du paludisme pour 1 000 habitants",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-3-3",
+          "status": "complete"
+        },{
+          "id": "3-b-2",
+          "title": "Aide publique au développement totale nette pour la recherche médicale et les secteurs de la santé de base",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-b-2",
+          "status": "notstarted"
+        },{
+          "id": "3-3-4",
+          "title": "Incidence de l&#39;hépatite B par 100 000 habitants",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-3-4",
+          "status": "complete"
+        },{
+          "id": "3-1-1",
+          "title": "Ratio de mortalité maternelle",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-1-1",
+          "status": "notstarted"
+        },{
+          "id": "3-3-2",
+          "title": "Incidence de la tuberculose par 100 000 habitants",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-3-2",
+          "status": "complete"
+        },{
+          "id": "3-7-1",
+          "title": "Proportion de femmes en âge de procréer (âgées de 15 à 49 ans) qui ont besoin de planification familiale satisfaites des méthodes modernes",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-7-1",
+          "status": "complete"
+        },{
+          "id": "3-3-5",
+          "title": "Nombre de personnes nécessitant des interventions contre les maladies tropicales négligées",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-3-5",
+          "status": "notstarted"
+        },{
+          "id": "3-4-2",
+          "title": "Taux de mortalité par suicide",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-4-2",
+          "status": "complete"
+        },{
+          "id": "3-a-1",
+          "title": "Prévalence normalisée selon l&#39;âge du tabagisme chez les personnes de 15 ans et plus",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-a-1",
+          "status": "complete"
+        },{
+          "id": "3-8-2",
+          "title": "Proportion de la population ayant d&#39;importantes dépenses de santé des ménages en proportion des dépenses ou des revenus totaux des ménages",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-8-2",
+          "status": "notstarted"
+        },{
+          "id": "3-b-3",
+          "title": "Proportion d&#39;établissements de santé disposant d&#39;un ensemble de médicaments essentiels pertinents disponibles et abordables sur une base durable",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-b-3",
+          "status": "notstarted"
+        },{
+          "id": "3-8-1",
+          "title": "Couverture des services de santé essentiels (définis comme la couverture moyenne des services essentiels basés sur des interventions traceurs incluant la santé génésique, maternelle, néonatale et infantile, les maladies infectieuses, les maladies non transmissibles et la capacité et l&#39;accès au service parmi la population générale et les plus défavorisées )",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-8-1",
+          "status": "notstarted"
+        },{
+          "id": "3-5-1",
+          "title": "Couverture des interventions thérapeutiques (services pharmacologiques, psychosociaux et de réadaptation et de suivi) pour les troubles liés à l&#39;utilisation de substances",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-5-1",
+          "status": "notstarted"
+        },{
+          "id": "3-5-2",
+          "title": "Usage nocif de l&#39;alcool, défini selon le contexte national comme la consommation d&#39;alcool par habitant (15 ans et plus) dans une année civile en litres d&#39;alcool pur",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-5-2",
+          "status": "complete"
+        },{
+          "id": "3-4-1",
+          "title": "Taux de mortalité attribuable aux maladies cardiovasculaires, au cancer, au diabète ou aux maladies respiratoires chroniques",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-4-1",
+          "status": "complete"
+        },{
+          "id": "3-c-1",
+          "title": "Densité et distribution des agents de santé",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-c-1",
+          "status": "complete"
+        },{
+          "id": "3-6-1",
+          "title": "Taux de mortalité dû aux accidents de la route",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-6-1",
+          "status": "complete"
+        },{
+          "id": "3-2-2",
+          "title": "Taux de mortalité néonatale",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-2-2",
+          "status": "complete"
+        },{
+          "id": "3-7-2",
+          "title": "Taux de natalité des adolescentes (âgées de 10 à 14 ans, âgées de 15 à 19 ans) pour 1 000 femmes de ce groupe d&#39;âge",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-7-2",
+          "status": "complete"
+        },{
+          "id": "3-9-1",
+          "title": "Taux de mortalité attribué à la pollution des ménages et de l&#39;air ambiant",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-9-1",
+          "status": "notstarted"
+        },{
+          "id": "3-1-2",
+          "title": "Proportion d&#39;accouchements assistés par du personnel de santé qualifié",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-1-2",
+          "status": "complete"
+        },{
+          "id": "3-3-1",
+          "title": "Nombre de nouvelles infections par 1 000 habitants non infectés par le VIH, selon le sexe, l&#39;âge et les populations clés",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/3-3-1",
+          "status": "complete"
         }]
     }
   },{
@@ -399,67 +399,11 @@
       "id": "4",
       "title": "Assurer à tous une éducation équitable, inclusive et de qualité et des possibilités d’apprentissage tout au long de la vie",
       "indicators": [{
-          "id": "4-2-1",
-          "title": "Proportion d&#39;enfants de moins de 5 ans en voie de développement sur le plan de la santé, de l&#39;apprentissage et du bien-être psychosocial, selon le sexe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-2-1",
-          "status": "complete"
-        },{
           "id": "4-1-1",
           "title": "Proportion d&#39;enfants et de jeunes: a) aux deuxième et troisième degrés; (b) à la fin du primaire; et (c) à la fin du premier cycle du secondaire, atteindre au moins un niveau de compétence minimum en (i) lecture et (ii) en mathématiques, par sexe",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/4-1-1",
-          "status": "complete"
-        },{
-          "id": "4-2-2",
-          "title": "Taux de participation à l&#39;apprentissage organisé (un an avant l&#39;âge officiel d&#39;entrée dans le primaire), par sexe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-2-2",
-          "status": "complete"
-        },{
-          "id": "4-4-1",
-          "title": "Proportion de jeunes et d&#39;adultes ayant des compétences en technologies de l&#39;information et des communications (TIC), selon le type de compétence",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-4-1",
-          "status": "complete"
-        },{
-          "id": "4-6-1",
-          "title": "Proportion de la population dans un groupe d&#39;âge donné atteignant au moins un niveau fixe de compétences en alphabétisation fonctionnelle (a) et en calcul (b), par sexe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-6-1",
-          "status": "complete"
-        },{
-          "id": "4-b-1",
-          "title": "Volume des flux d&#39;aide publique au développement pour les bourses par secteur et type d&#39;étude",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-b-1",
-          "status": "complete"
-        },{
-          "id": "4-3-1",
-          "title": "Taux de participation des jeunes et des adultes à l&#39;éducation et à la formation formelles et non formelles au cours des 12 derniers mois, par sexe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-3-1",
-          "status": "complete"
-        },{
-          "id": "4-7-1",
-          "title": "Mesure dans laquelle (i) l&#39;éducation à la citoyenneté mondiale et (ii) l&#39;éducation au développement durable, y compris l&#39;égalité des sexes et les droits humains, sont intégrés à tous les niveaux dans: (a) les politiques éducatives nationales, (b) les curricula, (d) évaluation des élèves",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-7-1",
-          "status": "complete"
-        },{
-          "id": "4-5-1",
-          "title": "Indices de parité (femmes / hommes, ruraux / urbains, quintile inférieur / supérieur et autres tels que statut d&#39;handicap, peuples autochtones et conflits), pour tous les indicateurs de l&#39;éducation sur cette liste qui peuvent être désagrégés",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/4-5-1",
           "status": "complete"
         },{
           "id": "4-c-1",
@@ -475,6 +419,62 @@
           "keywords": "",
           "href": "/sdg-indicators-1/fr/4-a-1",
           "status": "complete"
+        },{
+          "id": "4-3-1",
+          "title": "Taux de participation des jeunes et des adultes à l&#39;éducation et à la formation formelles et non formelles au cours des 12 derniers mois, par sexe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-3-1",
+          "status": "complete"
+        },{
+          "id": "4-4-1",
+          "title": "Proportion de jeunes et d&#39;adultes ayant des compétences en technologies de l&#39;information et des communications (TIC), selon le type de compétence",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-4-1",
+          "status": "complete"
+        },{
+          "id": "4-2-1",
+          "title": "Proportion d&#39;enfants de moins de 5 ans en voie de développement sur le plan de la santé, de l&#39;apprentissage et du bien-être psychosocial, selon le sexe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-2-1",
+          "status": "complete"
+        },{
+          "id": "4-5-1",
+          "title": "Indices de parité (femmes / hommes, ruraux / urbains, quintile inférieur / supérieur et autres tels que statut d&#39;handicap, peuples autochtones et conflits), pour tous les indicateurs de l&#39;éducation sur cette liste qui peuvent être désagrégés",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-5-1",
+          "status": "complete"
+        },{
+          "id": "4-6-1",
+          "title": "Proportion de la population dans un groupe d&#39;âge donné atteignant au moins un niveau fixe de compétences en alphabétisation fonctionnelle (a) et en calcul (b), par sexe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-6-1",
+          "status": "complete"
+        },{
+          "id": "4-7-1",
+          "title": "Mesure dans laquelle (i) l&#39;éducation à la citoyenneté mondiale et (ii) l&#39;éducation au développement durable, y compris l&#39;égalité des sexes et les droits humains, sont intégrés à tous les niveaux dans: (a) les politiques éducatives nationales, (b) les curricula, (d) évaluation des élèves",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-7-1",
+          "status": "complete"
+        },{
+          "id": "4-2-2",
+          "title": "Taux de participation à l&#39;apprentissage organisé (un an avant l&#39;âge officiel d&#39;entrée dans le primaire), par sexe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-2-2",
+          "status": "complete"
+        },{
+          "id": "4-b-1",
+          "title": "Volume des flux d&#39;aide publique au développement pour les bourses par secteur et type d&#39;étude",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/4-b-1",
+          "status": "complete"
         }]
     }
   },{
@@ -482,25 +482,25 @@
       "id": "5",
       "title": "Parvenir à l’égalité des sexes et autonomiser toutes les femmes et les filles",
       "indicators": [{
-          "id": "5-4-1",
-          "title": "Proportion du temps consacré au travail domestique et de soins non rémunéré, selon le sexe, l&#39;âge et le lieu",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-4-1",
-          "status": "complete"
-        },{
-          "id": "5-6-1",
-          "title": "Proportion de femmes âgées de 15 à 49 ans qui prennent leurs propres décisions éclairées en ce qui concerne les relations sexuelles, l&#39;utilisation de la contraception et les soins de santé reproductive",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-6-1",
-          "status": "notstarted"
-        },{
           "id": "5-3-1",
           "title": "Proportion de femmes âgées de 20 à 24 ans qui étaient mariées ou en union avant l&#39;âge de 15 ans et avant l&#39;âge de 18 ans",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/5-3-1",
+          "status": "notstarted"
+        },{
+          "id": "5-5-1",
+          "title": "Proportion de sièges occupés par des femmes dans (a) les parlements nationaux et (b) les gouvernements locaux",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/5-5-1",
+          "status": "complete"
+        },{
+          "id": "5-a-2",
+          "title": "Proportion de pays où le cadre juridique (y compris le droit coutumier) garantit l&#39;égalité des droits des femmes à la propriété et / ou au contrôle foncier",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/5-a-2",
           "status": "notstarted"
         },{
           "id": "5-3-2",
@@ -517,18 +517,18 @@
           "href": "/sdg-indicators-1/fr/5-5-2",
           "status": "complete"
         },{
-          "id": "5-b-1",
-          "title": "Proportion de personnes possédant un téléphone mobile, selon le sexe",
+          "id": "5-2-1",
+          "title": "Proportion de femmes et de filles de 15 ans et plus ayant déjà été en couple victimes de violences physiques, sexuelles ou psychologiques d&#39;un partenaire intime ou d&#39;un ex-partenaire au cours des 12 derniers mois, selon la forme de violence et l&#39;âge",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-b-1",
+          "href": "/sdg-indicators-1/fr/5-2-1",
           "status": "complete"
         },{
-          "id": "5-a-2",
-          "title": "Proportion de pays où le cadre juridique (y compris le droit coutumier) garantit l&#39;égalité des droits des femmes à la propriété et / ou au contrôle foncier",
+          "id": "5-6-1",
+          "title": "Proportion de femmes âgées de 15 à 49 ans qui prennent leurs propres décisions éclairées en ce qui concerne les relations sexuelles, l&#39;utilisation de la contraception et les soins de santé reproductive",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-a-2",
+          "href": "/sdg-indicators-1/fr/5-6-1",
           "status": "notstarted"
         },{
           "id": "5-c-1",
@@ -538,25 +538,25 @@
           "href": "/sdg-indicators-1/fr/5-c-1",
           "status": "notstarted"
         },{
+          "id": "5-b-1",
+          "title": "Proportion de personnes possédant un téléphone mobile, selon le sexe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/5-b-1",
+          "status": "complete"
+        },{
+          "id": "5-4-1",
+          "title": "Proportion du temps consacré au travail domestique et de soins non rémunéré, selon le sexe, l&#39;âge et le lieu",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/5-4-1",
+          "status": "complete"
+        },{
           "id": "5-6-2",
           "title": "Nombre de pays dotés de lois et de règlements garantissant un accès égal et complet aux femmes et aux hommes âgés de 15 ans et plus aux soins de santé sexuelle et reproductive, à l&#39;information et à l&#39;éducation",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/5-6-2",
-          "status": "notstarted"
-        },{
-          "id": "5-a-1",
-          "title": "a) Proportion de la population agricole totale possédant des droits de propriété ou des droits garantis sur des terres agricoles, par sexe; et (b) la part des femmes parmi les propriétaires ou les détenteurs de droits sur les terres agricoles, type de tenure",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-a-1",
-          "status": "notstarted"
-        },{
-          "id": "5-2-2",
-          "title": "Proportion de femmes et de filles âgées de 15 ans et plus victimes de violences sexuelles par des personnes autres qu&#39;un partenaire intime au cours des 12 derniers mois, selon l&#39;âge et le lieu de l&#39;événement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-2-2",
           "status": "notstarted"
         },{
           "id": "5-1-1",
@@ -566,19 +566,19 @@
           "href": "/sdg-indicators-1/fr/5-1-1",
           "status": "notstarted"
         },{
-          "id": "5-5-1",
-          "title": "Proportion de sièges occupés par des femmes dans (a) les parlements nationaux et (b) les gouvernements locaux",
+          "id": "5-2-2",
+          "title": "Proportion de femmes et de filles âgées de 15 ans et plus victimes de violences sexuelles par des personnes autres qu&#39;un partenaire intime au cours des 12 derniers mois, selon l&#39;âge et le lieu de l&#39;événement",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-5-1",
-          "status": "complete"
+          "href": "/sdg-indicators-1/fr/5-2-2",
+          "status": "notstarted"
         },{
-          "id": "5-2-1",
-          "title": "Proportion de femmes et de filles de 15 ans et plus ayant déjà été en couple victimes de violences physiques, sexuelles ou psychologiques d&#39;un partenaire intime ou d&#39;un ex-partenaire au cours des 12 derniers mois, selon la forme de violence et l&#39;âge",
+          "id": "5-a-1",
+          "title": "a) Proportion de la population agricole totale possédant des droits de propriété ou des droits garantis sur des terres agricoles, par sexe; et (b) la part des femmes parmi les propriétaires ou les détenteurs de droits sur les terres agricoles, type de tenure",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/5-2-1",
-          "status": "complete"
+          "href": "/sdg-indicators-1/fr/5-a-1",
+          "status": "notstarted"
         }]
     }
   },{
@@ -586,11 +586,11 @@
       "id": "6",
       "title": "Garantir l’accès de tous à des services d’alimentation en eau et d’assainissement gérés de façon durable",
       "indicators": [{
-          "id": "6-2-1",
-          "title": "Proportion de la population utilisant des services d&#39;assainissement gérés de manière sûre, y compris une installation de lavage des mains avec de l&#39;eau et du savon",
+          "id": "6-a-1",
+          "title": "Montant de l&#39;aide publique au développement liée à l&#39;eau et à l&#39;assainissement qui fait partie d&#39;un plan de dépenses coordonné par le gouvernement",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/6-2-1",
+          "href": "/sdg-indicators-1/fr/6-a-1",
           "status": "notstarted"
         },{
           "id": "6-3-2",
@@ -607,11 +607,39 @@
           "href": "/sdg-indicators-1/fr/6-4-2",
           "status": "notstarted"
         },{
+          "id": "6-6-1",
+          "title": "Changement de l&#39;étendue des écosystèmes liés à l&#39;eau au fil du temps",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/6-6-1",
+          "status": "notstarted"
+        },{
+          "id": "6-2-1",
+          "title": "Proportion de la population utilisant des services d&#39;assainissement gérés de manière sûre, y compris une installation de lavage des mains avec de l&#39;eau et du savon",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/6-2-1",
+          "status": "notstarted"
+        },{
           "id": "6-5-2",
           "title": "Proportion de zone de bassin transfrontière avec un dispositif opérationnel pour la coopération dans le domaine de l&#39;eau",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/6-5-2",
+          "status": "notstarted"
+        },{
+          "id": "6-5-1",
+          "title": "Degré de mise en œuvre de la gestion intégrée des ressources en eau (0-100)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/6-5-1",
+          "status": "complete"
+        },{
+          "id": "6-3-1",
+          "title": "Proportion d&#39;eaux usées traitées en toute sécurité",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/6-3-1",
           "status": "notstarted"
         },{
           "id": "6-b-1",
@@ -628,40 +656,12 @@
           "href": "/sdg-indicators-1/fr/6-4-1",
           "status": "notstarted"
         },{
-          "id": "6-5-1",
-          "title": "Degré de mise en œuvre de la gestion intégrée des ressources en eau (0-100)",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/6-5-1",
-          "status": "complete"
-        },{
-          "id": "6-6-1",
-          "title": "Changement de l&#39;étendue des écosystèmes liés à l&#39;eau au fil du temps",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/6-6-1",
-          "status": "notstarted"
-        },{
           "id": "6-1-1",
           "title": "Proportion de la population utilisant des services d&#39;eau potable gérés de manière sûre",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/6-1-1",
           "status": "complete"
-        },{
-          "id": "6-3-1",
-          "title": "Proportion d&#39;eaux usées traitées en toute sécurité",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/6-3-1",
-          "status": "notstarted"
-        },{
-          "id": "6-a-1",
-          "title": "Montant de l&#39;aide publique au développement liée à l&#39;eau et à l&#39;assainissement qui fait partie d&#39;un plan de dépenses coordonné par le gouvernement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/6-a-1",
-          "status": "notstarted"
         }]
     }
   },{
@@ -669,11 +669,25 @@
       "id": "7",
       "title": "Garantir l’accès de tous à des services énergétiques fiables, durables et modernes, à un coût abordable",
       "indicators": [{
-          "id": "7-b-1",
-          "title": "Investissements dans l&#39;efficacité énergétique en proportion du PIB et montant des investissements étrangers directs dans le transfert financier des infrastructures et de la technologie aux services de développement durable",
+          "id": "7-3-1",
+          "title": "Intensité énergétique mesurée en termes d&#39;énergie primaire et de PIB",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/7-b-1",
+          "href": "/sdg-indicators-1/fr/7-3-1",
+          "status": "complete"
+        },{
+          "id": "7-1-2",
+          "title": "Proportion de la population qui dépend principalement des carburants propres et de la technologie",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/7-1-2",
+          "status": "notstarted"
+        },{
+          "id": "7-a-1",
+          "title": "Flux financiers internationaux vers les pays en développement à l&#39;appui de la recherche-développement sur l&#39;énergie propre et de la production d&#39;énergie renouvelable, y compris dans les systèmes hybrides",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/7-a-1",
           "status": "notstarted"
         },{
           "id": "7-2-1",
@@ -690,25 +704,11 @@
           "href": "/sdg-indicators-1/fr/7-1-1",
           "status": "complete"
         },{
-          "id": "7-1-2",
-          "title": "Proportion de la population qui dépend principalement des carburants propres et de la technologie",
+          "id": "7-b-1",
+          "title": "Investissements dans l&#39;efficacité énergétique en proportion du PIB et montant des investissements étrangers directs dans le transfert financier des infrastructures et de la technologie aux services de développement durable",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/7-1-2",
-          "status": "notstarted"
-        },{
-          "id": "7-3-1",
-          "title": "Intensité énergétique mesurée en termes d&#39;énergie primaire et de PIB",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/7-3-1",
-          "status": "complete"
-        },{
-          "id": "7-a-1",
-          "title": "Flux financiers internationaux vers les pays en développement à l&#39;appui de la recherche-développement sur l&#39;énergie propre et de la production d&#39;énergie renouvelable, y compris dans les systèmes hybrides",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/7-a-1",
+          "href": "/sdg-indicators-1/fr/7-b-1",
           "status": "notstarted"
         }]
     }
@@ -724,12 +724,75 @@
           "href": "/sdg-indicators-1/fr/8-2-1",
           "status": "complete"
         },{
-          "id": "8-10-1",
-          "title": "(a) Nombre de succursales de banques commerciales pour 100 000 adultes et (b) Nombre de guichets automatiques bancaires (GAB) pour 100 000 adultes",
+          "id": "8-9-1",
+          "title": "PIB direct du tourisme en proportion du PIB total et du taux de croissance",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-10-1",
+          "href": "/sdg-indicators-1/fr/8-9-1",
           "status": "complete"
+        },{
+          "id": "8-4-1",
+          "title": "Empreinte matérielle, empreinte matérielle par habitant et empreinte matérielle par PIB",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-4-1",
+          "status": "notstarted"
+        },{
+          "id": "8-4-2",
+          "title": "Consommation de matériaux domestiques, consommation de matériaux domestiques par habitant et consommation de matériaux domestiques par PIB",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-4-2",
+          "status": "complete"
+        },{
+          "id": "8-10-2",
+          "title": "Proportion d&#39;adultes (15 ans et plus) ayant un compte dans une banque ou une autre institution financière ou auprès d&#39;un fournisseur de services monétaires mobiles",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-10-2",
+          "status": "complete"
+        },{
+          "id": "8-a-1",
+          "title": "Engagements et décaissements au titre de l&#39;Aide pour le commerce",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-a-1",
+          "status": "complete"
+        },{
+          "id": "8-8-1",
+          "title": "Taux de fréquence des lésions professionnelles mortelles et non mortelles, selon le sexe et le statut de migrant",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-8-1",
+          "status": "complete"
+        },{
+          "id": "8-9-2",
+          "title": "Proportion d&#39;emplois dans les industries du tourisme durable sur l&#39;ensemble des emplois du tourisme",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-9-2",
+          "status": "complete"
+        },{
+          "id": "8-3-1",
+          "title": "Proportion de l&#39;emploi informel dans l&#39;emploi non agricole, par sexe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-3-1",
+          "status": "notstarted"
+        },{
+          "id": "8-1-1",
+          "title": "Taux de croissance annuel du PIB réel par habitant",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-1-1",
+          "status": "complete"
+        },{
+          "id": "8-b-1",
+          "title": "Existence d&#39;une stratégie nationale élaborée et mise en œuvre pour l&#39;emploi des jeunes, en tant que stratégie distincte ou dans le cadre d&#39;une stratégie nationale pour l&#39;emploi",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/8-b-1",
+          "status": "notstarted"
         },{
           "id": "8-6-1",
           "title": "Proportion de jeunes (âgés de 15 à 24 ans) ne poursuivant ni études, ni emploi, ni formation",
@@ -745,39 +808,18 @@
           "href": "/sdg-indicators-1/fr/8-7-1",
           "status": "notstarted"
         },{
-          "id": "8-1-1",
-          "title": "Taux de croissance annuel du PIB réel par habitant",
+          "id": "8-5-1",
+          "title": "Gains horaires moyens des employés féminins et masculins, selon la profession, l&#39;âge et les personnes handicapées",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-1-1",
+          "href": "/sdg-indicators-1/fr/8-5-1",
           "status": "complete"
         },{
-          "id": "8-9-2",
-          "title": "Proportion d&#39;emplois dans les industries du tourisme durable sur l&#39;ensemble des emplois du tourisme",
+          "id": "8-10-1",
+          "title": "(a) Nombre de succursales de banques commerciales pour 100 000 adultes et (b) Nombre de guichets automatiques bancaires (GAB) pour 100 000 adultes",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-9-2",
-          "status": "complete"
-        },{
-          "id": "8-a-1",
-          "title": "Engagements et décaissements au titre de l&#39;Aide pour le commerce",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-a-1",
-          "status": "complete"
-        },{
-          "id": "8-4-1",
-          "title": "Empreinte matérielle, empreinte matérielle par habitant et empreinte matérielle par PIB",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-4-1",
-          "status": "notstarted"
-        },{
-          "id": "8-10-2",
-          "title": "Proportion d&#39;adultes (15 ans et plus) ayant un compte dans une banque ou une autre institution financière ou auprès d&#39;un fournisseur de services monétaires mobiles",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-10-2",
+          "href": "/sdg-indicators-1/fr/8-10-1",
           "status": "complete"
         },{
           "id": "8-8-2",
@@ -787,53 +829,11 @@
           "href": "/sdg-indicators-1/fr/8-8-2",
           "status": "notstarted"
         },{
-          "id": "8-5-1",
-          "title": "Gains horaires moyens des employés féminins et masculins, selon la profession, l&#39;âge et les personnes handicapées",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-5-1",
-          "status": "complete"
-        },{
           "id": "8-5-2",
           "title": "Taux de chômage, selon le sexe, l&#39;âge et les personnes handicapées",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/8-5-2",
-          "status": "complete"
-        },{
-          "id": "8-b-1",
-          "title": "Existence d&#39;une stratégie nationale élaborée et mise en œuvre pour l&#39;emploi des jeunes, en tant que stratégie distincte ou dans le cadre d&#39;une stratégie nationale pour l&#39;emploi",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-b-1",
-          "status": "notstarted"
-        },{
-          "id": "8-4-2",
-          "title": "Consommation de matériaux domestiques, consommation de matériaux domestiques par habitant et consommation de matériaux domestiques par PIB",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-4-2",
-          "status": "complete"
-        },{
-          "id": "8-3-1",
-          "title": "Proportion de l&#39;emploi informel dans l&#39;emploi non agricole, par sexe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-3-1",
-          "status": "notstarted"
-        },{
-          "id": "8-9-1",
-          "title": "PIB direct du tourisme en proportion du PIB total et du taux de croissance",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-9-1",
-          "status": "complete"
-        },{
-          "id": "8-8-1",
-          "title": "Taux de fréquence des lésions professionnelles mortelles et non mortelles, selon le sexe et le statut de migrant",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/8-8-1",
           "status": "complete"
         }]
     }
@@ -842,12 +842,19 @@
       "id": "9",
       "title": "Bâtir une infrastructure résiliente, promouvoir une industrialisation durable qui profite à tous et encourager l’innovation",
       "indicators": [{
-          "id": "9-4-1",
-          "title": "Émissions de CO2 par unité de valeur ajoutée",
+          "id": "9-3-1",
+          "title": "Proportion des petites industries dans la valeur ajoutée totale de l&#39;industrie",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/9-4-1",
-          "status": "complete"
+          "href": "/sdg-indicators-1/fr/9-3-1",
+          "status": "notstarted"
+        },{
+          "id": "9-3-2",
+          "title": "Proportion de petites industries ayant un prêt ou une ligne de crédit",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/9-3-2",
+          "status": "notstarted"
         },{
           "id": "9-2-2",
           "title": "L&#39;emploi manufacturier en proportion de l&#39;emploi total",
@@ -856,39 +863,11 @@
           "href": "/sdg-indicators-1/fr/9-2-2",
           "status": "complete"
         },{
-          "id": "9-3-1",
-          "title": "Proportion des petites industries dans la valeur ajoutée totale de l&#39;industrie",
+          "id": "9-a-1",
+          "title": "Appui international officiel total (aide publique au développement et autres flux officiels) à l&#39;infrastructure",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/9-3-1",
-          "status": "notstarted"
-        },{
-          "id": "9-5-1",
-          "title": "Dépenses de recherche et développement en proportion du PIB",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/9-5-1",
-          "status": "complete"
-        },{
-          "id": "9-2-1",
-          "title": "Valeur manufacturière ajoutée en proportion du PIB et par habitant",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/9-2-1",
-          "status": "complete"
-        },{
-          "id": "9-1-2",
-          "title": "Volume de passagers et de fret, par mode de transport",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/9-1-2",
-          "status": "complete"
-        },{
-          "id": "9-3-2",
-          "title": "Proportion de petites industries ayant un prêt ou une ligne de crédit",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/9-3-2",
+          "href": "/sdg-indicators-1/fr/9-a-1",
           "status": "notstarted"
         },{
           "id": "9-b-1",
@@ -905,18 +884,39 @@
           "href": "/sdg-indicators-1/fr/9-1-1",
           "status": "notstarted"
         },{
-          "id": "9-a-1",
-          "title": "Appui international officiel total (aide publique au développement et autres flux officiels) à l&#39;infrastructure",
+          "id": "9-2-1",
+          "title": "Valeur manufacturière ajoutée en proportion du PIB et par habitant",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/9-a-1",
-          "status": "notstarted"
+          "href": "/sdg-indicators-1/fr/9-2-1",
+          "status": "complete"
+        },{
+          "id": "9-1-2",
+          "title": "Volume de passagers et de fret, par mode de transport",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/9-1-2",
+          "status": "complete"
         },{
           "id": "9-c-1",
           "title": "Proportion de la population couverte par un réseau mobile, par technologie",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/9-c-1",
+          "status": "complete"
+        },{
+          "id": "9-5-1",
+          "title": "Dépenses de recherche et développement en proportion du PIB",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/9-5-1",
+          "status": "complete"
+        },{
+          "id": "9-4-1",
+          "title": "Émissions de CO2 par unité de valeur ajoutée",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/9-4-1",
           "status": "complete"
         },{
           "id": "9-5-2",
@@ -932,6 +932,55 @@
       "id": "10",
       "title": "Réduire les inégalités dans les pays et d’un pays à l’autre",
       "indicators": [{
+          "id": "10-b-1",
+          "title": "Flux totaux de ressources pour le développement, par pays bénéficiaires et donateurs et type de flux (par exemple, aide publique au développement, investissements étrangers directs et autres flux)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/10-b-1",
+          "status": "notstarted"
+        },{
+          "id": "10-3-1",
+          "title": "Proportion de personnes ayant déclaré se sentir victimes de discrimination ou de harcèlement au cours des 12 derniers mois sur la base d&#39;un motif de discrimination interdit par le droit international des droits de l&#39;homme",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/10-3-1",
+          "status": "notstarted"
+        },{
+          "id": "10-5-1",
+          "title": "Indicateurs de solidité financière",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/10-5-1",
+          "status": "notstarted"
+        },{
+          "id": "10-6-1",
+          "title": "Proportion de membres et de droits de vote des pays en développement dans les organisations internationales",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/10-6-1",
+          "status": "notstarted"
+        },{
+          "id": "10-7-2",
+          "title": "Nombre de pays ayant mis en œuvre des politiques de migration bien gérées",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/10-7-2",
+          "status": "notstarted"
+        },{
+          "id": "10-c-1",
+          "title": "Frais de remise en proportion du montant remis",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/10-c-1",
+          "status": "notstarted"
+        },{
+          "id": "10-7-1",
+          "title": "Coût de recrutement supporté par l&#39;employé en proportion du revenu annuel gagné dans le pays de destination",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/10-7-1",
+          "status": "notstarted"
+        },{
           "id": "10-2-1",
           "title": "Proportion de personnes vivant en dessous de 50% du revenu médian, selon le sexe, l&#39;âge et les personnes handicapées",
           "description": "",
@@ -946,41 +995,6 @@
           "href": "/sdg-indicators-1/fr/10-a-1",
           "status": "notstarted"
         },{
-          "id": "10-3-1",
-          "title": "Proportion de personnes ayant déclaré se sentir victimes de discrimination ou de harcèlement au cours des 12 derniers mois sur la base d&#39;un motif de discrimination interdit par le droit international des droits de l&#39;homme",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/10-3-1",
-          "status": "notstarted"
-        },{
-          "id": "10-6-1",
-          "title": "Proportion de membres et de droits de vote des pays en développement dans les organisations internationales",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/10-6-1",
-          "status": "notstarted"
-        },{
-          "id": "10-7-1",
-          "title": "Coût de recrutement supporté par l&#39;employé en proportion du revenu annuel gagné dans le pays de destination",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/10-7-1",
-          "status": "notstarted"
-        },{
-          "id": "10-5-1",
-          "title": "Indicateurs de solidité financière",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/10-5-1",
-          "status": "notstarted"
-        },{
-          "id": "10-7-2",
-          "title": "Nombre de pays ayant mis en œuvre des politiques de migration bien gérées",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/10-7-2",
-          "status": "notstarted"
-        },{
           "id": "10-4-1",
           "title": "Part du travail dans le PIB, comprenant les salaires et les transferts de protection sociale",
           "description": "",
@@ -988,26 +1002,12 @@
           "href": "/sdg-indicators-1/fr/10-4-1",
           "status": "complete"
         },{
-          "id": "10-c-1",
-          "title": "Frais de remise en proportion du montant remis",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/10-c-1",
-          "status": "notstarted"
-        },{
           "id": "10-1-1",
           "title": "Taux de croissance des dépenses des ménages ou du revenu par habitant parmi les 40% les plus pauvres de la population et la population totale",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/10-1-1",
           "status": "complete"
-        },{
-          "id": "10-b-1",
-          "title": "Flux totaux de ressources pour le développement, par pays bénéficiaires et donateurs et type de flux (par exemple, aide publique au développement, investissements étrangers directs et autres flux)",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/10-b-1",
-          "status": "notstarted"
         }]
     }
   },{
@@ -1022,32 +1022,18 @@
           "href": "/sdg-indicators-1/fr/11-3-2",
           "status": "notstarted"
         },{
-          "id": "11-a-1",
-          "title": "Proportion de la population vivant dans des villes qui mettent en œuvre des plans de développement urbain et régional intégrant les projections démographiques et les besoins en ressources, selon la taille de la ville",
+          "id": "11-6-1",
+          "title": "Proportion des déchets solides urbains collectés régulièrement et avec rejet final adéquat des déchets urbains solides générés, par villes",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-a-1",
+          "href": "/sdg-indicators-1/fr/11-6-1",
           "status": "notstarted"
         },{
-          "id": "11-c-1",
-          "title": "Proportion de l&#39;aide financière aux pays les moins avancés allouée à la construction et à la modernisation de bâtiments durables, résilients et économe en ressources utilisant des matériaux locaux",
+          "id": "11-b-1",
+          "title": "Nombre de pays qui adoptent et mettent en œuvre des stratégies nationales de réduction des risques de catastrophe conformément au Cadre de Sendai pour la réduction des risques de catastrophe 2015-2030",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-c-1",
-          "status": "notstarted"
-        },{
-          "id": "11-1-1",
-          "title": "Proportion de la population urbaine vivant dans des taudis, des quartiers informels ou des logements inadéquats",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-1-1",
-          "status": "complete"
-        },{
-          "id": "11-b-2",
-          "title": "Proportion de gouvernements locaux qui adoptent et mettent en œuvre des stratégies locales de réduction des risques de catastrophe conformément aux stratégies nationales de réduction des risques de catastrophe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-b-2",
+          "href": "/sdg-indicators-1/fr/11-b-1",
           "status": "complete"
         },{
           "id": "11-2-1",
@@ -1057,12 +1043,54 @@
           "href": "/sdg-indicators-1/fr/11-2-1",
           "status": "notstarted"
         },{
-          "id": "11-6-1",
-          "title": "Proportion des déchets solides urbains collectés régulièrement et avec rejet final adéquat des déchets urbains solides générés, par villes",
+          "id": "11-7-2",
+          "title": "Proportion de personnes victimes de harcèlement physique ou sexuel, selon le sexe, l&#39;âge, le statut d&#39;invalidité et le lieu de l&#39;événement, au cours des 12 derniers mois",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-6-1",
+          "href": "/sdg-indicators-1/fr/11-7-2",
           "status": "notstarted"
+        },{
+          "id": "11-1-1",
+          "title": "Proportion de la population urbaine vivant dans des taudis, des quartiers informels ou des logements inadéquats",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/11-1-1",
+          "status": "complete"
+        },{
+          "id": "11-c-1",
+          "title": "Proportion de l&#39;aide financière aux pays les moins avancés allouée à la construction et à la modernisation de bâtiments durables, résilients et économe en ressources utilisant des matériaux locaux",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/11-c-1",
+          "status": "notstarted"
+        },{
+          "id": "11-7-1",
+          "title": "Part moyenne de l&#39;agglomération des villes qui est un espace ouvert à l&#39;usage du public pour tous, selon le sexe, l&#39;âge et les personnes handicapées",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/11-7-1",
+          "status": "notstarted"
+        },{
+          "id": "11-5-1",
+          "title": "Nombre de décès, de personnes disparues et de personnes directement affectées par les catastrophes pour 100 000 habitants",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/11-5-1",
+          "status": "complete"
+        },{
+          "id": "11-b-2",
+          "title": "Proportion de gouvernements locaux qui adoptent et mettent en œuvre des stratégies locales de réduction des risques de catastrophe conformément aux stratégies nationales de réduction des risques de catastrophe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/11-b-2",
+          "status": "complete"
+        },{
+          "id": "11-5-2",
+          "title": "Pertes économiques directes par rapport au PIB mondial, dommages aux infrastructures critiques et nombre de perturbations des services de base attribuées aux catastrophes",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/11-5-2",
+          "status": "complete"
         },{
           "id": "11-4-1",
           "title": "Dépenses totales (publiques et privées) consacrées à la préservation, la protection et la conservation de tout le patrimoine culturel et naturel, par type de patrimoine (désignation culturelle, naturelle, mixte et du patrimoine mondial), niveau de gouvernement (national, régional et local / municipal), type de dépense (dépenses de fonctionnement / investissement) et type de financement privé (dons en nature, secteur privé sans but lucratif et parrainage)",
@@ -1078,46 +1106,18 @@
           "href": "/sdg-indicators-1/fr/11-6-2",
           "status": "complete"
         },{
-          "id": "11-5-1",
-          "title": "Nombre de décès, de personnes disparues et de personnes directement affectées par les catastrophes pour 100 000 habitants",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-5-1",
-          "status": "complete"
-        },{
-          "id": "11-5-2",
-          "title": "Pertes économiques directes par rapport au PIB mondial, dommages aux infrastructures critiques et nombre de perturbations des services de base attribuées aux catastrophes",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-5-2",
-          "status": "complete"
-        },{
-          "id": "11-b-1",
-          "title": "Nombre de pays qui adoptent et mettent en œuvre des stratégies nationales de réduction des risques de catastrophe conformément au Cadre de Sendai pour la réduction des risques de catastrophe 2015-2030",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-b-1",
-          "status": "complete"
-        },{
-          "id": "11-7-2",
-          "title": "Proportion de personnes victimes de harcèlement physique ou sexuel, selon le sexe, l&#39;âge, le statut d&#39;invalidité et le lieu de l&#39;événement, au cours des 12 derniers mois",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-7-2",
-          "status": "notstarted"
-        },{
-          "id": "11-7-1",
-          "title": "Part moyenne de l&#39;agglomération des villes qui est un espace ouvert à l&#39;usage du public pour tous, selon le sexe, l&#39;âge et les personnes handicapées",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/11-7-1",
-          "status": "notstarted"
-        },{
           "id": "11-3-1",
           "title": "Rapport entre le taux de consommation des terres et le taux de croissance de la population",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/11-3-1",
+          "status": "notstarted"
+        },{
+          "id": "11-a-1",
+          "title": "Proportion de la population vivant dans des villes qui mettent en œuvre des plans de développement urbain et régional intégrant les projections démographiques et les besoins en ressources, selon la taille de la ville",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/11-a-1",
           "status": "notstarted"
         }]
     }
@@ -1126,67 +1126,11 @@
       "id": "12",
       "title": "Établir des modes de consommation et de production durables",
       "indicators": [{
-          "id": "12-2-2",
-          "title": "Consommation de matériaux domestiques, consommation de matériaux domestiques par habitant et consommation de matériaux domestiques par PIB",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-2-2",
-          "status": "complete"
-        },{
-          "id": "12-4-2",
-          "title": "Déchets dangereux générés par habitant et proportion de déchets dangereux traités, par type de traitement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-4-2",
-          "status": "notstarted"
-        },{
-          "id": "12-4-1",
-          "title": "Nombre de parties à des accords multilatéraux sur l&#39;environnement internationaux sur les déchets dangereux et autres produits chimiques qui respectent leurs engagements et obligations en matière de transmission d&#39;informations, comme requis par chaque accord pertinent",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-4-1",
-          "status": "complete"
-        },{
-          "id": "12-5-1",
-          "title": "Taux de recyclage national, tonnes de matériaux recyclés",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-5-1",
-          "status": "inprogress"
-        },{
-          "id": "12-7-1",
-          "title": "Nombre de pays mettant en œuvre des politiques et des plans d&#39;action pour des marchés publics durables",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-7-1",
-          "status": "notstarted"
-        },{
           "id": "12-6-1",
           "title": "Nombre d&#39;entreprises publiant des rapports de développement durable",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/12-6-1",
-          "status": "notstarted"
-        },{
-          "id": "12-b-1",
-          "title": "Nombre de stratégies ou de politiques de tourisme durable et de plans d&#39;action mis en œuvre avec des outils de suivi et d&#39;évaluation convenus",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-b-1",
-          "status": "notstarted"
-        },{
-          "id": "12-c-1",
-          "title": "Montant des subventions aux combustibles fossiles par unité de PIB (production et consommation) et en proportion des dépenses nationales totales en combustibles fossiles",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-c-1",
-          "status": "notstarted"
-        },{
-          "id": "12-2-1",
-          "title": "Empreinte matérielle, empreinte matérielle par habitant et empreinte matérielle par PIB",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/12-2-1",
           "status": "notstarted"
         },{
           "id": "12-a-1",
@@ -1196,11 +1140,46 @@
           "href": "/sdg-indicators-1/fr/12-a-1",
           "status": "notstarted"
         },{
+          "id": "12-7-1",
+          "title": "Nombre de pays mettant en œuvre des politiques et des plans d&#39;action pour des marchés publics durables",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-7-1",
+          "status": "notstarted"
+        },{
+          "id": "12-2-2",
+          "title": "Consommation de matériaux domestiques, consommation de matériaux domestiques par habitant et consommation de matériaux domestiques par PIB",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-2-2",
+          "status": "complete"
+        },{
           "id": "12-8-1",
           "title": "Mesure dans laquelle (i) l&#39;éducation à la citoyenneté mondiale et (ii) l&#39;éducation au développement durable (y compris l&#39;éducation au changement climatique) sont intégrées dans (a) les politiques éducatives nationales (b) les curricula (c) la formation des enseignants et (d)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/12-8-1",
+          "status": "notstarted"
+        },{
+          "id": "12-b-1",
+          "title": "Nombre de stratégies ou de politiques de tourisme durable et de plans d&#39;action mis en œuvre avec des outils de suivi et d&#39;évaluation convenus",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-b-1",
+          "status": "notstarted"
+        },{
+          "id": "12-2-1",
+          "title": "Empreinte matérielle, empreinte matérielle par habitant et empreinte matérielle par PIB",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-2-1",
+          "status": "notstarted"
+        },{
+          "id": "12-4-2",
+          "title": "Déchets dangereux générés par habitant et proportion de déchets dangereux traités, par type de traitement",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-4-2",
           "status": "notstarted"
         },{
           "id": "12-3-1",
@@ -1210,11 +1189,32 @@
           "href": "/sdg-indicators-1/fr/12-3-1",
           "status": "notstarted"
         },{
+          "id": "12-5-1",
+          "title": "Taux de recyclage national, tonnes de matériaux recyclés",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-5-1",
+          "status": "inprogress"
+        },{
+          "id": "12-4-1",
+          "title": "Nombre de parties à des accords multilatéraux sur l&#39;environnement internationaux sur les déchets dangereux et autres produits chimiques qui respectent leurs engagements et obligations en matière de transmission d&#39;informations, comme requis par chaque accord pertinent",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-4-1",
+          "status": "complete"
+        },{
           "id": "12-1-1",
           "title": "Nombre de pays ayant des plans d&#39;action nationaux pour la consommation et la production durables (CPD) ou CPD intégrés en tant que priorité ou objectif dans les politiques nationales",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/12-1-1",
+          "status": "notstarted"
+        },{
+          "id": "12-c-1",
+          "title": "Montant des subventions aux combustibles fossiles par unité de PIB (production et consommation) et en proportion des dépenses nationales totales en combustibles fossiles",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/12-c-1",
           "status": "notstarted"
         }]
     }
@@ -1230,39 +1230,11 @@
           "href": "/sdg-indicators-1/fr/13-b-1",
           "status": "complete"
         },{
-          "id": "13-1-1",
-          "title": "Nombre de décès, de personnes disparues et de personnes directement affectées par les catastrophes pour 100 000 habitants",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/13-1-1",
-          "status": "complete"
-        },{
-          "id": "13-1-3",
-          "title": "Proportion de gouvernements locaux qui adoptent et mettent en œuvre des stratégies locales de réduction des risques de catastrophe conformément aux stratégies nationales de réduction des risques de catastrophe",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/13-1-3",
-          "status": "complete"
-        },{
           "id": "13-3-2",
           "title": "Nombre de pays ayant communiqué le renforcement des capacités institutionnelles, systémiques et individuelles pour mettre en œuvre l&#39;adaptation, l&#39;atténuation et le transfert de technologie, et les actions de développement",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/13-3-2",
-          "status": "complete"
-        },{
-          "id": "13-a-1",
-          "title": "Le montant mobilisé du dollar des États-Unis par an entre 2020 et 2025 est responsable de l&#39;engagement de 100 milliards de dollars",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/13-a-1",
-          "status": "notstarted"
-        },{
-          "id": "13-3-1",
-          "title": "Nombre de pays ayant intégré l&#39;atténuation, l&#39;adaptation, la réduction de l&#39;impact et l&#39;alerte précoce dans les programmes d&#39;enseignement primaire, secondaire et tertiaire",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/13-3-1",
           "status": "complete"
         },{
           "id": "13-2-1",
@@ -1272,12 +1244,40 @@
           "href": "/sdg-indicators-1/fr/13-2-1",
           "status": "complete"
         },{
+          "id": "13-1-1",
+          "title": "Nombre de décès, de personnes disparues et de personnes directement affectées par les catastrophes pour 100 000 habitants",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/13-1-1",
+          "status": "complete"
+        },{
           "id": "13-1-2",
           "title": "Nombre de pays qui adoptent et mettent en œuvre des stratégies nationales de réduction des risques de catastrophe conformément au Cadre de Sendai pour la réduction des risques de catastrophe 2015-2030",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/13-1-2",
           "status": "complete"
+        },{
+          "id": "13-1-3",
+          "title": "Proportion de gouvernements locaux qui adoptent et mettent en œuvre des stratégies locales de réduction des risques de catastrophe conformément aux stratégies nationales de réduction des risques de catastrophe",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/13-1-3",
+          "status": "complete"
+        },{
+          "id": "13-3-1",
+          "title": "Nombre de pays ayant intégré l&#39;atténuation, l&#39;adaptation, la réduction de l&#39;impact et l&#39;alerte précoce dans les programmes d&#39;enseignement primaire, secondaire et tertiaire",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/13-3-1",
+          "status": "complete"
+        },{
+          "id": "13-a-1",
+          "title": "Le montant mobilisé du dollar des États-Unis par an entre 2020 et 2025 est responsable de l&#39;engagement de 100 milliards de dollars",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/13-a-1",
+          "status": "notstarted"
         }]
     }
   },{
@@ -1292,18 +1292,25 @@
           "href": "/sdg-indicators-1/fr/14-7-1",
           "status": "notstarted"
         },{
-          "id": "14-1-1",
-          "title": "Indice d&#39;eutrophisation côtière et densité des débris flottants en plastique",
+          "id": "14-4-1",
+          "title": "Proportion de stocks de poissons dans des limites biologiquement viables",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/14-1-1",
-          "status": "notstarted"
+          "href": "/sdg-indicators-1/fr/14-4-1",
+          "status": "complete"
         },{
           "id": "14-b-1",
           "title": "Progrès réalisés par les pays dans le degré d&#39;application d&#39;un cadre juridique / réglementaire / politique / institutionnel qui reconnaît et protège les droits d&#39;accès à la pêche artisanale",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/14-b-1",
+          "status": "notstarted"
+        },{
+          "id": "14-6-1",
+          "title": "Progrès accomplis par les pays dans le degré de mise en œuvre des instruments internationaux visant à lutter contre la pêche illicite, non déclarée et non réglementée",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/14-6-1",
           "status": "notstarted"
         },{
           "id": "14-c-1",
@@ -1313,20 +1320,6 @@
           "href": "/sdg-indicators-1/fr/14-c-1",
           "status": "notstarted"
         },{
-          "id": "14-3-1",
-          "title": "L&#39;acidité marine moyenne (pH) mesurée à une suite convenue de stations d&#39;échantillonnage représentatives",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/14-3-1",
-          "status": "notstarted"
-        },{
-          "id": "14-2-1",
-          "title": "Proportion de zones économiques exclusives nationales gérées selon des approches écosystémiques",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/14-2-1",
-          "status": "notstarted"
-        },{
           "id": "14-a-1",
           "title": "Proportion du budget total de recherche alloué à la recherche dans le domaine des technologies marines",
           "description": "",
@@ -1334,18 +1327,11 @@
           "href": "/sdg-indicators-1/fr/14-a-1",
           "status": "notstarted"
         },{
-          "id": "14-4-1",
-          "title": "Proportion de stocks de poissons dans des limites biologiquement viables",
+          "id": "14-1-1",
+          "title": "Indice d&#39;eutrophisation côtière et densité des débris flottants en plastique",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/14-4-1",
-          "status": "complete"
-        },{
-          "id": "14-6-1",
-          "title": "Progrès accomplis par les pays dans le degré de mise en œuvre des instruments internationaux visant à lutter contre la pêche illicite, non déclarée et non réglementée",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/14-6-1",
+          "href": "/sdg-indicators-1/fr/14-1-1",
           "status": "notstarted"
         },{
           "id": "14-5-1",
@@ -1354,6 +1340,20 @@
           "keywords": "",
           "href": "/sdg-indicators-1/fr/14-5-1",
           "status": "complete"
+        },{
+          "id": "14-2-1",
+          "title": "Proportion de zones économiques exclusives nationales gérées selon des approches écosystémiques",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/14-2-1",
+          "status": "notstarted"
+        },{
+          "id": "14-3-1",
+          "title": "L&#39;acidité marine moyenne (pH) mesurée à une suite convenue de stations d&#39;échantillonnage représentatives",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/14-3-1",
+          "status": "notstarted"
         }]
     }
   },{
@@ -1362,11 +1362,25 @@
       "title": "Préserver et restaurer les écosystèmes terrestres, en veillant à les exploiter de façon durable, gérer durablement les forêts, lutter contre la désertification, enrayer et inverser le processus de
 dégradation des terres et mettre fin à l’appauvrissement de la biodiversité",
       "indicators": [{
-          "id": "15-2-1",
-          "title": "Progrès vers la gestion durable des forêts",
+          "id": "15-a-1",
+          "title": "Aide publique au développement et dépenses publiques pour la conservation et l&#39;utilisation durable de la biodiversité et des écosystèmes",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-2-1",
+          "href": "/sdg-indicators-1/fr/15-a-1",
+          "status": "notstarted"
+        },{
+          "id": "15-5-1",
+          "title": "Index de la liste rouge",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/15-5-1",
+          "status": "notstarted"
+        },{
+          "id": "15-b-1",
+          "title": "Aide publique au développement et dépenses publiques pour la conservation et l&#39;utilisation durable de la biodiversité et des écosystèmes",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/15-b-1",
           "status": "notstarted"
         },{
           "id": "15-3-1",
@@ -1376,11 +1390,32 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/15-3-1",
           "status": "notstarted"
         },{
-          "id": "15-6-1",
-          "title": "Nombre de pays ayant adopté des cadres législatifs, administratifs et politiques pour assurer un partage juste et équitable des avantages",
+          "id": "15-2-1",
+          "title": "Progrès vers la gestion durable des forêts",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-6-1",
+          "href": "/sdg-indicators-1/fr/15-2-1",
+          "status": "notstarted"
+        },{
+          "id": "15-1-2",
+          "title": "Proportion de sites importants pour la biodiversité terrestre et d&#39;eau douce couverts par des aires protégées, par type d&#39;écosystème",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/15-1-2",
+          "status": "notstarted"
+        },{
+          "id": "15-c-1",
+          "title": "Proportion d&#39;animaux sauvages commercialisés qui ont été braconnés ou trafiqués illicitement",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/15-c-1",
+          "status": "notstarted"
+        },{
+          "id": "15-8-1",
+          "title": "Proportion de pays adoptant une législation nationale pertinente et disposant de ressources adéquates pour la prévention ou le contrôle des espèces exotiques envahissantes",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/15-8-1",
           "status": "notstarted"
         },{
           "id": "15-7-1",
@@ -1397,11 +1432,18 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/15-4-2",
           "status": "notstarted"
         },{
-          "id": "15-8-1",
-          "title": "Proportion de pays adoptant une législation nationale pertinente et disposant de ressources adéquates pour la prévention ou le contrôle des espèces exotiques envahissantes",
+          "id": "15-4-1",
+          "title": "Couverture par les aires protégées de sites importants pour la biodiversité des montagnes",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-8-1",
+          "href": "/sdg-indicators-1/fr/15-4-1",
+          "status": "notstarted"
+        },{
+          "id": "15-9-1",
+          "title": "Progrès vers les objectifs nationaux établis conformément à la cible 2 d&#39;Aichi pour la biodiversité du Plan stratégique pour la diversité biologique 2011-2020",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/15-9-1",
           "status": "notstarted"
         },{
           "id": "15-1-1",
@@ -1411,53 +1453,11 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/15-1-1",
           "status": "complete"
         },{
-          "id": "15-9-1",
-          "title": "Progrès vers les objectifs nationaux établis conformément à la cible 2 d&#39;Aichi pour la biodiversité du Plan stratégique pour la diversité biologique 2011-2020",
+          "id": "15-6-1",
+          "title": "Nombre de pays ayant adopté des cadres législatifs, administratifs et politiques pour assurer un partage juste et équitable des avantages",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-9-1",
-          "status": "notstarted"
-        },{
-          "id": "15-4-1",
-          "title": "Couverture par les aires protégées de sites importants pour la biodiversité des montagnes",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-4-1",
-          "status": "notstarted"
-        },{
-          "id": "15-a-1",
-          "title": "Aide publique au développement et dépenses publiques pour la conservation et l&#39;utilisation durable de la biodiversité et des écosystèmes",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-a-1",
-          "status": "notstarted"
-        },{
-          "id": "15-c-1",
-          "title": "Proportion d&#39;animaux sauvages commercialisés qui ont été braconnés ou trafiqués illicitement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-c-1",
-          "status": "notstarted"
-        },{
-          "id": "15-b-1",
-          "title": "Aide publique au développement et dépenses publiques pour la conservation et l&#39;utilisation durable de la biodiversité et des écosystèmes",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-b-1",
-          "status": "notstarted"
-        },{
-          "id": "15-1-2",
-          "title": "Proportion de sites importants pour la biodiversité terrestre et d&#39;eau douce couverts par des aires protégées, par type d&#39;écosystème",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-1-2",
-          "status": "notstarted"
-        },{
-          "id": "15-5-1",
-          "title": "Index de la liste rouge",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/15-5-1",
+          "href": "/sdg-indicators-1/fr/15-6-1",
           "status": "notstarted"
         }]
     }
@@ -1466,25 +1466,39 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
       "id": "16",
       "title": "Promouvoir l’avènement de sociétés pacifiques et inclusives aux fins du développement durable, assurer l’accès de tous à la justice et mettre en place, à tous les niveaux, des institutions efficaces, responsables et ouvertes à tous",
       "indicators": [{
-          "id": "16-6-2",
-          "title": "Proportion de la population satisfaite de sa dernière expérience de services publics",
+          "id": "16-1-1",
+          "title": "Nombre de victimes d&#39;homicides intentionnels pour 100 000 habitants, selon le sexe et l&#39;âge",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-6-2",
-          "status": "notstarted"
+          "href": "/sdg-indicators-1/fr/16-1-1",
+          "status": "complete"
         },{
-          "id": "16-6-1",
-          "title": "Dépenses publiques primaires en proportion du budget initial approuvé, par secteur (ou par codes budgétaires ou similaires)",
+          "id": "16-3-2",
+          "title": "Détenus non condamnés en proportion de la population carcérale totale",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-6-1",
-          "status": "notstarted"
+          "href": "/sdg-indicators-1/fr/16-3-2",
+          "status": "complete"
         },{
           "id": "16-7-1",
           "title": "Proportions de postes (par sexe, âge, personnes handicapées et groupes de population) dans les institutions publiques (législatures nationales et locales, service public et pouvoir judiciaire) par rapport aux distributions nationales",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators-1/fr/16-7-1",
+          "status": "notstarted"
+        },{
+          "id": "16-4-2",
+          "title": "Proportion d&#39;armes saisies, trouvées ou remises dont l&#39;origine ou le contexte illicite a été retracé ou établi par une autorité compétente conformément aux instruments internationaux",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-4-2",
+          "status": "notstarted"
+        },{
+          "id": "16-8-1",
+          "title": "Proportion de membres et de droits de vote des pays en développement dans les organisations internationales",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-8-1",
           "status": "notstarted"
         },{
           "id": "16-1-3",
@@ -1494,6 +1508,13 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/16-1-3",
           "status": "notstarted"
         },{
+          "id": "16-6-1",
+          "title": "Dépenses publiques primaires en proportion du budget initial approuvé, par secteur (ou par codes budgétaires ou similaires)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-6-1",
+          "status": "notstarted"
+        },{
           "id": "16-7-2",
           "title": "Proportion de la population qui croit que la prise de décision est inclusive et réactive, selon le sexe, l&#39;âge, le handicap et le groupe de population",
           "description": "",
@@ -1501,46 +1522,11 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/16-7-2",
           "status": "notstarted"
         },{
-          "id": "16-2-1",
-          "title": "Proportion d&#39;enfants âgés de 1 à 17 ans ayant subi une punition physique et / ou une agression psychologique de la part d&#39;aidants au cours du dernier mois",
+          "id": "16-10-1",
+          "title": "Nombre de cas vérifiés d&#39;assassinat, d&#39;enlèvement, de disparition forcée, de détention arbitraire et de torture de journalistes, de personnel des médias associés, de syndicalistes et de défenseurs des droits de l&#39;homme au cours des 12 derniers mois",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-2-1",
-          "status": "notstarted"
-        },{
-          "id": "16-5-1",
-          "title": "Proportion de personnes qui ont eu au moins un contact avec un agent public et qui ont versé un pot-de-vin à un agent public, ou ont été invitées à obtenir un pot-de-vin de la part de ces fonctionnaires au cours des 12 derniers mois",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-5-1",
-          "status": "notstarted"
-        },{
-          "id": "16-1-1",
-          "title": "Nombre de victimes d&#39;homicides intentionnels pour 100 000 habitants, selon le sexe et l&#39;âge",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-1-1",
-          "status": "complete"
-        },{
-          "id": "16-2-2",
-          "title": "Nombre de victimes de la traite par 100 000 habitants, selon le sexe, l&#39;âge et la forme d&#39;exploitation",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-2-2",
-          "status": "complete"
-        },{
-          "id": "16-5-2",
-          "title": "Proportion d&#39;entreprises ayant eu au moins un contact avec un agent public et ayant versé un pot-de-vin à un agent public, ou ayant reçu un pot-de-vin de ces fonctionnaires au cours des 12 derniers mois",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-5-2",
-          "status": "notstarted"
-        },{
-          "id": "16-8-1",
-          "title": "Proportion de membres et de droits de vote des pays en développement dans les organisations internationales",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-8-1",
+          "href": "/sdg-indicators-1/fr/16-10-1",
           "status": "notstarted"
         },{
           "id": "16-1-4",
@@ -1564,25 +1550,11 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/16-2-3",
           "status": "notstarted"
         },{
-          "id": "16-b-1",
-          "title": "Proportion de personnes ayant déclaré se sentir victimes de discrimination ou de harcèlement au cours des 12 derniers mois sur la base d&#39;un motif de discrimination interdit par le droit international des droits de l&#39;homme",
+          "id": "16-2-1",
+          "title": "Proportion d&#39;enfants âgés de 1 à 17 ans ayant subi une punition physique et / ou une agression psychologique de la part d&#39;aidants au cours du dernier mois",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-b-1",
-          "status": "notstarted"
-        },{
-          "id": "16-9-1",
-          "title": "Proportion d&#39;enfants de moins de 5 ans dont les naissances ont été enregistrées auprès d&#39;une autorité civile, selon l&#39;âge",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-9-1",
-          "status": "complete"
-        },{
-          "id": "16-10-2",
-          "title": "Nombre de pays qui adoptent et appliquent des garanties constitutionnelles, légales et / ou politiques pour l&#39;accès du public à l&#39;information",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-10-2",
+          "href": "/sdg-indicators-1/fr/16-2-1",
           "status": "notstarted"
         },{
           "id": "16-4-1",
@@ -1592,11 +1564,25 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/16-4-1",
           "status": "notstarted"
         },{
-          "id": "16-a-1",
-          "title": "Existence d&#39;institutions nationales indépendantes des droits de l&#39;homme conformes aux Principes de Paris",
+          "id": "16-6-2",
+          "title": "Proportion de la population satisfaite de sa dernière expérience de services publics",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-a-1",
+          "href": "/sdg-indicators-1/fr/16-6-2",
+          "status": "notstarted"
+        },{
+          "id": "16-2-2",
+          "title": "Nombre de victimes de la traite par 100 000 habitants, selon le sexe, l&#39;âge et la forme d&#39;exploitation",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-2-2",
+          "status": "complete"
+        },{
+          "id": "16-5-1",
+          "title": "Proportion de personnes qui ont eu au moins un contact avec un agent public et qui ont versé un pot-de-vin à un agent public, ou ont été invitées à obtenir un pot-de-vin de la part de ces fonctionnaires au cours des 12 derniers mois",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-5-1",
           "status": "notstarted"
         },{
           "id": "16-3-1",
@@ -1606,25 +1592,39 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/16-3-1",
           "status": "complete"
         },{
-          "id": "16-3-2",
-          "title": "Détenus non condamnés en proportion de la population carcérale totale",
+          "id": "16-10-2",
+          "title": "Nombre de pays qui adoptent et appliquent des garanties constitutionnelles, légales et / ou politiques pour l&#39;accès du public à l&#39;information",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-3-2",
-          "status": "complete"
-        },{
-          "id": "16-10-1",
-          "title": "Nombre de cas vérifiés d&#39;assassinat, d&#39;enlèvement, de disparition forcée, de détention arbitraire et de torture de journalistes, de personnel des médias associés, de syndicalistes et de défenseurs des droits de l&#39;homme au cours des 12 derniers mois",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-10-1",
+          "href": "/sdg-indicators-1/fr/16-10-2",
           "status": "notstarted"
         },{
-          "id": "16-4-2",
-          "title": "Proportion d&#39;armes saisies, trouvées ou remises dont l&#39;origine ou le contexte illicite a été retracé ou établi par une autorité compétente conformément aux instruments internationaux",
+          "id": "16-9-1",
+          "title": "Proportion d&#39;enfants de moins de 5 ans dont les naissances ont été enregistrées auprès d&#39;une autorité civile, selon l&#39;âge",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/16-4-2",
+          "href": "/sdg-indicators-1/fr/16-9-1",
+          "status": "complete"
+        },{
+          "id": "16-a-1",
+          "title": "Existence d&#39;institutions nationales indépendantes des droits de l&#39;homme conformes aux Principes de Paris",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-a-1",
+          "status": "notstarted"
+        },{
+          "id": "16-b-1",
+          "title": "Proportion de personnes ayant déclaré se sentir victimes de discrimination ou de harcèlement au cours des 12 derniers mois sur la base d&#39;un motif de discrimination interdit par le droit international des droits de l&#39;homme",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-b-1",
+          "status": "notstarted"
+        },{
+          "id": "16-5-2",
+          "title": "Proportion d&#39;entreprises ayant eu au moins un contact avec un agent public et ayant versé un pot-de-vin à un agent public, ou ayant reçu un pot-de-vin de ces fonctionnaires au cours des 12 derniers mois",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/16-5-2",
           "status": "notstarted"
         }]
     }
@@ -1633,123 +1633,11 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
       "id": "17",
       "title": "Renforcer les moyens de mettre en œuvre le Partenariat mondial pour le développement durable et le revitaliser",
       "indicators": [{
-          "id": "17-4-1",
-          "title": "Service de la dette en proportion des exportations de biens et services",
+          "id": "17-17-1",
+          "title": "Montant des dollars des États-Unis engagés dans des partenariats public-privé et de la société civile",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-4-1",
-          "status": "complete"
-        },{
-          "id": "17-1-1",
-          "title": "Total des recettes publiques en pourcentage du PIB, par source",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-1-1",
-          "status": "complete"
-        },{
-          "id": "17-9-1",
-          "title": "Valeur monétaire de l&#39;assistance financière et technique (y compris dans le cadre de la coopération Nord-Sud, Sud-Sud et triangulaire) engagée dans les pays en développement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-9-1",
-          "status": "notstarted"
-        },{
-          "id": "17-1-2",
-          "title": "Proportion du budget national financé par les taxes intérieures",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-1-2",
-          "status": "notstarted"
-        },{
-          "id": "17-18-3",
-          "title": "Nombre de pays disposant d&#39;un plan statistique national entièrement financé et en cours de mise en œuvre, par source de financement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-18-3",
-          "status": "complete"
-        },{
-          "id": "17-8-1",
-          "title": "Proportion d&#39;individus utilisant Internet",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-8-1",
-          "status": "complete"
-        },{
-          "id": "17-19-2",
-          "title": "Proportion de pays qui a) ont effectué au moins un recensement de la population et du logement au cours des 10 dernières années et b) qui ont enregistré 100% des naissances et 80% des décès",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-19-2",
-          "status": "complete"
-        },{
-          "id": "17-3-1",
-          "title": "Investissements directs étrangers (IDE), aide publique au développement et coopération Sud-Sud en proportion du budget intérieur total",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-3-1",
-          "status": "notstarted"
-        },{
-          "id": "17-13-1",
-          "title": "Tableau de bord macroéconomique",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-13-1",
-          "status": "complete"
-        },{
-          "id": "17-11-1",
-          "title": "Part des pays en développement et des pays les moins avancés dans les exportations mondiales",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-11-1",
-          "status": "notstarted"
-        },{
-          "id": "17-2-1",
-          "title": "Aide publique au développement nette, totale et pour les pays les moins avancés, en proportion du revenu national brut (RNB) des donateurs du Comité d&#39;aide au développement de l&#39;Organisation de coopération et de développement économiques (OCDE)",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-2-1",
-          "status": "notstarted"
-        },{
-          "id": "17-3-2",
-          "title": "Volume des envois de fonds (en dollars des États-Unis) en proportion du PIB total",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-3-2",
-          "status": "complete"
-        },{
-          "id": "17-19-1",
-          "title": "Valeur en dollars de toutes les ressources mises à disposition pour renforcer la capacité statistique dans les pays en développement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-19-1",
-          "status": "notstarted"
-        },{
-          "id": "17-15-1",
-          "title": "Étendue de l&#39;utilisation des cadres de résultats et des outils de planification propres aux pays par les fournisseurs de coopération au développement",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-15-1",
-          "status": "notstarted"
-        },{
-          "id": "17-18-2",
-          "title": "Nombre de pays disposant d&#39;une législation statistique nationale conforme aux Principes fondamentaux de la statistique officielle",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-18-2",
-          "status": "complete"
-        },{
-          "id": "17-5-1",
-          "title": "Nombre de pays qui adoptent et appliquent des régimes de promotion des investissements pour les pays les moins avancés",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-5-1",
-          "status": "notstarted"
-        },{
-          "id": "17-6-1",
-          "title": "Nombre d&#39;accords et de programmes de coopération scientifique et / ou technologique entre les pays, par type de coopération",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-6-1",
+          "href": "/sdg-indicators-1/fr/17-17-1",
           "status": "notstarted"
         },{
           "id": "17-6-2",
@@ -1766,6 +1654,20 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/17-14-1",
           "status": "notstarted"
         },{
+          "id": "17-7-1",
+          "title": "Montant total du financement approuvé pour les pays en développement afin de promouvoir le développement, le transfert, la diffusion et la diffusion de technologies écologiquement rationnelles",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-7-1",
+          "status": "notstarted"
+        },{
+          "id": "17-5-1",
+          "title": "Nombre de pays qui adoptent et appliquent des régimes de promotion des investissements pour les pays les moins avancés",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-5-1",
+          "status": "notstarted"
+        },{
           "id": "17-10-1",
           "title": "Moyenne tarifaire mondiale pondérée",
           "description": "",
@@ -1773,11 +1675,32 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/17-10-1",
           "status": "notstarted"
         },{
-          "id": "17-17-1",
-          "title": "Montant des dollars des États-Unis engagés dans des partenariats public-privé et de la société civile",
+          "id": "17-4-1",
+          "title": "Service de la dette en proportion des exportations de biens et services",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-17-1",
+          "href": "/sdg-indicators-1/fr/17-4-1",
+          "status": "complete"
+        },{
+          "id": "17-1-1",
+          "title": "Total des recettes publiques en pourcentage du PIB, par source",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-1-1",
+          "status": "complete"
+        },{
+          "id": "17-19-2",
+          "title": "Proportion de pays qui a) ont effectué au moins un recensement de la population et du logement au cours des 10 dernières années et b) qui ont enregistré 100% des naissances et 80% des décès",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-19-2",
+          "status": "complete"
+        },{
+          "id": "17-3-1",
+          "title": "Investissements directs étrangers (IDE), aide publique au développement et coopération Sud-Sud en proportion du budget intérieur total",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-3-1",
           "status": "notstarted"
         },{
           "id": "17-12-1",
@@ -1794,6 +1717,55 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/17-18-1",
           "status": "notstarted"
         },{
+          "id": "17-2-1",
+          "title": "Aide publique au développement nette, totale et pour les pays les moins avancés, en proportion du revenu national brut (RNB) des donateurs du Comité d&#39;aide au développement de l&#39;Organisation de coopération et de développement économiques (OCDE)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-2-1",
+          "status": "notstarted"
+        },{
+          "id": "17-15-1",
+          "title": "Étendue de l&#39;utilisation des cadres de résultats et des outils de planification propres aux pays par les fournisseurs de coopération au développement",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-15-1",
+          "status": "notstarted"
+        },{
+          "id": "17-18-2",
+          "title": "Nombre de pays disposant d&#39;une législation statistique nationale conforme aux Principes fondamentaux de la statistique officielle",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-18-2",
+          "status": "complete"
+        },{
+          "id": "17-8-1",
+          "title": "Proportion d&#39;individus utilisant Internet",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-8-1",
+          "status": "complete"
+        },{
+          "id": "17-9-1",
+          "title": "Valeur monétaire de l&#39;assistance financière et technique (y compris dans le cadre de la coopération Nord-Sud, Sud-Sud et triangulaire) engagée dans les pays en développement",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-9-1",
+          "status": "notstarted"
+        },{
+          "id": "17-18-3",
+          "title": "Nombre de pays disposant d&#39;un plan statistique national entièrement financé et en cours de mise en œuvre, par source de financement",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-18-3",
+          "status": "complete"
+        },{
+          "id": "17-19-1",
+          "title": "Valeur en dollars de toutes les ressources mises à disposition pour renforcer la capacité statistique dans les pays en développement",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-19-1",
+          "status": "notstarted"
+        },{
           "id": "17-16-1",
           "title": "Nombre de pays faisant état de progrès dans les cadres de suivi de l&#39;efficacité du développement multipartite qui soutiennent la réalisation des objectifs de développement durable",
           "description": "",
@@ -1801,12 +1773,40 @@ dégradation des terres et mettre fin à l’appauvrissement de la biodiversité
           "href": "/sdg-indicators-1/fr/17-16-1",
           "status": "notstarted"
         },{
-          "id": "17-7-1",
-          "title": "Montant total du financement approuvé pour les pays en développement afin de promouvoir le développement, le transfert, la diffusion et la diffusion de technologies écologiquement rationnelles",
+          "id": "17-3-2",
+          "title": "Volume des envois de fonds (en dollars des États-Unis) en proportion du PIB total",
           "description": "",
           "keywords": "",
-          "href": "/sdg-indicators-1/fr/17-7-1",
+          "href": "/sdg-indicators-1/fr/17-3-2",
+          "status": "complete"
+        },{
+          "id": "17-11-1",
+          "title": "Part des pays en développement et des pays les moins avancés dans les exportations mondiales",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-11-1",
           "status": "notstarted"
+        },{
+          "id": "17-1-2",
+          "title": "Proportion du budget national financé par les taxes intérieures",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-1-2",
+          "status": "notstarted"
+        },{
+          "id": "17-6-1",
+          "title": "Nombre d&#39;accords et de programmes de coopération scientifique et / ou technologique entre les pays, par type de coopération",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-6-1",
+          "status": "notstarted"
+        },{
+          "id": "17-13-1",
+          "title": "Tableau de bord macroéconomique",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators-1/fr/17-13-1",
+          "status": "complete"
         }]
     }
   }]
