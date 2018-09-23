@@ -32,6 +32,9 @@ jobs:
       - attach_workspace:
           at: /tmp/build
       - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
           name: Deploy to S3
           command: aws s3 sync --acl public-read --sse --delete /tmp/build/_site s3://www.my-sdg-nrp.org
   build_staging:
