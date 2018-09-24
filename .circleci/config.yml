@@ -1,7 +1,7 @@
 # Python CircleCI 2.0 configuration file
 version: 2
 jobs:
-  build_prod:
+  deploy_prod:
     docker:
       - image: circleci/ruby:2.5.1
     working_directory: ~/repo
@@ -19,25 +19,14 @@ jobs:
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build --config _config_prod.yml
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - _site
-  deploy_prod:
-    docker:
-      - image: circleci/python:3.6.1
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - attach_workspace:
-          at: /tmp/build
+      - add_ssh_keys:
+          fingerprints:
+            # Replace this with the fingerprint for gh-stg.
+            - "31:d1:7d:9e:b4:78:3d:c0:ac:66:71:03:11:02:47:0c"
       - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync --acl public-read --sse --delete /tmp/build/_site s3://www.my-sdg-nrp.org
-  build_staging:
+          name: Deploy to Github
+          command: bash scripts/deploy/circleci/deploy_prod.sh
+  deploy_staging:
     docker:
       - image: circleci/ruby:2.5.1
     working_directory: ~/repo
@@ -55,18 +44,6 @@ jobs:
       - run:
           name: Build the Jekyll site
           command: bundle exec jekyll build
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - _site
-  deploy_staging:
-    docker:
-      - image: circleci/ruby:2.5.1
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - attach_workspace:
-          at: /tmp/build
       - add_ssh_keys:
           fingerprints:
             # Replace this with the fingerprint for gh-stg.
@@ -78,23 +55,11 @@ workflows:
   version: 2
   deploy:
     jobs:
-      - build_prod:
-          filters:
-            branches:
-              only: master
       - deploy_prod:
-          requires:
-            - build_prod
           filters:
             branches:
               only: master
-      - build_staging:
-          filters:
-            branches:
-              only: develop
       - deploy_staging:
-          requires:
-            - build_staging
           filters:
             branches:
               only: develop
@@ -106,5 +71,4 @@ workflows:
             branches:
               only: develop
     jobs:
-      - build_staging
       - deploy_staging
