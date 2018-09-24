@@ -21,8 +21,8 @@ jobs:
           command: bundle exec jekyll build --config _config_prod.yml
       - add_ssh_keys:
           fingerprints:
-            # Replace this with the fingerprint for gh-prod.
-            - "9e:47:8e:0e:f1:51:5a:70:9f:6c:09:fd:e1:a2:ba:da"
+            # Replace this with the fingerprint for gh-stg.
+            - "31:d1:7d:9e:b4:78:3d:c0:ac:66:71:03:11:02:47:0c"
       - run:
           name: Deploy to Github
           command: bash scripts/deploy/circleci/deploy_prod.sh
