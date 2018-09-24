@@ -39,8 +39,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/assets/css/default.css?v=20180804013236">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/assets/css/custom.css?v=20180804013236"></head>
+        <link rel="stylesheet" href="/assets/css/default.css?v=20180924212647">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/assets/css/custom.css?v=20180924212647"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -63,8 +63,7 @@
     </a>
 
   <div class='hidden visible-xs float-right'>
-    <ul id='accessibility-nav' class='contrast-switcher'></ul>
-    <div class="language-toggle-mobile">
+    <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
       <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
   <span class="language-toggle-text">English</span>
@@ -73,8 +72,7 @@
 </a>
 <ul class="language-options language-toggle"><li><a href="/es/faq/">Español</a></li><li><a href="/fr/faq/">Français</a></li></ul>
 
-    </div>
-  </div>
+    </div></div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
@@ -83,29 +81,15 @@
         <li><span data-target="search">Search</span></li>
       </ul>
 
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu">
-        <li class="nav-link"
-          >
-          <a href="/">Goals</a>
-        </li>
-        <li class="nav-link" >
-          <a href="/reporting-status">Reporting Status</a>
-        </li>
-        <li class="nav-link" >
-          <a href="/about">About</a>
-        <li class="nav-link" >
-            <a href="/publications">Publications</a>
-        </li>
-        <li class="nav-link" >
-          <a href="/guidance">Guidance</a>
-        </li>
-        <li class="nav-link active" >
-          <a href="/faq">FAQ</a>
-        </li>
-<!--        <li class="nav-link" >
-          <a href="/news">News &amp; Events</a>
-        </li> -->
-        <li>
+      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
+            <a href="/reporting-status">Reporting Status</a>
+          </li><li class="nav-link ">
+            <a href="/about">About</a>
+          </li><li class="nav-link ">
+            <a href="/guidance">Guidance</a>
+          </li><li class="nav-link active">
+            <a href="/faq">FAQ</a>
+          </li><li>
           <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
   <span class="language-toggle-text">English</span>
@@ -114,8 +98,7 @@
 </a>
 <ul class="language-options language-toggle"><li><a href="/es/faq/">Español</a></li><li><a href="/fr/faq/">Français</a></li></ul>
 
-        </li>
-      </ul>
+        </li></ul>
 
       <div id="search" class="menu-target">
   <label for="indicator_search">
@@ -130,10 +113,15 @@
 
 </header>
 
+<div class="heading us-heading">
+  <div class="container">
+    <h1>Frequently Asked Questions (FAQ)</h1>
+  </div>
+</div>
+
 <div id="main-content" class="container" role="main">
-    <div>
-        <h1>Frequently Asked Questions (FAQ)</h1>
-        <h4>This page provides guidance on accessing or contributing to US data for the SDGs.</h4>
+  <div>
+      <h4>This page provides guidance on accessing or contributing to US data for the SDGs.</h4>
 
 <h2 id="requesting-us-data-for-the-sdgs">Requesting US Data for the SDGs</h2>
 <p>Looking for the most recent US statistics for the SDGs? You can find them on this site under US Statistics <a href="https://gsa.github.io/sdg-indicators/">https://gsa.github.io/sdg-indicators/</a>. We typically update US statistics in the fall of each year; some updates are made a bit later to accommodate existing release schedules. The date of last update and anticipated next update appear in the indicator's national metadata page. Statistics and metadata can be downloaded in csv format.</p>
@@ -173,17 +161,15 @@ document.addEventListener("DOMContentLoaded", function () {
  </script>
 
 
-    </div>
+  </div>
 </div>
 
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
       <div class="col-xs-9">
-        <a href="mailto:FN-OMB-OIRA-SDGs@omb.eop.gov">Contact us</a> | <a class="twitter-follow-button" href="https://twitter.com/StatsClaudie?ref_src=twsrc%5Etfw" data-show-count="false">@StatsClaudie</a>
-      </div>
-      <div class="col-xs-3 text-right">
-        <a href="/faq/">FAQ</a> | <a href="/about/cookies-and-privacy/">Cookies</a>
+        <a href="/contact/">Contact us</a> |
+        <a href="/about/cookies-and-privacy/">Cookies</a>
       </div>
     </div>
   </div>
@@ -222,9 +208,9 @@ ga('send', 'pageview');
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
 <script>
-  var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
+  var remoteDataBaseUrl = 'https://brock-code.github.io/sdg-data';
 </script>
-<script src='/assets/js/sdg.js?v=20180804013236'></script>
+<script src='/assets/js/sdg.js?v=20180924212647'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
@@ -235,7 +221,7 @@ $(function() {
       });
 
       $.ajax({
-        url: 'http://brock.tips/sdg-data/comb/' + domData.id + '.json',
+        url: 'https://brock-code.github.io/sdg-data/comb/' + domData.id + '.json',
         success: function(res) {
 
           $('.async-loading').remove();

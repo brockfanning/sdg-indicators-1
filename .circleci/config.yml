@@ -21,10 +21,11 @@ jobs:
           command: bundle exec jekyll build --config _config_prod.yml
       - add_ssh_keys:
           fingerprints:
-            - "06:60:53:ac:f3:70:f6:fe:3c:02:42:9f:7f:bf:24:40"
+            # Replace this with the fingerprint for gh-stg.
+            - "31:d1:7d:9e:b4:78:3d:c0:ac:66:71:03:11:02:47:0c"
       - run:
           name: Deploy to Github
-          command: bash scripts/deploy/deploy.circleci.sh
+          command: bash scripts/deploy/circleci/deploy_prod.sh
   deploy_staging:
     docker:
       - image: circleci/ruby:2.5.1
@@ -45,10 +46,11 @@ jobs:
           command: bundle exec jekyll build
       - add_ssh_keys:
           fingerprints:
-            - "06:60:53:ac:f3:70:f6:fe:3c:02:42:9f:7f:bf:24:40"
+            # Replace this with the fingerprint for gh-stg.
+            - "31:d1:7d:9e:b4:78:3d:c0:ac:66:71:03:11:02:47:0c"
       - run:
           name: Deploy to Github
-          command: bash scripts/deploy/deploy_staging.circleci.sh
+          command: bash scripts/deploy/circleci/deploy_staging.sh
 workflows:
   version: 2
   deploy:
@@ -61,3 +63,12 @@ workflows:
           filters:
             branches:
               only: develop
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only: develop
+    jobs:
+      - deploy_staging
