@@ -1,0 +1,81 @@
+{% assign unit_label = page.variable_unit_label %}
+<script>
+  /**
+  * This takes a dataset with all 0 and 1 values, and alters the bar chart so
+  * that 1's go UP and the 0's go DOWN.
+  *
+  * @type Object
+  */
+  var binaryBarPlugin = {
+    beforeRender: function (chartInstance) {
+      var datasets = chartInstance.config.data.datasets;
+
+      for (var i = 0; i < datasets.length; i++) {
+        var meta = datasets[i]._meta;
+        // It counts up every time you change something on the chart so
+        // this is a way to get the info on whichever index it's at
+        var metaData = meta[Object.keys(meta)[0]];
+        var bars = metaData.data;
+
+        for (var j = 0; j < bars.length; j++) {
+          var model = bars[j]._model;
+          var yScale = bars[j]._yScale;
+
+          var barHeight = yScale.bottom + yScale.top;
+          var barMiddle = barHeight / 2;
+
+          var isNo = model.base === model.y;
+          var isYes = !isNo && model.y !== barMiddle;
+
+          if (isNo) {
+            model.y = barMiddle;
+          }
+          if (isYes) {
+            model.base = barMiddle;
+          }
+        }
+      }
+    }
+  };
+  // Create a variable that will override the chart config in indicatorView.js.
+  var chartConfigOverrides = {
+    // Force the "bar" type instead of the "binary" type which Chart.js doesn't
+    // recognize.
+    type: 'bar',
+    // Add the up/down bar plugin.
+    plugins: [binaryBarPlugin],
+    // Assign some callbacks to convert 1/0 to Yes/No.
+    options: {
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+            if (tooltipItem.yLabel == 1) {
+              label += ': Yes';
+            }
+            else {
+              label += ': No';
+            }
+            return label;
+          }
+        }
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            callback: function(value, index, values) {
+                if (value == 1) {
+                  return 'Yes';
+                }
+                if (value == 0) {
+                  return 'No';
+                }
+                return '';
+            }
+          },
+        }]
+      },
+    }
+  };
+</script>
+<canvas></canvas>
