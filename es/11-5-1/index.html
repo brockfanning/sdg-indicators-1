@@ -15,7 +15,7 @@
         
         
         <title>
-         11.5.1 -   - 
+        Indicador 11.5.1 - Gol  - 
         </title>
         <meta name="description" content="">
         <meta property="og:description" content="">
@@ -43,17 +43,17 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181012000032">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181012000032"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181012144210">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181012144210"></head>
 <body>
 <!-- <div class="container"> -->
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"></a>
+<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
 <div id="disclaimer">
   <div class="container">
   <div class="alert alert-danger" role="alert">
-    <strong class="phase-tag"></strong>
-    
+    <strong class="phase-tag">Alfa</strong>
+    Este es un sitio web de desarrollo. Agradecemos sus comentarios.
   </div>
 </div>
 
@@ -63,52 +63,52 @@
   <div class="container">
 
     <a class="navbar-brand" href="/sdg-indicators-1/es/" id="home">
-      <img src="/sdg-indicators-1/assets/img/SDG_logo.png" alt=" - " />
+      <img src="/sdg-indicators-1/assets/img/SDG_logo.png" alt="Objetivos de Desarrollo Sostenible - 17 Metas para transformar nuestro mundo" />
     </a>
 
   <div class='hidden visible-xs float-right'>
     <ul id='accessibility-nav' class='contrast-switcher'></ul><div class="language-toggle-mobile">
       <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  <span class="language-toggle-text"></span>
+  <span class="language-toggle-text">Español</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
-<ul class="language-options language-toggle"><li><a href="/sdg-indicators-1/11-5-1/"></a></li><li><a href="/sdg-indicators-1/fr/11-5-1/"></a></li></ul>
+<ul class="language-options language-toggle"><li><a href="/sdg-indicators-1/11-5-1/">English</a></li><li><a href="/sdg-indicators-1/fr/11-5-1/">Français</a></li></ul>
 
     </div></div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
-        <li><span data-target="menu"></span></li>
-        <li><span data-target="search"></span></li>
+        <li><span data-target="menu">Menú</span></li>
+        <li><span data-target="search">Buscar</span></li>
       </ul>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/sdg-indicators-1/es/reporting-status"></a>
+            <a href="/sdg-indicators-1/es/reporting-status">Estado de informes</a>
           </li><li class="nav-link ">
-            <a href="/sdg-indicators-1/es/about"></a>
+            <a href="/sdg-indicators-1/es/about">Acerca de</a>
           </li><li class="nav-link ">
-            <a href="/sdg-indicators-1/es/guidance"></a>
+            <a href="/sdg-indicators-1/es/guidance">Dirección</a>
           </li><li class="nav-link ">
-            <a href="/sdg-indicators-1/es/faq"></a>
+            <a href="/sdg-indicators-1/es/faq">Preguntas más frecuentes</a>
           </li><li>
           <a href="#" onclick="$('.language-toggle').toggle(); return false;">
   <i class="fa fa-globe"></i>
-  <span class="language-toggle-text"></span>
+  <span class="language-toggle-text">Español</span>
   <i class="language-toggle fa fa-chevron-down"></i>
   <i class="language-toggle fa fa-chevron-up" style="display:none;"></i>
 </a>
-<ul class="language-options language-toggle"><li><a href="/sdg-indicators-1/11-5-1/"></a></li><li><a href="/sdg-indicators-1/fr/11-5-1/"></a></li></ul>
+<ul class="language-options language-toggle"><li><a href="/sdg-indicators-1/11-5-1/">English</a></li><li><a href="/sdg-indicators-1/fr/11-5-1/">Français</a></li></ul>
 
         </li></ul>
 
       <div id="search" class="menu-target">
   <label for="indicator_search">
-    <i class="fa fa-search" aria-hidden="true"></i><span>:</span>
+    <i class="fa fa-search" aria-hidden="true"></i><span>Buscar:</span>
   </label>
-  <input id="indicator_search" title="" placeholder="" data-url="/sdg-indicators-1/es/indicators.json" data-pageurl="/sdg-indicators-1/es/search/?" />
+  <input id="indicator_search" title="Búsqueda de indicador" placeholder="Búsqueda de indicador" data-url="/sdg-indicators-1/es/indicators.json" data-pageurl="/sdg-indicators-1/es/search/?" />
 </div>
 
 
@@ -126,8 +126,8 @@
       </div>
       <div class="variable-options">
         <div>
-          <button data-type="select"></button>
-          <button data-type="clear"></button>
+          <button data-type="select">Seleccionar todo</button>
+          <button data-type="clear">Limpiar todo</button>
         </div>
         <% _.each(seriesItem.values, function(item) { %>
           <label><input type="checkbox" value="<%=item.value%>" data-field="<%=seriesItem.field%>" /><%=item.value%></label>
@@ -135,10 +135,10 @@
       </div>
       
       <% if(allowedFields.indexOf(seriesItem.field) == -1) { %> 
-        <div class="variable-hint">
+        <div class="variable-hint">Disponible cuando se selecciona '<%= _.findWhere(edges, { To: seriesItem.field }).From %>'
         </div>
         <div class="no-data-hint">
-          
+          No hay opciones disponibles debido a los filtros anteriores
         </div>
       <% }%>
 
@@ -148,14 +148,14 @@
 
 <script type="text/template" id="units_template">
   <% if(units.length) { %>
-    <h5></h5>
+    <h5>Tipo de unidades</h5>
     <% _.each(units, function(unitsItem, index) { %>
       <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <% if(!index) { %>checked="checked"<% } %> /> <%=unitsItem%></label>
     <% }); %>
   <% } %>
 </script>
 
-<script>translations['indicator'] = null;</script>
+<script>translations['indicator'] = {"chart":"Gráfico","clear_all":"Limpiar todo","clear_selections":"Borrar selecciones","dataset_size_warning":"Hay demasiados conjuntos de datos para mostrar en el gráfico. No todo se mostrará hasta que elimine algunas selecciones.","download_chart":"Descargar Chart CSV","download_csv":"Descargar CSV","download_csv_title":"Descargar como CSV","download_headline":"Descargar Headline CSV","download_headline_title":"Descargar los datos del titular como CSV","download_source":"Descargar Source CSV","download_source_title":"Descargar los datos fuente como CSV","download_table":"Descargar la tabla CSV","edit":"Editar","edit_data":"Editar datos","edit_metadata":"Editar metadatos","footnote":"Nota","geographical_area":"Área geográfica","global_metadata":"Metadatos globales","global_metadata_blurb":"Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. <a href=\"https://unstats.un.org/sdgs/metadata/\">La</a> División de Estadística de las Naciones Unidas proporciona <a href=\"https://unstats.un.org/sdgs/metadata/\">los metadatos globales completos</a> .","legend_help":"Haga clic en la leyenda para eliminar líneas individuales del gráfico.","loading_map":"Cargando mapa","map":"Mapa","national_metadata":"Metadatos nacionales","national_metadata_blurb":"Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de %country_name más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de %country_adjective, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de %country_adjective.","no_data_hint":"No hay opciones disponibles debido a los filtros anteriores","select_all":"Seleccionar todo","series_help":"Elija categorías de las listas desplegables a continuación para ver diferentes desgloses de los datos. Algunos no estarán disponibles hasta que se elija un nivel superior.","source":"Fuente","sources":"Fuentes","sub_categories":"Subcategorías","table":"Mesa","unit_of_measurement":"Unidad de medida","units_type":"Tipo de unidades","variable_hint":"Disponible cuando se selecciona '%field'","view_indicator_list":"Ver la lista de indicadores de este objetivo"};</script>
 
 
 
@@ -175,17 +175,17 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2">
-        <a href="/sdg-indicators-1/es/" title="">
-          <img src="/sdg-indicators-1/assets/img/goals/es/11.png" alt=" -  11" />
+        <a href="/sdg-indicators-1/es/sustainable-cities-communities" title="Ver la lista de indicadores de este objetivo">
+          <img src="/sdg-indicators-1/assets/img/goals/es/11.png" alt="Cuidades y Comunidades Sostenibles - Gol 11" />
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
-          <a href="/sdg-indicators-1/es/">
-            <span class="hidden-sm hidden-md hidden-lg"> 11: </span>
+          <a href="/sdg-indicators-1/es/sustainable-cities-communities">
+            <span class="hidden-sm hidden-md hidden-lg">Gol 11: </span>Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles
           </a>
         </h1>
-        <h2> 11.5.1: </h2>
+        <h2>Indicador 11.5.1: Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 personas</h2>
       </div>
     </div>
   </div>
@@ -193,10 +193,10 @@
 
 <div id="main-content" class="container goal-11">
   <ol class="breadcrumb">
-  <li><a href="/sdg-indicators-1/es/"></a></li>
+  <li><a href="/sdg-indicators-1/es/">Casa</a></li>
   
-      <li><a href="/sdg-indicators-1/es/" title=""> 11</a></li>
-      <li class="active"> 11.5.1</li>
+      <li><a href="/sdg-indicators-1/es/sustainable-cities-communities" title="Make cities and human settlements inclusive, safe, resilient and sustainable">Gol 11</a></li>
+      <li class="active">Indicador 11.5.1</li>
   
 </ol>
 
@@ -221,10 +221,10 @@
     <div class="col-md-3">
       <div id="toolbar">
         <span id="series-help">
-          <h4></h4>
-          <p></p>
+          <h4>Subcategorías</h4>
+          <p>Elija categorías de las listas desplegables a continuación para ver diferentes desgloses de los datos. Algunos no estarán disponibles hasta que se elija un nivel superior.</p>
         </span>
-        <p></p>
+        <p>Haga clic en la leyenda para eliminar líneas individuales del gráfico.</p>
         <div id="fields">
           <p class="async-loading" data-img="/sdg-indicators-1/assets/img/loading-small.gif"></p>
         </div>
@@ -242,9 +242,9 @@
   
   <div id="datatables">
     
-    <a href="http://brock.tips/sdg-data/headline/11-5-1.csv" class="btn btn-primary btn-download" download="indicator_11-5-1.csv" tabindex="0" role="button"></a>
+    <a href="http://brock.tips/sdg-data/headline/11-5-1.csv" class="btn btn-primary btn-download" download="indicator_11-5-1.csv" tabindex="0" role="button">Descargar Headline CSV</a>
     
-    <a href="http://brock.tips/sdg-data/data/11-5-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_11-5-1.csv' tabindex='0' role='button'></a>
+    <a href="http://brock.tips/sdg-data/data/11-5-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_11-5-1.csv' tabindex='0' role='button'>Descargar Source CSV</a>
     
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
@@ -499,13 +499,13 @@
         <div class="async-loaded" style="display:none">
           <ul class="nav nav-tabs data-view" role="tablist">
             <li role="presentation" class="nav-item active">
-              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab"></a>
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Gráfico</a>
             </li>
             <li role="presentation" class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab"></a>
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Mesa</a>
             </li>
             <li role="presentation" class="nav-item map" style="display:none">
-              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab"></a>
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Mapa</a>
             </li>
           </ul>
 
@@ -517,7 +517,7 @@
     
 
     <div id="dataset-size-warning" style="display:none">
-      <i class="fa fa-bolt"></i> 
+      <i class="fa fa-bolt"></i> Hay demasiados conjuntos de datos para mostrar en el gráfico. No todo se mostrará hasta que elimine algunas selecciones.
     </div>
 
     
@@ -538,7 +538,7 @@
             <div role="tabpanel" class="tab-pane" id="mapview" class="map">
               
               <div id="map">
-                <img src="/sdg-indicators-1/assets/img/loading.gif" alt="" />
+                <img src="/sdg-indicators-1/assets/img/loading.gif" alt="Cargando mapa" />
               </div>
               
             </div>
@@ -549,17 +549,17 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab"></a>
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">Metadatos nacionales</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab"></a>
+            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Metadatos globales</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab"></a>
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Fuentes</a>
           </li>
           
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab"></a>
+            <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Editar</a>
           </li>
           
         </ul>
@@ -571,7 +571,7 @@
             <div > <!-- formerly class="collapsible expanded" -->
               <!-- <h3 tabindex='0'>National Metadata</h3> -->
               <article>
-                <p></p>
+                <p>Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de US más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de US, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de US.</p>
                   <table class="table table-hover">
   
   
@@ -663,7 +663,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">Unit of measure </th>
+        <th scope="row">Unidad de medida </th>
         <td>
           
             Yes/no
@@ -693,7 +693,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
             <div> <!-- formerly <div class="collapsible expanded"> -->
               <!-- <h3 tabindex='0'>Global Metadata</h3> -->
               <article>
-                <p></p>
+                <p>Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. <a href="https://unstats.un.org/sdgs/metadata/">La</a> División de Estadística de las Naciones Unidas proporciona <a href="https://unstats.un.org/sdgs/metadata/">los metadatos globales completos</a> .</p>
                 <table class="table table-hover">
   
   
@@ -702,7 +702,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">Indicator name </th>
+        <th scope="row">Nombre del indicador </th>
         <td>
           
             Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
@@ -714,7 +714,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">Target name </th>
+        <th scope="row">Nombre de destino </th>
         <td>
           
             By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters, with a focus on protecting the poor and people in vulnerable situations.
@@ -726,7 +726,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">Global indicator description </th>
+        <th scope="row">Descripción del indicador global </th>
         <td>
           
             Death: The number of people who died during the disaster, or directly after, as a direct result of the hazardous event Missing: The number of people whose whereabouts is unknown since the hazardous event. It includes people who are presumed dead although there is no physical evidence. The data on number of deaths and number of missing are mutually exclusive. Affected people: People who are affected by a hazardous event. Comment: People can be affected directly or indirectly. Affected people may experience short-term or long-term consequences to their lives, livelihoods or health and in the economic, physical, social, cultural and environmental assets. Directly affected: People who have suffered injury, illness or other health effects; who were evacuated, displaced, relocated; or have suffered direct damage to their livelihoods, economic, physical, social, cultural and environmental assets. Indirectly affected: People who have suffered consequences, other than or in addition to direct effects, over time due to disruption or changes in economy, critical infrastructures, basic services, commerce, work or social, health and physiological consequences. In this indicator, given the difficulties in assessing the full range of all affected (directly and indirectly), UNISDR proposes the use of an indicator that would estimate "directly affected" as a proxy for the number of affected. This indicator, while not perfect, comes from data widely available and could be used consistently across countries and over time to measure the achievement of the Target B. From the perspective of data availability and measurability, it is proposed to build a composite indicator which consists of "directly affected", or those who are 	Injured or ill, 	Evacuated, 	Relocated and to measure the number who suffered direct damage to their livelihoods or assets, 	People whose houses were damaged or destroyed 	People who received food relief aid. Injured or ill: The number of people suffering from physical injuries, trauma or cases of disease requiring immediate medical assistance as a direct result of a hazardous event. Evacuated: The number of people who temporarily moved from where they were (including their place of residence, work places, schools and hospitals) to safer locations in order to ensure their safety. Relocated: The number of people who moved permanently from their homes to new sites due to hazardous event. Note: This definition excludes preventive relocation before the event. People whose houses were damaged or destroyed due to hazardous events: The estimated number of inhabitants previously living in the houses (housing units) damaged or destroyed. All the inhabitants of these houses (housing units) are assumed to be affected being in their dwelling or by direct consequence of the destruction/damage to their housings (housing units). An average number of inhabitants per house (housing unit) in the country can be used to estimate the value. Houses destroyed: Houses (housing units) levelled, buried, collapsed, washed away or damaged to the extent that they are no longer habitable. Houses damaged: Houses (housing units) with minor damage, not structural or architectural, which may continue to be habitable, although they may require some repair or cleaning. People who received food relief aid: The number of persons who received food /nutrition, by government or as humanitarian aid, during or in the aftermath of a hazardous event. Hazardous event: The occurrence of a natural or human-induced phenomenon in a particular place during a particular period of time due to the existence of a hazard. Hazard: A potentially damaging physical event, phenomenon or human activity that may cause the loss of life or injury, property damage, social and economic disruption or environmental degradation. UNISDR recommends setting NO threshold for recording hazardous event in order to monitor all hazardous events. Small-scale but frequent hazardous events that are not registered in international disaster loss databases account for an important share of damages and losses when they are combined, and often go unnoticed by the national and international community. These events, when accumulated, are often a source of poverty in developing countries but can be effectively addressed by well-designed policies. The scope of the Sendai Framework for Disaster Risk Reduction 2015-2030 is "the risk of small-scale and large-scale, frequent and infrequent, sudden and slow-onset disasters, caused by natural or man-made hazards as well as relate environmental, technological and biological hazards and risks". Regarding the inclusion of biological and environmental hazards in natural hazards category and whether and how to integrate man-made hazards, UNISDR will discuss the issue with WHO and other organizations (for example, WHO would be in a better position in terms of data, knowledge and relationship with Member States and other stakeholders to monitor biological events including epidemics. However, we generally do not expect biological disasters will cause physical damages to facilities. ). Note: Terminology will be discussed and finalized in the Open-ended Intergovernmental Working Group for Sendai Framework for Disaster Risk Reduction.
@@ -738,7 +738,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">UN designated tier </th>
+        <th scope="row">Nivel designado por la ONU </th>
         <td>
           
             2
@@ -762,7 +762,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">Link to UN metadata </th>
+        <th scope="row">Enlace a los metadatos de la ONU </th>
         <td>
           
             
@@ -772,7 +772,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
 
             
               <a href="http://unstats.un.org/sdgs/files/metadata-compilation/Metadata-Goal-11.pdf" target="_blank">
-                Link <span class="visuallyhidden"></span>
+                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
               </a>
             
 
@@ -843,7 +843,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">Organization </th>
+        <th scope="row">Organización </th>
         <td>
           
             National Security Council/Executive Office of the President
@@ -879,7 +879,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   
       
       <tr>
-        <th scope="row">URL </th>
+        <th scope="row">Enlace a la fuente de datos </th>
         <td>
           
             
@@ -889,7 +889,7 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
 
             
               <a href="https://www.dhs.gov/presidential-policy-directive-8-national-preparedness" target="_blank">
-                Link <span class="visuallyhidden"></span>
+                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
               </a>
             
 
@@ -910,8 +910,8 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
           
           <div role="tabpanel" class="tab-pane" id="edit">
             <div class="edit-container">
-              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/data-wide/indicator_11-5-1.csv"></a>
-              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/meta/11-5-1.md"></a>
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/data-wide/indicator_11-5-1.csv">Editar datos</a>
+              <a class="btn btn-primary" href="http://prose.io/#brockfanning/sdg-data/edit/develop/meta/11-5-1.md">Editar metadatos</a>
             </div>
           </div>
           
@@ -925,8 +925,8 @@ The indicator will build bridge between SDGs and the Sendai Framework for Disast
   <div class="container">
     <div class="row">
       <div class="col-xs-9">
-        <a href="/sdg-indicators-1/es/contact/"></a> |
-        <a href="/sdg-indicators-1/es/about/cookies-and-privacy/"></a>
+        <a href="/sdg-indicators-1/es/contact/">Contáctenos</a> |
+        <a href="/sdg-indicators-1/es/about/cookies-and-privacy/">Galletas</a>
       </div>
     </div>
   </div>
@@ -962,7 +962,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181012000032'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181012144210'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
