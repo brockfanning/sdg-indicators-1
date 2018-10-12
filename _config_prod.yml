@@ -27,7 +27,7 @@ jekyll_get_data:
   - data: schema
     json: 'https://brock-code.github.io/sdg-data/meta/schema.json'
   - data: translations
-    json: 'http://brock.tips/sdg-translations/translations.json'
+    json: 'https://opendataenterprise.github.io/sdg-translations/translations.json'
 
 analytics:
   ga_prod: ''
