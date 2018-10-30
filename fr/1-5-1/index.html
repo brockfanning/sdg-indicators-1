@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -217,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_1-5-1' data-id="1-5-1" data-country="United States"
-  data-charttitle="Has the US established national and local disaster risk reduction strategies?" data-measurementunit="Yes/no" data-datasource="National Security Council/Executive Office of the President" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="Has the US established national and local disaster risk reduction strategies?" data-measurementunit="Yes/no" data-datasource="National Security Council/Executive Office of the President" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="binary" data-geocoderegex="" data-showmap="">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -523,7 +523,48 @@
     
     <div class="plot-container">
         
+<script>
+  // Create a variable that will override the chart config in indicatorView.js.
+  var chartConfigOverrides = {
+    // Force the "bar" type instead of the "binary" type which Chart.js doesn't
+    // recognize.
+    type: 'bar',
+    // Assign some callbacks to convert 1/-1 to Yes/No.
+    options: {
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+            if (tooltipItem.yLabel == 1) {
+              label += ': Yes';
+            }
+            else {
+              label += ': No';
+            }
+            return label;
+          }
+        }
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            callback: function(value, index, values) {
+                if (value == 1) {
+                  return 'Yes';
+                }
+                if (value == -1) {
+                  return 'No';
+                }
+                return '';
+            }
+          },
+        }]
+      },
+    }
+  };
+</script>
 <canvas></canvas>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -670,18 +711,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            disaster_rsk_rdctn
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -758,23 +787,6 @@
         <td>
           
             
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
-        <td>
-          
-            Cities around the world, as well as rural populations, witness growing disaster risks. Impacts of climate change on sustainable development are observed through both slow-onset events (e.g. sea level rise, increasing temperatures, ocean acidification, glacial retreat and related impacts, salinization, land and forest degradation, loss of biodiversity and desertification) and extreme weather events. Human loss can be measured by the number of deaths, missing, injured or ill, evacuated, relocated, people whose houses were damaged/destroyed and people who received food relief aid as a direct result of the hazardous events.
- Cities are some of the most vulnerable areas to natural disasters. Unplanned urban development (e.g. informal settlements, overcrowding, inadequate infrastructures) exacerbates urban vulnerability to climate change impacts and hydro-meteorological and geological hazards. Over half of all coastal areas are urbanized and 21 of the world's 33 mega cities lie in coastal flood zones. SIDS and coastal regions are particularly affected by sea level rise, coastal flooding and erosion, and extreme events (e.g. tsunamis and storm surges) due to undermining natural protective barriers, low levels of development combined with rapid population growth in low lying coastal areas and inadequate capacity to adapt. Poor urban populations must often resort to unsustainable coping strategies and mechanisms. 
-Large numbers of people remain perilously close to falling into poverty, experiencing shocks that they are unable to cope with. For the poor, a shock of even a relatively short duration can have long term consequences. Several dimensions of poverty are closely related to environment, which is often affected by natural disasters. The poverty reduction agenda could include well-designed social protection scheme to help protecting the poor against sudden shocks and the development of capacities to better predict and prepare for such shocks. Better management of natural resources can themselves strengthen the resilience of the poor, by both reducing the likelihood of natural hazardous events and offering resources to help cope with them.
- Biodiversity provides ecosystem resilience and contributes to the ability to respond to unpredictable global changes and natural disasters. Healthy ecosystems act as buffers against natural hazards, providing valuable yet underutilized approaches for climate change adaptation, enhancing natural resilience and reducing the vulnerability of people, for example to floods and the effects of land degradation. These ecosystem services improve the sustainability and economic efficiency of built infrastructure, and are critical for sustainable and resilient urban areas.
- This indicator will track human-related loss. The disaster loss data (particularly mortality) are significantly influenced by large-scale catastrophic event, which represent important outliers. UNISDR recommends countries to report the data by event, so complementary analysis can be done by both including and excluding such catastrophic events.
- The indicator will build bridge between SDGs and the Sendai Framework for Disaster Risk Reduction because the reduction of human related loss is included in the Sendai Framework global targets and will also be monitored under the Sendai Framework Monitoring Mechanism.
           
         </td>
         </tr>
@@ -864,6 +876,10 @@ Large numbers of people remain perilously close to falling into poverty, experie
         </tr>
         
       
+  
+  
+  
+  
   
   
   
@@ -1046,6 +1062,8 @@ Large numbers of people remain perilously close to falling into poverty, experie
   
   
   
+  
+  
 </table>
 
               </article>
@@ -1110,6 +1128,8 @@ Large numbers of people remain perilously close to falling into poverty, experie
   
   
   
+  
+  
       
       <tr>
         <th scope="row">Organisation </th>
@@ -1122,17 +1142,6 @@ Large numbers of people remain perilously close to falling into poverty, experie
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1194,7 +1203,7 @@ Large numbers of people remain perilously close to falling into poverty, experie
 
             
               <a href="https://www.dhs.gov/presidential-policy-directive-8-national-preparedness" target="_blank">
-                Link <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
+                https://www.dhs.gov/presidential-policy-directive-8-national-preparedness <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
               </a>
             
 
@@ -1279,7 +1288,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

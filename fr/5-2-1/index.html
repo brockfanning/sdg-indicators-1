@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -217,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_5-2-1' data-id="5-2-1" data-country="United States"
-  data-charttitle="Estimated number of rapes in US" data-measurementunit="Estimated Volume Number" data-datasource="FBI Uniform Crime Reporting Program" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="Estimated number of rapes in US" data-measurementunit="Estimated Volume Number" data-datasource="FBI Uniform Crime Reporting Program" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="bar" data-geocoderegex="" data-showmap="">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -511,7 +511,34 @@
     
     <div class="plot-container">
         
-<canvas></canvas>
+
+<canvas id="barchart-5-2-1" class="ct-chart ct-major-eleventh"></canvas>
+<script>
+  // 3.5.2
+  // 1.5.2 // 2 bars
+  // 4.b.1 // 3 bars
+  var chartInfo = chartDataProcessor.getChartInfo(null),
+      chartInstance = new Chart(document.getElementById('barchart-5-2-1'), {
+      type: 'bar',
+      data: chartInfo,
+      options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              ticks: {
+                  suggestedMin: 0
+              }
+            }]
+          },
+          legend: {
+            display: false
+         },
+      }
+  });
+
+</script>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -658,18 +685,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            rev_rape_def
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -746,18 +761,6 @@
         <td>
           
             National
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
-        <td>
-          
-            
           
         </td>
         </tr>
@@ -847,6 +850,10 @@
         </tr>
         
       
+  
+  
+  
+  
   
   
   
@@ -1029,6 +1036,8 @@
   
   
   
+  
+  
 </table>
 
               </article>
@@ -1093,6 +1102,8 @@
   
   
   
+  
+  
       
       <tr>
         <th scope="row">Organisation </th>
@@ -1105,17 +1116,6 @@
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            CRIMESTATSINFO@fbi.gov
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1177,7 +1177,7 @@
 
             
               <a href="https://ucr.fbi.gov/crime-in-the-u.s/2016/crime-in-the-u.s.-2016" target="_blank">
-                Link <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
+                https://ucr.fbi.gov/crime-in-the-u.s/2016/crime-in-the-u.s.-2016 <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
               </a>
             
 
@@ -1262,7 +1262,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

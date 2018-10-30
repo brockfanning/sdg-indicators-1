@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -217,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_2-2-2' data-id="2-2-2" data-country="United States"
-  data-charttitle="Percent of children ages 0 to 5 years with wasting (very low weight-for-length/height) in the US" data-measurementunit="" data-datasource="Centers for Disease Control and Prevention/National Center for Health Statistics/National Health and Nutrition Examination Survey" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="Percent of children ages 0 to 5 years with wasting (very low weight-for-length/height) in the US" data-measurementunit="" data-datasource="Centers for Disease Control and Prevention/National Center for Health Statistics/National Health and Nutrition Examination Survey" data-geographicalarea="United States" data-footnote="Testing footnote" data-showdata="true" data-graphtype="bar" data-geocoderegex="" data-showmap="false">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -499,7 +499,34 @@
     
     <div class="plot-container">
         
-<canvas></canvas>
+
+<canvas id="barchart-2-2-2" class="ct-chart ct-major-eleventh"></canvas>
+<script>
+  // 3.5.2
+  // 1.5.2 // 2 bars
+  // 4.b.1 // 3 bars
+  var chartInfo = chartDataProcessor.getChartInfo(null),
+      chartInstance = new Chart(document.getElementById('barchart-2-2-2'), {
+      type: 'bar',
+      data: chartInfo,
+      options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              ticks: {
+                  suggestedMin: 0
+              }
+            }]
+          },
+          legend: {
+            display: false
+         },
+      }
+  });
+
+</script>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -646,18 +673,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            pct_us_wasting_under5
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -731,18 +746,6 @@
       
       <tr>
         <th scope="row">Disaggregation geography </th>
-        <td>
-          
-            
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
         <td>
           
             
@@ -864,6 +867,10 @@
   
   
   
+  
+  
+  
+  
 </table>
 
               </article>
@@ -953,7 +960,7 @@
 
             
               <a href="http://unstats.un.org/sdgs/files/metadata-compilation/Metadata-Goal-2.pdf" target="_blank">
-                Link <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
+                UN metadata <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
               </a>
             
 
@@ -965,6 +972,8 @@
   
       
       
+  
+  
   
   
   
@@ -1034,7 +1043,11 @@
     
     <div class="col-md-6">
       
+        <h4>La source 1</h4>
+      
       <table class="table table-hover">
+  
+  
   
   
   
@@ -1093,17 +1106,6 @@
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            AMBranum@cdc.gov
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1165,7 +1167,7 @@
 
             
               <a href="http://www.cdc.gov/nchs/nhanes/index.htm" target="_blank">
-                Link <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
+                http://www.cdc.gov/nchs/nhanes/index.htm <span class="visuallyhidden">Ouvre dans une nouvelle fenêtre</span>
               </a>
             
 
@@ -1186,6 +1188,156 @@
   
   
   
+  
+</table>
+
+    </div>
+    
+   
+    
+    <div class="col-md-6">
+      
+        <h4>La source 2</h4>
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+      
+      <tr>
+        <th scope="row">Agency Staff Name </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Agency Survey Dataset </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Notes </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Title </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Lien vers la source de données </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
   
 </table>
 
@@ -1250,7 +1402,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -204,7 +204,6 @@
     <div class="col-xs-12">
       <div id="page-content">
   
-<hr />
 
 </div>
 
@@ -218,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_6-5-1' data-id="6-5-1" data-country="United States"
-  data-charttitle="Estimated acres of US farm land irrigated" data-measurementunit="Acre-feet of water" data-datasource="National Agricultural Statistics Service/Farm and Ranch Irrigation Survey" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="Estimated acres of US farm land irrigated" data-measurementunit="Acre-feet of water" data-datasource="National Agricultural Statistics Service/Farm and Ranch Irrigation Survey" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="bar" data-geocoderegex="" data-showmap="">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -488,7 +487,34 @@
     
     <div class="plot-container">
         
-<canvas></canvas>
+
+<canvas id="barchart-6-5-1" class="ct-chart ct-major-eleventh"></canvas>
+<script>
+  // 3.5.2
+  // 1.5.2 // 2 bars
+  // 4.b.1 // 3 bars
+  var chartInfo = chartDataProcessor.getChartInfo(null),
+      chartInstance = new Chart(document.getElementById('barchart-6-5-1'), {
+      type: 'bar',
+      data: chartInfo,
+      options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              ticks: {
+                  suggestedMin: 0
+              }
+            }]
+          },
+          legend: {
+            display: false
+         },
+      }
+  });
+
+</script>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -635,18 +661,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            acres_irrigated
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -723,18 +737,6 @@
         <td>
           
             National, by State and Water Resources Regions
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
-        <td>
-          
-            The indicator captures the degree of implementation of all main elements of IWRM. It supports decision making at the country level, as results can be disaggregated to review progress on different aspects. This will strengthen stakeholder participation, transparency and accountability. It also enables countries to identify barriers to progress and ways in which they can be addressed. It also facilitates coherence between the various targets within the water and sanitation goal by supporting water monitoring, planning and evaluation, as well as associated capacity building and thus the achievement of the overall water goal.
           
         </td>
         </tr>
@@ -824,6 +826,10 @@
         </tr>
         
       
+  
+  
+  
+  
   
   
   
@@ -1006,6 +1012,8 @@
   
   
   
+  
+  
 </table>
 
               </article>
@@ -1070,6 +1078,8 @@
   
   
   
+  
+  
       
       <tr>
         <th scope="row">Organización </th>
@@ -1082,17 +1092,6 @@
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            Nicole.norris@nass.usda.gov
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1123,7 +1122,7 @@
         <th scope="row">Notes </th>
         <td>
           
-            
+            Web source: Table 4. Estimated Quantity of Water Applied: 2013 and 2008 https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Farm_and_Ranch_Irrigation_Survey/
           
         </td>
         </tr>
@@ -1152,10 +1151,6 @@
             
             
 
-            
-              <a href="Web source: Table 4. Estimated Quantity of Water Applied: 2013 and 2008 https://www.agcensus.usda.gov/Publications/2012/Online_Resources/Farm_and_Ranch_Irrigation_Survey/" target="_blank">
-                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
-              </a>
             
 
           
@@ -1239,7 +1234,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

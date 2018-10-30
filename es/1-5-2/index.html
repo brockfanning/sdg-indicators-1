@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -217,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_1-5-2' data-id="1-5-2" data-country="United States"
-  data-charttitle="Disaster losses as a percentage of GDP" data-measurementunit="Disaster losses: Billions of US dollars" data-datasource="Saving and Investment by Sector" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="Disaster losses as a percentage of GDP" data-measurementunit="Disaster losses: Billions of US dollars" data-datasource="Saving and Investment by Sector" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="bar" data-geocoderegex="" data-showmap="">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -511,7 +511,34 @@
     
     <div class="plot-container">
         
-<canvas></canvas>
+
+<canvas id="barchart-1-5-2" class="ct-chart ct-major-eleventh"></canvas>
+<script>
+  // 3.5.2
+  // 1.5.2 // 2 bars
+  // 4.b.1 // 3 bars
+  var chartInfo = chartDataProcessor.getChartInfo(null),
+      chartInstance = new Chart(document.getElementById('barchart-1-5-2'), {
+      type: 'bar',
+      data: chartInfo,
+      options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              ticks: {
+                  suggestedMin: 0
+              }
+            }]
+          },
+          legend: {
+            display: false
+         },
+      }
+  });
+
+</script>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -658,18 +685,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            dsast_loss_pct_global_gdp
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -746,23 +761,6 @@
         <td>
           
             
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
-        <td>
-          
-            Cities around the world, as well as rural populations, witness growing disaster risks. Impacts of climate change on sustainable development are observed through both slow-onset events (e.g. sea level rise, increasing temperatures, ocean acidification, glacial retreat and related impacts, salinization, land and forest degradation, loss of biodiversity and desertification) and extreme weather events. The economic loss indicator would track loss to agricultural, industrial and commercial sectors and damage to housing and critical infrastructure. 
-Cities are some of the most vulnerable areas to natural disasters. Unplanned urban development (e.g. informal settlements, overcrowding, inadequate infrastructures) exacerbates urban vulnerability to climate change impacts and hydro-meteorological and geological hazards. Over half of all coastal areas are urbanized and 21 of the world's 33 mega cities lie in coastal flood zones. SIDS and coastal regions are particularly affected by sea level rise, coastal flooding and erosion, and extreme events (e.g. tsunamis and storm surges) due to undermining natural protective barriers, low levels of development combined with rapid population growth in low lying coastal areas and inadequate capacity to adapt. Poor urban populations must often resort to unsustainable coping strategies and mechanisms. 
-Large numbers of people remain perilously close to falling into poverty, experiencing shocks that they are unable to cope with. For the poor, a shock of even a relatively short duration can have long term consequences. Several dimensions of poverty are closely related to environment, which is often affected by natural disasters. The poverty reduction agenda could include well-designed social protection scheme to help protecting the poor against sudden shocks and the development of capacities to better predict and prepare for such shocks. Better management of natural resources can themselves strengthen the resilience of the poor, by both reducing the likelihood of natural hazardous events and offering resources to help cope with them. 
-The environment for food production is increasingly challenging, particularly for smallholders, due to environmental and climate-related factors. Similar to extreme income poverty, food insecurity continues to be predominantly concentrated in rural areas of developing countries, and disproportionately affects poor farmers, agricultural workers, pastoralists and rural communities. Common conditions for protracted crisis situations include frequent or continued exposure to shocks that undermine livelihoods, food and market systems. Special consideration needs to be given to population living in areas prone to environmental and natural disaster shocks. 
-Biodiversity provides ecosystem resilience and contributes to the ability to respond to unpredictable global changes and natural disasters. Healthy ecosystems act as buffers against natural hazards, providing valuable yet underutilized approaches for climate change adaptation, enhancing natural resilience and reducing the vulnerability of people, for example to floods and the effects of land degradation. These ecosystem services improve the sustainability and economic efficiency of built infrastructure, and are critical for sustainable and resilient urban areas. 
-This indicator will track direct physical loss expressed in economic term. The disaster loss data (particularly mortality) are significantly influenced by large-scale catastrophic event, which represent important outliers. UNISDR recommends countries to report the data by event, so complementary analysis can be done by both including and excluding such catastrophic events. The indicator will build bridge between SDGs and the Sendai Framework for Disaster Risk Reduction because the reduction of direct economic loss is included in the Sendai Framework global targets and will also be monitored under the Sendai Framework Monitoring Mechanism.
           
         </td>
         </tr>
@@ -852,6 +850,10 @@ This indicator will track direct physical loss expressed in economic term. The d
         </tr>
         
       
+  
+  
+  
+  
   
   
   
@@ -1034,6 +1036,8 @@ This indicator will track direct physical loss expressed in economic term. The d
   
   
   
+  
+  
 </table>
 
               </article>
@@ -1098,6 +1102,8 @@ This indicator will track direct physical loss expressed in economic term. The d
   
   
   
+  
+  
       
       <tr>
         <th scope="row">Organización </th>
@@ -1110,17 +1116,6 @@ This indicator will track direct physical loss expressed in economic term. The d
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            Andrew.Craig@bea.gov
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1182,7 +1177,7 @@ This indicator will track direct physical loss expressed in economic term. The d
 
             
               <a href="http://www.bea.gov/iTable/iTableHtml.cfm?reqid=9&step=3&isuri=1&903=137" target="_blank">
-                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
+                http://www.bea.gov/iTable/iTableHtml.cfm?reqid=9&step=3&isuri=1&903=137 <span class="visuallyhidden">Se abre en una nueva ventana</span>
               </a>
             
 
@@ -1267,7 +1262,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

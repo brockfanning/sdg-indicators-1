@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -217,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_15-1-1' data-id="15-1-1" data-country="United States"
-  data-charttitle="US Forest area as a percentage of total land area" data-measurementunit="Percent" data-datasource="USDA Forest Service; Research & Development; Inventory, Monitoring and Assessment Research" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="US Forest area as a percentage of total land area" data-measurementunit="Percent" data-datasource="USDA Forest Service; Research & Development; Inventory, Monitoring and Assessment Research" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="bar" data-geocoderegex="" data-showmap="">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -499,7 +499,34 @@
     
     <div class="plot-container">
         
-<canvas></canvas>
+
+<canvas id="barchart-15-1-1" class="ct-chart ct-major-eleventh"></canvas>
+<script>
+  // 3.5.2
+  // 1.5.2 // 2 bars
+  // 4.b.1 // 3 bars
+  var chartInfo = chartDataProcessor.getChartInfo(null),
+      chartInstance = new Chart(document.getElementById('barchart-15-1-1'), {
+      type: 'bar',
+      data: chartInfo,
+      options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              ticks: {
+                  suggestedMin: 0
+              }
+            }]
+          },
+          legend: {
+            display: false
+         },
+      }
+  });
+
+</script>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -646,18 +673,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            pct_forest_totland
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -734,18 +749,6 @@
         <td>
           
             Forest inventory data is available at the state and county level, but FAO GFRA reporting is limited to a single national estimate.
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
-        <td>
-          
-            
           
         </td>
         </tr>
@@ -835,6 +838,10 @@
         </tr>
         
       
+  
+  
+  
+  
   
   
   
@@ -1017,6 +1024,8 @@
   
   
   
+  
+  
 </table>
 
               </article>
@@ -1081,6 +1090,8 @@
   
   
   
+  
+  
       
       <tr>
         <th scope="row">Organisation </th>
@@ -1093,17 +1104,6 @@
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            Grobertson02@fs.fed.us
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1134,7 +1134,7 @@
         <th scope="row">Notes </th>
         <td>
           
-            
+            Web source: http://www.srs.fs.usda.gov/pubs/gtr/gtr_wo091.pdf.   Oswalt, Sonja N.; Smith, W. Brad; Miles, Patrick D.; Pugh, Scott A. 2014. Forest Resources of the United States, 2012: a technical document supporting the Forest Service 2015 update of the RPA Assessment. Gen. Tech. Rep. WO-91. Washington, DC: U.S. Department of Agriculture, Forest Service, Washington Office. 218 p.  See: Table 1a. Land area in the United States by major class, region, subregion, and State, 2012. 
           
         </td>
         </tr>
@@ -1163,10 +1163,6 @@
             
             
 
-            
-              <a href="Web source: http://www.srs.fs.usda.gov/pubs/gtr/gtr_wo091.pdf.   Oswalt, Sonja N.; Smith, W. Brad; Miles, Patrick D.; Pugh, Scott A. 2014. Forest Resources of the United States, 2012: a technical document supporting the Forest Service 2015 update of the RPA Assessment. Gen. Tech. Rep. WO-91. Washington, DC: U.S. Department of Agriculture, Forest Service, Washington Office. 218 p.  See: Table 1a. Land area in the United States by major class, region, subregion, and State, 2012. " target="_blank">
-                Link <span class="visuallyhidden">opens in a new window</span>
-              </a>
             
 
           
@@ -1250,7 +1246,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

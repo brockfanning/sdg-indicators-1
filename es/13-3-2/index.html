@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -217,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_13-3-2' data-id="13-3-2" data-country="United States"
-  data-charttitle="Has the US implemented programs to build capacity to implement adaptation, mitigation, technology transfer and development related to climate events?" data-measurementunit="Yes/No" data-datasource="Julia Meisel, Department of State " data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="Has the US implemented programs to build capacity to implement adaptation, mitigation, technology transfer and development related to climate events?" data-measurementunit="Yes/No" data-datasource="Julia Meisel, Department of State " data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="binary" data-geocoderegex="" data-showmap="">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -523,7 +523,48 @@
     
     <div class="plot-container">
         
+<script>
+  // Create a variable that will override the chart config in indicatorView.js.
+  var chartConfigOverrides = {
+    // Force the "bar" type instead of the "binary" type which Chart.js doesn't
+    // recognize.
+    type: 'bar',
+    // Assign some callbacks to convert 1/-1 to Yes/No.
+    options: {
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+            if (tooltipItem.yLabel == 1) {
+              label += ': Yes';
+            }
+            else {
+              label += ': No';
+            }
+            return label;
+          }
+        }
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            callback: function(value, index, values) {
+                if (value == 1) {
+                  return 'Yes';
+                }
+                if (value == -1) {
+                  return 'No';
+                }
+                return '';
+            }
+          },
+        }]
+      },
+    }
+  };
+</script>
 <canvas></canvas>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -670,18 +711,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            comm_climate
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -755,18 +784,6 @@
       
       <tr>
         <th scope="row">Disaggregation geography </th>
-        <td>
-          
-            
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
         <td>
           
             
@@ -859,6 +876,10 @@
         </tr>
         
       
+  
+  
+  
+  
   
   
   
@@ -1041,6 +1062,8 @@
   
   
   
+  
+  
 </table>
 
               </article>
@@ -1105,6 +1128,8 @@
   
   
   
+  
+  
       
       <tr>
         <th scope="row">Organización </th>
@@ -1117,17 +1142,6 @@
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1189,7 +1203,7 @@
 
             
               <a href="https://www.whitehouse.gov/the-press-office/2015/08/19/resilience-americorps-announces-ten-cities-its-pilot-program-support" target="_blank">
-                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
+                https://www.whitehouse.gov/the-press-office/2015/08/19/resilience-americorps-announces-ten-cities-its-pilot-program-support <span class="visuallyhidden">Se abre en una nueva ventana</span>
               </a>
             
 
@@ -1274,7 +1288,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {

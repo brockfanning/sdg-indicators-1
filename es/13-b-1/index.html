@@ -43,8 +43,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181029000059">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181029000059"></head>
+        <link rel="stylesheet" href="/sdg-indicators-1/assets/css/default.css?v=20181030000037">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"><link rel="stylesheet" href="/sdg-indicators-1/assets/css/custom.css?v=20181030000037"></head>
 <body>
 <!-- <div class="container"> -->
 
@@ -217,7 +217,7 @@
   </div>
 
   <div class="row" id="indicatorData" data-indicatorid='indicator_13-b-1' data-id="13-b-1" data-country="United States"
-  data-charttitle="Does this indicator (LDC or small island developing states receiving support) apply to the US?" data-measurementunit="Yes/no" data-datasource="National Security Council/Executive Office of the President" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  data-charttitle="Does this indicator (LDC or small island developing states receiving support) apply to the US?" data-measurementunit="Yes/no" data-datasource="National Security Council/Executive Office of the President" data-geographicalarea="United States" data-footnote="" data-showdata="true" data-graphtype="binary" data-geocoderegex="" data-showmap="">
     
     <div class="col-md-3">
       <div id="toolbar">
@@ -511,7 +511,48 @@
     
     <div class="plot-container">
         
+<script>
+  // Create a variable that will override the chart config in indicatorView.js.
+  var chartConfigOverrides = {
+    // Force the "bar" type instead of the "binary" type which Chart.js doesn't
+    // recognize.
+    type: 'bar',
+    // Assign some callbacks to convert 1/-1 to Yes/No.
+    options: {
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+            if (tooltipItem.yLabel == 1) {
+              label += ': Yes';
+            }
+            else {
+              label += ': No';
+            }
+            return label;
+          }
+        }
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            callback: function(value, index, values) {
+                if (value == 1) {
+                  return 'Yes';
+                }
+                if (value == -1) {
+                  return 'No';
+                }
+                return '';
+            }
+          },
+        }]
+      },
+    }
+  };
+</script>
 <canvas></canvas>
+
     </div>
     <div id="plotLegend"></div>
 
@@ -658,18 +699,6 @@
   
       
       <tr>
-        <th scope="row">Indicator variable </th>
-        <td>
-          
-            ldc_sids_rcd_spprt_climate
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
         <th scope="row">Variable description </th>
         <td>
           
@@ -746,18 +775,6 @@
         <td>
           
             
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      <tr>
-        <th scope="row">Rationale interpretation </th>
-        <td>
-          
-            As the effects of climate change are becoming more evident and acute, the need for effective climate services is greater than ever before. Climate services underpin climate action and achieving SDGs. Nevertheless, the GFCS High level Task Force had identified 70 countries that do not yet have sufficient capacities to develop and use climate services. This is a major focus of the GFCS. This indicator contributes and supports the achievement of several targets such as 1.5, 2.1, 6.1, 6.4, 6.5, 7.1, 9.1, 11.3, 11.5, 12.8, 13.1, 13.2, 14.2, 15.3.
           
         </td>
         </tr>
@@ -847,6 +864,10 @@
         </tr>
         
       
+  
+  
+  
+  
   
   
   
@@ -1029,6 +1050,8 @@
   
   
   
+  
+  
 </table>
 
               </article>
@@ -1093,6 +1116,8 @@
   
   
   
+  
+  
       
       <tr>
         <th scope="row">Organización </th>
@@ -1105,17 +1130,6 @@
         
       
   
-      
-      <tr>
-        <th scope="row">Agency Staff Email </th>
-        <td>
-          
-            Elan_P_Strait@nsc.eop.gov
-          
-        </td>
-        </tr>
-        
-      
   
       
       <tr>
@@ -1258,7 +1272,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <script>
   var remoteDataBaseUrl = 'http://brock.tips/sdg-data';
 </script>
-<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181029000059'></script>
+<script src='/sdg-indicators-1/assets/js/sdg.js?v=20181030000037'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
