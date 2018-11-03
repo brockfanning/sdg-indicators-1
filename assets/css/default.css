@@ -1210,6 +1210,15 @@ footer {
     padding: 5px;
     padding-left: 0; }
 
+.language-toggle-button {
+  cursor: pointer; }
+
+.navbar ul.navbar-nav li a.language-toggle-button {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .navbar ul.navbar-nav li a.language-toggle-button {
+      display: block; } }
+
 .language-toggle-mobile {
   position: relative;
   padding-top: 20px;
