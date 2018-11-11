@@ -82,6 +82,9 @@ defaults:
     values:
       language: "en"
 
+custom_css:
+  - /assets/css/leaflet-map.css
+
 plugins:
   - jekyll-remote-theme
 
