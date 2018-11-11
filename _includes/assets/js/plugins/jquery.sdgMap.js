@@ -92,34 +92,40 @@
         }
       }
 
+      // A function to style each "Feature" in the GeoJSON layer.
       function style(feature) {
+        // All the Features will be the same other than fillColor.
         return $.extend({}, that.options.leafletStyle, {
           fillColor: getColor(feature.properties),
         });
       }
 
+      // A function to generate the markup for the legend.
+      function getLegendMarkup() {
+        var div = L.DomUtil.create('div', 'info legend');
+        var grades = chroma.limits(that.valueRange, 'e', that.options.legendItems);
+
+        function round(value) {
+          return Math.round(value * 100) / 100;
+        }
+
+        for (var i = 0; i < grades.length; i++) {
+            div.innerHTML +=
+                '<i style="background:' + that.colorScale(grades[i]).hex() + '"></i> ' +
+                round(grades[i]) + (grades[i + 1] ? '&ndash;' + round(grades[i + 1]) + '<br>' : '+');
+        }
+
+        return div;
+      }
+
+      // Load the remote GeoJSON file.
       $.getJSON(this.options.serviceUrl, function (geojson) {
+        // Add the GeoJSON layer to the map.
         L.geoJson(geojson, {style: style}).addTo(mymap);
 
+        // Add the legend.
         var legend = L.control({position: that.options.legendPosition});
-        legend.onAdd = function (map) {
-
-          var div = L.DomUtil.create('div', 'info legend'),
-              grades = chroma.limits(that.valueRange, 'e', that.options.legendItems);
-
-          function round(value) {
-            return Math.round(value * 100) / 100;
-          }
-
-          for (var i = 0; i < grades.length; i++) {
-              div.innerHTML +=
-                  '<i style="background:' + that.colorScale(grades[i]).hex() + '"></i> ' +
-                  round(grades[i]) + (grades[i + 1] ? '&ndash;' + round(grades[i + 1]) + '<br>' : '+');
-          }
-
-          return div;
-        };
-
+        legend.onAdd = getLegendMarkup;
         legend.addTo(mymap);
       });
 
