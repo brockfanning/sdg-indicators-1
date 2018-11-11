@@ -2,17 +2,19 @@
 
   // Create the defaults once
   var defaults = {
+    // Info relevant to the source GeoJSON data.
     serviceUrl: 'https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson',
     nameProperty: 'lad16nm',
     idProperty: 'lad16cd',
     startingLatitude: 55.7656678,
     startingLongitde: -3.7666251,
     startingZoom: 5,
+    // Leaflet configuration.
     leafletTileURL: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
     leafletTileOptions: {
       attribution: 'Blah blah',
-      minZoom: 4,
-      maxZoom: 6,
+      minZoom: 5,
+      maxZoom: 8,
       id: 'mapbox.light',
       accessToken: 'pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg'
     },
@@ -23,8 +25,10 @@
       dashArray: '3',
       fillOpacity: 0.7
     },
+    // Choropleth considerations.
     colorRange: ['#b4c5c1', '#004433'],
     noValueColor: '#f0f0f0',
+    legendItems: 5
   };
 
   function Plugin(element, options) {
@@ -37,7 +41,9 @@
     this.geoCodeRegEx = this.options.geoCodeRegEx;
 
     this.valueRange = [_.min(_.pluck(this.options.geoData, 'Value')), _.max(_.pluck(this.options.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange).domain(this.valueRange);
+    this.colorScale = chroma.scale(this.options.colorRange)
+      .domain(this.valueRange)
+      .classes(this.options.legendItems);
 
     this.years = _.uniq(_.pluck(this.options.geoData, 'Year'));
     this.currentYear = this.years[0];
@@ -75,6 +81,27 @@
 
       $.getJSON(this.options.serviceUrl, function (geojson) {
         L.geoJson(geojson, {style: style}).addTo(mymap);
+
+        var legend = L.control({position: 'bottomright'});
+        legend.onAdd = function (map) {
+
+          var div = L.DomUtil.create('div', 'info legend'),
+              grades = chroma.limits(that.valueRange, 'e', that.options.legendItems);
+
+          function round(value) {
+            return Math.round(value * 100) / 100;
+          }
+
+          for (var i = 0; i < grades.length; i++) {
+              div.innerHTML +=
+                  '<i style="background:' + that.colorScale(grades[i]).hex() + '"></i> ' +
+                  round(grades[i]) + (grades[i + 1] ? '&ndash;' + round(grades[i + 1]) + '<br>' : '+');
+          }
+
+          return div;
+        };
+
+        legend.addTo(mymap);
       });
 
       // Leaflet needs "invalidateSize()" if it was originally rendered in a
