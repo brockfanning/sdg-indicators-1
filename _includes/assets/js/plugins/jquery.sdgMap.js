@@ -9,7 +9,8 @@
     startingLatitude: 55.7656678,
     startingLongitde: -3.7666251,
     startingZoom: 5,
-    // Leaflet configuration.
+    // Options for using tile imagery with leaflet.
+    leafletTiles: true,
     leafletTileURL: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
     leafletTileOptions: {
       attribution: 'Blah blah',
@@ -25,10 +26,11 @@
       dashArray: '3',
       fillOpacity: 0.7
     },
-    // Choropleth considerations.
+    // Visual/choropleth considerations.
     colorRange: ['#b4c5c1', '#004433'],
     noValueColor: '#f0f0f0',
-    legendItems: 5
+    legendItems: 5,
+    legendPosition: 'bottomright',
   };
 
   function Plugin(element, options) {
@@ -53,20 +55,37 @@
 
   Plugin.prototype = {
     init: function() {
+      // Create the map and set the starting position.
       var mymap = L.map(this.element)
         .setView([this.options.startingLatitude, this.options.startingLongitde], this.options.startingZoom);
-      L.tileLayer(this.options.leafletTileURL, this.options.leafletTileOptions).addTo(mymap);
-
+      // Add tiles if necessary.
+      if (this.options.leafletTiles) {
+        L.tileLayer(this.options.leafletTileURL, this.options.leafletTileOptions).addTo(mymap);
+      }
+      // Because after this point, "this" rarely works.
       var that = this;
 
-      function getColor(properties) {
+      // A function to get the local (CSV) data corresponding to a GeoJSON
+      // "feature" with the corresponding data.
+      function getLocalData(properties) {
         var geocode = properties[that.options.idProperty];
         var matches = _.where(that.options.geoData, {
           GeoCode: geocode,
           Year: that.currentYear
         });
         if (matches.length) {
-          return that.colorScale(matches[0]['Value']).hex();
+          return matches[0];
+        }
+        else {
+          return false;
+        }
+      }
+
+      // A function to choose a color for a GeoJSON feature.
+      function getColor(properties) {
+        var localData = getLocalData(properties);
+        if (localData) {
+          return that.colorScale(localData['Value']).hex();
         }
         else {
           return that.options.noValueColor;
@@ -82,7 +101,7 @@
       $.getJSON(this.options.serviceUrl, function (geojson) {
         L.geoJson(geojson, {style: style}).addTo(mymap);
 
-        var legend = L.control({position: 'bottomright'});
+        var legend = L.control({position: that.options.legendPosition});
         legend.onAdd = function (map) {
 
           var div = L.DomUtil.create('div', 'info legend'),
