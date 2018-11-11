@@ -31,6 +31,7 @@
     noValueColor: '#f0f0f0',
     legendItems: 5,
     legendPosition: 'bottomright',
+    sliderPosition: 'bottomleft',
   };
 
   function Plugin(element, options) {
@@ -102,7 +103,7 @@
 
       // A function to generate the markup for the legend.
       function getLegendMarkup() {
-        var div = L.DomUtil.create('div', 'info legend');
+        var div = L.DomUtil.create('div', 'control legend');
         var grades = chroma.limits(that.valueRange, 'e', that.options.legendItems);
 
         function round(value) {
@@ -118,6 +119,26 @@
         return div;
       }
 
+      // A function to generate the markup for the slider.
+      function getSliderMarkup() {
+        var div = L.DomUtil.create('div', 'control');
+        var currentYear = L.DomUtil.create('div', 'current-year', div);
+        var slider = L.DomUtil.create('input', 'slider', div);
+        slider.type = 'range';
+        slider.min = 0;
+        slider.max = that.years.length - 1;
+        slider.value = 0;
+        slider.step = 1;
+        slider.id = 'year-slider';
+        slider.oninput = function() {
+          that.currentYear = that.years[this.value];
+          currentYear.innerHTML = 'Showing year: ' + that.currentYear;
+        }
+        slider.oninput();
+
+        return div;
+      }
+
       // Load the remote GeoJSON file.
       $.getJSON(this.options.serviceUrl, function (geojson) {
         // Add the GeoJSON layer to the map.
@@ -127,6 +148,11 @@
         var legend = L.control({position: that.options.legendPosition});
         legend.onAdd = getLegendMarkup;
         legend.addTo(mymap);
+
+        // Add the slider.
+        var slider = L.control({position: that.options.sliderPosition});
+        slider.onAdd = getSliderMarkup;
+        slider.addTo(mymap);
       });
 
       // Leaflet needs "invalidateSize()" if it was originally rendered in a
