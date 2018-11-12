@@ -26,7 +26,7 @@ jekyll_get_data:
     # directory: 'remotedata'
   - data: schema
     json: 'https://G205SDGs.github.io/sdg-data/meta/schema.json'
-   - data: translations
+  - data: translations
     # Pin to version 0.2.0 of the translation repository.
     json: 'https://opendataenterprise.github.io/sdg-translations/translations-0.2.0.json'
 
