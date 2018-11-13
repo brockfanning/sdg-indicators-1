@@ -12,20 +12,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: production
-remotedatabaseurl: "https://sustainabledevelopment-germany.github.io/sdg-data"
+remotedatabaseurl: "https://sustainabledevelopment-germany.github.io/sdg-data-pub/"
 # permalink: /news/:year/:month/:day/:title.html
 
 jekyll_get_data:
   - data: meta
-    json: 'https://sustainabledevelopment-germany.github.io/sdg-data/meta/all.json'
+    json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/meta/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: headlines
-    json: 'https://sustainabledevelopment-germany.github.io/sdg-data/headline/all.json'
+    json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/headline/all.json'
     # cache: true
     # directory: 'remotedata'
   - data: schema
-    json: 'https://sustainabledevelopment-germany.github.io/sdg-data/meta/schema.json'
+    json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/meta/schema.json'
   - data: translations
     # Pin to version 0.2.0 of the translation repository.
     json: 'https://opendataenterprise.github.io/sdg-translations/translations-0.2.0.json'
