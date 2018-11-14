@@ -6,27 +6,23 @@
     serviceUrl: 'https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson',
     nameProperty: 'lad16nm',
     idProperty: 'lad16cd',
-    startingLatitude: 55.7656678,
-    startingLongitde: -3.7666251,
-    startingZoom: 5,
     // Options for using tile imagery with leaflet.
-    leafletTiles: true,
-    leafletTileURL: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
-    leafletTileOptions: {
+    tileURL: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
+    tileOptions: {
+      id: 'mapbox.light',
+      accessToken: 'pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg',
       attribution: 'Blah blah',
       minZoom: 5,
       maxZoom: 12,
-      id: 'mapbox.light',
-      accessToken: 'pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg'
     },
-    leafletStyle: {
+    styleOptions: {
       weight: 1,
       opacity: 1,
       color: 'white',
       dashArray: '3',
       fillOpacity: 0.7
     },
-    leafletHoverStyle: {
+    styleOptionsHover: {
       weight: 3,
       color: '#666',
       dashArray: '',
@@ -35,13 +31,11 @@
     colorRange: ['#b4c5c1', '#004433'],
     noValueColor: '#f0f0f0',
     legendItems: 5,
+    // Placement of map controls.
     legendPosition: 'bottomright',
     sliderPosition: 'bottomleft',
     infoPosition: 'topright',
   };
-
-  // Some functions that will be used in multiple places.
-
 
   function Plugin(element, options) {
 
@@ -61,10 +55,13 @@
     this.years = _.uniq(_.pluck(this.options.geoData, 'Year'));
     this.currentYear = this.years[0];
 
-    this.featureStyle = function(plugin) {
+    this.selectedFields = [];
+    this.layer = null;
+
+    this.style = function(plugin) {
       return function(feature) {
-        return $.extend({}, plugin.options.leafletStyle, {
-          fillColor: plugin.getColorOfFeature(feature.properties),
+        return $.extend({}, plugin.options.styleOptions, {
+          fillColor: plugin.getColor(feature.properties),
         });
       }
     }(this);
@@ -73,19 +70,22 @@
   }
 
   Plugin.prototype = {
-    // A function called through jQuery to update the data according to the
-    // currently-selected fields.
+
+    // Update the map according according to the currently-selected fields.
     updateSelectedFields: function(selectedFields) {
-      console.log(selectedFields);
+      this.selectedFields = selectedFields;
+      this.updateColors();
     },
-    // A function to update the colors of the Features on the map.
+
+    // Update the colors of the Features on the map.
     updateColors: function() {
-      this.geojsonLayer.setStyle(this.featureStyle);
+      this.layer.setStyle(this.style);
     },
-    // A function to get the local (CSV) data corresponding to a GeoJSON
-    // "feature" with the corresponding data.
-    getLocalDataForFeature: function(featureProperties) {
-      var geocode = featureProperties[this.options.idProperty];
+
+    // Get the local (CSV) data corresponding to a GeoJSON "feature" with the
+    // corresponding data.
+    getData: function(props) {
+      var geocode = props[this.options.idProperty];
       var matches = _.where(this.options.geoData, {
         GeoCode: geocode,
         Year: this.currentYear
@@ -97,9 +97,10 @@
         return false;
       }
     },
-    // A function to choose a color for a GeoJSON feature.
-    getColorOfFeature: function(properties) {
-      var localData = this.getLocalDataForFeature(properties);
+
+    // Choose a color for a GeoJSON feature.
+    getColor: function(props) {
+      var localData = this.getData(props);
       if (localData) {
         return this.colorScale(localData['Value']).hex();
       }
@@ -107,134 +108,120 @@
         return this.options.noValueColor;
       }
     },
-    // A function to get the legend.
-    getLegend: function() {
-      var plugin = this;
-      var legend = L.Control.extend({
-        onAdd: function() {
-          function round(value) {
-            return Math.round(value * 100) / 100;
-          }
-          var div = L.DomUtil.create('div', 'control legend');
-          var grades = chroma.limits(plugin.valueRange, 'e', plugin.options.legendItems);
-          for (var i = 0; i < grades.length; i++) {
-            div.innerHTML +=
-              '<i style="background:' + plugin.colorScale(grades[i]).hex() + '"></i> ' +
-                round(grades[i]) + (grades[i + 1] ? '&ndash;' + round(grades[i + 1]) + '<br>' : '+');
-          }
 
-          return div;
-        },
-      });
-      return new legend({position: plugin.options.legendPosition});
-    },
-    // A function to get the slider.
-    getSlider: function() {
-      var plugin = this;
-      var slider = L.Control.extend({
-        onAdd: function() {
-          var div = L.DomUtil.create('div', 'control');
-          var yearLabel = L.DomUtil.create('div', 'current-year', div);
-          var sliderElement = L.DomUtil.create('input', 'slider', div);
-          L.DomEvent.disableClickPropagation(sliderElement);
-          // Add a bunch of attributes.
-          sliderElement.type = 'range';
-          sliderElement.min = 0;
-          sliderElement.max = plugin.years.length - 1;
-          sliderElement.value = 0;
-          sliderElement.step = 1;
-          sliderElement.oninput = function() {
-            plugin.currentYear = plugin.years[this.value];
-            yearLabel.innerHTML = 'Showing year: <strong>' + plugin.currentYear + '</strong>';
-            plugin.updateColors();
-          }
-          return div;
-        },
-      });
-      return new slider({position: plugin.options.sliderPosition});
-    },
-    // A function to get the info pane.
-    getInfoPane: function() {
-      var plugin = this;
-      var info = L.Control.extend({
-        onAdd: function() {
-          this._div = L.DomUtil.create('div', 'control info');
-          this.update();
-          return this._div;
-        },
-        update: function(props) {
-          var infoMarkup = '';
-          if (props) {
-            infoMarkup = '<p>' + props[plugin.options.nameProperty] + '</p>';
-            var localData = plugin.getLocalDataForFeature(props);
-            infoMarkup += (localData['Value']) ? '<h4>' + localData['Value'] + '</h4>' : 'No data available';
-          }
-          this._div.innerHTML = infoMarkup;
-        }
-      });
-      return new info({position: plugin.options.infoPosition});
-    },
     init: function() {
-      // Create the map and set the starting position.
-      this.map = L.map(this.element)
-        .setView([this.options.startingLatitude, this.options.startingLongitde], this.options.startingZoom);
-      // Add tiles if necessary.
-      if (this.options.leafletTiles) {
-        L.tileLayer(this.options.leafletTileURL, this.options.leafletTileOptions).addTo(this.map);
-      }
+
+      // Create the map.
+      var map = L.map(this.element);
+
+      // Add tile imagery.
+      L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(map);
 
       // Because after this point, "this" rarely works.
-      var that = this;
+      var plugin = this;
 
-      // Function to zoom to the clicked feature.
-      function zoomToFeature(e) {
-        that.map.fitBounds(e.target.getBounds());
+      // Helper function to round values for the legend.
+      function round(value) {
+        return Math.round(value * 100) / 100;
       }
 
-      // Function highlight the hovered feature.
-      function highlightFeature(e) {
-        var layer = e.target;
-
-        layer.setStyle(that.options.leafletHoverStyle);
-        that.infoPane.update(layer.feature.properties);
-
-        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-          layer.bringToFront();
+      // Add the legend.
+      var legend = L.control();
+      legend.onAdd = function() {
+        var div = L.DomUtil.create('div', 'control legend');
+        var grades = chroma.limits(plugin.valueRange, 'e', plugin.options.legendItems);
+        for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+            '<i style="background:' + plugin.colorScale(grades[i]).hex() + '"></i> ' +
+              round(grades[i]) + (grades[i + 1] ? '&ndash;' + round(grades[i + 1]) + '<br>' : '+');
         }
+        return div;
       }
+      legend.setPosition(this.options.legendPosition);
+      legend.addTo(map);
 
-      // Function to un-highlight the un-hovered feature.
-      function resetHighlight(e) {
-        that.geojsonLayer.resetStyle(e.target);
-        that.infoPane.update();
+      // Add the slider.
+      var slider = L.control();
+      slider.onAdd = function() {
+        var div = L.DomUtil.create('div', 'control');
+        var year = L.DomUtil.create('div', 'current-year', div);
+        year.innerHTML = 'Showing year: <strong>' + plugin.currentYear + '</strong>';
+        var input = L.DomUtil.create('input', 'slider', div);
+        L.DomEvent.disableClickPropagation(input);
+        // Add a bunch of attributes.
+        input.type = 'range';
+        input.min = 0;
+        input.max = plugin.years.length - 1;
+        input.value = 0;
+        input.step = 1;
+        input.oninput = function() {
+          plugin.currentYear = plugin.years[input.value];
+          year.innerHTML = 'Showing year: <strong>' + plugin.currentYear + '</strong>'
+          plugin.updateColors();
+        }
+        return div;
       }
+      slider.setPosition(this.options.sliderPosition);
+      slider.addTo(map);
 
-      // Function to set all event listeners.
-      function onEachFeature(feature, layer) {
-        layer.on({
-          click: zoomToFeature,
-          mouseover: highlightFeature,
-          mouseout: resetHighlight
-        });
+      // Add the info pane.
+      var info = L.control();
+      info.onAdd = function() {
+        this._div = L.DomUtil.create('div', 'control info');
+        this.update();
+        return this._div;
       }
+      info.update = function(props) {
+        var infoMarkup = '';
+        if (props) {
+          infoMarkup = '<p>' + props[plugin.options.nameProperty] + '</p>';
+          var localData = plugin.getData(props);
+          infoMarkup += (localData['Value']) ? '<h4>' + localData['Value'] + '</h4>' : 'No data available';
+        }
+        this._div.innerHTML = infoMarkup;
+      }
+      info.setPosition(this.options.infoPosition);
+      info.addTo(map);
 
-      // Load the remote GeoJSON file.
+      // At this point we need to load the GeoJSON layer.
       $.getJSON(this.options.serviceUrl, function (geojson) {
+
         // Add the GeoJSON layer to the map.
-        that.geojsonLayer = L.geoJson(geojson, {
-          style: that.featureStyle,
+        plugin.layer = L.geoJson(geojson, {
+          style: plugin.style,
           onEachFeature: onEachFeature
-        }).addTo(that.map);
+        }).addTo(map);
 
-        // Add the legend.
-        that.getLegend().addTo(that.map);
+        // Zoom to the clicked feature.
+        function zoomToFeature(e) {
+          map.fitBounds(e.target.getBounds());
+        }
 
-        // Add the slider.
-        that.getSlider().addTo(that.map);
+        // Highlight a feature.
+        function highlightFeature(e) {
+          var layer = e.target;
+          layer.setStyle(plugin.options.styleOptionsHover);
+          info.update(layer.feature.properties);
 
-        // Add the info pane.
-        that.infoPane = that.getInfoPane().addTo(that.map);
+          if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+          }
+        }
 
+        // Un-highlight a feature.
+        function resetFeature(e) {
+          plugin.layer.resetStyle(e.target);
+          info.update();
+        }
+
+        // Set all event listeners.
+        function onEachFeature(feature, layer) {
+          layer.on({
+            click: zoomToFeature,
+            mouseover: highlightFeature,
+            mouseout: resetFeature
+          });
+        }
       });
 
       // Leaflet needs "invalidateSize()" if it was originally rendered in a
@@ -242,7 +229,10 @@
       $('.map .nav-link').click(function() {
         setTimeout(function() {
           jQuery('#map #loader-container').hide();
-          that.map.invalidateSize();
+          // Fix the size.
+          map.invalidateSize();
+          // Also zoom in/out as needed.
+          map.fitBounds(plugin.layer.getBounds());
         }, 500);
       });
     },
