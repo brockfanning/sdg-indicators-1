@@ -11,6 +11,6 @@ var mapView = function () {
   };
 
   this.update = function(selectedFields) {
-    $('#map').sdgMap('update', selectedFields).updateColors();
+    $('#map').sdgMap('update', selectedFields);
   }
 };
