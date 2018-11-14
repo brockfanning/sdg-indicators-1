@@ -55,6 +55,10 @@
     this.years = _.uniq(_.pluck(this.options.geoData, 'Year'));
     this.currentYear = this.years[0];
 
+    // Track the selected GeoJSON feature.
+    this.selectedFeature = null;
+
+    // These variables will be set later.
     this.selectedFields = [];
     this.layer = null;
 
@@ -192,14 +196,13 @@
           onEachFeature: onEachFeature
         }).addTo(map);
 
-        // Zoom to the clicked feature.
-        function zoomToFeature(e) {
-          map.fitBounds(e.target.getBounds());
+        // Zoom to a feature.
+        function zoomToFeature(layer) {
+          map.fitBounds(layer.getBounds());
         }
 
         // Highlight a feature.
-        function highlightFeature(e) {
-          var layer = e.target;
+        function highlightFeature(layer) {
           layer.setStyle(plugin.options.styleOptionsHover);
           info.update(layer.feature.properties);
 
@@ -209,17 +212,51 @@
         }
 
         // Un-highlight a feature.
-        function resetFeature(e) {
-          plugin.layer.resetStyle(e.target);
+        function unHighlightFeature(layer) {
+          plugin.layer.resetStyle(layer);
           info.update();
+        }
+
+        // Event handler for click/touch.
+        function clickHandler(e) {
+          var layer = e.target;
+          // Clicking "selects" a feature.
+          if (plugin.selectedFeature) {
+            unHighlightFeature(plugin.selectedFeature);
+          }
+          plugin.selectedFeature = layer;
+          // Zoom in.
+          zoomToFeature(layer);
+          // Highlight the feature.
+          highlightFeature(layer);
+        }
+
+        // Event handler for mouseover.
+        function mouseoverHandler(e) {
+          var layer = e.target;
+          // Disable mouseover if the user has selected a feature.
+          if (plugin.selectedFeature) {
+            return;
+          }
+          highlightFeature(layer);
+        }
+
+        // Event handler for mouseout.
+        function mouseoutHandler(e) {
+          var layer = e.target;
+          // Disable mouseout if the user has selected a feature.
+          if (plugin.selectedFeature) {
+            return;
+          }
+          unHighlightFeature(layer);
         }
 
         // Set all event listeners.
         function onEachFeature(feature, layer) {
           layer.on({
-            click: zoomToFeature,
-            mouseover: highlightFeature,
-            mouseout: resetFeature
+            click: clickHandler,
+            mouseover: mouseoverHandler,
+            mouseout: mouseoutHandler,
           });
         }
       });
