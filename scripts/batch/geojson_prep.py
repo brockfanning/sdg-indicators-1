@@ -18,7 +18,7 @@ lookup_child_col = 'LAD16CD'
 
 geojson_child_file = 'https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson'
 geojson_child_col = 'lad16cd'
-geojson_parent_file = 'https://opendata.arcgis.com/datasets/4fcca2a47fed4bfaa1793015a18537ac_0.geojson'
+geojson_parent_file = 'https://opendata.arcgis.com/datasets/4fcca2a47fed4bfaa1793015a18537ac_4.geojson'
 geojson_parent_col = 'rgn17cd'
 
 # Get the lookup table, as a dict of parents to lists of children.
