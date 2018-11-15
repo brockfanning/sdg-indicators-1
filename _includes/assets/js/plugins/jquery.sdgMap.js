@@ -2,10 +2,20 @@
 
   // Create the defaults once
   var defaults = {
-    // Info relevant to the source GeoJSON data.
-    serviceUrl: 'https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson',
-    nameProperty: 'lad16nm',
-    idProperty: 'lad16cd',
+    parentGeo: {
+      serviceUrl: '/sdg-indicators/public/parents.geo.json',
+      nameProperty: 'rgn17nm',
+      idProperty: 'rgn17cd',
+      noData: 'No data available at the region level',
+      buttonText: 'View district data',
+    },
+    childGeo: {
+      serviceUrl: '/sdg-indicators/public/children.geo.json',
+      nameProperty: 'lad16nm',
+      idProperty: 'lad16cd',
+      noData: 'No data available for this district',
+      buttonText: 'Back to regions',
+    },
     // Options for using tile imagery with leaflet.
     tileURL: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
     tileOptions: {
@@ -58,6 +68,9 @@
     // Track the selected GeoJSON feature.
     this.selectedFeature = null;
 
+    // Track whether the child GeoJSON is being viewed.
+    this.childActive = false;
+
     // These variables will be set later.
     this.selectedFields = [];
     this.layer = null;
@@ -89,7 +102,7 @@
     // Get the local (CSV) data corresponding to a GeoJSON "feature" with the
     // corresponding data.
     getData: function(props) {
-      var geocode = props[this.options.idProperty];
+      var geocode = props[this.getGeo().idProperty];
       var matches = _.where(this.options.geoData, {
         GeoCode: geocode,
         Year: this.currentYear
@@ -110,6 +123,16 @@
       }
       else {
         return this.options.noValueColor;
+      }
+    },
+
+    // Get the properties of the current geojson layer.
+    getGeo: function() {
+      if (this.childActive) {
+        return this.options.childGeo;
+      }
+      else {
+        return this.options.parentGeo;
       }
     },
 
@@ -176,19 +199,37 @@
         return this._div;
       }
       info.update = function(props) {
-        var infoMarkup = '';
-        if (props) {
-          infoMarkup = '<p>' + props[plugin.options.nameProperty] + '</p>';
-          var localData = plugin.getData(props);
-          infoMarkup += (localData['Value']) ? '<h4>' + localData['Value'] + '</h4>' : 'No data available';
+        if (this._div) {
+          this._div.innerHTML = '';
         }
-        this._div.innerHTML = infoMarkup;
+        if (props) {
+          var name = L.DomUtil.create('p', 'info-name', this._div);
+          name.innerHTML = props[plugin.getGeo().nameProperty];
+          var localData = plugin.getData(props);
+          var value;
+          if (localData['Value']) {
+            value = L.DomUtil.create('h4', 'info-value', this._div);
+            value.innerHTML = localData['Value'];
+          }
+          else {
+            value = L.DomUtil.create('p', 'info-no-data', this._div);
+            value.innerHTML = plugin.getGeo().noData;
+          }
+          if (props.has_children || props.parent) {
+            var button = L.DomUtil.create('button', 'nested-zoom', this._div);
+            button.innerHTML = plugin.getGeo().buttonText;
+            button.onclick = function(e) {
+              console.log('switching');
+              console.log(e);
+            }
+          }
+        }
       }
       info.setPosition(this.options.infoPosition);
       info.addTo(map);
 
       // At this point we need to load the GeoJSON layer.
-      $.getJSON(this.options.serviceUrl, function (geojson) {
+      $.getJSON(this.getGeo().serviceUrl, function (geojson) {
 
         // Add the GeoJSON layer to the map.
         plugin.layer = L.geoJson(geojson, {
@@ -275,7 +316,7 @@
     },
     // Stll needed?
     isInScope: function(d) {
-      return d === null ? true : d.properties[this.options.idProperty].match(this.options.geoCodeRegEx);
+      return d === null ? true : d.properties[this.getGeo().idProperty].match(this.options.geoCodeRegEx);
     }
   };
 
