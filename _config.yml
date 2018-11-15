@@ -73,6 +73,7 @@ collections:
 # The list of languages that are translated. The first one is the default.
 languages:
   - en
+  - fr
 
 # This makes sure that all pages have a language.
 defaults:
