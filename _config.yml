@@ -72,6 +72,7 @@ collections:
 
 # The list of languages that are translated. The first one is the default.
 languages:
+  - de
   - en
 
 # This makes sure that all pages have a language.
@@ -80,7 +81,7 @@ defaults:
     scope:
       path: ""
     values:
-      language: "en"
+      language: "de"
 plugins:
   - jekyll-remote-theme
 
