@@ -4,7 +4,7 @@ permalink: /about/
 layout: page
 ---
 
-ONS is responsible for the development and collection of UK data for the [Sustainable Development Goals](http://www.un.org/sustainabledevelopment/sustainable-development-goals/) (SDG) global indicators and for reporting UK progress towards them.
+Destatis is responsible for the development and collection of German data for the [Sustainable Development Goals](http://www.un.org/sustainabledevelopment/sustainable-development-goals/) (SDG) global indicators and for reporting UK progress towards them.
 
 This website is for disseminating UK SDG indicator data. We are at an Alpha stage in development, so the site is still 'work in progress'.
 
