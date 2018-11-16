@@ -1,21 +1,65 @@
+/**
+ * Notes:
+ *
+ * On load:
+ *  - load all GeoJSON files and attach them as layers, but only one will be visible
+ *  - each layer has its own style options
+ * On feature click:
+ *  - zoom to clicked feature
+ *  - select clicked feature
+ *  - update info pane about clicked feature
+ * On zoom end:
+ *  - show/hide layers as needed
+ *  - if hiding a layer with a selected feature, unselect and remove info from pane
+ *
+ * Takeaways:
+ * 1. The default layer will always be visible but not always clickable.
+ * 2. For sanity, the lower layers should not receive choropleth colors, only outlines
+ */
 (function($, L, chroma, window, document, undefined) {
 
   // Create the defaults once
   var defaults = {
-    parentGeo: {
-      serviceUrl: '/sdg-indicators/public/parents.geo.json',
-      nameProperty: 'rgn17nm',
-      idProperty: 'rgn17cd',
-      noData: 'No data available at the region level',
-      buttonText: 'View district data',
-    },
-    childGeo: {
-      serviceUrl: '/sdg-indicators/public/children.geo.json',
-      nameProperty: 'lad16nm',
-      idProperty: 'lad16cd',
-      noData: 'No data available for this district',
-      buttonText: 'Back to regions',
-    },
+    geoLayers: [
+      {
+        zoomThreshold: 0,
+        serviceUrl: '/sdg-indicators/public/parents.geo.json',
+        nameProperty: 'rgn17nm',
+        idProperty: 'rgn17cd',
+        noData: 'No data available at the region level',
+        styleOptions: {
+          weight: 1,
+          opacity: 1,
+          color: 'white',
+          dashArray: '3',
+          fillOpacity: 0.7
+        },
+        styleOptionsSelected: {
+          weight: 3,
+          color: '#666',
+          dashArray: '',
+        }
+      },
+      {
+        zoomThreshold: 8,
+        serviceUrl: '/sdg-indicators/public/children.geo.json',
+        nameProperty: 'lad16nm',
+        idProperty: 'lad16cd',
+        noData: 'No data available for this district',
+        styleOptions: {
+          weight: 1,
+          opacity: 1,
+          color: 'yellow',
+          dashArray: '3',
+          fillOpacity: 0.7
+        },
+        styleOptionsSelected: {
+          weight: 3,
+          color: '#222',
+          dashArray: '',
+        }
+      }
+    ],
     // Options for using tile imagery with leaflet.
     tileURL: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
     tileOptions: {
@@ -24,18 +68,6 @@
       attribution: 'Blah blah',
       minZoom: 5,
       maxZoom: 12,
-    },
-    styleOptions: {
-      weight: 1,
-      opacity: 1,
-      color: 'white',
-      dashArray: '3',
-      fillOpacity: 0.7
-    },
-    styleOptionsHover: {
-      weight: 3,
-      color: '#666',
-      dashArray: '',
     },
     // Visual/choropleth considerations.
     colorRange: ['#b4c5c1', '#004433'],
@@ -68,16 +100,14 @@
     // Track the selected GeoJSON feature.
     this.selectedFeature = null;
 
-    // Track whether the child GeoJSON is being viewed.
-    this.childActive = false;
-
     // These variables will be set later.
     this.selectedFields = [];
     this.layer = null;
+    this.map = null;
 
     this.style = function(plugin) {
       return function(feature) {
-        return $.extend({}, plugin.options.styleOptions, {
+        return $.extend({}, plugin.getGeo().styleOptions, {
           fillColor: plugin.getColor(feature.properties),
         });
       }
@@ -128,18 +158,21 @@
 
     // Get the properties of the current geojson layer.
     getGeo: function() {
-      if (this.childActive) {
-        return this.options.childGeo;
-      }
-      else {
-        return this.options.parentGeo;
-      }
+      var zoom = this.map.getZoom() || 0;
+      var geo = null;
+      this.options.geoLayers.forEach(function(geoLayer) {
+        if (geoLayer.zoomThreshold <= zoom) {
+          geo = geoLayer;
+        }
+      });
+      return geo;
     },
 
     init: function() {
 
       // Create the map.
       var map = L.map(this.element);
+      this.map = map;
 
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(map);
@@ -215,27 +248,24 @@
             value = L.DomUtil.create('p', 'info-no-data', this._div);
             value.innerHTML = plugin.getGeo().noData;
           }
-          if (props.has_children || props.parent) {
-            var button = L.DomUtil.create('button', 'nested-zoom', this._div);
-            button.innerHTML = plugin.getGeo().buttonText;
-            button.onclick = function(e) {
-              console.log('switching');
-              console.log(e);
-            }
-          }
         }
       }
       info.setPosition(this.options.infoPosition);
       info.addTo(map);
 
-      // At this point we need to load the GeoJSON layer.
-      $.getJSON(this.getGeo().serviceUrl, function (geojson) {
+      // At this point we need to load the GeoJSON layer/s.
+      var geoURLs = this.options.geoLayers.map(function(item) {
+        return $.getJSON(item.serviceUrl);
+      });
+      $.when.apply($, geoURLs).done(function() {
 
-        // Add the GeoJSON layer to the map.
-        plugin.layer = L.geoJson(geojson, {
-          style: plugin.style,
-          onEachFeature: onEachFeature
-        }).addTo(map);
+        var geoJsons = arguments;
+        for (var i in geoJsons) {
+          plugin.layer = L.geoJson(geoJsons[i], {
+            style: plugin.style,
+            onEachFeature: onEachFeature
+          }).addTo(map);
+        }
 
         // Zoom to a feature.
         function zoomToFeature(layer) {
@@ -244,7 +274,7 @@
 
         // Highlight a feature.
         function highlightFeature(layer) {
-          layer.setStyle(plugin.options.styleOptionsHover);
+          layer.setStyle(plugin.getGeo().styleOptionsSelected);
           info.update(layer.feature.properties);
 
           if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
@@ -272,34 +302,17 @@
           highlightFeature(layer);
         }
 
-        // Event handler for mouseover.
-        function mouseoverHandler(e) {
-          var layer = e.target;
-          // Disable mouseover if the user has selected a feature.
-          if (plugin.selectedFeature) {
-            return;
-          }
-          highlightFeature(layer);
-        }
-
-        // Event handler for mouseout.
-        function mouseoutHandler(e) {
-          var layer = e.target;
-          // Disable mouseout if the user has selected a feature.
-          if (plugin.selectedFeature) {
-            return;
-          }
-          unHighlightFeature(layer);
-        }
-
-        // Set all event listeners.
+        // Set the Feature-specific event listeners.
         function onEachFeature(feature, layer) {
           layer.on({
             click: clickHandler,
-            mouseover: mouseoverHandler,
-            mouseout: mouseoutHandler,
           });
         }
+
+        // Set the nested-zooming behavior.
+        map.on('zoomend', function(e) {
+          console.log(map.getZoom());
+        });
       });
 
       // Leaflet needs "invalidateSize()" if it was originally rendered in a
