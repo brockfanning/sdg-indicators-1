@@ -32,7 +32,6 @@
           weight: 1,
           opacity: 1,
           color: 'white',
-          fillColor: 'transparent',
           dashArray: '3',
           fillOpacity: 0.7
         },
@@ -53,7 +52,6 @@
           weight: 1,
           opacity: 1,
           color: 'yellow',
-          fillColor: 'transparent',
           dashArray: '3',
           fillOpacity: 0.7
         },
@@ -91,8 +89,6 @@
     this._defaults = defaults;
     this._name = 'sdgMap';
 
-    this.geoCodeRegEx = this.options.geoCodeRegEx;
-
     this.valueRange = [_.min(_.pluck(this.options.geoData, 'Value')), _.max(_.pluck(this.options.geoData, 'Value'))];
     this.colorScale = chroma.scale(this.options.colorRange)
       .domain(this.valueRange)
@@ -124,7 +120,6 @@
 
     // Get all of the GeoJSON layers.
     getAllLayers: function() {
-      // Unfortunately relies on an internal of the ZoomShowHide library.
       return L.featureGroup(this.zoomShowHide.layers);
     },
 
@@ -168,11 +163,6 @@
       else {
         return this.options.noValueColor;
       }
-    },
-
-    // Get the properties of the current geojson layer.
-    getGeo: function() {
-      return this.options.geoLayers[0];
     },
 
     // Zoom to a feature.
@@ -244,14 +234,15 @@
         this.update();
         return this._div;
       }
-      info.update = function(props) {
+      info.update = function(layer) {
         if (this._div) {
           this._div.innerHTML = '';
         }
-        if (props) {
+        if (layer) {
+          var props = layer.feature.properties;
           var name = L.DomUtil.create('p', 'info-name', this._div);
-          name.innerHTML = props[plugin.getGeo().nameProperty];
-          var localData = plugin.getData(props);
+          name.innerHTML = props[layer.options.sdgLayer.nameProperty];
+          var localData = plugin.getData(props[layer.options.sdgLayer.idProperty]);
           var value;
           if (localData['Value']) {
             value = L.DomUtil.create('h4', 'info-value', this._div);
@@ -259,7 +250,7 @@
           }
           else {
             value = L.DomUtil.create('p', 'info-no-data', this._div);
-            value.innerHTML = plugin.getGeo().noData;
+            value.innerHTML = layer.options.sdgLayer.noData;
           }
         }
       }
@@ -272,11 +263,20 @@
       });
       $.when.apply($, geoURLs).done(function() {
 
+        function onEachFeature(feature, layer) {
+          //feature.sdgLayerOptions = this.sdgLayerOptions;
+          layer.on({
+            click: clickHandler,
+          });
+        }
+
         var geoJsons = arguments;
         for (var i in geoJsons) {
           var layer = L.geoJson(geoJsons[i], {
+            // Tack on the custom options here to access them later.
+            sdgLayer: plugin.options.geoLayers[i],
             style: plugin.options.geoLayers[i].styleOptions,
-            onEachFeature: onEachFeature
+            onEachFeature: onEachFeature,
           });
           layer.min_zoom = plugin.options.geoLayers[i].min_zoom;
           layer.max_zoom = plugin.options.geoLayers[i].max_zoom;
@@ -289,8 +289,8 @@
 
         // Highlight a feature.
         function highlightFeature(layer) {
-          layer.setStyle(plugin.getGeo().styleOptionsSelected);
-          info.update(layer.feature.properties);
+          layer.setStyle(layer.options.sdgLayer.styleOptionsSelected);
+          info.update(layer);
 
           if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
             layer.bringToFront();
@@ -299,7 +299,7 @@
 
         // Un-highlight a feature.
         function unHighlightFeature(layer) {
-          plugin.layer.resetStyle(layer);
+          layer.setStyle(layer.options.sdgLayer.styleOptions);
           info.update();
         }
 
@@ -316,13 +316,6 @@
           // Highlight the feature.
           highlightFeature(layer);
         }
-
-        // Set the Feature-specific event listeners.
-        function onEachFeature(feature, layer) {
-          layer.on({
-            click: clickHandler,
-          });
-        }
       });
 
       // Leaflet needs "invalidateSize()" if it was originally rendered in a
@@ -337,10 +330,6 @@
         }, 500);
       });
     },
-    // Stll needed?
-    isInScope: function(d) {
-      return d === null ? true : d.properties[this.getGeo().idProperty].match(this.options.geoCodeRegEx);
-    }
   };
 
   // A really lightweight plugin wrapper around the constructor,
