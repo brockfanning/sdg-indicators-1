@@ -22,7 +22,8 @@
   var defaults = {
     geoLayers: [
       {
-        zoomThreshold: 0,
+        min_zoom: 0,
+        max_zoom: 7,
         serviceUrl: '/sdg-indicators/public/parents.geo.json',
         nameProperty: 'rgn17nm',
         idProperty: 'rgn17cd',
@@ -31,6 +32,7 @@
           weight: 1,
           opacity: 1,
           color: 'white',
+          fillColor: 'transparent',
           dashArray: '3',
           fillOpacity: 0.7
         },
@@ -41,7 +43,8 @@
         }
       },
       {
-        zoomThreshold: 8,
+        min_zoom: 8,
+        max_zoom: 20,
         serviceUrl: '/sdg-indicators/public/children.geo.json',
         nameProperty: 'lad16nm',
         idProperty: 'lad16cd',
@@ -50,6 +53,7 @@
           weight: 1,
           opacity: 1,
           color: 'yellow',
+          fillColor: 'transparent',
           dashArray: '3',
           fillOpacity: 0.7
         },
@@ -100,18 +104,12 @@
     // Track the selected GeoJSON feature.
     this.selectedFeature = null;
 
+    // Use the ZoomShowHide library to control visibility ranges.
+    this.zoomShowHide = new ZoomShowHide();
+
     // These variables will be set later.
     this.selectedFields = [];
-    this.layer = null;
     this.map = null;
-
-    this.style = function(plugin) {
-      return function(feature) {
-        return $.extend({}, plugin.getGeo().styleOptions, {
-          fillColor: plugin.getColor(feature.properties),
-        });
-      }
-    }(this);
 
     this.init();
   }
@@ -124,15 +122,31 @@
       this.updateColors();
     },
 
+    // Get all of the GeoJSON layers.
+    getAllLayers: function() {
+      // Unfortunately relies on an internal of the ZoomShowHide library.
+      return L.featureGroup(this.zoomShowHide.layers);
+    },
+
+    // Get only the visible GeoJSON layers.
+    getVisibleLayers: function() {
+      // Unfortunately relies on an internal of the ZoomShowHide library.
+      return this.zoomShowHide._layerGroup;
+    },
+
     // Update the colors of the Features on the map.
     updateColors: function() {
-      this.layer.setStyle(this.style);
+      var plugin = this;
+      this.getAllLayers().eachLayer(function(layer) {
+        layer.setStyle(function(feature) {
+          return { fillColor: plugin.getColor(feature.properties, layer.sdgOptions.idProperty) }
+        });
+      });
     },
 
     // Get the local (CSV) data corresponding to a GeoJSON "feature" with the
     // corresponding data.
-    getData: function(props) {
-      var geocode = props[this.getGeo().idProperty];
+    getData: function(geocode) {
       var matches = _.where(this.options.geoData, {
         GeoCode: geocode,
         Year: this.currentYear
@@ -146,8 +160,8 @@
     },
 
     // Choose a color for a GeoJSON feature.
-    getColor: function(props) {
-      var localData = this.getData(props);
+    getColor: function(props, idProperty) {
+      var localData = this.getData(props[idProperty]);
       if (localData) {
         return this.colorScale(localData['Value']).hex();
       }
@@ -158,24 +172,23 @@
 
     // Get the properties of the current geojson layer.
     getGeo: function() {
-      var zoom = this.map.getZoom() || 0;
-      var geo = null;
-      this.options.geoLayers.forEach(function(geoLayer) {
-        if (geoLayer.zoomThreshold <= zoom) {
-          geo = geoLayer;
-        }
-      });
-      return geo;
+      return this.options.geoLayers[0];
+    },
+
+    // Zoom to a feature.
+    zoomToFeature: function(layer) {
+      this.map.fitBounds(layer.getBounds());
     },
 
     init: function() {
 
       // Create the map.
-      var map = L.map(this.element);
-      this.map = map;
+      this.map = L.map(this.element);
+      this.map.setView([0, 0], 0);
+      this.zoomShowHide.addTo(this.map);
 
       // Add tile imagery.
-      L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(map);
+      L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
       // Because after this point, "this" rarely works.
       var plugin = this;
@@ -198,7 +211,7 @@
         return div;
       }
       legend.setPosition(this.options.legendPosition);
-      legend.addTo(map);
+      legend.addTo(this.map);
 
       // Add the slider.
       var slider = L.control();
@@ -222,7 +235,7 @@
         return div;
       }
       slider.setPosition(this.options.sliderPosition);
-      slider.addTo(map);
+      slider.addTo(this.map);
 
       // Add the info pane.
       var info = L.control();
@@ -251,7 +264,7 @@
         }
       }
       info.setPosition(this.options.infoPosition);
-      info.addTo(map);
+      info.addTo(this.map);
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.options.geoLayers.map(function(item) {
@@ -261,16 +274,18 @@
 
         var geoJsons = arguments;
         for (var i in geoJsons) {
-          plugin.layer = L.geoJson(geoJsons[i], {
-            style: plugin.style,
+          var layer = L.geoJson(geoJsons[i], {
+            style: plugin.options.geoLayers[i].styleOptions,
             onEachFeature: onEachFeature
-          }).addTo(map);
+          });
+          layer.min_zoom = plugin.options.geoLayers[i].min_zoom;
+          layer.max_zoom = plugin.options.geoLayers[i].max_zoom;
+          // Store our custom options here, for easier access.
+          layer.sdgOptions = plugin.options.geoLayers[i];
+          // Add the layer to the ZoomShowHide group.
+          plugin.zoomShowHide.addLayer(layer);
         }
-
-        // Zoom to a feature.
-        function zoomToFeature(layer) {
-          map.fitBounds(layer.getBounds());
-        }
+        plugin.updateColors();
 
         // Highlight a feature.
         function highlightFeature(layer) {
@@ -297,7 +312,7 @@
           }
           plugin.selectedFeature = layer;
           // Zoom in.
-          zoomToFeature(layer);
+          plugin.zoomToFeature(layer);
           // Highlight the feature.
           highlightFeature(layer);
         }
@@ -308,11 +323,6 @@
             click: clickHandler,
           });
         }
-
-        // Set the nested-zooming behavior.
-        map.on('zoomend', function(e) {
-          console.log(map.getZoom());
-        });
       });
 
       // Leaflet needs "invalidateSize()" if it was originally rendered in a
@@ -321,9 +331,9 @@
         setTimeout(function() {
           jQuery('#map #loader-container').hide();
           // Fix the size.
-          map.invalidateSize();
+          plugin.map.invalidateSize();
           // Also zoom in/out as needed.
-          map.fitBounds(plugin.layer.getBounds());
+          plugin.zoomToFeature(plugin.getVisibleLayers());
         }, 500);
       });
     },
