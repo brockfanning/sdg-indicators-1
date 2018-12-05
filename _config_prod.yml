@@ -27,8 +27,8 @@ jekyll_get_data:
   - data: schema
     json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/meta/schema.json'
   - data: translations
-    # Pin to version 0.2.0 of the translation repository.
-    json: 'https://opendataenterprise.github.io/sdg-translations/translations-0.2.0.json'
+    # Pin to version 0.3.0 of the translation repository.
+    json: 'https://open-sdg.github.io/sdg-translations/translations-0.3.0.json'
 
 analytics:
   ga_prod: ''
@@ -84,5 +84,5 @@ defaults:
 plugins:
   - jekyll-remote-theme
 
-# Use a remote Jekyll theme. (Currently in a temporary location.)
-remote_theme: brockfanning/sdg-theme@multilingual
+# Use a remote Jekyll theme.
+remote_theme: open-sdg/open-sdg@0.1.0
