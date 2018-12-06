@@ -13,8 +13,6 @@ Answers to some specific questions about the website are included in our [Freque
 
 View this [presentation (.ppsx file 6.45Mb)]({{ site.baseurl}}/public/NRP VIDEO DEMO May2018.ppsx) on the site's main features.
 
-[pdf format]({{ site.baseurl}}/public/meta/3.c.1.pdf)
-
 Our wiki pages also include more detailed information for people adding data and metadata:
 - [Raw data format]( https://github.com/datasciencecampus/sdg-indicators/wiki/Raw-data-format)
 -	[Metadata format](https://github.com/datasciencecampus/sdg-indicators/wiki/Metadata-format)
