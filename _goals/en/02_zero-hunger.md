@@ -1,5 +1,5 @@
 ---
-permalink: /en/zero-hunger/
+permalink: /en/kein-hunger/
 language: en
 sdg_goal: '2'
 color: '#e5b735'

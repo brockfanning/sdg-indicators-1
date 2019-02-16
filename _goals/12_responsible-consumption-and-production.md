@@ -1,7 +1,5 @@
 ---
-title: Ensure sustainable consumption and production patterns
-short: Responsible consumption and production
-permalink: /responsible-consumption-and-production/
+permalink: /verantwortungsvolle-konsum-und-produktionsmuster/
 sdg_goal: '12'
 color: '#c9992d'
 layout: goal

@@ -1,5 +1,5 @@
 ---
-permalink: /en/peace-and-justice-strong-institutions/
+permalink: /en/frieden-gerechtigkeit-und-starke-institutionen/
 language: en
 sdg_goal: '16'
 color: '#00689d'
