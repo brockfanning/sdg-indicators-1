@@ -1,8 +1,5 @@
 ---
-title: Ensure inclusive and equitable quality education and promote lifelong learning
-  opportunities for all
-short: Quality Education
-permalink: /quality-education/
+permalink: /hochwertige-bildung/
 sdg_goal: '4'
 color: '#c5192d'
 layout: goal

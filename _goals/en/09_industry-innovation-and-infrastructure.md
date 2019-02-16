@@ -1,5 +1,5 @@
 ---
-permalink: /en/industry-innovation-and-infrastructure/
+permalink: /en/industrie-innovationen-und-infrastruktur/
 language: en
 sdg_goal: '9'
 color: '#fd6925'

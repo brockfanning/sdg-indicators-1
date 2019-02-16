@@ -1,5 +1,5 @@
 ---
-permalink: /en/good-health-and-well-being/
+permalink: /en/gesundheit-und-wohlergehen/
 language: en
 sdg_goal: '3'
 color: '#4c9f38'

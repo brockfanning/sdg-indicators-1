@@ -1,5 +1,5 @@
 ---
-permalink: /en/life-on-land/
+permalink: /en/leben-an-land/
 language: en
 sdg_goal: '15'
 color: '#56c02b'

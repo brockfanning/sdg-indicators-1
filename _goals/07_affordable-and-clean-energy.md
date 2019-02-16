@@ -1,7 +1,5 @@
 ---
-title: Ensure access to affordable, reliable, sustainable and modern energy for all
-short: Affordable and clean energy
-permalink: /affordable-and-clean-energy/
+permalink: /bezahlbare-und-saubere-energie/
 sdg_goal: '7'
 color: '#fcc30b'
 layout: goal

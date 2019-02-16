@@ -1,5 +1,5 @@
 ---
-permalink: /en/reduced-inequalities/
+permalink: /en/weniger-ungleichheiten/
 language: en
 sdg_goal: '10'
 color: '#dd1367'
