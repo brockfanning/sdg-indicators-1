@@ -28,7 +28,7 @@ jekyll_get_data:
     json: 'https://G205SDGs.github.io/sdg-data/meta/schema.json'
   - data: translations
     # Pin to version 0.3.0 of the translation repository.
-    json: 'https://open-sdg.github.io/sdg-translations/translations.json'
+    json: 'https://open-sdg.github.io/sdg-translations/translations-0.3.0.json'
 
 analytics:
   ga_prod: ''
@@ -72,8 +72,8 @@ collections:
 
 # The list of languages that are translated. The first one is the default.
 languages:
-  - de
-  - en
+    - de
+    - en
 
 # Menu
 menu:
@@ -87,7 +87,7 @@ menu:
   - path: /guidance/
     translation_key: menu.guidance
   - path: /faq/
-translation_key: menu.faq
+    translation_key: menu.faq
 
 # This makes sure that all pages have a language.
 defaults:
