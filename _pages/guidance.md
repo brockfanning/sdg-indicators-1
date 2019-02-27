@@ -7,7 +7,7 @@ layout: page
 ## Nationale Berichtsplattform - SDG
 
 Nationale Berichtsplattform - SDG ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Indikatoren zur Darstellung der Ziele der nachhaltigen Entwicklung (SDGs) der Agenda 2030 (mit Daten für Deutschland) und einer Reihe von Indikatoren zur Darstellung der nachhaltigen Entwicklung in Deutschland.
-# Unsere Herangehensweise an eine NRP
+### Unsere Herangehensweise an eine NRP
 
 Um den grundlegenden Prinzipien der UNO für die amtliche Statistik zu entsprechen, sollten die Mindesteigenschaften eines SDG-NRP folgende sein:
 - wird von den nationalen statistischen Ämtern verwaltet;
@@ -34,11 +34,11 @@ Wir empfehlen Ihnen, sich mit den US und britischen Plattformen für SDG und der
 
 ## NRP - Genutzte Software
 
-# Backend IT-Anforderungen::
+### Backend IT-Anforderungen::
 - GitHub: Hosting der Website, die für die Programmierung von Projekten mit dem Git-Versionskontrollsystem entwickelt wurde.
 - Jekyll: Generator für statische Seiten, die in Ruby geschrieben wurden
 
-# Front-end IT-Anforderungen:
+### Front-end IT-Anforderungen:
 - XHTML, CSS, JavaScript
 - Chartist: JavaScript Bibliothek
 - Bootstrap: framework CSS
