@@ -15,7 +15,7 @@ environment: production
 remotedatabaseurl: "https://sustainabledevelopment-germany.github.io/sdg-data-pub/"
 # permalink: /news/:year/:month/:day/:title.html
 
-jekyll_get_data:
+jekyll_get_json:
   - data: meta
     json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/meta/all.json'
     # cache: true
@@ -84,6 +84,8 @@ defaults:
       language: "de"
 plugins:
   - jekyll-remote-theme
+  - jekyll-get-json
+  - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
 remote_theme: open-sdg/open-sdg@0.1.0

@@ -15,7 +15,7 @@ environment: staging
 remotedatabaseurl: "https://G205SDGs.github.io/sdg-data"
 # permalink: /news/:year/:month/:day/:title.html
 
-jekyll_get_data:
+jekyll_get_json:
   - data: meta
     json: 'https://G205SDGs.github.io/sdg-data/meta/all.json'
     # cache: true
@@ -98,6 +98,8 @@ defaults:
       language: "de"
 plugins:
   - jekyll-remote-theme
+  - jekyll-get-json
+  - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
 remote_theme: open-sdg/open-sdg@0.1.0
