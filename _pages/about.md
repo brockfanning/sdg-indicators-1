@@ -20,4 +20,4 @@ Destatis ist verantwortlich f√ºr die Entwicklung und Erhebung deutscher Daten f√
 
 Diese Website dient der Verbreitung der deutschen SDG-Indikatorendaten. Wir befinden uns in einem Alpha-Stadium der Entwicklung, so dass sich die Website noch in Arbeit befindet.
 
-Wenn Sie Feedback zu dieser Website oder den SDG-Daten von Deutschland haben, kontaktieren Sie uns bitte unter folgender Adresse <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>. The answers to some frequently asked questions are also available in our [FAQ]({{ site.baseurl }}{% link _pages/faq.md %}).
+Wenn Sie Feedback zu dieser Website oder den SDG-Daten von Deutschland haben, kontaktieren Sie uns bitte unter folgender Adresse <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>. The answers to some frequently asked questions are also available in our [FAQ]({{ site.baseurl }}{% link _pages/en/faq.md %}).
