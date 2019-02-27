@@ -23,14 +23,14 @@ In addition, the German NRP reporting platform has been developed in accordance 
 
 German statistics actively supports the development of national reporting platforms, in particular produced in the open-source model for the purpose of monitoring SDGs indicators. Precursors in this field are USA and UK.
 The current version of the German reporting platform has been developed based on earlier version of the UK NRP, and adapted to the needs of German statistics.
-The project code is publicly available in the repository - https://github.com/G205SDGs/sdg-indicators
+The project code is publicly available in a [Github repository](https://github.com/G205SDGs/sdg-indicators)
 
 The new universal version of the open-sdg platform developed by the US, UK and Center for Open Data Enterprise is available.
 We encourage you to familiarize yourself with the national US, UK platforms for SDG and the project documentation.
 
-- US NPR SDG - https://gsa.github.io/sdg-indicators-usa/
+- [US NPR SDG](https://gsa.github.io/sdg-indicators-usa)
 
-- UK NPR SDG - https://sustainabledevelopment-uk.github.io
+- [UK NPR SDG](https://sustainabledevelopment-uk.github.io)
 
 ## NRP - applied technology
 

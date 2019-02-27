@@ -23,14 +23,14 @@ Darüber hinaus wurde die deutsche NRP Berichtsplattform nach anerkannten intern
 
 Das Statistische Bundesamt(Destatis) unterstützt aktiv die Entwicklung nationaler Berichtsplattformen, insbesondere als Open-Source Lösung, zur Darstellung von SDG-Indikatoren. Vorreiter in diesem Bereich sind die USA und Großbritannien.
 Die aktuelle Version der deutschen Berichtsplattform wurde auf der Grundlage einer früheren Version des britischen NRP entwickelt und von an die Bedürfnisse der deutschen Statistik angepasst.
-Der Projektcode ist im folgenden Repository öffentlich zugänglich - https://github.com/G205SDGs/sdg-indicators
+Der Projektcode ist im folgenden [GitHub Repository](https://github.com/G205SDGs/sdg-indicators) öffentlich zugänglich
 
 Eine neue universelle Version der von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten Sdg-Berichtsplattform ist verfügbar.
 Wir empfehlen Ihnen, sich mit den US und britischen Plattformen für SDG und der entsprechenden Projektdokumentation vertraut zu machen.
 
-- USA NPR SDG - https://gsa.github.io/sdg-indicators-usa/
+- [USA NPR SDG](https://gsa.github.io/sdg-indicators-usa)
 
-- GB NPR SDG - https://sustainabledevelopment-uk.github.io
+- [GB NPR SDG](https://sustainabledevelopment-uk.github.io)
 
 ## NRP - Genutzte Software
 
