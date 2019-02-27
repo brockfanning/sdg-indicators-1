@@ -1,32 +1,44 @@
 ---
-title: Guidance
+title: Guide NRP
 permalink: /en/guidance/
 language: en
 layout: page
 ---
 
-This page shares information for people using this website and for countries wishing to take a copy of it.
+## National reporting platform - SDG
 
-We have also developed a set of [wiki pages]( https://github.com/datasciencecampus/sdg-indicators/wiki) which include more detailed technical information.
+National reporting platform - SDG is a publicly available tool serving dissemination and presentation of indicators monitoring Sustainable Development Goals (SDGs) of the 2030 Agenda (with data for Germany) and a set of indicators for monitoring sustainable development on the level of the country.
+Our aproach to NRP
 
-## Using this website
-Answers to some specific questions about the website are included in our [Frequently Asked Questions]({{ site.baseurl }}/faq/) page.
+In order to conform with the UN's Fundamental Principles of Official Statistics, the minimum characteristics an SDG NRP should have are that it should:
+- is managed by national statistical offices;
+- features official statistics and metadata according to established standard methodology;
+- is publicly accessible;
+- allows for feedback from data users;
+- features open source (free) technology.
 
-View this [presentation (.ppsx file 6.45Mb)]({{ site.baseurl}}/public/NRP VIDEO DEMO May2018.ppsx) on the site's main features.
+In addition, the German NRP reporting platform has been developed in accordance with accepted ones international guidelines, in particular for open data and software produced in the open source model.
 
-Our wiki pages also include more detailed information for people adding data and metadata:
-- [Raw data format]( https://github.com/datasciencecampus/sdg-indicators/wiki/Raw-data-format)
--	[Metadata format](https://github.com/datasciencecampus/sdg-indicators/wiki/Metadata-format)
-- [Data scenarios and characteristics](https://github.com/datasciencecampus/sdg-indicators/wiki/Data-scenarios-and-characteristics)
+## NRP - sources
 
-## Creating a copy of this website
-Other countries wishing to reuse this UK SDG reporting platforms or the [US SDG reporting platform](https://sdg.data.gov/) are welcome to do so for free.
+German statistics actively supports the development of national reporting platforms, in particular produced in the open-source model for the purpose of monitoring SDGs indicators. Precursors in this field are USA and UK.
+The current version of the German reporting platform has been developed based on earlier version of the UK NRP, and adapted to the needs of German statistics.
+The project code is publicly available in the repository - https://github.com/G205SDGs/sdg-indicators
 
-The technical guidance in our [wiki pages]( https://github.com/datasciencecampus/sdg-indicators/wiki) is aimed at countries taking a copy of the UK website, including information such as:
--	[Required skill sets](https://github.com/datasciencecampus/sdg-indicators/wiki/Required-skill-sets)
--	[How do we create our own NRP](https://github.com/datasciencecampus/sdg-indicators/wiki/How-do-we-create-our-own-NRP)
--	[What do we need to change]( https://github.com/datasciencecampus/sdg-indicators/wiki/What-do-we-need-to-change)
--	[Development installation instructions](https://github.com/datasciencecampus/sdg-indicators/wiki/Development-installation-instructions)
--	[Differences between the US and UK]( https://github.com/datasciencecampus/sdg-indicators/wiki/Differences-between-the-US-and-UK-NRPs)
+The new universal version of the open-sdg platform developed by the US, UK and Center for Open Data Enterprise is available.
+We encourage you to familiarize yourself with the national US, UK platforms for SDG and the project documentation.
 
-The US also provide various guidance and information on the [training materials page]( https://gsa.github.io/sdg-indicators/training/) of their reporting platform.
+- US NPR SDG - https://gsa.github.io/sdg-indicators-usa/
+
+- UK NPR SDG - https://sustainabledevelopment-uk.github.io
+
+## NRP - applied technology
+
+# Back-end IT requirements:
+- GitHub: hosting website designed for programming projects using the Git version control system.
+- Jekyll: generator of static pages written in Ruby
+
+# Front-end IT requirements:
+- XHTML, CSS, JavaScript
+- Chartist: JavaScript library that offers customizable and responsive charts
+- Bootstrap: framework CSS

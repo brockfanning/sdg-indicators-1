@@ -1,31 +1,44 @@
 ---
-title: Guidance
+title: Guide NRP
 permalink: /guidance/
 layout: page
 ---
 
-This page shares information for people using this website and for countries wishing to take a copy of it.
+## Nationale Berichtsplattform - SDG
 
-We have also developed a set of [wiki pages]( https://github.com/datasciencecampus/sdg-indicators/wiki) which include more detailed technical information.
+Nationale Berichtsplattform - SDG ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Indikatoren zur Darstellung der Ziele der nachhaltigen Entwicklung (SDGs) der Agenda 2030 (mit Daten für Deutschland) und einer Reihe von Indikatoren zur Darstellung der nachhaltigen Entwicklung in Deutschland.
+# Unsere Herangehensweise an eine NRP
 
-## Using this website
-Answers to some specific questions about the website are included in our [Frequently Asked Questions]({{ site.baseurl }}/faq/) page.
+Um den grundlegenden Prinzipien der UNO für die amtliche Statistik zu entsprechen, sollten die Mindesteigenschaften eines SDG-NRP folgende sein:
+- wird von den nationalen statistischen Ämtern verwaltet;
+- enthält offizielle Statistiken und Metadaten nach bewährter Standardmethodik;
+- ist öffentlich zugänglich;
+- ermöglicht die Rückmeldung von Datennutzern;
+- ist betrieben mit Open-Source (kostenlose) Technologien
 
-View this [presentation (.ppsx file 6.45Mb)]({{ site.baseurl}}/public/NRP VIDEO DEMO May2018.ppsx) on the site's main features.
+Darüber hinaus wurde die deutsche NRP Berichtsplattform nach anerkannten internationalen Richtlinien entwickelt, insbesondere hinsichtlich offener Daten und Software.
 
-Our wiki pages also include more detailed information for people adding data and metadata:
-- [Raw data format]( https://github.com/datasciencecampus/sdg-indicators/wiki/Raw-data-format)
--	[Metadata format](https://github.com/datasciencecampus/sdg-indicators/wiki/Metadata-format)
-- [Data scenarios and characteristics](https://github.com/datasciencecampus/sdg-indicators/wiki/Data-scenarios-and-characteristics)
 
-## Creating a copy of this website
-Other countries wishing to reuse this UK SDG reporting platforms or the [US SDG reporting platform](https://sdg.data.gov/) are welcome to do so for free.
+## NRP - sources
 
-The technical guidance in our [wiki pages]( https://github.com/datasciencecampus/sdg-indicators/wiki) is aimed at countries taking a copy of the UK website, including information such as:
--	[Required skill sets](https://github.com/datasciencecampus/sdg-indicators/wiki/Required-skill-sets)
--	[How do we create our own NRP](https://github.com/datasciencecampus/sdg-indicators/wiki/How-do-we-create-our-own-NRP)
--	[What do we need to change]( https://github.com/datasciencecampus/sdg-indicators/wiki/What-do-we-need-to-change)
--	[Development installation instructions](https://github.com/datasciencecampus/sdg-indicators/wiki/Development-installation-instructions)
--	[Differences between the US and UK]( https://github.com/datasciencecampus/sdg-indicators/wiki/Differences-between-the-US-and-UK-NRPs)
+Das Statistische Bundesamt(Destatis) unterstützt aktiv die Entwicklung nationaler Berichtsplattformen, insbesondere als Open-Source Lösung, zur Darstellung von SDG-Indikatoren. Vorreiter in diesem Bereich sind die USA und Großbritannien.
+Die aktuelle Version der deutschen Berichtsplattform wurde auf der Grundlage einer früheren Version des britischen NRP entwickelt und von an die Bedürfnisse der deutschen Statistik angepasst.
+Der Projektcode ist im folgenden Repository öffentlich zugänglich - https://github.com/G205SDGs/sdg-indicators
 
-The US also provide various guidance and information on the [training materials page]( https://gsa.github.io/sdg-indicators/training/) of their reporting platform.
+Eine neue universelle Version der von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten Sdg-Berichtsplattform ist verfügbar.
+Wir empfehlen Ihnen, sich mit den US und britischen Plattformen für SDG und der entsprechenden Projektdokumentation vertraut zu machen.
+
+- USA NPR SDG - https://gsa.github.io/sdg-indicators-usa/
+
+- GB NPR SDG - https://sustainabledevelopment-uk.github.io
+
+## NRP - Genutzte Software
+
+# Backend IT-Anforderungen::
+- GitHub: Hosting der Website, die für die Programmierung von Projekten mit dem Git-Versionskontrollsystem entwickelt wurde.
+- Jekyll: Generator für statische Seiten, die in Ruby geschrieben wurden
+
+# Front-end IT-Anforderungen:
+- XHTML, CSS, JavaScript
+- Chartist: JavaScript Bibliothek
+- Bootstrap: framework CSS
