@@ -28,7 +28,7 @@ jekyll_get_json:
     json: 'https://G205SDGs.github.io/sdg-data/meta/schema.json'
   - data: translations
     # Pin to version 0.3.0 of the translation repository.
-    json: 'https://open-sdg.github.io/sdg-translations/translations.json'
+    json: 'https://JustusCas.github.io/sdg-translations/translations.json'
 
 analytics:
   ga_prod: ''
