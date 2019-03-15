@@ -104,6 +104,7 @@ body {
 
 header {
   background: $vanilla /* url('../img/sdgbg.png') bottom left repeat-x;*/;
+  border-bottom: $main-background-color 5px solid;
   .container {
     min-height: 113px;
     .navbar-default {
