@@ -4,7 +4,7 @@ permalink: /imprint/
 layout: page
 ---
 
-Herausgeber dieser Webseiten ist das Statistische Bundesamt, Wiesbaden, vertreten durch den Präsidenten
+Herausgeber dieser Webseiten ist das Statistische Bundesamt, Wiesbaden, vertreten durch den Präsidenten.
 
 ## Haftungsausschluss ##
 

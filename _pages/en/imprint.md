@@ -5,7 +5,7 @@ language: en
 layout: page
 ---
 
-### Legally binding original text in the German language ###
+## Legally binding original text in the German language ##
 
 These web pages are published by Statistisches Bundesamt (Federal Statistical Office), Wiesbaden, represented by the President.
 
