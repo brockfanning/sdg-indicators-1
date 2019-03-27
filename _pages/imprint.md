@@ -6,7 +6,7 @@ layout: page
 
 Herausgeber dieser Webseiten ist das Statistische Bundesamt, Wiesbaden, vertreten durch den Präsidenten.
 
-## Haftungsausschluss ##
+## Haftungsausschluss
 
 Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie uns bitte über unser [Kontaktformular](https://www.destatis.de/DE/Service/Kontakt/Kontakt.html).
 
@@ -14,7 +14,7 @@ Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webse
 
 Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise ("externe Links") auf die von anderen Anbietern bereitgehaltenen Inhalte. Die fremden Inhalte stammen weder vom Statistischen Bundesamt noch hat das Statistische Bundesamt die Möglichkeit, den Inhalt von Seiten Dritter zu beeinflussen. Die Inhalte fremder Seiten, auf die das Statistische Bundesamt mittels Links hinweist, spiegeln nicht die Meinung des Statistischen Bundesamts wider, sondern dienen lediglich der Information und der Darstellung von Zusammenhängen. Das Statistische Bundesamt haftet nicht für fremde Inhalte, auf die es lediglich im oben genannten Sinne hinweist. Die Verantwortlichkeit liegt alleine bei dem Anbieter der Inhalte. Bei Nutzungsausfällen der Website wegen technischer oder organisatorischer Störungen bestehen keinerlei Ansprüche - gleich welcher Art - gegen das Statistische Bundesamt.
 
-## Copyright allgemein ##
+## Copyright allgemein
 
 Für die Standard-Veröffentlichungen des Statistischen Bundesamtes in gedruckter und elektronischer Form sowie für die Inhalte auf unserer Website www.destatis.de einschließlich Grafiken sowie der zum Download bereitgestellten Produkte gilt, soweit bei dem jeweiligen Produkt/Internetseite keine ergänzenden oder anderslautenden Angaben ausgewiesen sind,
 
@@ -29,6 +29,6 @@ Ausgenommen vom zeitlich und räumlich uneingeschränkten Nutzungsumfang sind Nu
 
 Bei Verwendung unserer Daten empfiehlt es sich daher, auf die Ausbringung der Copyright-Angaben im jeweiligen Produkt zu achten und im Bedarfsfalle die im Impressum genannten Copyright-Inhaber zu kontakten.
 
-## Allgemeine Geschäftsbedingungen (AGB) ##
+## Allgemeine Geschäftsbedingungen (AGB)
 
 Es gelten die [Allgemeine Geschäftsbedingungen](https://www.destatis.de/DE/Service/Impressum/agb.pdf?__blob=publicationFile&v=3) des Statistischen Bundesamtes (Stand 12.07.2018) für die Vertriebsabwicklung im Verkauf von gedruckten und auf Datenträger angebotenen Publikationen.

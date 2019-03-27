@@ -9,7 +9,7 @@ layout: page
 
 These web pages are published by Statistisches Bundesamt (Federal Statistical Office), Wiesbaden, represented by the President.
 
-## \Disclaimer
+## Liability exclusion
 
 The information on this website is researched and implemented with maximum care. Nevertheless, it cannot be ruled out that errors occur in the process. Please send any comments and corrections to one of the indicated addresses of the Federal Statistical Office.
 
