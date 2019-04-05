@@ -1,7 +1,7 @@
 ---
-permalink: /verantwortungsvolle-konsum-und-produktionsmuster/
+permalink: /12/
 sdg_goal: '12'
 color: '#c9992d'
-layout: goal
+layout: goal-by-target
 ---
 

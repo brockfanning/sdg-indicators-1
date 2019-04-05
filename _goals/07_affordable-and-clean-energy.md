@@ -1,7 +1,7 @@
 ---
-permalink: /bezahlbare-und-saubere-energie/
+permalink: /7/
 sdg_goal: '7'
 color: '#fcc30b'
-layout: goal
+layout: goal-by-target
 ---
 
