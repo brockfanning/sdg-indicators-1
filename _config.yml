@@ -26,6 +26,9 @@ jekyll_get_json:
     # directory: 'remotedata'
   - data: schema
     json: 'https://G205SDGs.github.io/sdg-data/meta/schema.json'
+  - data: reporting
+    # Replace my-github-org and open-sdg-data-starter as needed.
+    json: 'https://G205SDGs.github.io/sdg-data/stats/reporting.json'
   - data: translations
     # Pin to version 0.3.0 of the translation repository.
     json: 'https://JustusCas.github.io/sdg-translations/translations.json'
