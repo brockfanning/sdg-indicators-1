@@ -26,6 +26,8 @@ jekyll_get_json:
     # directory: 'remotedata'
   - data: schema
     json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/meta/schema.json'
+  - data: reporting
+    json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/stats/reporting.json'
   - data: translations
     # Pin to version 0.3.0 of the translation repository.
     json: 'https://open-sdg.github.io/sdg-translations/translations-0.3.0.json'

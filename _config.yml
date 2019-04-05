@@ -26,6 +26,8 @@ jekyll_get_json:
     # directory: 'remotedata'
   - data: schema
     json: 'https://G205SDGs.github.io/sdg-data/meta/schema.json'
+  - data: reporting
+    json: 'https://G205SDGs.github.io/sdg-data/stats/reporting.json'
   - data: translations
     # Pin to version 0.3.0 of the translation repository.
     json: 'https://JustusCas.github.io/sdg-translations/translations.json'
@@ -100,5 +102,5 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
-remote_theme: open-sdg/open-sdg@0.4.0
+remote_theme: open-sdg/open-sdg@0.5.0
 goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
