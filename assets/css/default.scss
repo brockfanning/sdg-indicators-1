@@ -613,13 +613,13 @@ h5 + .btn-download {
   }
 }
 
-.danger {
+.danger, .notstarted {
   background-color: #E27874;
 }
-.warning {
+.warning, .inprogress {
   background-color: #f0ad4e;
 }
-.success {
+.success, .complete {
   background-color: #5cb85c;
 }
 
@@ -1026,7 +1026,17 @@ h5 + .btn-download {
     margin: 2px 2px 0 0;
   }
   &.goal-indicators {
-    @include indicatorcards
+    @include indicatorcards;
+    &.goal-by-target {
+      .indicator-cards a {
+        padding: 0;
+        margin-bottom: 1.5rem;
+      }
+      .indicator-cards.target {
+        margin-bottom: 1.5rem;
+        clear: left;
+      }
+    }
   }
   .goal-indicators:after {
     content: "";
@@ -1081,7 +1091,7 @@ h5 + .btn-download {
       }
     }
     table {
-      th {
+      thead th {
         cursor: pointer;
 
         span.sort {
@@ -1104,6 +1114,9 @@ h5 + .btn-download {
         &.sorting_desc {
           span.sort { background-image: url(../img/sort_desc.png); }
         }
+      }
+      tbody th {
+        font-weight: normal;
       }
     }
 
