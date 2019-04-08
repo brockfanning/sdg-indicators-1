@@ -89,3 +89,6 @@ plugins:
 
 # Use a remote Jekyll theme.
 remote_theme: open-sdg/open-sdg@0.1.0
+
+custom_css:
+  - /assets/css/custom.css
