@@ -46,23 +46,18 @@
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
-
-      {% if indicator.reporting_status == 'notstarted' %}
-        {% assign status_desc = t.status.exploring_data_sources %}
-        {% assign status_css = 'notstarted' %}
-      {% endif %}
-      {% if indicator.reporting_status == 'inprogress' %}
-        {% assign status_desc = t.status.statistics_in_progress %}
-        {% assign status_css = 'inprogress' %}
-      {% endif %}
-      {% if indicator.reporting_status == 'complete' %}
-        {% assign status_desc = t.status.reported_online %}
-        {% assign status_css = 'complete' %}
-      {% endif %}
-      {% if indicator.reporting_status == 'notrelevant' %}
-        {% assign status_desc = t.status.not_relevant %}
-        {% assign status_css = 'notrelevant' %}
-      {% endif %}
+    {% if indicator.reporting_status == 'notapplicable' %}
+      {% assign status_desc = t.status.not_applicable %}
+    {% endif %}
+    {% if indicator.reporting_status == 'notstarted' %}
+      {% assign status_desc = t.status.exploring_data_sources %}
+    {% endif %}
+    {% if indicator.reporting_status == 'inprogress' %}
+      {% assign status_desc = t.status.statistics_in_progress %}
+    {% endif %}
+    {% if indicator.reporting_status == 'complete' %}
+      {% assign status_desc = t.status.reported_online %}
+    {% endif %}
       {% assign tag_classes = "" | split: "," %}
       {% if indicator.tags %}
         {% for tag in indicator.tags %}
