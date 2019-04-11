@@ -47,16 +47,16 @@
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
     {% if indicator.reporting_status == 'notapplicable' %}
-      {% assign status_desc = t.status.not_applicable %}
+      {% assign status_desc = t.status.notapplicable %}
     {% endif %}
     {% if indicator.reporting_status == 'notstarted' %}
-      {% assign status_desc = t.status.exploring_data_sources %}
+      {% assign status_desc = t.status.notstarted %}
     {% endif %}
     {% if indicator.reporting_status == 'inprogress' %}
-      {% assign status_desc = t.status.statistics_in_progress %}
+      {% assign status_desc = t.status.inprogress %}
     {% endif %}
     {% if indicator.reporting_status == 'complete' %}
-      {% assign status_desc = t.status.reported_online %}
+      {% assign status_desc = t.status.complete %}
     {% endif %}
       {% assign tag_classes = "" | split: "," %}
       {% if indicator.tags %}
