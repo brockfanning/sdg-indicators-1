@@ -1,5 +1,8 @@
 ---
 ---
+.notstarted {
+   background-color: #E27874;
+ }
 .notapplicable {
   background-color: #B7B7B7;
 }
@@ -8,9 +11,6 @@
  }
 .complete {
    background-color: #5cb85c;
- }
- .notrelevant{
-   background-color: #B8B8B8;
  }
  #main-content.goal-indicators .indicator-cards a {
    padding: 0;
