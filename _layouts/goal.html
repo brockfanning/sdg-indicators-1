@@ -46,7 +46,10 @@
     </div>
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
-
+      {% if indicator.reporting_status == 'notapplicable' %}
+        {% assign status_desc = t.status.not_applicable %}
+        {% assign status_css = 'notapplicable' %}
+      {% endif %}
       {% if indicator.reporting_status == 'notstarted' %}
         {% assign status_desc = t.status.exploring_data_sources %}
         {% assign status_css = 'danger' %}
