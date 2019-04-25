@@ -15,7 +15,7 @@ environment: staging
 remotedatabaseurl: "https://G205SDGs.github.io/sdg-data"
 # permalink: /news/:year/:month/:day/:title.html
 
-jekyll_get_data:
+jekyll_get_json:
   - data: meta
     json: 'https://G205SDGs.github.io/sdg-data/meta/all.json'
     # cache: true
@@ -26,6 +26,12 @@ jekyll_get_data:
     # directory: 'remotedata'
   - data: schema
     json: 'https://G205SDGs.github.io/sdg-data/meta/schema.json'
+  - data: reporting
+    # Replace my-github-org and open-sdg-data-starter as needed.
+    json: 'https://G205SDGs.github.io/sdg-data/stats/reporting.json'
+  - data: translations
+    # Pin to version 0.3.0 of the translation repository.
+    json: 'https://JustusCas.github.io/sdg-translations/translations.json'
 
 analytics:
   ga_prod: ''
@@ -49,7 +55,7 @@ markdown: kramdown
 exclude: [vendor, scripts, remotedata]
 
 # International Support
-# Eg name: Australia and adjective: Australian
+# Eg name: Australia and adjective: Australian.
 country:
   name: Germany
   adjective: German
@@ -66,3 +72,39 @@ collections:
     output: true
   goals:
     output: true
+
+# The list of languages that are translated. The first one is the default.
+languages:
+    - de
+    - en
+
+# Menu
+menu:
+  # Use these to customise the main navigation.
+  - path: /
+    translation_key: general.goals
+  - path: /reporting-status/
+    translation_key: menu.reporting_status
+  - path: /about/
+    translation_key: menu.about
+  - path: /guidance/
+    translation_key: menu.guidance
+
+# This makes sure that all pages have a language.
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      language: "de"
+plugins:
+  - jekyll-remote-theme
+  - jekyll-get-json
+  - jekyll-open-sdg-plugins
+
+# Use a remote Jekyll theme.
+remote_theme: open-sdg/open-sdg@0.5.3
+goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
+
+custom_css:
+  - /assets/css/custom.css
