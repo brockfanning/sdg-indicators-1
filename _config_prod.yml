@@ -75,6 +75,17 @@ languages:
   - de
   - en
 
+# Menu
+menu:
+  # Use these to customise the main navigation.
+  - path: /
+    translation_key: general.goals
+  - path: /reporting-status/
+    translation_key: menu.reporting_status
+  - path: /about/
+    translation_key: menu.about
+  - path: /guidance/
+    translation_key: menu.guidance
 # This makes sure that all pages have a language.
 defaults:
   -
@@ -88,7 +99,7 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
-remote_theme: open-sdg/open-sdg@0.1.0
+remote_theme: open-sdg/open-sdg@0.5.3
 
 custom_css:
   - /assets/css/custom.css
