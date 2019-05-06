@@ -89,6 +89,7 @@ menu:
     translation_key: menu.about
   - path: /guidance/
     translation_key: menu.guidance
+    
 # This makes sure that all pages have a language.
 defaults:
   -
