@@ -28,9 +28,9 @@ Der Projektcode ist im folgenden [GitHub Repository](https://github.com/G205SDGs
 Eine neue universelle Version der von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten Sdg-Berichtsplattform ist verfügbar.
 Wir empfehlen Ihnen, sich mit den US und britischen Plattformen für SDG und der entsprechenden Projektdokumentation vertraut zu machen.
 
-- [USA NPR SDG](https://gsa.github.io/sdg-indicators-usa)
+- [USA NRP SDG](https://gsa.github.io/sdg-indicators-usa)
 
-- [GB NPR SDG](https://sustainabledevelopment-uk.github.io)
+- [GB NRP SDG](https://sustainabledevelopment-uk.github.io)
 
 ## NRP - Genutzte Software
 
