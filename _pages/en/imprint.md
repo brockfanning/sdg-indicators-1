@@ -32,6 +32,5 @@ Excluded from the temporally and geographically unlimited scope of use are the u
 
 It is therefore recommended that, when exploiting our data, users ensure that the copyright information is included in the product in question and, if necessary, that they contact the copyright owner given in the imprint.
 
-## General Terms and Conditions
-
-The [General Terms and Conditions](https://www.destatis.de/DE/Service/Impressum/agb.pdf?__blob=publicationFile&v=3) of the Federal Statistical Office (as at 1 February 2014) for the distribution procedure regarding the sale of printed publications and publications on data media shall apply.
+Rights to the SDG logos used on this website:
+© United Nations Department of Public Information

@@ -28,3 +28,6 @@ Diese Regelung gilt für jede Art der Weiterverbreitung von Texten, Daten und Gr
 Ausgenommen vom zeitlich und räumlich uneingeschränkten Nutzungsumfang sind Nutzungsrechte Dritter, die in unseren Werken oder auf unseren Internet-Seiten explizit ausgewiesen sind (z. B. Fotorechte). Dies gilt auch für Kooperationsprodukte. Eine generelle Aussage kann hierzu nicht getroffen werden. Hier ist im Einzelfall eine produktbezogene Prüfung erforderlich.
 
 Bei Verwendung unserer Daten empfiehlt es sich daher, auf die Ausbringung der Copyright-Angaben im jeweiligen Produkt zu achten und im Bedarfsfalle die im Impressum genannten Copyright-Inhaber zu kontakten.
+
+Fotorechte an den auf dieser Website verwendeten SDG Logos:
+© United Nations Department of Public Information
