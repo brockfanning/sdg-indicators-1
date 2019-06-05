@@ -16,9 +16,9 @@ Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise ("exte
 
 ## Copyright allgemein
 
-Für die Standard-Veröffentlichungen des Statistischen Bundesamtes in gedruckter und elektronischer Form sowie für die Inhalte auf unserer Website www.destatis.de einschließlich Grafiken sowie der zum Download bereitgestellten Produkte gilt, soweit bei dem jeweiligen Produkt/Internetseite keine ergänzenden oder anderslautenden Angaben ausgewiesen sind,
+Für die Standard-Veröffentlichungen des Statistischen Bundesamtes in gedruckter und elektronischer Form sowie für die Inhalte auf dieser Website einschließlich Grafiken sowie der zum Download bereitgestellten Produkte gilt, soweit bei dem jeweiligen Produkt/Internetseite keine ergänzenden oder anderslautenden Angaben ausgewiesen sind,
 
-© Statistisches Bundesamt (Destatis), 2019
+© Statistisches Bundesamt (Destatis), 2019 <br>
 Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellennachweis gestattet.
 
 Diese Regelung gilt für jede Art der Weiterverbreitung von Texten, Daten und Grafiken durch Dritte, soweit das Statistische Bundesamt Inhaber des Urheberrechts ist und die alleinigen Herausgeberrechte besitzt. Die Weiterverwendung ist sowohl für nicht gewerbliche als auch gewerbliche Zwecke erlaubt. Auch die Verbreitungsform elektronisch, via Internet oder als Print ist nicht eingeschränkt. Es bedarf keiner ausdrücklichen Genehmigung durch unser Haus. Eine Quellenangabe ist jedoch erforderlich. Das Statistische Bundesamt (Destatis) ist als Herausgeber in den Quellennachweis aufzunehmen.
@@ -28,7 +28,3 @@ Diese Regelung gilt für jede Art der Weiterverbreitung von Texten, Daten und Gr
 Ausgenommen vom zeitlich und räumlich uneingeschränkten Nutzungsumfang sind Nutzungsrechte Dritter, die in unseren Werken oder auf unseren Internet-Seiten explizit ausgewiesen sind (z. B. Fotorechte). Dies gilt auch für Kooperationsprodukte. Eine generelle Aussage kann hierzu nicht getroffen werden. Hier ist im Einzelfall eine produktbezogene Prüfung erforderlich.
 
 Bei Verwendung unserer Daten empfiehlt es sich daher, auf die Ausbringung der Copyright-Angaben im jeweiligen Produkt zu achten und im Bedarfsfalle die im Impressum genannten Copyright-Inhaber zu kontakten.
-
-## Allgemeine Geschäftsbedingungen (AGB)
-
-Es gelten die [Allgemeine Geschäftsbedingungen](https://www.destatis.de/DE/Service/Impressum/agb.pdf?__blob=publicationFile&v=3) des Statistischen Bundesamtes (Stand 12.07.2018) für die Vertriebsabwicklung im Verkauf von gedruckten und auf Datenträger angebotenen Publikationen.
