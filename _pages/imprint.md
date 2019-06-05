@@ -29,5 +29,5 @@ Ausgenommen vom zeitlich und räumlich uneingeschränkten Nutzungsumfang sind Nu
 
 Bei Verwendung unserer Daten empfiehlt es sich daher, auf die Ausbringung der Copyright-Angaben im jeweiligen Produkt zu achten und im Bedarfsfalle die im Impressum genannten Copyright-Inhaber zu kontakten.
 
-Fotorechte an den auf dieser Website verwendeten SDG Logos:
+Fotorechte an den auf dieser Website verwendeten SDG Logos:<br>
 © United Nations Department of Public Information
