@@ -42,3 +42,12 @@ We encourage you to familiarize yourself with the national US and UK platforms f
 - XHTML, CSS, JavaScript
 - Chartist: JavaScript library that offers customizable and responsive charts
 - Bootstrap: framework CSS
+
+## Current display
+
+Due to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:
+- The units of the displayed time series are only displayed in English in the legends of the graphics.
+- Four- (or more) digit values are rounded to whole tens.
+- Integers are displayed without decimal places (even in time series in which other numerical values with decimal places exist).
+- Very long names of time series are not broken up into several lines in the axis labels of the graphics and partly cut off.
+- Zero values in time series are interpreted and displayed as missing values.
