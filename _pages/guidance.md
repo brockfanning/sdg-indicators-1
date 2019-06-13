@@ -6,7 +6,7 @@ layout: page
 
 ## Nationale Berichtsplattform - SDG
 
-Nationale Berichtsplattform - SDG ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Indikatoren zur Darstellung der Ziele der nachhaltigen Entwicklung (SDGs) der Agenda 2030 (mit Daten für Deutschland) und einer Reihe von Indikatoren zur Darstellung der nachhaltigen Entwicklung in Deutschland.
+Die Nationale Berichtsplattform - SDG (National Reporting Platform - NRP) ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Indikatoren zur Darstellung der Ziele der nachhaltigen Entwicklung (SDGs) der Agenda 2030 (mit Daten für Deutschland) und einer Reihe von Indikatoren zur Darstellung der nachhaltigen Entwicklung in Deutschland.
 ### Unsere Herangehensweise an eine NRP
 
 Um den grundlegenden Prinzipien der UNO für die amtliche Statistik zu entsprechen, sollten die Mindesteigenschaften einer SDG-NRP folgende sein: <br>
@@ -43,3 +43,12 @@ Wir empfehlen Ihnen, sich mit den SDG-Plattformen der USA und Großbritanniens u
 - XHTML, CSS, JavaScript
 - Chartist: JavaScript Bibliothek
 - Bootstrap: framework CSS
+
+## Aktuelle Darstellung
+
+Aufgrund von technischen Schwierigkeiten finden sich auf der aktuellen Version der deutschen NRP einige mangelahfte Darstellungen, auf die an dieser Stelle hingewiesen wird:
+- Die Einheiten der dargestellten Zeitreihen werden in den Legenden der Grafiken lediglich in Englisch dargestellt.
+- Vier- (oder mehr-) stellige Zahlenwerte werden auf ganze Zehnerwerte gerundet.
+- Ganze Zahlen werden ohne Nachkommastelle dargestellt (auch in Zeitreihen, in denen andere Zahlenwerte mit Nachkommastelle vorhanden sind).
+- Sehr lange Zeitreihenbezeichnungen werden in den Achsenbeschriftungen der Grafiken nicht in mehrere Zeilen umgebrochen und z.T. abgeschnitten.
+- Nullwerte in Zeitreihen werden als fehlende Werte interpretiert und dargestellt.
