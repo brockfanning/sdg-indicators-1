@@ -29,5 +29,6 @@ Ausgenommen vom zeitlich und räumlich uneingeschränkten Nutzungsumfang sind Nu
 
 Bei Verwendung unserer Daten empfiehlt es sich daher, auf die Ausbringung der Copyright-Angaben im jeweiligen Produkt zu achten und im Bedarfsfalle die im Impressum genannten Copyright-Inhaber zu kontakten.
 
-Fotorechte an den auf dieser Website verwendeten SDG Logos:<br>
-© United Nations Department of Public Information
+Logo und Pictogramme der Globalen Ziele nachhaltiger Entwicklung (SDGs):
+© United Nations / [www.globalgoals.org](http://www.globalgoals.org/asset-licence/)
+für die deutsche Übersetzung Bundespresseamt / [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
