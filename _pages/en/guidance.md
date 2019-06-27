@@ -7,17 +7,18 @@ layout: page
 
 ## National reporting platform - SDG
 
-National reporting platform - SDG is a publicly available tool serving dissemination and presentation of indicators monitoring Sustainable Development Goals (SDGs) of the 2030 Agenda (with data for Germany) and a set of indicators for monitoring sustainable development on the level of the country.
+The national reporting platform - SDG is a publicly available tool for the dissemination and presentation of data for Germany on the indicators of the Sustainable Development Goals (SDGs) of the United Nations (UN) 2030 Agenda.
 ### Our aproach to NRP
 
-In order to conform with the UN's Fundamental Principles of Official Statistics, the minimum characteristics an SDG NRP should have are that it should:
-- be managed by national statistical offices;
-- features official statistics and metadata according to established standard methodology;
-- be publicly accessible;
-- allows for feedback from data users;
-- features open source (free) technology.
+In order to comply with the UN's Fundamental Principles of Official Statistics, the minimum characteristics of an SDG NRP should be the following: <br>
+The NRP
+- is managed by national statistical offices;
+- provides official statistics and metadata according to established standard methodology;
+- is publicly accessible;
+- enables feedback from data users;
+- is operated with open source (free) technology.
 
-In addition, the German NRP reporting platform has been developed in accordance with recognized international guidelines, especially with regard to open data and software.
+In addition, the German NRP has been developed in accordance with recognized international guidelines, in particular with regard to freely accessible data and software.
 
 ## NRP - sources
 
@@ -47,7 +48,7 @@ We encourage you to familiarize yourself with the national US and UK platforms f
 
 Due to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:
 - The units of the displayed time series are only displayed in English in the legends of the graphics.
-- Four- (or more) digit values are rounded to whole tens.
+- Four- (or more) digit values are rounded.
 - Integers are displayed without decimal places (even in time series in which other numerical values with decimal places exist).
 - Very long names of time series are not broken up into several lines in the axis labels of the graphics and partly cut off.
 - Zero values in time series are interpreted and displayed as missing values.
