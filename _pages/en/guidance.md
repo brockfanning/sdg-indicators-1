@@ -7,27 +7,24 @@ layout: page
 
 ## National reporting platform - SDG
 
-The national reporting platform - SDG is a publicly available tool for the dissemination and presentation of data for Germany on the indicators of the Sustainable Development Goals (SDGs) of the United Nations (UN) 2030 Agenda.
+The national reporting platform - SDG (SDG - NRP) is a publicly available tool serving the dissemination and presentation of data for Germany on  the Sustainable Development Goals (SDGs) of the 2030 Agenda by the United Nations (UN).
+
 ### Our aproach to NRP
 
-In order to comply with the UN's Fundamental Principles of Official Statistics, the minimum characteristics of an SDG NRP should be the following: <br>
-The NRP
-- is managed by national statistical offices;
-- provides official statistics and metadata according to established standard methodology;
-- is publicly accessible;
-- enables feedback from data users;
-- is operated with open source (free) technology.
+In order to conform with the UN’s Fundamental Principles of Official Statistics, the minimum characteristics an SDG NRP should have are that it should: <br>
+- be managed by national statistical offices;
+- features official statistics and metadata according to established standard methodology;
+- be publicly accessible;
+- allows for feedback from data users;
+- features open source (free) technology.
 
-In addition, the German NRP has been developed in accordance with recognized international guidelines, in particular with regard to freely accessible data and software.
+In addition, the German SDG-NRP has been developed in accordance with recognized international guidelines, especially with regard to open data and software.
 
 ## NRP - sources
 
-The Federal Statistical Office (Destatis) actively supports the development of national reporting platforms, in particular as an open source solution for the presentation of SDG indicators. Precursors in this field are the USA and Great Britain.
-The current version of the German reporting platform has been developed based on an earlier version of the UK NRP, and adapted to the needs of German statistics.
-The project code is publicly available in a [Github repository](https://github.com/G205SDGs/sdg-indicators).
+The Federal Statistical Office (Destatis) actively supports the development of national reporting platforms, in particular as an open source solution for the presentation of SDG indicators. Precursors in this field are the USA and Great Britain. The current version of the German reporting platform has been developed based on an earlier version of the UK NRP, and adapted to the needs of German statistics. The project code is publicly available in a [Github repository](https://github.com/G205SDGs/sdg-indicators).
 
-The new universal version of the open-sdg platform developed by the US, UK and Center for Open Data Enterprise is available.
-We encourage you to familiarize yourself with the national US and UK platforms for SDG and the project documentation.
+The Federal Statistical Office (Destatis) actively supports the development of national reporting platforms, in particular as an open source solution for the presentation of SDG indicators. Precursors in this field are the USA and Great Britain. The current version of the German reporting platform has been developed based on an earlier version of the UK NRP, and adapted to the needs of German statistics. The project code is publicly available in a .
 
 - [US NPR SDG](https://gsa.github.io/sdg-indicators-usa)
 
@@ -46,9 +43,9 @@ We encourage you to familiarize yourself with the national US and UK platforms f
 
 ## Current display
 
-Due to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:
+DDue to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:<br>
 - The units of the displayed time series are only displayed in English in the legends of the graphics.
 - Four- (or more) digit values are rounded.
 - Integers are displayed without decimal places (even in time series in which other numerical values with decimal places exist).
-- Very long names of time series are not broken up into several lines in the axis labels of the graphics and partly cut off.
+- Very long names of time series are not broken up into several lines in the axis labels of the graphics and hence are partly cut off.
 - Zero values in time series are interpreted and displayed as missing values.
