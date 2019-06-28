@@ -14,6 +14,14 @@ Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webse
 
 Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise ("externe Links") auf die von anderen Anbietern bereitgehaltenen Inhalte. Die fremden Inhalte stammen weder vom Statistischen Bundesamt noch hat das Statistische Bundesamt die Möglichkeit, den Inhalt von Seiten Dritter zu beeinflussen. Die Inhalte fremder Seiten, auf die das Statistische Bundesamt mittels Links hinweist, spiegeln nicht die Meinung des Statistischen Bundesamts wider, sondern dienen lediglich der Information und der Darstellung von Zusammenhängen. Das Statistische Bundesamt haftet nicht für fremde Inhalte, auf die es lediglich im oben genannten Sinne hinweist. Die Verantwortlichkeit liegt alleine bei dem Anbieter der Inhalte. Bei Nutzungsausfällen der Website wegen technischer oder organisatorischer Störungen bestehen keinerlei Ansprüche - gleich welcher Art - gegen das Statistische Bundesamt.
 
+## Hinweise zum Datenschutz
+
+**Das Statistische Bundesamt nimmt den Schutz Ihrer Privat- und Persönlichkeitssphäre ernst und beachtet die datenschutzrechtlichen Bestimmungen. Ihr Vertrauen ist uns wichtig!**
+
+Mit diesen Hinweisen kommen wir auch unseren Informationspflichten nach Artikel 13 der Datenschutz-Grundverordnung (DS-GVO) bei der Erhebung personenbezogener Daten nach. Beim Zugriff auf diese Nationale Berichtsplattform werden vom Statistischen Bundesamt keine personenbezogene Daten erhoben.
+
+Für Datenschutzhinweise im Zusammenhang mit der Nutzung des Kontaktformulares und sozialen Medien sowie des weiteren Internet-Angebotes des Statistischen Bundesamtes, gilt die [Datenschutzerklärung](https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html) des Statistischen Bundesamtes.
+
 ## Copyright allgemein
 
 Für die Standard-Veröffentlichungen des Statistischen Bundesamtes in gedruckter und elektronischer Form sowie für die Inhalte auf dieser Website einschließlich Grafiken sowie der zum Download bereitgestellten Produkte gilt, soweit bei dem jeweiligen Produkt/Internetseite keine ergänzenden oder anderslautenden Angaben ausgewiesen sind,
