@@ -6,31 +6,29 @@ layout: page
 ---
 
 ## How do I suggest new or different data sources?
-If you have feedback on the data sources we have used or have suggestions for new data sources then please email us at <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>.
+If you have feedback on the data sources we have used or have suggestions for new data sources then please contact us here <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>.
 
 ## What does the reporting status mean?
 We have used three different types of reporting status for an indicator, which are also colour coded:
 
-* Reported online (green) – as a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.
-* Statistics in progress (amber) – we have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.
-* Exploring data sources (red) – we are still looking for a suitable data source for this indicator.
+* Green: Reported online – as a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.
+* Amber: Statistics in progress – we have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.
+* Red: Exploring data sources – we are still looking for a suitable data source for this indicator.
 
 Where there is additional information about the status of indicator data collection and reporting, this will be displayed at the top of the indicator page.
 
-## How often will new data be added to this site?
-We will add data as soon as it has been sourced and checked. This includes new data as well as updates to data we have already published. We will continue to collect data from existing sources where possible, in cooperation with topic experts.
+## How are data gaps filled?
+In case there are no data available for an indicator, possible data sources are sought and assessed according to our quality standards. If they pass, the indicator is published in the reporting platform.
 
-## What are we doing to fill data gaps?
-For some indicators, although we may have data at the national level, our existing data sources don’t always allow us to disaggregate by all main groups.
+For some indicators, although there may be data available at the national level, the existing data sources don’t always allow us to disaggregate by all required categories.
 
-This means we need to look for new data sources, link existing ones, or model data. We are working with colleagues across the Federal Statical Office to do this.
+Thus, either  new data sources need to be found, or existing ones to be linked, or data to be model. This is constantly supported by the respective thematic department in the Federal Statistical Office.
 
-
-## How accessible is this website?
-Our aim is to make this website as accessible and usable as possible for every user.
+## What does disaggregation mean?
+Disaggregation is used to assess an indicator in more detail by dividing it into subcategories. The most common ones are age or gender. Every indicator has its own specific set of disaggregation categories which are provided either in the indicator’s name or by the international organization responsible for the indicator.
 
 ## Can other countries copy this website?
-Yes. For more information go to [guidance](https://g205sdgs.github.io/sdg-indicators/en/guidance/).
+The website may be used by other countries to build their own national reporting platform. Conditions for using Github apply. For more information please visit [guidance](https://g205sdgs.github.io/sdg-indicators/en/guidance/).
 
 <!-- DO NOT REMOVE ANYTHING BELOW THIS LINE -->
 <script type='text/javascript'>

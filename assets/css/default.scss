@@ -6,7 +6,10 @@ $main-background-color: #eaeaea;
 $dark-highlight : #0275d8;
 $vanilla: #fff;
 $footer-color : #E5E6E7;
+// Colors for use of "17"-logos
 $goal-colors : #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #FD6925 #DD1367 #FD9C27 #BF8B2E #417D46 #0A96D8 #57BE2F #00689C #1F4A6A;
+// Colors for use of pictos
+//$goal-colors : #E4243D #DFA73A #4CA144 #C7212F #EF402D #27BFE6 #FBC412 #A21C41 #F26A2E #E01483 #F99E29 #BF8D2C #407F46 #1D98D4 #5BB947 #136A9F #144969;
 $navbar-height : 175;
 $disclaimer-height: 40;
 $collapsed-navbar-height: $navbar-height - 30;
@@ -328,7 +331,7 @@ header {
     input {
       padding: 5px;
       padding-left: 29px;
-      width: 140px;
+      width: 160px;
       transition: width 0.4s;
       margin-top: 5px;
 
