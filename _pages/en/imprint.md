@@ -17,7 +17,7 @@ Although the information on these web pages is produced with utmost care, the Fe
 
 In addition to information of its own, the Federal Statistical Office offers links to external websites offering information of other providers. Neither is such external information provided by the Federal Statistical Office itself, nor is the Federal Statistical Office in a position to exert influence on the information offered on third-party pages. The information offered on external pages to which the Federal Statistical Office provides links does not reflect the opinion of the Federal Statistical Office; such links only serve the purpose of providing additional information and illustrating connections. The Federal Statistical Office is not liable for external information to which the Office just offers links as described above. Responsibility lies only with the provider of such information. If, due to technical or organisational errors, users should not be able to utilise the website, they shall not have any claim whatsoever against the Federal Statistical Office.
 
-##Data protection notes
+## Data protection notes
 
 **The Federal Statistical Office is committed to protecting your privacy and fully adheres to the data protection provisions. The trust placed in our organisation and in official statistics is of great importance to us.**
 
