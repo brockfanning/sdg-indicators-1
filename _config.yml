@@ -103,7 +103,7 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
-remote_theme: open-sdg/open-sdg@0.6.2
+remote_theme: open-sdg/open-sdg@0.6.1
 goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
 
 custom_css:
