@@ -17,7 +17,7 @@ Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise ("exte
 ## Hinweise zum Datenschutz
 
 Mit diesen Hinweisen kommen wir unseren Informationspflichten nach Artikel 13 der Datenschutz-Grundverordnung (DS-GVO) bei der Erhebung personenbezogener Daten nach:
-Beim Zugriff auf die Nationale Berichtsplattform werden vom Statistischen Bundesamt keine personenbezogene Daten erhoben, Sie nutzen allerdings die Dienste des Anbieters GitHub. Die Datenschutzerklärung von GitHub finden Sie unter [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement). Als dienstlicher Websiten-Besucher werden technische Informationen, auch die IP-Adresse, erfasst: diese kann ggf. ein personenbezogenes Datum sein. Personenbezogene Daten werden erfasst, wenn Sie einen Account anlegen.
+Beim Zugriff auf die Nationale Berichtsplattform werden vom Statistischen Bundesamt keine personenbezogene Daten erhoben, Sie nutzen allerdings die Dienste des Anbieters GitHub. Die Datenschutzerklärung von GitHub finden Sie unter [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement). Als Websiten-Besucher werden technische Informationen, auch die IP-Adresse, erfasst: diese kann ein personenbezogenes Datum sein. Personenbezogene Daten werden erfasst, wenn Sie einen Account anlegen.
 Im Zusammenhang mit der Nutzung des Kontaktformulars, der Nutzung sozialer sozialen Medien sowie des weiteren Internet-Angebotes des Statistischen Bundesamtes gilt die Datenschutzerklärung unter [https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html](https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html).
 
 
