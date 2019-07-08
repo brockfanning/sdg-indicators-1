@@ -43,7 +43,7 @@ The Federal Statistical Office (Destatis) actively supports the development of n
 
 ## Current display
 
-DDue to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:<br>
+Due to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:<br>
 - The units of the displayed time series are only displayed in English in the legends of the graphics.
 - Four- (or more) digit values are rounded.
 - Integers are displayed without decimal places (even in time series in which other numerical values with decimal places exist).
