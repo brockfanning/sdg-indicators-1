@@ -21,9 +21,7 @@ In addition to information of its own, the Federal Statistical Office offers lin
 
 With these notes we fulfill our information obligations regarding the collection of personal data, which are laid down in Article 13 of the General Data Protection Regulation (GDPR).
 
-The Federal Statistical Office does not collect any personal data when the National Reporting Platform is accessed, but you do use the services of the provider GitHub. GitHub's data protection declaration can be found at [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement).
-
- As website visitors, technical information, including the IP address, is recorded: this can be personal data. Personal data is collected when you create an account.
+The Federal Statistical Office does not collect any personal data when the National Reporting Platform is accessed.Howerver you are also using the services of the provider GitHub. GitHub's data protection declaration can be found at [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement). As website visitor, technical information, including the IP address, is recorded: this can be personal data. Personal data is collected when you create an account.
 
 For data protection notes with regards to the use of our contact form, social media and our general website, the [data protection declaration](https://www.destatis.de/EN/Service/PrivacyPolicy/privacypolicy_node.html) of the Federal Statistical Office applies.
 
