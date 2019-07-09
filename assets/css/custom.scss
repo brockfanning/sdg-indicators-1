@@ -21,12 +21,46 @@
 .complete {
   background-color: #5cb85c;
 }
- #main-content.goal-indicators .indicator-cards a {
-   padding: 0;
-   margin-bottom: 1.5rem;
- }
- #main-content.goal-indicators .indicator-cards.target {
-   margin-bottom: 1.5rem;
-   clear: left;
-   font-weight: bold;
- }
+
+#main-content.goal-indicators .indicator-cards a {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+#main-content.goal-indicators .indicator-cards.target {
+  margin-bottom: 1.5rem;
+  clear: left;
+  font-weight: bold;
+}
+
+header {
+  background: $vanilla /* url('../img/sdgbg.png') bottom left repeat-x;*/;
+  border-bottom: $main-background-color 5px solid;
+}
+
+.navbar {
+  #search {
+    input {
+      width: 160px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .navbar {
+    .top-level {
+      li {
+        button{
+          color: #E5E6E7;
+          display: block;
+          padding: 15px;
+          border: 0;
+          text-transform: uppercase;
+          background-color: inherit;
+          text-align: left;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
