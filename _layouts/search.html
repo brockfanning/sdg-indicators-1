@@ -11,7 +11,7 @@
 <script type="text/template" class="results">
 
   <% if(resultsCount) { %>
-    <p><%= resultsCount %> <% if(resultsCount != 1) { %>{{ t.general.indicator }}<% } else { %>{{ t.general.indicators }}<% } %> {{ t.search.found_in }} <%= searchResults.length %> {{ t.general.goal }}<% if(searchResults.length != 1) { %>s<% } %></p>
+    <p><%= resultsCount %> <% if(resultsCount == 1) { %>{{ t.general.indicator }}<% } else { %>{{ t.general.indicators }}<% } %> {{ t.search.found_in }} <%= searchResults.length %> <% if(searchResults.length == 1) { %>{{ t.general.goal }}<% } else { %>{{ t.general.found_in_goals }} %></p>
 
     <% _.each(searchResults, function(goal){ %>
       <div class="row">
