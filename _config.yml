@@ -104,7 +104,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 remote_theme: open-sdg/open-sdg
-goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
+goal_image_base: https://github.com/G205SDGs/sdg-indicators/tree/develop/assets/img/goals
 
 custom_css:
   - /assets/css/custom.css
