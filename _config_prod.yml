@@ -1,20 +1,9 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# This files contains overrides of _config.yml for the production site.
 
 # Site settings
-title: German Indicators For The Sustainable Development Goals
-description: Data Platform Prototype
 baseurl: "" # the subpath of your site, e.g. /blog
-url: ""
-data_dir: data
 environment: production
 remotedatabaseurl: "https://sustainabledevelopment-germany.github.io/sdg-data-pub/"
-# permalink: /news/:year/:month/:day/:title.html
-
 jekyll_get_json:
   - data: meta
     json: 'https://sustainabledevelopment-germany.github.io/sdg-data-pub/meta/all.json'
@@ -35,76 +24,3 @@ jekyll_get_json:
 
 analytics:
   ga_prod: ''
-
-###################################################################################################
-email_contacts:
-  questions: sdg-indicators@destatis.de
-  suggestions: sdg-indicators@destatis.de
-  functional: sdg-indicators@destatis.de
-###################################################################################################
-
-# Github Repo for Data
-repo_name: sdg-data
-branch: develop
-org_name: G205SDGs
-
-# Build settings
-markdown: kramdown
-
-# Travis Support
-exclude: [vendor, scripts, remotedata]
-
-# International Support
-# Eg name: Australia and adjective: Australian
-country:
-  name: Germany
-  adjective: German
-
-# Pages
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-  posts:
-    output: true
-    permalink: /news/:year/:month/:day/:title.html
-  indicators:
-    output: true
-  goals:
-    output: true
-
-# The list of languages that are translated. The first one is the default.
-languages:
-  - de
-  - en
-
-# Menu
-menu:
-  # Use these to customise the main navigation.
-  - path: /
-    translation_key: general.goals
-  - path: /reporting-status/
-    translation_key: menu.reporting_status
-  - path: /about/
-    translation_key: menu.about
-  - path: /guidance/
-    translation_key: menu.guidance
-
-# This makes sure that all pages have a language.
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      language: "de"
-plugins:
-  - jekyll-remote-theme
-  - jekyll-get-json
-  - jekyll-open-sdg-plugins
-
-# Use a remote Jekyll theme.
-remote_theme: open-sdg/open-sdg@0.6.1
-goal_image_base: https://open-sdg.github.io/sdg-translations/assets/img/goals
-
-custom_css:
-  - /assets/css/custom.css
