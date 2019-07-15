@@ -34,6 +34,12 @@ $main-background-color: #eaeaea;
   margin-bottom: 1.5rem;
   clear: left;
   font-weight: bold;
+  span {
+    font-size: larger;
+    @media screen and (min-width: 992px) {
+      font-size: inherit;
+    }
+  }
 }
 
 #main-content .tab-content img {
