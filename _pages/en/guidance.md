@@ -24,7 +24,7 @@ In addition, the German SDG-NRP has been developed in accordance with recognized
 
 The Federal Statistical Office (Destatis) actively supports the development of national reporting platforms, in particular as an open source solution for the presentation of SDG indicators. Precursors in this field are the USA and Great Britain. The current version of the German reporting platform has been developed based on an earlier version of the UK NRP, and adapted to the needs of German statistics. The project code is publicly available in a [Github repository](https://github.com/G205SDGs/sdg-indicators).
 
-The Federal Statistical Office (Destatis) actively supports the development of national reporting platforms, in particular as an open source solution for the presentation of SDG indicators. Precursors in this field are the USA and Great Britain. The current version of the German reporting platform has been developed based on an earlier version of the UK NRP, and adapted to the needs of German statistics. The project code is publicly available in a .
+The new universal version of the open-SDG platform developed by the US, UK and Center for Open Data Enterprise is available. We encourage you to familiarize yourself with the national US and UK platforms for SDGs and the project documentation.
 
 - [US NPR SDG](https://gsa.github.io/sdg-indicators-usa)
 
