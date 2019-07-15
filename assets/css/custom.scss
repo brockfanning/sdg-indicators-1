@@ -36,6 +36,11 @@ $main-background-color: #eaeaea;
   font-weight: bold;
 }
 
+#main-content .tab-content img {
+  max-height: 130px;
+  width: auto;
+}
+
 header {
   background: $vanilla /* url('../img/sdgbg.png') bottom left repeat-x;*/;
   border-bottom: $main-background-color 5px solid;
