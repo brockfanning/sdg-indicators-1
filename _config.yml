@@ -78,6 +78,12 @@ languages:
     - de
     - en
 
+# Automatically create goal and indicator pages.
+create_goals:
+  layout: goal-by-target
+create_indicators:
+  layout: indicator
+
 # Menu
 menu:
   # Use these to customise the main navigation.
