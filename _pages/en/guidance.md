@@ -44,8 +44,5 @@ The new universal version of the open-SDG platform developed by the US, UK and C
 ## Current display
 
 Due to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:<br>
-- The units of the displayed time series are only displayed in English in the legends of the graphics.
-- Four- (or more) digit values are rounded.
 - Integers are displayed without decimal places (even in time series in which other numerical values with decimal places exist).
 - Very long names of time series are not broken up into several lines in the axis labels of the graphics and hence are partly cut off.
-- Zero values in time series are interpreted and displayed as missing values.

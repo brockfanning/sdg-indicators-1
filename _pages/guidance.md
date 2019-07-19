@@ -47,8 +47,5 @@ Wir empfehlen Ihnen, sich mit den SDG-Plattformen der USA und Großbritanniens u
 ## Aktuelle Darstellung
 
 Aufgrund von technischen Schwierigkeiten finden sich auf der aktuellen Version der deutschen NRP einige mangelhafte Darstellungen, auf die an dieser Stelle hingewiesen wird:
-- Die Einheiten der dargestellten Zeitreihen werden in den Legenden der Grafiken lediglich in Englisch dargestellt.
-- Vier- (oder mehr-) stellige Zahlenwerte werden gerundet.
 - Ganze Zahlen werden ohne Nachkommastelle dargestellt (auch in Zeitreihen, in denen andere Zahlenwerte mit Nachkommastelle vorhanden sind).
 - Sehr lange Zeitreihenbezeichnungen werden in den Achsenbeschriftungen der Grafiken nicht in mehrere Zeilen umgebrochen und z.T. abgeschnitten.
-- Nullwerte in Zeitreihen werden als fehlende Werte interpretiert und dargestellt.
