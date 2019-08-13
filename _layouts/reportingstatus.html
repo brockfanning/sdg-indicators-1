@@ -28,10 +28,12 @@
             {%- for status in overall.statuses -%}
 
             <script type="text/template" class="results">
-              <% if(status.status != 'not_applicable') { %> {assign sum+= status.percentage} <% } %>
+              {var a = 0}
+              <% if(status.status != 'not_applicable') { %> {a += status.percentage} <% } %>
+              <p> a </p>
             </script>
 
-            <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"+sum></span>
+            <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
             {%- endfor -%}
         </div>
 
