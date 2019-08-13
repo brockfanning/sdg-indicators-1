@@ -32,11 +32,11 @@
 
               <% if({{status.status}} != 'not_applicable') { %>
                 <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
-                {% asign s += {{ status.percentage } }} <% }
+                {% assign s += {{ status.percentage } }} <% }
 
 
               <% } else { %>
-                <span class="{{ status.status | slugify }}" style="width:s%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+                <span class="{{ status.status | slugify }}" style="width: {100-s}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
               <% } %>
 
             </script>
