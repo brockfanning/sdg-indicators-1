@@ -25,7 +25,8 @@
         </div>
         <div class="goal-stats">
             {%- for status in overall.statuses -%}
-            <span class="{{ status.status | slugify }}" style="width:{{ status.percentage | round }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+            <% if(status.status != 'not_applicable') { %>{{ assign sum+=status.status }} <% }
+              <span class="{{ status.status | slugify }}" style="width:{{ status.percentage | round }}%" title="{{ status.translation_key | t }}: sum {{ status.percentage | round }}%"></span>
             {%- endfor -%}
         </div>
 
