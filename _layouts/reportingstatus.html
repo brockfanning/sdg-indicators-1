@@ -28,18 +28,18 @@
 
 
 
-            <script type="text/template" class="results">
+              <script type="text/template" class="results">
 
-              <% if({{status.status}} != 'not_applicable') { %>
-                <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
-                {% assign s += {{ status.percentage } }} <% }
+                <% if({{status.status}} != 'not_applicable') { %>
+                  <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+                  {% assign s += {{ status.percentage } }} <% }
 
 
-              <% } else { %>
-                <span class="{{ status.status | slugify }}" style="width: {100-s}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
-              <% } %>
+                  <% } else { %>
+                    <span class="{{ status.status | slugify }}" style="width: {100-s}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+                    <% } %>
 
-            </script>
+                  </script>
 
 
 
