@@ -26,7 +26,25 @@
         <div class="goal-stats">
             {%- for status in overall.statuses -%}
 
-            <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+
+
+            <script type="text/template" class="results">
+
+              <% if({{status.status}} != 'not_applicable') { %>
+                <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+                {% asign s += {{ status.percentage } }} <% }
+
+
+              <% } else { %>
+                <span class="{{ status.status | slugify }}" style="width:s%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+              <% } %>
+
+            </script>
+
+
+
+
+            <!--<span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>-->
             {%- endfor -%}
         </div>
 
