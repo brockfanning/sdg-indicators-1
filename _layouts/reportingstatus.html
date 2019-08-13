@@ -27,12 +27,6 @@
         <div class="goal-stats">
             {%- for status in overall.statuses -%}
 
-            <script type="text/template" class="results">
-              {var a = 0}
-              <% if(status.status != 'not_applicable') { %> {a += status.percentage} <% } %>
-              <p> a </p>
-            </script>
-
             <span class="{{ status.status | slugify }}" style="width:{{ status.percentage }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
             {%- endfor -%}
         </div>
