@@ -120,7 +120,7 @@ map_options:
     attribution: #<a href="https://www.mapbox.com">Mapbox</a> | <a href="http://geoportal.statistics.gov.uk/">ONS</a>
 
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
-  colorRange: chroma.brewer.BuGn
+  colorRange:['#000085','#1A1A91','#33339D','#4D4DAA','#6666B6','#8080C2','#9999CE','#B3B3DA','#CCCCE7','#E6E6F3']
   # Set the color for boundaries that have no data.
   noValueColor:  '#f0f0f0'
   # For documentation on the style options below, see here:
