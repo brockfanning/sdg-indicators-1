@@ -103,7 +103,7 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
-remote_theme: open-sdg/open-sdg@0.7.0
+remote_theme: open-sdg/open-sdg@0.7.1
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
 
 custom_css:
@@ -112,7 +112,7 @@ custom_css:
 
 
 # Mapping
-#map_options:
+map_options:
   #tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
   #tileOptions:
     #id: mapbox.light
