@@ -122,7 +122,7 @@ map_options:
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
   #colorRange: chroma.brewer.BuGn #Oranges
   # Set the color for boundaries that have no data.
-  noValueColor:  '#3fd64f'
+  noValueColor:  '#f0f0f0'
   # For documentation on the style options below, see here:
   # https://leafletjs.com/reference-1.4.0.html#path-option
   # Set the default style for boundaries in the map:
