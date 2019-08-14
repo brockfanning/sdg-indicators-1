@@ -112,31 +112,31 @@ custom_css:
 
 
 # Mapping
-#map_options:
-  #tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
-  #tileOptions:
-    #id: mapbox.light
-    #accessToken: pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg
-    #attribution: #<a href="https://www.mapbox.com">Mapbox</a> | <a href="http://geoportal.statistics.gov.uk/">ONS</a>
+map_options:
+  tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
+  tileOptions:
+    id: mapbox.light
+    accessToken: pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg
+    attribution: #<a href="https://www.mapbox.com">Mapbox</a> | <a href="http://geoportal.statistics.gov.uk/">ONS</a>
 
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
-  colorRange: ['#fee6ce','#fdae6b','#e6550d'] #chroma.brewer.BuGn #Oranges
+  #colorRange: chroma.brewer.BuGn #Oranges
   # Set the color for boundaries that have no data.
   noValueColor:  '#f0f0f0'
   # For documentation on the style options below, see here:
   # https://leafletjs.com/reference-1.4.0.html#path-option
   # Set the default style for boundaries in the map:
-  styleNormal:
-    weight: 1
-    opacity: 1
-    color: '#888'
-    fillOpacity: 0.7
+  #styleNormal:
+    #weight: 1
+    #opacity: 1
+    #color: #888
+    #fillOpacity: 0.7
   # Set the style for boundaries that have been selected/highlighted:
-  styleHighlighted:
-    weight: 1
-    opacity: 1
-    color: '#111'
-    fillOpacity: 0.7
+  #styleHighlighted:
+    #weight: 1
+    #opacity: 1
+    #color: #111
+    #fillOpacity: 0.7
   # Set the style for top-level boundaries that are displaying in other layers.
   # Note: This is only applicable when using the "nested zoom" feature (see below).
   #styleStatic:
