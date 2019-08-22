@@ -113,7 +113,7 @@ custom_css:
 
 # Mapping
 map_options:
-  tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
+  tileURL: https://api.mapbox.com/tilesets/v1/sources/mobosse/hello-world?access_token={accessToken} #https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}
   tileOptions:
     id: mapbox.mapbox-terrain-v2 #mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A #pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg
