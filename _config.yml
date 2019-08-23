@@ -115,7 +115,7 @@ custom_css:
 map_options:
   tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?mapbox://styles/mobosse/cjzmrn62k0ek11cmgea7a1i1h&access_token={accessToken}
   tileOptions:
-    id: mapbox.light
+    #id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A #pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg
     attribution: <a href="https://www.mapbox.com">Mapbox</a> # | <a href="http://geoportal.statistics.gov.uk/">ONS</a>
 
