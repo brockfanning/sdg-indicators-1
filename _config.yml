@@ -103,7 +103,7 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
-remote_theme: open-sdg/open-sdg@0.7.1
+remote_theme: open-sdg/open-sdg@0.8.1
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
 
 custom_css:
@@ -113,8 +113,8 @@ custom_css:
 
 # Mapping
 map_options:
-  #tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?mapbox://styles/mobosse/cjzmrn62k0ek11cmgea7a1i1h&access_token={accessToken}
-  tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/wmts?access_token=pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
+  tileURL: https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?mapbox://styles/mobosse/cjzmrn62k0ek11cmgea7a1i1h&access_token={accessToken}
+  #tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/wmts?access_token=pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
   tileOptions:
     id: mapbox.blank
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A #pk.eyJ1IjoiYnJvY2tmYW5uaW5nMSIsImEiOiJjaXplbmgzczgyMmRtMnZxbzlmbGJmdW9pIn0.LU-BYMX69uu3eGgk0Imibg
