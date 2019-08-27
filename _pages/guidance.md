@@ -35,7 +35,7 @@ Wir empfehlen Ihnen, sich mit den SDG-Plattformen der USA und Großbritanniens u
 
 ## NRP - Genutzte Software
 
-### Backend IT-Anforderungen:
+### Back-end IT-Anforderungen:
 - GitHub: Hosting der Website, die für die Programmierung von Projekten mit dem Git-Versionskontrollsystem entwickelt wurde.
 - Jekyll: Generator für statische Seiten, die in Ruby geschrieben wurden.
 
