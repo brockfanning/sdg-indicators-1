@@ -125,7 +125,7 @@ map_options:
   #colorRange: ['#FFD9D5','#FFC8C1','#FFB6AD','#FFA499','#FF9385','#FF8171','#FF6F5D','#FF5D49','#FF4C35','#FF3A21']
   #Goal 8:
   colorRange: ["#F6E8EC", "#EED3DB", "#E5BFCA", "#DDAAB9", "#D495A8", "#CC8197", "#C46C86", "#BB5775", "#B34264", "#AA2E53","#A21942"]
-  
+
   # Set the color for boundaries that have no data.
   noValueColor:  '#f0f0f0'
   # For documentation on the style options below, see here:
@@ -162,9 +162,10 @@ map_layers:
   #Region
   - min_zoom: 0
     max_zoom: 20
-    serviceUrl: https://opendata.arcgis.com/datasets/33a15b8fd5624dd4800cc33ab5bad761_0.geojson
+    #serviceUrl: https://opendata.arcgis.com/datasets/33a15b8fd5624dd4800cc33ab5bad761_0.geojson
+    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     nameProperty: GEN
-    idProperty: OBJECTID
+    idProperty: AGS #OBJECTID
     staticBorders: true
     # link: https://hub.arcgis.com/datasets/4fcca2a47fed4bfaa1793015a18537ac_4
   #Local Authority
