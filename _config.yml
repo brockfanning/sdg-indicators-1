@@ -164,7 +164,7 @@ map_layers:
   - min_zoom: 0
     max_zoom: 20
     #serviceUrl: https://opendata.arcgis.com/datasets/33a15b8fd5624dd4800cc33ab5bad761_0.geojson
-    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
+    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen #https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     nameProperty: GEN
     idProperty: AGS #OBJECTID
     staticBorders: true
