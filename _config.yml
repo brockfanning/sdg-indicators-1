@@ -119,7 +119,7 @@ map_options:
   tileOptions:
     id: mapbox.dark
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
-    attribution: <a href="https://www.mapbox.com">Mapbox</a> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a>
+    attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a>
 
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
   #Goal 5:
@@ -164,7 +164,7 @@ map_layers:
   - min_zoom: 0
     max_zoom: 20
     #serviceUrl: https://opendata.arcgis.com/datasets/33a15b8fd5624dd4800cc33ab5bad761_0.geojson
-    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen #https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
+    serviceUrl: https://g205sdgs.github.io/sdg-indicators/assets/maps/Ländergrenzen_ohne_Seegrenzen.geojson
     nameProperty: GEN
     idProperty: AGS #OBJECTID
     staticBorders: true
