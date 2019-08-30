@@ -109,6 +109,9 @@ goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
 custom_css:
   - /assets/css/custom.css
 
+custom_js:
+  - /assets/js/custom.js
+
 
 
 # Mapping
