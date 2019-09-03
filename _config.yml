@@ -118,7 +118,7 @@ custom_js:
 map_options:
 
   #tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzo8dsnt0bz71cohx8l8etpg/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
-  tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzo8dsnt0bz71cohx8l8etpg/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
+  tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzmrn62k0ek11cmgea7a1i1h/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
   tileOptions:
     id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
