@@ -24,7 +24,7 @@ Sollten für einen Indikator keine Daten vorliegen, werden mögliche Datenquelle
 
 Bei einigen Indikatoren liegen zwar Daten auf nationaler Ebene vor, aber die zugrundeliegenden Datenquellen lassen keine Disaggregation nach allen geforderten Kategorien zu.
 
-In diesen Fällen wird nach neuen Datenquellen gesucht oder müssen die bestehenden Quellen verknüpft oder auch Daten modelliert werden. Hierzu tragen die jeweils betroffenen Fachbereiche im Statistischen Bundesamt(Destatis) kontinuierlich bei.
+In diesen Fällen wird nach neuen Datenquellen gesucht oder müssen die bestehenden Quellen verknüpft oder auch Daten modelliert werden. Hierzu tragen die jeweils betroffenen Fachbereiche im Statistischen Bundesamt (Destatis) kontinuierlich bei.
 
 
 ## Können andere Länder diese Website kopieren?

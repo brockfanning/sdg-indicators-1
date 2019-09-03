@@ -116,11 +116,11 @@ custom_js:
 
 # Mapping
 map_options:
-  
+
   #tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzo8dsnt0bz71cohx8l8etpg/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
   tileURL: https://api.mapbox.com/styles/v1/mobosse/cjzo8dsnt0bz71cohx8l8etpg/tiles/256/{z}/{x}/{y}?&access_token={accessToken}
   tileOptions:
-    id: mapbox.dark
+    id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
     attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a>
 
