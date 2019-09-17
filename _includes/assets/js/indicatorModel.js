@@ -189,12 +189,12 @@ var indicatorModel = function (options) {
   }());
 
   var headlineColor = '777777';
-  if (this.indicatorId.includes('_3.')){
+  if (this.indicatorId.includes('3.')){
     var colors = ['4c9f38', '3c7f2c', '6fb25f', '2d5f21', '93c587 ', '1e3f16', 'b7d8af', '0f1f0b', 'dbebd7'];
   }
-  //else if(this.indicatorId.contains('_3.')){
-    //var colors = ['e5243b', 'b71c2f', 'ea4f62', '891523', 'ef7b89', '5b0e17', 'f4a7b0', '2d070b', 'fce9eb'];
-  //}
+  else if(this.indicatorId.contains('1.')){
+    var colors = ['e5243b', 'b71c2f', 'ea4f62', '891523', 'ef7b89', '5b0e17', 'f4a7b0', '2d070b', 'fce9eb'];
+  }
   else{
     var colors = ['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
   }
