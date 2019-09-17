@@ -190,10 +190,10 @@ var indicatorModel = function (options) {
 
   var headlineColor = '777777';
   if (this.indicatorId == 'indicator_1-2-1'){
-    var colors = ['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
+    var colors = ['e5243b', 'b71c2f', '891523', '5b0e17', '2d070b', 'ea4f62', 'ef7b89', 'f4a7b0', 'fce9eb'];
   }
   else{
-    var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44', 'e5243b', 'e5b735'];
+    var colors = ['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
   }
 
   // allow headline + (2 x others)
