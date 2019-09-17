@@ -189,7 +189,7 @@ var indicatorModel = function (options) {
   }());
 
   var headlineColor = '777777';
-  if (this.indicatorId == 'indicator_1-1-2'){
+  if (this.indicatorId == 'indicator_1-2-1'){
     var colors = ['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
   }
   else{
