@@ -189,8 +189,11 @@ var indicatorModel = function (options) {
   }());
 
   var headlineColor = '777777';
-  if (this.indicatorId[9:10] == '_1'){
-    var colors = ['e5243b', 'b71c2f', '891523', '5b0e17', '2d070b', 'ea4f62', 'ef7b89', 'f4a7b0', 'fce9eb'];
+  if (this.indicatorId.includes('_1.'){
+    var colors = ['e5243b', 'b71c2f', 'ea4f62', '891523', 'ef7b89', '5b0e17', 'f4a7b0', '2d070b', 'fce9eb'];
+  }
+  else if(this.indicatorId.includes('_3.'){
+    var colors = ['c5192d', '3c7f2c', '6fb25f', '2d5f21', '93c587 ', '1e3f16', 'b7d8af', '0f1f0b', 'dbebd7'];
   }
   else{
     var colors = ['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
