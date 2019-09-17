@@ -189,7 +189,7 @@ var indicatorModel = function (options) {
   }());
 
   var headlineColor = '777777';
-  var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'];
+  var colors = ['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44', 'e5243b', 'e5b735'];
 
   // allow headline + (2 x others)
   var maxDatasetCount = 2 * colors.length;
