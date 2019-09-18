@@ -1,0 +1,48 @@
+<ol class="breadcrumb">
+  <li><a href="{{ site.baseurl }}{{ baseurl_folder }}/">{{ t.general.home }}</a></li>
+  {% if goal_uri %}
+      <li><a href="{{ goal_uri }}" title="{{ goal_title }}">{{ t.general.goal }} {{ goal_number }}</a></li>
+      <li class="active">{{ t.general.indicator }} {{ meta.indicator_display }}</li>
+      <li id = "liRight">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.next }}" title="next indicator">
+          <span style="font-size:20px">>
+          </span>
+        </a>
+      </li>
+      <li id = "liRight">
+        <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" title="previous indicator">
+          <span style="font-size:20px"><
+          </span>
+        </a>
+      </li>
+
+  {% else %}
+      <li class="active">{{ t.general.goal }} {{ goal_number }}</li>
+      {% if page.sdg_goal == '1' %}
+        {% assign next_goal = '2' %}
+        {% assign previous_goal = '17' %}
+      {% elsif page.sdg_goal == '17' %}
+        {% assign next_goal = '1' %}
+        {% assign previous_goal = '16' %}
+      {% else %}
+        {% assign previous_goal = page.sdg_goal | minus: 1 %}
+        {% assign next_goal = page.sdg_goal | plus: 1 %}
+      {% endif %}
+
+        <li id = "liRight">
+          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" title="next goal">
+            <span style="font-size:20px">>
+            </span>
+          </a>
+        </li>
+        <li id = "liRight">
+          <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" title="previous goal">
+            <span style="font-size:20px"><
+            </span>
+          </a>
+        </li>
+
+
+  {% endif %}
+
+</ol>
