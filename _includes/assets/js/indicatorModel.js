@@ -190,55 +190,55 @@ var indicatorModel = function (options) {
 
   var headlineColor = '777777';
   if (this.indicatorId.includes('_1-')){
-    var colors = ['e5243b', '891523', 'ef7b89', 'b71c2f', 'ea4f62', '5b0e17', 'f4a7b0', '2d070b', 'fce9eb'];
+    var colors = ['e5243b', '891523', 'ef7b89', '2d070b', 'fce9eb', 'b71c2f', 'ea4f62', '5b0e17', 'f4a7b0'];
   }
   else if(this.indicatorId.includes('_2-')){
-    var colors = ['e5b735', '6d5719', 'd3bd7f', '927421', 'c5a754', '493a10', 'e2d3a9', '241d08', 'f0e9d4'];
+    var colors = ['e5b735', '6d5719', 'd3bd7f', '241d08', 'f0e9d4', '927421', 'c5a754', '493a10', 'e2d3a9'];
   }
   else if(this.indicatorId.includes('_3-')){
-    var colors = ['4c9f38', '2d5f21', '93c587', '3c7f2c', '6fb25f', '1e3f16', 'b7d8af', '0f1f0b', 'dbebd7'];
+    var colors = ['4c9f38', '2d5f21', '93c587', '0f1f0b', 'dbebd7', '3c7f2c', '6fb25f', '1e3f16', 'b7d8af'];
   }
   else if(this.indicatorId.includes('_4-')){
-    var colors = ['c5192d', '760f1b', 'dc7581', '9d1424', 'd04656', '4e0a12', 'e7a3ab', '270509', 'f3d1d5'];
+    var colors = ['c5192d', '760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'];
   }
   else if(this.indicatorId.includes('_5-')){
-    var colors = ['ff3a21', 'b22817', 'ff7563', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90', '330b06', 'ffd7d2'];
+    var colors = ['ff3a21', 'b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'];
   }
   else if(this.indicatorId.includes('_6-')){
-    var colors = ['26bde2', '167187', '7cd7ed', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3', '07252d', 'd3f1f9'];
+    var colors = ['26bde2', '167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'];
   }
   else if(this.indicatorId.includes('_7-')){
-    var colors = ['fcc30b', '977506', 'fddb6c', 'c99c08', 'fccf3b', '644e04', 'fde79d', '322702', 'fef3ce'];
+    var colors = ['fcc30b', '977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'];
   }
   else if(this.indicatorId.includes('_8-')){
-    var colors = ['a21942', '610f27', 'c7758d', '811434', 'b44667', '400a1a', 'd9a3b3', '20050d', 'ecd1d9'];
+    var colors = ['a21942', '610f27', 'c7758d', '20050d', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'];
   }
   else if(this.indicatorId.includes('_9-')){
-    var colors = ['fd6925', '973f16', 'fda57c', 'ca541d', 'fd8750', '652a0e', 'fec3a7', '321507', 'fee1d3'];
+    var colors = ['fd6925', '973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'];
   }
   else if(this.indicatorId.includes('_10-')){
-    var colors = ['dd1367', '840b3d', 'ea71a3', 'b00f52', 'e34285', '580729', 'f1a0c2', '2c0314', 'f8cfe0'];
+    var colors = ['dd1367', '840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'e34285', '580729', 'f1a0c2'];
   }
   else if(this.indicatorId.includes('_11-')){
-    var colors = ['fd9d24', '975e15', 'fdc47b', 'ca7d1c', 'fdb04f', '653e0e', 'fed7a7', '321f07', 'feebd3'];
+    var colors = ['fd9d24', '975e15', 'fdc47b', '321f07', 'feebd3', 'ca7d1c', 'fdb04f', '653e0e', 'fed7a7'];
   }
   else if(this.indicatorId.includes('_12-')){
-    var colors = ['c9992d', '785b1b', 'dec181', 'a07a24', 'd3ad56', '503d12', 'e9d6ab', '281e09', 'f4ead5'];
+    var colors = ['c9992d', '785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'];
   }
   else if(this.indicatorId.includes('_13-')){
-    var colors = ['3f7e44', '254b28', '8bb18e', '326436', '659769', '19321b', 'b2cbb4', '0c190d', 'd8e5d9'];
+    var colors = ['3f7e44', '254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'];
   }
   else if(this.indicatorId.includes('_14-')){
-    var colors = ['0a97d9', '065a82', '6cc0e8', '0878ad', '3aabe0', '043c56', '9dd5ef', '021e2b', 'ceeaf7'];
+    var colors = ['0a97d9', '065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'];
   }
   else if(this.indicatorId.includes('_15-')){
-    var colors = ['56c02b', '337319', '99d97f', '449922', '77cc55', '224c11', 'bbe5aa', '112608', 'ddf2d4'];
+    var colors = ['56c02b', '337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'];
   }
   else if(this.indicatorId.includes('_16-')){
-    var colors = ['00689d', '003e5e', '66a4c4', '00537d', '3286b0', '00293e', '99c2d7', '00141f', 'cce0eb'];
+    var colors = ['00689d', '003e5e', '66a4c4', '00141f', 'cce0eb', '00537d', '3286b0', '00293e', '99c2d7'];
   }
   else if(this.indicatorId.includes('_17-')){
-    var colors = ['19486a', '0f2b3f', '7591a5', '143954', '466c87', '0a1c2a', 'a3b5c3', '050e15', 'd1dae1'];
+    var colors = ['19486a', '0f2b3f', '7591a5', '050e15', 'd1dae1', '143954', '466c87', '0a1c2a', 'a3b5c3'];
   }
   //SDG goal colors
   //['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
