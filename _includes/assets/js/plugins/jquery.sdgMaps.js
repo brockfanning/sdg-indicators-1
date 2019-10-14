@@ -3,7 +3,7 @@
  * Integrate with high-contrast switcher.
  */
 (function($, L, chroma, window, document, undefined) {
-  addTitle(object, 'Hello World')
+
   // Create the defaults once
   var defaults = {
 
