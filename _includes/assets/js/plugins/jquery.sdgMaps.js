@@ -7,7 +7,7 @@
   // Create the defaults once
   var defaults = {
 
-    title: 'Hey World, it´s me; Mo!'
+    title: 'Hey World, it´s me; Mo!',
 
     // Options for using tile imagery with leaflet.
     tileURL: '[replace me]',
