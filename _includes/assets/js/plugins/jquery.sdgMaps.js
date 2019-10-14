@@ -3,11 +3,9 @@
  * Integrate with high-contrast switcher.
  */
 (function($, L, chroma, window, document, undefined) {
-
+  addTitle(object, 'Hello World')
   // Create the defaults once
   var defaults = {
-
-    title: 'Hey World, it´s me; Mo!',
 
     // Options for using tile imagery with leaflet.
     tileURL: '[replace me]',
