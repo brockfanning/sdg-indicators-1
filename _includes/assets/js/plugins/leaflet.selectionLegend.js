@@ -32,18 +32,18 @@
     onAdd: function() {
       var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
         '<ul id="selection-list"></ul>' +
-        '<div class="legend-swatches">' +
+        '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
         '</div>' +
-        '<div class="legend-values">' +
+        '<div class="legend-values">' + //values
           '<span class="legend-value left">{lowValue}</span>' +
           '<span class="arrow left"></span>' +
           '<span class="legend-value right">{highValue}</span>' +
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      var swatchWidth = 100 / this.plugin.options.colorRange.length;
-      var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
+      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
@@ -52,11 +52,11 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-      var headline;
+      var headline
       if (this.plugin.ageName){
         headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
       } else {
-        headline = this.plugin.unitName;//this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
+        headline = this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
       }
       //-----------------------------------------------------------------------
 
