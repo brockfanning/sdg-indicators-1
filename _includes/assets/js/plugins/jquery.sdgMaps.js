@@ -87,8 +87,8 @@
     this.timeSeriesName = translations.t(this.timeSeries[0]);
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[0]);
-    //this.age = _.pluck(this.geoData, 'age');
-    //this.ageName = translations.t(this.age[0]);
+    this.age = _.pluck(this.geoData, 'age');
+    this.ageName = translations.t(this.age[0]);
     //---------------------------------------------------
 
     this.init();
