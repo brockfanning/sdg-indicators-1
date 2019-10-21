@@ -58,6 +58,7 @@
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
+    //
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
@@ -250,6 +251,9 @@
           plugin.currentYear = new Date(e.time).getFullYear();
           plugin.updateColors();
           plugin.selectionLegend.update();
+
+
+
         }
       }));
 

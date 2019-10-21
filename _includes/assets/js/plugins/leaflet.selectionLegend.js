@@ -30,7 +30,7 @@
     },
 
     onAdd: function() {
-      var controlTpl = '<span id="mapHead">{title}</span>' + //<<<-------------------
+      var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' +
           '{legendSwatches}' +
@@ -42,8 +42,8 @@
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      var swatchWidth = 100 / this.plugin.options.colorRange.length;
-      var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
+      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
