@@ -52,12 +52,12 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-      var headline
-      if (this.plugin.ageName){
-        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
-      } else {
-        headline = this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
-      }
+      var headline = this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
+      //if (this.plugin.ageName){
+      //  headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
+      //} else {
+      //  headline = this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
+      //}
       //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
