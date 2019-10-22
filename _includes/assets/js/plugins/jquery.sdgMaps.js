@@ -75,9 +75,9 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[1])//[this.goalNr])
+    this.colorScale = chroma.scale(this.options.colorRange[0])//[this.goalNr])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[1].length); //[this.goalNr].length);
+      .classes(this.options.colorRange[0].length); //[this.goalNr].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
