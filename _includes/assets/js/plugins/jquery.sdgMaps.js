@@ -75,7 +75,7 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[0])//[this.goalNr])
+    this.colorScale = chroma.scale()//[this.goalNr])
       .domain(this.valueRange)
       .classes(this.options.colorRange[0].length); //[this.goalNr].length);
 
@@ -85,8 +85,8 @@
     //----------------------------------------------
     //this.timeSeries = _.pluck(this.geoData, 'timeseries');
     //this.timeSeriesName = translations.t(this.timeSeries[0]);
-    //this.unit = _.pluck(this.geoData, 'Units');
-    //this.unitName = translations.t(this.unit[0]);
+    this.unit = _.pluck(this.geoData, 'Units');
+    this.unitName = translations.t(this.unit[0]);
     //this.age = _.pluck(this.geoData, 'age');
     //this.ageName = translations.t(this.age[0]);
     //---------------------------------------------------
