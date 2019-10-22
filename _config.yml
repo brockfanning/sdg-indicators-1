@@ -144,7 +144,7 @@ map_options:
               # ["#E8EDF0", "#BAC8D2", "#8CA4B5", "#5E7F97", "#305A79", "#19486A", "#143A55", "#0F2B40", "#0A1D2A", "#050E15"]]
 
   # Set the color for boundaries that have no data.
-  noValueColor:  '#E02B76' #'#f0f0f0'
+  noValueColor:  '#f0f0f0'
   # For documentation on the style options below, see here:
   # https://leafletjs.com/reference-1.4.0.html#path-option
   # Set the default style for boundaries in the map:
