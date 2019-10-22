@@ -77,7 +77,7 @@
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
     this.colorScale = chroma.scale(this.options.colorRange[3])//[this.goalNr])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[3].length); //[this.goalNr].length);
+      .classes(10); //this.options.colorRange[3].length); //[this.goalNr].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
