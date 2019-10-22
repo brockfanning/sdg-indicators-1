@@ -18,7 +18,7 @@
     minZoom: 5,
     maxZoom: 10,
     // Visual/choropleth considerations.
-    colorRange: chroma.brewer.BuGn,
+    //colorRange: chroma.brewer.BuGn,
     noValueColor: '#f0f0f0',
     styleNormal: {
       weight: 1,
@@ -75,9 +75,9 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[0])//[this.goalNr])
+    this.colorScale = chroma.scale(this.options.colorRange[2])//[this.goalNr])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[0].length); //[this.goalNr].length);
+      .classes(this.options.colorRange[2].length); //[this.goalNr].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
