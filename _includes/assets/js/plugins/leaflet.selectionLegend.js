@@ -30,7 +30,7 @@
     },
 
     onAdd: function() {
-      var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
+      var controlTpl = '' + //'<span id="mapHead">{title}</span>' +//<<<----------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -42,8 +42,8 @@
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
-      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
+      var swatchWidth = 100 / this.plugin.options.colorRange.lenght; //[this.plugin.goalNr].length;
+      var swatches = this.plugin.options.colorRange.map(function(swatchColor) { //[this.plugin.goalNr].map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
@@ -52,12 +52,12 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-      var headline
-      if (this.plugin.ageName){
-        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
-      } else {
-        headline = 'Test 4.4'; //this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
-      }
+      //var headline
+      //if (this.plugin.ageName){
+        //headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
+      //} else {
+        //headline = 'Test 4.4'; //this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
+      //}
       //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
@@ -66,7 +66,7 @@
         legendSwatches: swatches,
 
         //---
-        title: headline,
+        //title: headline,
         //---
 
       });
