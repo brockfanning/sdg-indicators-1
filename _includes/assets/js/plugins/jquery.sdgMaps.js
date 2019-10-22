@@ -18,7 +18,7 @@
     minZoom: 5,
     maxZoom: 10,
     // Visual/choropleth considerations.
-    //colorRange: chroma.brewer.BuGn,
+    colorRange: chroma.brewer.BuGn,
     noValueColor: '#f0f0f0',
     styleNormal: {
       weight: 1,
@@ -83,12 +83,12 @@
     this.currentYear = this.years[0];
 
     //----------------------------------------------
-    this.timeSeries = _.pluck(this.geoData, 'timeseries');
-    this.timeSeriesName = translations.t(this.timeSeries[0]);
-    this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[0]);
-    this.age = _.pluck(this.geoData, 'age');
-    this.ageName = translations.t(this.age[0]);
+    //this.timeSeries = _.pluck(this.geoData, 'timeseries');
+    //this.timeSeriesName = translations.t(this.timeSeries[0]);
+    //this.unit = _.pluck(this.geoData, 'Units');
+    //this.unitName = translations.t(this.unit[0]);
+    //this.age = _.pluck(this.geoData, 'age');
+    //this.ageName = translations.t(this.age[0]);
     //---------------------------------------------------
 
     this.init();
