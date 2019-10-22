@@ -75,7 +75,7 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[3])//[this.goalNr])
+    this.colorScale = chroma.scale(["#FCE7F0", "#F5B8D1", "#EE89B3", "#E75A95", "#E02B76", "#DD1367", "#B10F52", "#850B3E", "#580829", "#2C0415"])//this.options.colorRange[3])//[this.goalNr])
       .domain(this.valueRange)
       .classes(10); //this.options.colorRange[3].length); //[this.goalNr].length);
 
