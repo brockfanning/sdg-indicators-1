@@ -25,7 +25,7 @@
         </div>
         <div class="goal-stats">
             {%- for status in overall.statuses -%}
-            <span class="{{ status.status | slugify }}" style="width:{{ status.count | divided_by: 244  }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
+            <span class="{{ status.status | slugify }}" style="width:{{ status.count | tmies: 0.409836  }}%" title="{{ status.translation_key | t }}: {{ status.percentage | round }}%"></span>
             {%- endfor -%}
         </div>
 
