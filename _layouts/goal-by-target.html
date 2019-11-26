@@ -44,7 +44,7 @@
   {% for group in goal_indicators %}
     {% assign target = group.name | sdg_lookup %}
 
-
+<!--
     {% if target.number == '17.1' %}
       <div class="indicator-cards target col-md-12">
         <span>
@@ -53,8 +53,7 @@
         </span>
       </div>
     {% endif %}
-
-
+-->
     <div class="indicator-cards target col-md-6">
       <span>
         <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
