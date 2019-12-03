@@ -27,7 +27,7 @@
         </title>
 
         {% if page.indicator %}
-          <meta name="description" content= "{{ t.general.meta_indicator | escape }} {{ meta.indicator }} - {{ indicator_title }}" >
+          <meta name="description" content= "{{ t.general.meta_indicator | escape }} {{ meta.indicator }} - {{ meta.indicator | get_indicator_name }}" >
         {% elsif goal_number %}
           <meta name="description" content= "{{ t.general.meta_goal | escape }} {{ goal_number }} - {{ goal_short }}" >
         {% else %}
