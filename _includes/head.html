@@ -20,13 +20,13 @@
           {% if page.indicator %}
             {{ t.general.indicator | escape }} {{ page.indicator.number }} - {{ t.general.goal | escape }} {{ page.goal.number }}
           {% elsif page.goal %}
-            {{ t.general.goal | escape }} {{ page.goal.number }} - {{ page.goal.short | escape }}
+            {{ t.general.goal | escape }} {{ number_number }} - {{ page.goal.short | escape }}
           {% else %}
             {{ t.general.title | escape }}
           {% endif %}
         </title>
 
-        <meta name="description" content= "{{ page.t.general.meta | escape }}" >
+        <meta name="description" content= "{{ t.general.meta | escape }}" >
         <meta property="og:description" content="">
         {% if site.environment == 'staging' %}
         <meta name="robots" content="noindex, nofollow">
