@@ -156,3 +156,35 @@ header {
     width: 100%;
   }
 }
+
+
+//edit disclaimer color
+#disclaimer {
+  background: #BF0C16;
+
+  .phase-tag {
+    background: #005ea5;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px 5px 0;
+  }
+  .alert {
+    color: white;
+    margin-bottom: 0;
+    padding: 10px;
+    a {
+      color: white;
+    }
+  }
+  .alert-danger {
+    border: none;
+    margin-bottom: 0;
+    background: #BF0C16;
+    a {
+      text-decoration: underline;
+    }
+    @media only screen and (max-width: 680px) {
+      font-size: 0.75em;
+    }
+  }
+}
