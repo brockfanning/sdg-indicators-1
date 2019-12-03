@@ -26,7 +26,14 @@
           {% endif %}
         </title>
 
-        <meta name="description" content= "{{ t.general.meta | escape }}" >
+        {% if page.indicator %}
+          <meta name="description" content= "{{ t.general.meta_indicator | escape }} {{ meta.indicator }} - {{ meta.national_indicator_available }}" >
+        {% elsif goal_number %}
+          <meta name="description" content= "{{ t.general.meta_goal | escape }} {{ goal_number }} - {{ goal_short }}" >
+        {% else %}
+          <meta name="description" content= "{{ t.general.meta | escape }}" >
+        {% endif %}
+
         <meta property="og:description" content="">
         {% if site.environment == 'staging' %}
         <meta name="robots" content="noindex, nofollow">
