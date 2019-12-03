@@ -19,8 +19,8 @@
         <title>
           {% if page.indicator %}
             {{ t.general.indicator | escape }} {{ page.indicator.number }} - {{ t.general.goal | escape }} {{ page.goal.number }}
-          {% elsif page.goal %}
-            {{ t.general.goal | escape }} {{ number_number }} - {{ page.goal.short | escape }}
+          {% elsif goal_number %}
+            {{ t.general.goal | escape }} {{ goal_number }} - {{ page.goal.short | escape }}
           {% else %}
             {{ t.general.title | escape }}
           {% endif %}
