@@ -30,7 +30,7 @@
     },
 
     onAdd: function() {
-      var controlTpl = '' + //'<span id="mapHead">{title}</span>' +//<<<----------------
+      var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -52,12 +52,12 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-      //var headline
-      //if (this.plugin.ageName){
-        //headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
-      //} else {
-        //headline = 'Test 4.4'; //this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
-      //}
+      var headline
+      if (this.plugin.ageName){
+        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
+      } else {
+        headline = 'Test 4.4'; //this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
+      }
       //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
@@ -66,7 +66,7 @@
         legendSwatches: swatches,
 
         //---
-        //title: headline,
+        title: headline,
         //---
 
       });
