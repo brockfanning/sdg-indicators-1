@@ -58,7 +58,8 @@
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
-    //this.goalNr = options.goal;
+    this.goalNr = options.goal;
+    this.title = options.title;
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
@@ -75,26 +76,40 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale()//[this.goalNr])
+    this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
       .domain(this.valueRange)
-      .classes(9); //[this.goalNr].length);
+      .classes(this.options.colorRange[this.goalNr].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
 
     //----------------------------------------------
-    //this.timeSeries = _.pluck(this.geoData, 'timeseries');
-    //this.timeSeriesName = translations.t(this.timeSeries[0]);
+    this.title = translations.t(this.title)
+    this.timeSeries = _.pluck(this.geoData, 'title');
+    this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
+    this.sex = _.pluck(this.geoData, 'sex');
+    this.sexName = translations.t(this.sex[this.sex.length -1]);
+    this.age = _.pluck(this.geoData, 'age');
+    this.ageName = translations.t(this.age[this.age.length -1]);
+    this.typification = _.pluck(this.geoData, 'typification');
+    this.typificationName = translations.t(this.typification[this.typification.length -1]);
+    this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
+    this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[0]);
-    //this.age = _.pluck(this.geoData, 'age');
-    //this.ageName = translations.t(this.age[0]);
+    this.unitName = translations.t(this.unit[this.unit.length -1]);
+
+    this.startExp = 0;
+    this.reloadCounter = 0; // to avoid multiple search buttons
+    this.hasMapDisaggs = false;
     //---------------------------------------------------
 
     this.init();
   }
 
+
   Plugin.prototype = {
+
+
 
     // Add time series to GeoJSON data and normalize the name and geocode.
     prepareGeoJson: function(geoJson, idProperty, nameProperty) {
