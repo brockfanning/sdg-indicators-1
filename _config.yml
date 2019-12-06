@@ -122,7 +122,7 @@ map_options:
   tileOptions:
     id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjanplNTNhMmQwMTFjM21wNHEzazRlejhwIn0.ecHE5G83cklfW5AXYjI_0A
-    attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> | <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a> | <a href="https://www.mapbox.com/map-feedback/"><b>Impove this map</b>
+    attribution: <a href="https://www.mapbox.com">Mapbox</a> | <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> | <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2019</a> | <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2019</a> | <a href="https://www.mapbox.com/map-feedback/"><b>Impove this map</b>
 
   colorRange: ["#F6E8EC", "#E3BAC6", "#D18CA1", "#BE5E7B", "#AB3055", "#A21942", "#821435", "#610F28", "#410A1A", "#20050D"]
   #colorRange: [["#FCE9EB", "#F7BDC4", "#F2929D", "#ED6676", "#E83A4F", "#E5243B", "#B71D2F", "#891623", "#5C0E18", "#2E070C"],
