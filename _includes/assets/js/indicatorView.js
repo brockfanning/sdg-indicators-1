@@ -132,7 +132,6 @@ var indicatorView = function (model, options) {
     else if (args.indicatorId.includes('_16-')) {var goalNr = 15;}
     else if (args.indicatorId.includes('_17-')) {var goalNr = 16;}
 
-
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
       view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
@@ -345,7 +344,19 @@ var indicatorView = function (model, options) {
   };
 
   this.updatePlot = function(chartInfo) {
+    // No Line for Targets--------------------------------------------------------------------------------------------
+    for (var set = 0; set<chartInfo.datasets.length; set++){
+
+      //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
+        //cartInfo.datasets[set].push("showLines: false")
+      //}
+      console.log (set, chartInfo.datasets);
+    };
+    //----------------------------------------------------------------------------------------------------------------
+
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
+
+
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
@@ -369,11 +380,10 @@ var indicatorView = function (model, options) {
   };
 
 
-
   this.createPlot = function (chartInfo) {
 
+    //console.log (chartInfo);
     var that = this;
-
     var chartConfig = {
       type: this._model.graphType,
       data: chartInfo,
@@ -406,7 +416,14 @@ var indicatorView = function (model, options) {
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               text.push('<li data-datasetindex="' + datasetIndex + '">');
-              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              //-make shure targets don´t get dashed--------------------------------------------------------------------------------------------------------------
+              if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
+                text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
+              }
+              else{
+                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              }
+              //--------------------------------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
@@ -415,8 +432,9 @@ var indicatorView = function (model, options) {
             text.push('</ul>');
             return text.join('');
         },
+
         legend: {
-          display: false
+          display: false,
         },
         title: {
           display: false
@@ -428,8 +446,8 @@ var indicatorView = function (model, options) {
     };
     chartConfig = opensdg.chartConfigAlter(chartConfig);
 
-    this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
 
+    this._chartInstance = new Chart($(this._rootElement).find('canvas'), chartConfig);
     Chart.pluginService.register({
       afterDraw: function(chart) {
         var $canvas = $(that._rootElement).find('canvas'),

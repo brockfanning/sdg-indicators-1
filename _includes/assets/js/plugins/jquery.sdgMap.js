@@ -16,7 +16,7 @@
     },
     // Zoom limits.
     minZoom: 5,
-    maxZoom: 10,
+    maxZoom: 15,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
     noValueColor: '#f0f0f0',
@@ -112,17 +112,29 @@
 
 
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty) {
+    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
         var name = feature.properties[nameProperty];
+
+        //----Legend with Disagg---------------------------------------
         // First add the time series data.
-        var records = _.where(geoData, { GeoCode: geocode });
+        //Normal version, if there is no Disaggregation-cathegory with more than one expression.
+        if (cat == ''){
+          var records = _.where(geoData, { GeoCode: geocode});
+        }
+        //If there is a Disaggregation-cathegory with more than one expression:
+        else{
+          var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
+        }
+        //-----------------------------------------------------------------------
+        //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
           feature.properties[record.Year] = record.Value;
         });
+
         // Next normalize the geocode and name.
         feature.properties.name = translations.t(name);
         feature.properties.geocode = geocode;
@@ -131,6 +143,30 @@
       });
       return geoJson;
     },
+
+    //---Legend with Disagg---------------
+    //Find those disaggregation-categories that have more then one expression in all lines that have geoData
+    findCat: function(){
+      var categories = ['title','sex','age'];
+      var category = '';
+
+      for (var i = 0; i<categories.length; i++){
+        if (this.findDisagg(categories[i]).length>1){ //if more than one expression for this categorie exists...
+          var category = categories[i];
+          this.hasMapDisaggs = true;
+        }
+      };
+      return category;
+    },
+
+    // Get the found category and return an array with the corresponding expressions
+    findDisagg: function(category){
+      var expressions = _.pluck(this.geoData, category);
+      unique = [ ...new Set(expressions) ];
+      return unique;
+    },
+
+    //---------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
@@ -231,14 +267,13 @@
 
     // Initialize the map itself.
     init: function() {
-
       // Create the map.
       this.map = L.map(this.element, {
         minZoom: this.options.minZoom,
         maxZoom: this.options.maxZoom,
         zoomControl: false,
       });
-      this.map.setView([0, 0], 0);
+      this.map.setView([51.9, 10.26],0);
       this.dynamicLayers = new ZoomShowHide();
       this.dynamicLayers.addTo(this.map);
       this.staticLayers = new ZoomShowHide();
@@ -253,11 +288,68 @@
       // Add scale.
       this.map.addControl(L.control.scale({position: 'bottomright'}));
 
+
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
 
       // Because after this point, "this" rarely works.
       var plugin = this;
+
+
+      //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
+      //Create a Button for every expression and add it to the map
+      var cat = plugin.findCat();
+      if (cat != ''){
+        var exp = plugin.findDisagg(cat);
+        for (var i = 0; i<exp.length; i++) {
+          var label = exp[i];
+          var command = L.control({position: 'bottomright'});
+          command.onAdd = function (map) {
+              var div = L.DomUtil.create('div', 'command');
+              //set the Button on position 'startExp' to status checked
+              if (i == plugin.startExp){
+                div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'" checked> '+translations.t(label)+'</label><br>';
+              }
+              else{
+                div.innerHTML = '<label><input id="command'+toString(i)+'" type="radio" name="disagg" value="'+i+'"> '+translations.t(label)+'</label><br>';
+              }
+              return div;
+          };
+          command.addTo(this.map);
+        };
+
+        //set var "expression" to the array(exp) value at position of checked button
+        this.expression = exp[$('input[name="disagg"]:checked').val()];
+        //count up the reloadCounter to avoid multiple builds of the search buttnon
+        this.reloadCounter ++;
+        //adjust the values for the selectionLegend
+        if (cat == 'sex'){
+          plugin.sexName = translations.t(plugin.expression);
+        }
+        else if (cat == 'title'){
+          plugin.timeSeries = translations.t(plugin.expression);
+        }
+        else if (cat == 'age'){
+          plugin.ageName = translations.t(plugin.expression);
+        }
+
+        //action, when click:
+        $('input[type="radio"]').on('click change', function(e) {
+
+          //console.log(e.type, plugin.startExp, plugin.sexName);
+
+
+          //set startExp to the intiger of the Position of selectet Expression
+          plugin.startExp = $('input[name="disagg"]:checked').val();
+
+          //alert('You clicked radio!');
+
+          //reload the map with different startExp
+          plugin.map.remove();
+          plugin.init();
+        });
+      }
+      //------------------------------------------------------------------------------------------------------------------------
 
       // Add the year slider.
       this.map.addControl(L.Control.yearSlider({
@@ -266,10 +358,11 @@
           plugin.currentYear = new Date(e.time).getFullYear();
           plugin.updateColors();
           plugin.selectionLegend.update();
+
         }
       }));
 
-      // mapbox logo.----------------------------------------------------------------------------------------------------
+      // mapbox logo.
       var logo = L.control({position: 'bottomleft'});
       logo.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'logo');
@@ -277,8 +370,6 @@
         return div;
       };
       logo.addTo(this.map);
-      //-----------------------------------------------------------------------------------------------------------------
-
 
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
@@ -322,7 +413,13 @@
           // Now go on to add the geoJson again as choropleth dynamic regions.
           var idProperty = plugin.mapLayers[i].idProperty;
           var nameProperty = plugin.mapLayers[i].nameProperty;
-          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);
+
+          //----------------------------------------------------------------------------------------------------------------------
+          var cat = plugin.findCat();
+          var expression = plugin.expression;
+
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
+          //----------------------------------------------------------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
@@ -339,22 +436,31 @@
           // Add the layer to the ZoomShowHide group.
           plugin.dynamicLayers.addLayer(layer);
         }
+
+
         plugin.updateColors();
 
         // Now that we have layers, we can add the search feature.
-        plugin.searchControl = new L.Control.Search({
-          layer: plugin.getAllLayers(),
-          propertyName: 'name',
-          marker: false,
-          moveToLocation: function(latlng) {
-            plugin.zoomToFeature(latlng.layer);
-            if (!plugin.selectionLegend.isSelected(latlng.layer)) {
-              plugin.highlightFeature(latlng.layer);
-              plugin.selectionLegend.addSelection(latlng.layer);
-            }
-          },
-          autoCollapse: true,
-        });
+        //-------------------------------------------------------------------
+        //A reload due to Radio-button change creates a second search-Button.
+        //Therefor we need to ask if it is the first load here:
+        if (plugin.reloadCounter == 1){
+          //----------------------------------------------------------------
+          plugin.searchControl = new L.Control.Search({
+            layer: plugin.getAllLayers(),
+            propertyName: 'name',
+            marker: false,
+            moveToLocation: function(latlng) {
+              plugin.zoomToFeature(latlng.layer);
+              if (!plugin.selectionLegend.isSelected(latlng.layer)) {
+                plugin.highlightFeature(latlng.layer);
+                plugin.selectionLegend.addSelection(latlng.layer);
+              }
+            },
+            autoCollapse: true,
+          });
+
+        }//---------------------------------
         plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?

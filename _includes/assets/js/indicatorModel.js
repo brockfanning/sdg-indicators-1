@@ -211,7 +211,7 @@ var indicatorModel = function (options) {
     var colors = ['fcc30b', '977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'];
   }
   else if(this.indicatorId.includes('_8-')){
-    var colors = ['a21942', '610f27', 'c7758d', 'a21942', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'];
+    var colors = ['a21942', '610f27', 'c7758d', '610F28', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'];
   }
   else if(this.indicatorId.includes('_9-')){
     var colors = ['fd6925', '973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'];
@@ -242,6 +242,8 @@ var indicatorModel = function (options) {
   };
   //SDG goal colors
   //['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
+  var headlinePointstyle = 'circle';
+  var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
 
   // allow headline + (2 x others)
   var maxDatasetCount = 2 * colors.length;
@@ -404,6 +406,14 @@ var indicatorModel = function (options) {
       seriesData = [],
       headlineTable = undefined,
       datasetIndex = 0,
+
+      //-----------------
+      nameList = []
+      indexList = []
+      //----------------
+
+
+
       getCombinationDescription = function(combination) {
         return _.map(Object.keys(combination), function(key) {
           return translations.t(combination[key]);
@@ -430,6 +440,46 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
+      //------------------------------------------------------------------------------------------------------------------------
+      getPointStyle = function (combinationDescription) {
+        if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
+          return 'rect';
+        }
+        else {
+          return 'circle';
+        }
+      },
+      //-------------------------------------------------------------------------------------------------------------------------
+
+      //-Since showLines does not work we set the opacity to 0.0 if it is a target--------------------------------------------------------------------------------------------------
+      getLineStyle = function (combinationDescription, datasetIndexMod) {
+        if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
+          return 'rgba(0, 0, 0, 0.0)';
+        }
+        else{
+          return '#' + getColor(datasetIndexMod);
+        }
+      },
+      //---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      //--Mixed charts -----------------------------------------------------------------------------------------------------------------------------------------------
+      barCharts = [translations.t('a) time series')+", "+translations.t('calculated annual values'),
+                  translations.t('a) time series')+", "+translations.t('air pollutants overall'),
+                  translations.t('b) target (max)')+", "+translations.t('air pollutants overall'),
+                  translations.t('a) time series')+", "+translations.t('funding balance (share of gross domestic product (at current prices) in %)'),
+                  translations.t('a) time series')+", "+translations.t('structural funding balance (share of gross domestic product (at current prices) in %)'),
+                  translations.t('a) time series')+", "+translations.t('proportion of msy examined in all managed stocks'),
+                  translations.t('a) time series')+", "+translations.t('index overall'),
+                  translations.t('b) target (min)')+", "+translations.t('index overall')]
+      getChartStyle = function (combinationDescription) {
+        if (barCharts.includes(String(combinationDescription))) {
+          return 'bar';
+        }
+        else {
+          return 'line';
+        }
+      },
+      //----------------------------------------------------------------------------------------------------------------------
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -445,12 +495,47 @@ var indicatorModel = function (options) {
         // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
         //     return f === field;
         //   }) : undefined,
+
+        //--------------------
+
+        var categ = combinationDescription.substring(0, 4)
+        if (categ == 'Ziel' || categ == 'Zeit' || categ == 'Targ' || categ == 'Time') {
+          if (combinationDescription.indexOf(',') != -1){
+            if (!nameList.includes(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length))) {
+              // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist noch nicht aufgerufen worden
+              // Schreibe den Index auf die Liste, damit dieser beim Aufruf des Pendants gefunden werden kann
+              nameList.push(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+              indexList.push(datasetIndex);
+              var datasetIndexMod = datasetIndex;
+            }
+            else {
+              // Ziel oder Zeitreihe - Mit Disaggregationen - Pendant ist schon aufgerufen worden
+              // --> finde den Index des Pendants
+              var tempIndex = nameList.indexOf(combinationDescription.substring(combinationDescription.indexOf(','), combinationDescription.length));
+              var datasetIndexMod = indexList[tempIndex];
+            }
+          }
+          else {
+            // Ziel oder Zeitreihe - Keine weiteren Disaggregationen
+            // Nimm die erste farbe aus der Liste
+            var datasetIndexMod = 0;
+          }
+        }
+        else {
+          // Keine Ziel-/Zeitreihen-Unterteilung
+          // Nimm den normalen Indexwert
+          var datasetIndexMod = datasetIndex;
+        }
+
         var fieldIndex,
           ds = _.extend({
+
             label: combinationDescription ? combinationDescription : that.country,
-            borderColor: '#' + getColor(datasetIndex),
-            backgroundColor: '#' + getColor(datasetIndex),
-            pointBorderColor: '#' + getColor(datasetIndex),
+            borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            backgroundColor: '#' + getColor(datasetIndexMod),
+            pointStyle: getPointStyle(combinationDescription),
+            radius: 6,
+            pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
               var found = _.findWhere(data, {
@@ -458,8 +543,11 @@ var indicatorModel = function (options) {
               });
               return found ? found.Value : null;
             }),
+            type: getChartStyle(combinationDescription),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
+        //----------------------------------
+
         datasetIndex++;
         return ds;
       };
@@ -624,7 +712,6 @@ var indicatorModel = function (options) {
         geoData: this.geoData,
         geoCodeRegEx: this.geoCodeRegEx,
         showMap: this.showMap,
-
         //------------------------------------------------
         indicatorId: this.indicatorId,
         title: this.chartTitle,
