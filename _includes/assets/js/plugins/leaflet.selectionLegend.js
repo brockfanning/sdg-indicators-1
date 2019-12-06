@@ -52,12 +52,23 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-      var headline
-      if (this.plugin.ageName){
-        headline = this.plugin.timeSeriesName + ', <br>' + this.plugin.ageName + ', <br>' + this.plugin.unitName;
-      } else {
-        headline = 'Test 4.4'; //this.plugin.timeSeriesName + ' <br>' + this.plugin.unitName;
+      var headline = this.plugin.title
+      if (this.plugin.timeSeriesName){
+        headline += ', <br>' + this.plugin.timeSeriesName;
       }
+      if (this.plugin.sexName){
+        headline += ', <br>' + this.plugin.sexName;
+      }
+      if (this.plugin.ageName){
+        headline += ', <br>' + this.plugin.ageName;
+      }
+      if (this.plugin.typificationName){
+        headline += ', <br>' + this.plugin.typificationName;
+      }
+      if (this.plugin.criminalOffenceName){
+        headline += ', <br>' + this.plugin.criminalOffenceName;
+      }
+      headline += ', <br>' + this.plugin.unitName;
       //-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
