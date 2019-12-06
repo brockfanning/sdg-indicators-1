@@ -52,10 +52,7 @@
       var div = L.DomUtil.create('div', 'selection-legend');
 
       //-----------------------------------------------------------------------
-      var headline = this.plugin.title
-      if (this.plugin.timeSeriesName){
-        headline += ', <br>' + this.plugin.timeSeriesName;
-      }
+      var headline = this.plugin.timeSeriesName
       if (this.plugin.sexName){
         headline += ', <br>' + this.plugin.sexName;
       }
