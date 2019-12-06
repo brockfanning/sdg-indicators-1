@@ -85,7 +85,7 @@
 
     //----------------------------------------------
     this.title = translations.t(this.title)
-    this.timeSeries = _.pluck(this.geoData, 'title');
+    this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
     this.sex = _.pluck(this.geoData, 'sex');
     this.sexName = translations.t(this.sex[this.sex.length -1]);
