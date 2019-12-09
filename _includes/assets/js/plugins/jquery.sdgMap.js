@@ -92,7 +92,7 @@
     this.currentYear = this.years[0];
 
     //this.title = translations.t(this.title)
-    
+
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
@@ -367,7 +367,7 @@
         }
       }));
 
-      /*// mapbox logo.
+      //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
       var logo = L.control({position: 'bottomleft'});
       logo.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'logo');
@@ -375,7 +375,8 @@
         return div;
       };
       logo.addTo(this.map);
-      */
+      //---#7 addMapboxWordmark---stop-----------------------------------------------------------------------------------------
+
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
       this.map.addControl(this.selectionLegend);
