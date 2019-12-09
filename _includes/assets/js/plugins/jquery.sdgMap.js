@@ -61,7 +61,6 @@
     //---#1 GoalDependendMapColor---start--------------------------------------
     this.goalNr = options.goal;
     //---#1 GoalDependendMapColor---stop---------------------------------------
-    //this.title = options.title;
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
@@ -90,8 +89,6 @@
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
-
-    //this.title = translations.t(this.title)
 
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
