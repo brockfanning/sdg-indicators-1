@@ -113,7 +113,7 @@ var indicatorView = function (model, options) {
   this._model.onSeriesComplete.attach(function(sender, args) {
     view_obj.initialiseSeries(args);
 
-    //--------------------------------
+    /*//--------------------------------
     if (args.indicatorId.includes('_1-')){var goalNr = 0;}
     else if (args.indicatorId.includes('_2-')) {var goalNr = 1;}
     else if (args.indicatorId.includes('_3-')) {var goalNr = 2;}
@@ -131,10 +131,10 @@ var indicatorView = function (model, options) {
     else if (args.indicatorId.includes('_15-')) {var goalNr = 14;}
     else if (args.indicatorId.includes('_16-')) {var goalNr = 15;}
     else if (args.indicatorId.includes('_17-')) {var goalNr = 16;}
-
+    */
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-      view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
+            view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx); //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
     }
   });
 
@@ -344,7 +344,7 @@ var indicatorView = function (model, options) {
   };
 
   this.updatePlot = function(chartInfo) {
-    // No Line for Targets--------------------------------------------------------------------------------------------
+    /*// No Line for Targets--------------------------------------------------------------------------------------------
     for (var set = 0; set<chartInfo.datasets.length; set++){
 
       //if (chartInfo.datasets[set].label.substr(0,4)=='Ziel'){
@@ -353,7 +353,7 @@ var indicatorView = function (model, options) {
       console.log (set, chartInfo.datasets);
     };
     //----------------------------------------------------------------------------------------------------------------
-
+    */
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
 
@@ -416,14 +416,15 @@ var indicatorView = function (model, options) {
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               text.push('<li data-datasetindex="' + datasetIndex + '">');
-              //-make shure targets don´t get dashed--------------------------------------------------------------------------------------------------------------
+              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              /*//-make shure targets don´t get dashed--------------------------------------------------------------------------------------------------------------
               if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
                 text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
               }
               else{
                 text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
               }
-              //--------------------------------------------------------------------------------------------------------------------------------------------------
+              *///--------------------------------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
@@ -434,7 +435,7 @@ var indicatorView = function (model, options) {
         },
 
         legend: {
-          display: false,
+          display: false
         },
         title: {
           display: false

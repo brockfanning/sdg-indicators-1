@@ -30,7 +30,7 @@
     },
 
     onAdd: function() {
-      var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
+      var controlTpl = '' +//var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -42,8 +42,8 @@
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
-      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
+      var swatchWidth = 100 / this.plugin.options.colorRange.length; //var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      var swatches = this.plugin.options.colorRange.map(function(swatchColor) { //var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
@@ -51,7 +51,7 @@
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
 
-      //-----------------------------------------------------------------------
+      /*//-----------------------------------------------------------------------
       var headline = this.plugin.timeSeriesName
       if (this.plugin.sexName){
         headline += ', <br>' + this.plugin.sexName;
@@ -66,7 +66,7 @@
         headline += ', <br>' + this.plugin.criminalOffenceName;
       }
       headline += ', <br>' + this.plugin.unitName;
-      //-----------------------------------------------------------------------
+      *///-----------------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
@@ -74,7 +74,7 @@
         legendSwatches: swatches,
 
         //---
-        title: headline,
+        //title: headline,
         //---
 
       });

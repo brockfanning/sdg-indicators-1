@@ -58,8 +58,8 @@
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
-    this.goalNr = options.goal;
-    this.title = options.title;
+    //this.goalNr = options.goal;
+    //this.title = options.title;
 
     // Require at least one geoLayer.
     if (!options.mapLayers.length) {
@@ -76,14 +76,14 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
+    this.colorScale = chroma.scale()//this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
       .domain(this.valueRange)
-      .classes(this.options.colorRange[this.goalNr].length);
+      .classes(9); //.classes(this.options.colorRange[this.goalNr].length);
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
 
-    //----------------------------------------------
+    /*//----------------------------------------------
     this.title = translations.t(this.title)
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
@@ -95,13 +95,14 @@
     this.typificationName = translations.t(this.typification[this.typification.length -1]);
     this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
     this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
+    */
     this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[this.unit.length -1]);
-
+    this.unitName = translations.t(this.unit[0]);//this.unitName = translations.t(this.unit[this.unit.length -1]);
+    /*
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
     this.hasMapDisaggs = false;
-    //---------------------------------------------------
+    *///---------------------------------------------------
 
     this.init();
   }
@@ -112,12 +113,14 @@
 
 
     // Add time series to GeoJSON data and normalize the name and geocode.
-    prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
+    prepareGeoJson: function(geoJson, idProperty, nameProperty) {//prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
       var geoData = this.geoData;
       geoJson.features.forEach(function(feature) {
         var geocode = feature.properties[idProperty];
         var name = feature.properties[nameProperty];
 
+        var records = _.where(geoData, { GeoCode: geocode });
+        /*
         //----Legend with Disagg---------------------------------------
         // First add the time series data.
         //Normal version, if there is no Disaggregation-cathegory with more than one expression.
@@ -128,7 +131,7 @@
         else{
           var records = _.where(geoData, { GeoCode: geocode, [cat]: exp });
         }
-        //-----------------------------------------------------------------------
+        *///-----------------------------------------------------------------------
         //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
         records.forEach(function(record) {
           // Add the Year data into the properties.
@@ -144,7 +147,7 @@
       return geoJson;
     },
 
-    //---Legend with Disagg---------------
+    /*//---Legend with Disagg---------------
     //Find those disaggregation-categories that have more then one expression in all lines that have geoData
     findCat: function(){
       var categories = ['title','sex','age'];
@@ -166,7 +169,7 @@
       return unique;
     },
 
-    //---------------------------
+    *///---------------------------
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
@@ -296,7 +299,7 @@
       var plugin = this;
 
 
-      //Add the radio buttons------------------------------------------------------------------------------------------------------------------------
+      /*//Add the radio buttons------------------------------------------------------------------------------------------------------------------------
       //Create a Button for every expression and add it to the map
       var cat = plugin.findCat();
       if (cat != ''){
@@ -349,7 +352,7 @@
           plugin.init();
         });
       }
-      //------------------------------------------------------------------------------------------------------------------------
+      *///------------------------------------------------------------------------------------------------------------------------
 
       // Add the year slider.
       this.map.addControl(L.Control.yearSlider({
@@ -362,7 +365,7 @@
         }
       }));
 
-      // mapbox logo.
+      /*// mapbox logo.
       var logo = L.control({position: 'bottomleft'});
       logo.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'logo');
@@ -370,7 +373,7 @@
         return div;
       };
       logo.addTo(this.map);
-
+      */
       // Add the selection legend.
       this.selectionLegend = L.Control.selectionLegend(plugin);
       this.map.addControl(this.selectionLegend);
@@ -413,13 +416,13 @@
           // Now go on to add the geoJson again as choropleth dynamic regions.
           var idProperty = plugin.mapLayers[i].idProperty;
           var nameProperty = plugin.mapLayers[i].nameProperty;
-
-          //----------------------------------------------------------------------------------------------------------------------
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);//-
+          /*//----------------------------------------------------------------------------------------------------------------------
           var cat = plugin.findCat();
           var expression = plugin.expression;
 
           var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty, cat, expression);
-          //----------------------------------------------------------------------------------------------------------------------
+          *///----------------------------------------------------------------------------------------------------------------------
 
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
@@ -441,10 +444,23 @@
         plugin.updateColors();
 
         // Now that we have layers, we can add the search feature.
-        //-------------------------------------------------------------------
+        plugin.searchControl = new L.Control.Search({
+          layer: plugin.getAllLayers(),
+          propertyName: 'name',
+          marker: false,
+          moveToLocation: function(latlng) {
+            plugin.zoomToFeature(latlng.layer);
+            if (!plugin.selectionLegend.isSelected(latlng.layer)) {
+              plugin.highlightFeature(latlng.layer);
+              plugin.selectionLegend.addSelection(latlng.layer);
+            }
+          },
+          autoCollapse: true,
+        });
+        /*//-------------------------------------------------------------------
         //A reload due to Radio-button change creates a second search-Button.
         //Therefor we need to ask if it is the first load here:
-        
+        if (plugin.reloadCounter == 1){
           //----------------------------------------------------------------
           plugin.searchControl = new L.Control.Search({
             layer: plugin.getAllLayers(),
@@ -460,9 +476,9 @@
             autoCollapse: true,
           });
 
-        if (plugin.reloadCounter == 1){
-        plugin.map.addControl(plugin.searchControl);
         }//---------------------------------
+        */
+        plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
         var zoom = plugin.map.getZoom();

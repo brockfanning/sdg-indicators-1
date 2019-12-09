@@ -242,8 +242,8 @@ var indicatorModel = function (options) {
   };
   //SDG goal colors
   //['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
-  var headlinePointstyle = 'circle';
-  var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
+  //var headlinePointstyle = 'circle';
+  //var pointStyles = ['circle', 'triangle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
 
   // allow headline + (2 x others)
   var maxDatasetCount = 2 * colors.length;
@@ -408,8 +408,8 @@ var indicatorModel = function (options) {
       datasetIndex = 0,
 
       //-----------------
-      nameList = []
-      indexList = []
+      //nameList = []
+      //indexList = []
       //----------------
 
 
@@ -440,7 +440,7 @@ var indicatorModel = function (options) {
 
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
-      //------------------------------------------------------------------------------------------------------------------------
+      /*//------------------------------------------------------------------------------------------------------------------------
       getPointStyle = function (combinationDescription) {
         if (String(combinationDescription).substr(0,4) == 'Ziel' || String(combinationDescription).substr(0,6) == 'Target'){
           return 'rect';
@@ -479,7 +479,7 @@ var indicatorModel = function (options) {
           return 'line';
         }
       },
-      //----------------------------------------------------------------------------------------------------------------------
+      *///----------------------------------------------------------------------------------------------------------------------
 
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
@@ -496,7 +496,7 @@ var indicatorModel = function (options) {
         //     return f === field;
         //   }) : undefined,
 
-        //--------------------
+        /*//--------------------
 
         var categ = combinationDescription.substring(0, 4)
         if (categ == 'Ziel' || categ == 'Zeit' || categ == 'Targ' || categ == 'Time') {
@@ -526,16 +526,16 @@ var indicatorModel = function (options) {
           // Nimm den normalen Indexwert
           var datasetIndexMod = datasetIndex;
         }
-
+        */
         var fieldIndex,
           ds = _.extend({
 
             label: combinationDescription ? combinationDescription : that.country,
-            borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            backgroundColor: '#' + getColor(datasetIndexMod),
-            pointStyle: getPointStyle(combinationDescription),
-            radius: 6,
-            pointBorderColor: '#' + getColor(datasetIndexMod),
+            borderColor: '#' + getColor(datasetIndex),//borderColor: getLineStyle(combinationDescription, datasetIndexMod),
+            backgroundColor: '#' + getColor(datasetIndex),//backgroundColor: '#' + getColor(datasetIndexMod),
+            //pointStyle: getPointStyle(combinationDescription),
+            //radius: 6,
+            pointBorderColor: '#' + getColor(datasetIndex),//pointBorderColor: '#' + getColor(datasetIndexMod),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
               var found = _.findWhere(data, {
@@ -543,7 +543,7 @@ var indicatorModel = function (options) {
               });
               return found ? found.Value : null;
             }),
-            type: getChartStyle(combinationDescription),
+            //type: getChartStyle(combinationDescription),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
         //----------------------------------
@@ -713,8 +713,8 @@ var indicatorModel = function (options) {
         geoCodeRegEx: this.geoCodeRegEx,
         showMap: this.showMap,
         //------------------------------------------------
-        indicatorId: this.indicatorId,
-        title: this.chartTitle,
+        //indicatorId: this.indicatorId,
+        //title: this.chartTitle,
         //------------------------------------------------
       });
 
