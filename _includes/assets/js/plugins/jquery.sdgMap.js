@@ -58,7 +58,9 @@
     this.mapLayers = [];
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
-    //this.goalNr = options.goal;
+    //---#1 GoalDependendMapColor---start--------------------------------------
+    this.goalNr = options.goal;
+    //---#1 GoalDependendMapColor---stop---------------------------------------
     //this.title = options.title;
 
     // Require at least one geoLayer.
@@ -76,9 +78,15 @@
     this._name = 'sdgMap';
 
     this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
-    this.colorScale = chroma.scale()//this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
+    //---#1 GoalDependendMapColor---start--------------------------------------
+    //this.colorScale = chroma.scale()
+    this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
+    //---#1 GoalDependendMapColor---stop---------------------------------------
       .domain(this.valueRange)
-      .classes(9); //.classes(this.options.colorRange[this.goalNr].length);
+      //---#1 GoalDependendMapColor---start--------------------------------------
+      //.classes(9); 
+      .classes(this.options.colorRange[this.goalNr].length);
+      //---#1 GoalDependendMapColor---stop-------------------------------------
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];

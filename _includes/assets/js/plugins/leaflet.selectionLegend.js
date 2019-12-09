@@ -42,8 +42,12 @@
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      var swatchWidth = 100 / this.plugin.options.colorRange.length; //var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
-      var swatches = this.plugin.options.colorRange.map(function(swatchColor) { //var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
+      //---#1 GoalDependendMapColor---start---------------------------------------------------------------------------------------------------------------
+      //var swatchWidth = 100 / this.plugin.options.colorRange.length;
+      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
+      //var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
+      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
+      //---#1 GoalDependendMapColor---stop----------------------------------------------------------------------------------------------------------------
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
