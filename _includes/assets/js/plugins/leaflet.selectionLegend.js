@@ -30,7 +30,10 @@
     },
 
     onAdd: function() {
-      var controlTpl = '' +//var controlTpl = '<span id="mapHead">{title}</span>' +//<<<----------------
+      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+      //var controlTpl = '' +
+      var controlTpl = '<span id="mapHead">{title}</span>' +
+      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
         '<ul id="selection-list"></ul>' +
         '<div class="legend-swatches">' + //bar
           '{legendSwatches}' +
@@ -55,31 +58,19 @@
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
 
-      /*//-----------------------------------------------------------------------
+      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
       var headline = this.plugin.timeSeriesName
-      if (this.plugin.sexName){
-        headline += ', <br>' + this.plugin.sexName;
-      }
-      if (this.plugin.ageName){
-        headline += ', <br>' + this.plugin.ageName;
-      }
-      if (this.plugin.typificationName){
-        headline += ', <br>' + this.plugin.typificationName;
-      }
-      if (this.plugin.criminalOffenceName){
-        headline += ', <br>' + this.plugin.criminalOffenceName;
-      }
       headline += ', <br>' + this.plugin.unitName;
-      *///-----------------------------------------------------------------------
+      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
 
-        //---
-        //title: headline,
-        //---
+        //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+        title: headline,
+        //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
       });
       return div;

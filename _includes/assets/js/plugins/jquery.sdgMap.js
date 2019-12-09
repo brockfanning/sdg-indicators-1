@@ -84,28 +84,22 @@
     //---#1 GoalDependendMapColor---stop---------------------------------------
       .domain(this.valueRange)
       //---#1 GoalDependendMapColor---start--------------------------------------
-      //.classes(9); 
+      //.classes(9);
       .classes(this.options.colorRange[this.goalNr].length);
       //---#1 GoalDependendMapColor---stop-------------------------------------
 
     this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
     this.currentYear = this.years[0];
 
-    /*//----------------------------------------------
-    this.title = translations.t(this.title)
+    //this.title = translations.t(this.title)
+    
+    //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    this.sex = _.pluck(this.geoData, 'sex');
-    this.sexName = translations.t(this.sex[this.sex.length -1]);
-    this.age = _.pluck(this.geoData, 'age');
-    this.ageName = translations.t(this.age[this.age.length -1]);
-    this.typification = _.pluck(this.geoData, 'typification');
-    this.typificationName = translations.t(this.typification[this.typification.length -1]);
-    this.criminalOffence = _.pluck(this.geoData, 'criminal offences');
-    this.criminalOffenceName = translations.t(this.criminalOffence[this.criminalOffence.length -1]);
-    */
     this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[0]);//this.unitName = translations.t(this.unit[this.unit.length -1]);
+    this.unitName = translations.t(this.unit[this.unit.length -1]);
+    //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
+
     /*
     this.startExp = 0;
     this.reloadCounter = 0; // to avoid multiple search buttons
