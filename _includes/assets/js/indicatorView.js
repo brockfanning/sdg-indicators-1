@@ -136,7 +136,7 @@ var indicatorView = function (model, options) {
       view_obj._mapView = new mapView();
             //---#1 GoalDependendMapColor---start--------------------------
             //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
-            view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr, args.title);
+            view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx, goalNr);
             //---#1 GoalDependendMapColor---stop---------------------------
     }
   });
