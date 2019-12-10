@@ -409,14 +409,6 @@ var indicatorView = function (model, options) {
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               text.push('<li data-datasetindex="' + datasetIndex + '">');
               text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              /*//-make shure targets don´t get dashed--------------------------------------------------------------------------------------------------------------
-              if (dataset.label.substr(0,4) == 'Ziel' || dataset.label.substr(0,6) == 'Target'){
-                text.push('<span class="swatchTgt' + '" style="background-color: ' + dataset.backgroundColor + '">');
-              }
-              else{
-                text.push('<span class="swatchTsr' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
-              }
-              *///--------------------------------------------------------------------------------------------------------------------------------------------------
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
