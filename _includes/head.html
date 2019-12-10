@@ -17,13 +17,15 @@
         ================================================== -->
 
         <title>
+          <!---#15 setCorrectTitle---start-------------------->
           {% if page.indicator %}
-            {{ t.general.indicator | escape }} {{ meta.indicator }} - {{ t.general.goal | escape }} {{ goal_number }}
+            {{ t.general.indicator | escape }} {{ meta.indicator_display }} - {{ t.general.goal | escape }} {{ goal_number }}
           {% elsif goal_number %}
             {{ t.general.goal | escape }} {{ goal_number }} - {{ goal_short | escape }}
           {% else %}
             {{ t.general.title | escape }}
           {% endif %}
+          <!---#15 setCorrectTitle---stop--------------------->
         </title>
 
         {% if page.indicator %}

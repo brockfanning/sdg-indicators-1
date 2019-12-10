@@ -453,9 +453,9 @@ var indicatorModel = function (options) {
           ds = _.extend({
 
             label: combinationDescription ? combinationDescription : that.country,
-            borderColor: '#' + getColor(datasetIndex),//borderColor: getLineStyle(combinationDescription, datasetIndexMod),
-            backgroundColor: '#' + getColor(datasetIndex),//backgroundColor: '#' + getColor(datasetIndexMod),
-            pointBorderColor: '#' + getColor(datasetIndex),//pointBorderColor: '#' + getColor(datasetIndexMod),
+            borderColor: '#' + getColor(datasetIndex),
+            backgroundColor: '#' + getColor(datasetIndex),
+            pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
               var found = _.findWhere(data, {
@@ -466,7 +466,6 @@ var indicatorModel = function (options) {
             //type: getChartStyle(combinationDescription),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
-        //----------------------------------
 
         datasetIndex++;
         return ds;
