@@ -44,8 +44,9 @@
 
   {%- for goalreport in site.data.reporting.goals -%}
     {%- assign goal_number = goalreport.goal  | downcase -%}
+    {%- assign goal_short_key = goalnumber | append: '-short' -%}
     {%- assign default_goal = site.data.translations[default_language].global_goals[goal_number] -%}
-    {%- assign translated_goal = t.global_goals[goal_number] -%}
+    {%- assign translated_goal = t.global_goals[goal_short_key] -%}
     <div class="goal">
         <div class="frame">
           <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ goal_number }}/">
