@@ -17,10 +17,13 @@
         ================================================== -->
 
         <!---#15 setCorrectTitle---start-------------------->
+        {% assign goal_number = page.sdg_goal %}
+        {% assign goal_short_key = goal_number | append: '-short' %}
+        {% assign goal_short = t.global_goals[goal_short_key] %}
         <title>
           {% if page.indicator %}
             {{ t.general.indicator | escape }} {{ meta.indicator }} - {{ t.general.goal | escape }} {{ goal_number }}
-          {% elsif page.goal %}
+          {% elsif page.sdg_goal %}
             {{ t.general.goal | escape }} {{ goal_number }} - {{ goal_short | escape }}
           {% else %}
             {{ t.general.title | escape }}
