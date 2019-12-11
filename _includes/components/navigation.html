@@ -1,4 +1,9 @@
 <!---#8 addNavigationButtons---start------------------------------------->
+{% if current_language == 'de' %}
+  {% assign language = '' %}
+{% else %}
+  {% assign language = current_language %}
+{% endif %}
 <!---Indicator page-->
 {% if goal_uri %}
   <!---3 Btns if there is a corresponding Indicator-->
@@ -10,7 +15,7 @@
     </div>
 
     <div class="col-xs-6 col-md-6 col-lg-4">
-      <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/{{ meta.dns_indicator }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" title="{{ t.general.link_dns_indicator }}" role="button">
+      <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/{{ language }}/{{ meta.dns_indicator }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" title="{{ t.general.link_dns_indicator }}" role="button">
         <b><span class="hidden-sm hidden-xs">{{ t.general.indicator_link_dns }}</span> SDG-{{ meta.dns_indicator | replace: "/", "" | replace: "-", "."}}</b>
       </a>
     </div>
@@ -54,7 +59,7 @@
     </a>
   </div>
   <div class="col-xs-6 col-md-6 col-lg-4">
-    <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/{{ goal_number }}" class="btn btn-primary btn-block G{{ goal_number }}-background" title="{{ t.general.link_sdg_goal }}" role="button">
+    <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/{{ language }}{{ goal_number }}" class="btn btn-primary btn-block G{{ goal_number }}-background" title="{{ t.general.link_sdg_goal }}" role="button">
       <b><span class="hidden-sm hidden-xs" style="color:white">{{ t.general.target_link_dns }} {{ t.general.goal }} {{ goal_number }} </span><span class="visible-sm visible-xs" style="color:white">{{ t.general.goal }} {{ goal_number }} {{ t.general.national }}</span></b>
     </a>
   </div>
