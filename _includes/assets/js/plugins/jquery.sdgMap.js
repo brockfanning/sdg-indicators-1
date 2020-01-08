@@ -40,7 +40,6 @@
       dashArray: '5,5',
     },
   };
-
   // Defaults for each map layer.
   var mapLayerDefaults = {
     min_zoom: 0,
@@ -58,9 +57,9 @@
     //---#20 changeAccessToken---start-----------------------------------------
     var d = new Date();
     if (d.getDate() > 15){
-      this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2lma20wOXJiM25tcTc2ZHU4NjMzIn0.elmNTh89cjLmD2roD7Mcxw'
+      this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M3NuNW0wMDU3M2xvNmx0ano3a3pwIn0.MvP3DaTCink7E4Ph-0OtFQ'
     }
-    console.log("Options:",this.options.tileOptions.accessToken)
+    console.log("Options:",this.options.tileOptions.accessToken);
     //---#20 changeAccessToken---stop------------------------------------------
     this.mapLayers = [];
     this.geoData = options.geoData;
