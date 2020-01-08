@@ -672,7 +672,7 @@ var indicatorView = function (model, options) {
         var span_heading = '<span>' + translations.t(heading) + '</span>';
         //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
         //return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
-        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + ((tableUnit == '') ? '' : ('<br>' + tableUnit));
+        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + ((tableUnit == '') ? '' : ('<br>(' + tableUnit)+')');
         //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
       };
 
