@@ -27,10 +27,7 @@ Das Statistische Bundesamt (Destatis) unterstützt aktiv die Entwicklung nationa
 Die aktuelle Version der deutschen Berichtsplattform wurde auf der Grundlage einer früheren Version der britischen NRP entwickelt und an die Bedürfnisse der deutschen Statistik angepasst.
 Der Projektcode ist im folgenden [GitHub Repository](https://github.com/G205SDGs/sdg-indicators) öffentlich zugänglich.
 
-Eine neue universelle Version der von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten SDG-Berichtsplattform ist verfügbar.
-Wir empfehlen Ihnen, sich mit den SDG-Plattformen der USA und Großbritanniens und der entsprechenden [Open SDG Projektdokumentation](https://open-sdg.readthedocs.io/en/latest/) vertraut zu machen.
-
-Wir empfehlen Ihnen, sich mit den SDG-Plattformen in den USA und in Großbritannien sowie mit der entsprechenden Open SDG-Projektdokumentation vertraut zu machen. Diese enthält technische Anweisungen, wie Sie am schnellsten eine Kopie der Open SDG-Plattform zum Laufen bringen können.
+Eine neue universelle Version der von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten SDG-Berichtsplattform ist verfügbar. Wir empfehlen Ihnen, sich mit den SDG-Plattformen in den USA und in Großbritannien sowie mit der entsprechenden [Open SDG-Projektdokumentation](https://open-sdg.readthedocs.io/en/latest/) vertraut zu machen. Diese enthält technische Anweisungen, wie Sie am schnellsten eine Kopie der Open SDG-Plattform zum Laufen bringen können.
 
 - [USA NRP SDG](https://sdg.data.gov/)
 
