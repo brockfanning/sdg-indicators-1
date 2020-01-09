@@ -36,7 +36,7 @@ Wir empfehlen Ihnen, sich mit den SDG-Plattformen in den USA und in Großbritann
 
 - [GB NRP SDG](https://sustainabledevelopment-uk.github.io)
 
-Wenn Sie Kommentare oder Feedback zum Open SDG-Projekt haben oder sich an der Open SDG-Community beteiligen möchten, wenden Sie sich an Open SDG GitHub, indem Sie ein Problem melden.
+Wenn Sie Kommentare oder Feedback zum Open SDG-Projekt haben oder an der Open SDG-Community teilnehmen möchten, wenden Sie sich an [Open SDG GitHub](https://github.com/open-sdg/open-sdg/issues).
 
 ### Genutzte Software
 
