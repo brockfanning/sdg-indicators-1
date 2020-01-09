@@ -30,7 +30,7 @@ The new universal version of the open-SDG platform developed by the US, UK and C
 
 - [UK NPR SDG](https://sustainabledevelopment-uk.github.io)
 
-If you have any comments or feedback on the Open SDG project, or want to get involved with the Open SDG community, please get in touch by raising an issue on the [Open SDG GitHub](https://github.com/open-sdg/open-sdg/issues)
+If you have any comments or feedback on the Open SDG project, or want to get involved with the Open SDG community, please get in touch by raising an issue on the [Open SDG GitHub](https://github.com/open-sdg/open-sdg/issues).
 
 ## NRP - applied technology
 
