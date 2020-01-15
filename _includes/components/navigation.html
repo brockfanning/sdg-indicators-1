@@ -7,6 +7,7 @@
 <!---Indicator page-->
 {% if goal_uri %}
   <!---3 Btns if there is a corresponding Indicator-->
+  <!--disabled till dns page is published
   {% if meta.dns_indicator %}
     <div class="col-xs-3 col-md-3 col-lg-4">
       <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
@@ -26,7 +27,7 @@
       </a>
     </div>
   <!---2 Btns if there is no corresponding Indicator-->
-  {% else  %}
+  <!--{% else  %}-->
     <div class="col-xs-6 col-md-6 col-lg-6">
       <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ meta.previous }}" class="btn btn-primary btn-block G{{ meta.sdg_goal }}-background" role="button">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="hidden-sm hidden-xs">{{ t.general.prev_indicator }}</span></b>
@@ -38,7 +39,7 @@
         <b><span class="hidden-sm hidden-xs">{{ t.general.next_indicator }}</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
-  {% endif %}
+  <!--{% endif %}-->
 
 <!---Goal page-->
 {% else %}
@@ -53,17 +54,21 @@
     {% assign next_goal = page.sdg_goal | plus: 1 %}
   {% endif %}
 
-  <div class="col-xs-3 col-md-3 col-lg-4">
+  <!--disabled till dns page is published <div class="col-xs-3 col-md-3 col-lg-4"> -->
+  <div class="col-xs-6 col-md-6 col-lg-6">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ previous_goal }}" class="btn btn-primary btn-block G{{ goal_number }}-background" role="button">
       <i class="fa fa-chevron-left" aria-hidden="true"></i> <b><span class="hidden-sm hidden-xs" style="color:white">{{ t.general.prev_goal }}</span></b>
     </a>
   </div>
+  <!--disabled till dns page is published
   <div class="col-xs-6 col-md-6 col-lg-4">
     <a href="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter/{{ language }}/{{ goal_number }}" class="btn btn-primary btn-block G{{ goal_number }}-background" title="{{ t.general.link_sdg_goal }}" role="button">
       <b><span class="hidden-sm hidden-xs" style="color:white">{{ t.general.target_link_dns }} {{ t.general.goal }} {{ goal_number }} </span><span class="visible-sm visible-xs" style="color:white">{{ t.general.goal }} {{ goal_number }} {{ t.general.national }}</span></b>
     </a>
   </div>
-  <div class="col-xs-3 col-md-3 col-lg-4">
+  -->
+  <!--disabled till dns page is published <div class="col-xs-3 col-md-3 col-lg-4"> -->
+  <div class="col-xs-6 col-md-6 col-lg-6">
     <a href="{{ site.baseurl }}{{ baseurl_folder }}/{{ next_goal }}" class="btn btn-primary btn-block G{{ goal_number }}-background" role="button">
       <b><span class="hidden-sm hidden-xs" style="color:white">{{ t.general.next_goal }}</span></b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </a>
