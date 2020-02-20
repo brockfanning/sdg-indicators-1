@@ -12,7 +12,7 @@ Für jeden Indikator gibt es drei verschiedene Kennzeichungen zu dessen Berichts
 
 * Grün: Online berichtet - die national aggregierten Daten für diesen Indikator sind auf dieser Website verfügbar. Jedoch sind die Daten teilweise noch nicht nach weiteren Kategorien und Kriterien aufgeschlüsselt verfügbar. Weitere Daten zu Disaggregationen werden gesucht und geprüft.
 * Orange: Statistik in Arbeit - es wurde eine geeignete Datenquelle für diesen Indikator oder einen Proxy-Indikator  identifiziert. Aktuell werden die Daten auf ihre Qualität geprüft und für die Veröffentlichung vorbereitet.
-* Rot: Datenquellensuche - Für diesen Indikator wird noch nach einer geeignete Datenquelle gesucht.
+* Rot: Datenquellensuche - für diesen Indikator wird noch nach einer geeignete Datenquelle gesucht.
 
 Zusätzliche Informationen über den Status der Erhebung und die Berichterstattung eines Indikators finden Sie im oberen Abschnitt auf der Indikatorseite.
 
@@ -24,11 +24,11 @@ Sollten für einen Indikator keine Daten vorliegen, werden mögliche Datenquelle
 
 Bei einigen Indikatoren liegen zwar Daten auf nationaler Ebene vor, aber die zugrundeliegenden Datenquellen lassen keine Disaggregation nach allen geforderten Kategorien zu.
 
-In diesen Fällen wird nach neuen Datenquellen gesucht oder müssen die bestehenden Quellen verknüpft oder auch Daten modelliert werden. Hierzu tragen die jeweils betroffenen Fachbereiche im Statistischen Bundesamt (Destatis) kontinuierlich bei.
+In diesen Fällen wird nach neuen Datenquellen gesucht oder es müssen die bestehenden Quellen verknüpft oder auch Daten modelliert werden. Hierzu tragen die jeweils betroffenen Fachbereiche im Statistischen Bundesamt (Destatis) kontinuierlich bei.
 
 
 ## Können andere Länder diese Website kopieren?
-Die Website kann von anderen Staaten frei verwendet werden, um eine eigene Berichtsplattform zu erstellen. Es gelten die Bedingungen für die Nutzung von Github. Weitere Informationen finden Sie unter [Technische Hinweise](https://g205sdgs.github.io/sdg-indicators/guidance/).
+Die Website kann von anderen Staaten frei verwendet werden, um eine eigene Berichtsplattform zu erstellen. Es gelten die Bedingungen für die Nutzung von [GitHub](https://github.com/). Weitere Informationen finden Sie unter [Technische Hinweise](https://g205sdgs.github.io/sdg-indicators/guidance/).
 
 <!-- DO NOT REMOVE ANYTHING BELOW THIS LINE -->
 <script type='text/javascript'>
