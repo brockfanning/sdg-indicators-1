@@ -418,7 +418,7 @@ var indicatorModel = function (options) {
         console.log(combinationDescription);
         //---#22 allowDisplayOfRangeValues---start-----------------
         if (combinationDescription == ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)")){
-          return rgba(255, 255, 255, 0);
+          return 'rgba(255, 255, 255, 0)';
         }
         //---#22 allowDisplayOfRangeValues---stop-------------------
 
