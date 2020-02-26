@@ -417,7 +417,7 @@ var indicatorModel = function (options) {
       getColor = function(datasetIndex, combinationDescription) {
         console.log(combinationDescription);
         //---#22 allowDisplayOfRangeValues---start-----------------
-        if (combinationDescription == ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)")){
+        if (combinationDescription == ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years, lower bound")){
           return 'rgba(255, 255, 255, 0)';
         }
         //---#22 allowDisplayOfRangeValues---stop-------------------
@@ -467,13 +467,16 @@ var indicatorModel = function (options) {
       getStacked = function(indicatorId, combinationDescription){
         if (stackedCharts.indexOf(indicatorId) != -1) {
           if (exceptions.indexOf(combinationDescription) != -1){
+            console.log("a",combinationDescription);
             return false;
           }
           else{
+            console.log("b",combinationDescription);
             return true;
           }
         }
         else {
+          console.log("c",combinationDescription);
           return false;
         }
       },
