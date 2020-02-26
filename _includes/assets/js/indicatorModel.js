@@ -418,7 +418,7 @@ var indicatorModel = function (options) {
         console.log(combinationDescription);
         //---#22 allowDisplayOfRangeValues---start-----------------
         if (combinationDescription == ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)")){
-          return 'rgba(255, 255, 255, 0)';
+          return rgba(255, 255, 255, 0);
         }
         //---#22 allowDisplayOfRangeValues---stop-------------------
 
@@ -428,15 +428,15 @@ var indicatorModel = function (options) {
         }
 
         if(datasetIndex === 0) {
-          return '#',headlineColor;
+          return '#'+headlineColor;
         } else {
           if(datasetIndex > colors.length) {
-            return '#',colors[datasetIndex - 1 - colors.length];
+            return '#'+colors[datasetIndex - 1 - colors.length];
           } else {
-            return '#',colors[datasetIndex - 1];
+            return '#'+colors[datasetIndex - 1];
           }
         }
-        return datasetIndex === 0 ? ('#',headlineColor) : ('#',colors[datasetIndex]);
+        return datasetIndex === 0 ? ('#'+headlineColor) : ('#'+colors[datasetIndex]);
       },
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
