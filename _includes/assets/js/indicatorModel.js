@@ -436,7 +436,7 @@ var indicatorModel = function (options) {
             return '#',colors[datasetIndex - 1];
           }
         }
-        return datasetIndex === 0 ? '#',headlineColor : '#',colors[datasetIndex];
+        return datasetIndex === 0 ? ('#',headlineColor) : ('#',colors[datasetIndex]);
       },
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
@@ -494,9 +494,9 @@ var indicatorModel = function (options) {
           ds = _.extend({
 
             label: combinationDescription ? combinationDescription : that.country,
-            borderColor: getColor(datasetIndex, combinationDescription),
-            backgroundColor: getColor(datasetIndex, combinationDescription),
-            pointBorderColor: getColor(datasetIndex, combinationDescription),
+            borderColor: getColor(datasetIndex, combinationDescription), // #22 borderColor: '#', getColor(datasetIndex, combinationDescription),
+            backgroundColor: getColor(datasetIndex, combinationDescription),// #22 backgroundColor: '#', getColor(datasetIndex, combinationDescription),
+            pointBorderColor: getColor(datasetIndex, combinationDescription),// #22 pointBorderColor: '#', getColor(datasetIndex, combinationDescription),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
               var found = _.findWhere(data, {
