@@ -434,6 +434,28 @@ var indicatorModel = function (options) {
         return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
 
+      //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
+      barCharts = ['indicator_3-5-1'];
+
+      exceptions = [translations.t('inpatient treatment of dependence syndrom due to psychoactive substance use (1 000)') + ', ' + translations.t('total'),
+                    translations.t('inpatient treatment of dependence syndrom due to psychoactive substance use (1 000)') + ', ' + translations.t('inpatient treatment of alcohol dependence')];
+
+      getChartStyle = function (indicatorId, combinationDescription) {
+
+        if (barCharts.indexOf(indicatorId) != -1) {
+          if (exceptions.indexOf(combinationDescription) != -1){
+            return 'line';
+          }
+          else{
+            return 'bar';
+          }
+        }
+        else {
+          return 'line';
+        }
+      },
+      //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
+
       getBorderDash = function(datasetIndex) {
         // offset if there is no headline data:
         if(!this.hasHeadline) {
@@ -463,6 +485,11 @@ var indicatorModel = function (options) {
               });
               return found ? found.Value : null;
             }),
+
+            //--#14.1 barsOnly---start------------------------------------------------
+            type: getChartStyle(that.indicatorId, combinationDescription),
+            //--#14.1 barsOnly---stop-------------------------------------------------
+
             //type: getChartStyle(combinationDescription),
             borderWidth: combinationDescription ? 2 : 4
           }, that.datasetObject);
