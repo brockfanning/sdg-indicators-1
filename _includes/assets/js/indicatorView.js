@@ -407,7 +407,7 @@ var indicatorView = function (model, options) {
             var text = ['<ul id="legend">'];
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
-              if (dataset.label != ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)")){
+              if (dataset.label != ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years, lower bound")){
                 text.push('<li data-datasetindex="' + datasetIndex + '">');
                 text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
                 text.push('</span>');
