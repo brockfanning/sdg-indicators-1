@@ -416,6 +416,12 @@ var indicatorModel = function (options) {
 
       getColor = function(datasetIndex, combinationDescription) {
         console.log(combinationDescription);
+        //---#22 allowDisplayOfRangeValues---start-----------------
+        if (combinationDescription == ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)")){
+          return '00ffffff';
+        }
+        //---#22 allowDisplayOfRangeValues---stop-------------------
+
         // offset if there is no headline data:
         if(!that.hasHeadline) {
           datasetIndex += 1;
@@ -429,17 +435,8 @@ var indicatorModel = function (options) {
           } else {
             return colors[datasetIndex - 1];
           }
-        }
-        //---#22 allowDisplayOfRangeValues---start-----------------
-        //return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
-
-        if (combinationDescription == ("treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)")){
-          return '00ffffff';
-          }
-        else{
-          return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
-        }
-        //---#22 allowDisplayOfRangeValues---stop-------------------
+        }      
+        return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
