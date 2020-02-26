@@ -430,13 +430,15 @@ var indicatorModel = function (options) {
             return colors[datasetIndex - 1];
           }
         }
-
-        if (combinationDescription == ('treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)')){
-          return 'ffffff';
+        //---#22 allowDisplayOfRangeValues---start-----------------
+        //return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
+        if (combinationDescription == ('"treatment demand in facilities for addiction support (substances opioids, cocaine and stimulants) of the age group 18 to under 65 years(lower bound)"')){
+          return '00ffffff';
           }
         else{
           return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
         }
+        //---#22 allowDisplayOfRangeValues---stop-------------------
       },
 
       //--#14.1 barsOnly---start--------------------------------------------------------------------------------------------------------
