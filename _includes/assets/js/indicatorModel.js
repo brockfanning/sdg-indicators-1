@@ -462,9 +462,16 @@ var indicatorModel = function (options) {
       //--#14.1 barsOnly---stop--------------------------------------------------------------------------------------------------------
 
       stackedCharts = ['indicator_3-5-1'];
-      getStacked = function(indicatorId){
+      exceptions = [translations.t('inpatient treatment of dependence syndrom due to psychoactive substance use (1 000)') + ', ' + translations.t('total'),
+                    translations.t('inpatient treatment of dependence syndrom due to psychoactive substance use (1 000)') + ', ' + translations.t('inpatient treatment of alcohol dependence')];
+      getStacked = function(indicatorId, combinationDescription){
         if (stackedCharts.indexOf(indicatorId) != -1) {
-          return true;
+          if (exceptions.indexOf(combinationDescription) != -1){
+            return false;
+          }
+          else{
+            return true;
+          }
         }
         else {
           return false;
@@ -508,7 +515,7 @@ var indicatorModel = function (options) {
             //--#14.1 barsOnly---start------------------------------------------------
             type: getChartStyle(that.indicatorId, combinationDescription),
             //--#14.1 barsOnly---stop-------------------------------------------------
-            stacked: getStacked(that.indicatorId),
+            stacked: getStacked(that.indicatorId, combinationDescription),
 
             //type: getChartStyle(combinationDescription),
             borderWidth: combinationDescription ? 2 : 4
