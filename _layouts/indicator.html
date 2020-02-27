@@ -110,7 +110,7 @@
               <!---#12 addIconsForTabs---stop-------------------------------------------->
             </li>
             {%- if meta.embedded_feature_url -%}
-            <li role="presentation" class="nav-item embedded-map" style="height: 500px;">
+            <li role="presentation" class="nav-item embedded-map" >
               <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#embeddedmapview" aria-controls="embeddedmapview" role="tab" {% include autotrack.html preset="tab_data_embed" category="Tab change" action="Change data view" label="Change to embedded item tab" %}><i class="fa fa-plus-square" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ meta.embedded_feature_tab_title }}</span></a>
             </li>
             {%- endif -%}
