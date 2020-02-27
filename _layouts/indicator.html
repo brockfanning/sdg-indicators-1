@@ -162,7 +162,19 @@
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          {% if meta.addInfo %}
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#addInfo" aria-controls="addInfo" role="tab" {% include autotrack.html preset="tab_meta_content" category="Tab change" action="Change metadata view" label="Change to Content tab" %}>{{ t.indicator.add_info }}</a>
+            </li>
+            <li role="presentation" class="nav-item">
+          {% else %}
+            <li role="presentation" class="nav-item active">
+          {% endif %}
+          <!--<li role="presentation" class="nav-item active">-->
+          <!---#x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to National Metadata tab" %}>{{ site.non_global_metadata | default: 'indicator.national_metadata' | t }}</a>
           </li>
           <li role="presentation" class="nav-item">
@@ -180,6 +192,17 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
+          <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
+          <div role="tabpanel" class="tab-pane" id="content">
+            <div>
+              <article>
+                {% include components/addInfo.html %}
+              </article>
+            </div>
+          </div>
+        <!---#5x---stop-------------------------------------------------------------------------------------------------------------------------------------->
+
+
           <div role="tabpanel" class="tab-pane active" id="metadata">
             <!-- National Metadata -->
             <div > <!-- formerly class="collapsible expanded" -->
@@ -204,6 +227,7 @@
               </article>
             </div>
           </div>
+
           <div role="tabpanel" class="tab-pane" id="sources">
             {% include components/sources.html %}
           </div>
