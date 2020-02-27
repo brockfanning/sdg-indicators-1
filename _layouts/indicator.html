@@ -111,9 +111,8 @@
             </li>
             {%- if meta.embedded_feature_url -%}
             <li role="presentation" class="nav-item embedded-map" >
-              <iframe data-no-disagg="true" class="nav-link" data-toggle="tab" href="#embeddedmapview" aria-controls="embeddedmapview" role="tab" width="550" height="650" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=CD81916F8BF5E88B%21105&authkey=%21AI2kLHCdAQSzPqQ&em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
-              <!--<a data-no-disagg="true" class="nav-link" data-toggle="tab" href="#embeddedmapview" aria-controls="embeddedmapview" role="tab" {% include autotrack.html preset="tab_data_embed" category="Tab change" action="Change data view" label="Change to embedded item tab" %}><i class="fa fa-plus-square" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ meta.embedded_feature_tab_title }}</span></a>
-              -->
+
+              <a data-no-disagg="true" class="nav-link" data-toggle="tab" href="{{ if meta.embedded_feature_url }}" aria-controls="embeddedmapview" role="tab" {% include autotrack.html preset="tab_data_embed" category="Tab change" action="Change data view" label="Change to embedded item tab" %}><i class="fa fa-plus-square" aria-hidden="true"></i> <span class="hidden-sm hidden-xs">{{ meta.embedded_feature_tab_title }}</span></a>
             </li>
             {%- endif -%}
           </ul>
