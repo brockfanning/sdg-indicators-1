@@ -165,7 +165,7 @@
           <!---#x---start------------------------------------------------------------------------------------------------------------------------------------->
           {% if meta.add_info %}
             <li role="presentation" class="nav-item active">
-              <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="addInfo" role="tab" {% include autotrack.html preset="tab_meta_content" category="Tab change" action="Change metadata view" label="Change to Content tab" %}>{{ t.indicator.add_info }}</a>
+              <a class="nav-link" data-toggle="tab" href="#add_info" aria-controls="add_info" role="tab" {% include autotrack.html preset="tab_meta_content" category="Tab change" action="Change metadata view" label="Change to Content tab" %}>{{ t.indicator.add_info }}</a>
             </li>
             <li role="presentation" class="nav-item">
           {% else %}
@@ -196,7 +196,7 @@
           <div role="tabpanel" class="tab-pane" id="content">
             <div>
               <article>
-                {% include components/addInfo.html %}
+                {% include components/add_info.html %}
               </article>
             </div>
           </div>
