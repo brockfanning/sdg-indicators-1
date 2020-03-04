@@ -195,10 +195,10 @@
 
           <!--#22 additionalDataAsEmbedded---start-------------------------->
           {% if meta.additional_information %}
-            console.log("a")
             <div role="tabpanel" class="tab-pane active" id="additional_information">
               <div>
                 <article>
+                  <p>{{ t.indicator.additional_information_blurb  }}</p>
                   {% include components/additional_information.html %}
                 </article>
                 {{ meta.additional_information }}
