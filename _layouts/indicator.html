@@ -195,6 +195,7 @@
 
           <!--#22 additionalDataAsEmbedded---start-------------------------->
           {% if meta.additional_information %}
+            console.log("a")
             <div role="tabpanel" class="tab-pane active" id="additional_information">
               <div>
                 <article>
@@ -224,6 +225,7 @@
               </article>
             </div>
           </div>
+
           <div role="tabpanel" class="tab-pane" id="globalmetadata">
             <!-- Global Metadata -->
             <div> <!-- formerly <div class="collapsible expanded"> -->
@@ -234,6 +236,7 @@
               </article>
             </div>
           </div>
+
           <div role="tabpanel" class="tab-pane" id="sources">
             {% include components/sources.html %}
           </div>

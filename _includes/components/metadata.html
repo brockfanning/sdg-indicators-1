@@ -10,11 +10,11 @@
     {% if indicator_metadata.field.scope == include.scope %}
       {% unless indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text"  or indicator_metadata.name == "national_indicator_available"  %}
       <tr>
+        <!--#22 additionalDataAsEmbedded---start---------->
         {% if indicator_metadata.field.scope != 'add_info' %}
+        <!--#22 additionalDataAsEmbedded---stop----------->
 
-          <!--#22 additionalDataAsEmbedded---start---------->
           {% if meta[indicator_metadata.name] %}
-          <!--#22 additionalDataAsEmbedded---stop----------->
 
             <th scope="row" height="{{ tableHeight }}" >{{ metadata_label }}</th>
 
@@ -47,7 +47,7 @@
 
         <!--#22 additionalDataAsEmbedded---start---------->
         {% else %} <!-- case: additional_information -->
-          <p> {{ meta[indicator_metadata.name] | t | markdownify }} </p>
+          <p> {{ meta[indicator_metadata.name] | markdownify }} </p>
         {% endif %}
         <!--#22 additionalDataAsEmbedded---stop----------->
       </tr>
