@@ -162,7 +162,19 @@
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="nav-item active">
+          <!--#22 additionalDataAsEmbedded---start-------------------------->
+          {% if meta.additional_information %}
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#additional_information" aria-controls="additional_information" role="tab" {% include autotrack.html preset="tab_meta_additional_information" category="Tab change" action="Change metadata view" label="Change to additional_information tab" %}>{{ t.indicator.add_info }}</a>
+            </li>
+            <li role="presentation" class="nav-item">
+          {% else %}
+            <li role="presentation" class="nav-item active">
+          {% endif %}
+          <!--<li role="presentation" class="nav-item active">-->
+          <!--#22 additionalDataAsEmbedded---stop--------------------------->
+
+
             <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab" {% include autotrack.html preset="tab_meta_national" category="Tab change" action="Change metadata view" label="Change to National Metadata tab" %}>{{ site.non_global_metadata | default: 'indicator.national_metadata' | t }}</a>
           </li>
           <li role="presentation" class="nav-item">
@@ -180,7 +192,25 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="metadata">
+
+          <!--#22 additionalDataAsEmbedded---start-------------------------->
+          {% if meta.additional_information %}
+            <div role="tabpanel" class="tab-pane active" id="additional_information">
+              <div>
+                <article>
+                  {% include components/additional_information.html %}
+                </article>
+                {{ meta.additional_information }}
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="metadata">
+          {% else %}
+            <div role="tabpanel" class="tab-pane active" id="metadata">
+          {% endif %}
+          <!--<div role="tabpanel" class="tab-pane active" id="metadata">-->
+          <!--#22 additionalDataAsEmbedded---stop--------------------------->
+
             <!-- National Metadata -->
             <div > <!-- formerly class="collapsible expanded" -->
               <!-- <h3 tabindex='0'>National Metadata</h3> -->
