@@ -431,19 +431,3 @@ header {
     }
   }
 }
-
-//high contrast navagation Btns-----------
-contrast-high {
-  .status-toggle-mobile, ul.navbar-nav {
-    .status-options a {
-      color: black;
-      &:hover {
-        color: black;
-      }
-    }
-  }
-  .btn-label {
-    color: pink;
-  }
-}
-//--------------------------------------
