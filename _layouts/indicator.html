@@ -78,7 +78,17 @@
     </div>
     <div id="indicator-main" class="col-md-9">
     {% else %}
-    <div id="indicator-main" class="col-md-12">
+    <div id="indicator-sidebar" class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>{{ t.indicator.sub_categories }}</h4>
+          <p>{{ t.indicator.no_selection }}</p>
+        </span>
+
+      </div>
+      <div id="units"></div>
+    </div>
+    <div id="indicator-main" class="col-md-9">
     {% endif %}
 
       {% if show_data %}
