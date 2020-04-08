@@ -421,7 +421,7 @@ var indicatorModel = function (options) {
         if(!that.hasHeadline) {
           datasetIndex += 1;
         } else{
-          colors = colors[1:colors.lengh]
+          colors = colors[1:colors.length];
         }
 
         if(datasetIndex === 0) {
