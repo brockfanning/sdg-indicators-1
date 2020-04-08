@@ -55,7 +55,9 @@ var indicatorModel = function (options) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
-  console.log("b", this.edgesData);
+  console.log("a", this.allowedFields);
+  console.log("b", this.selectedFields);
+  console.log("c", this.validParentsByChild);
 
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
