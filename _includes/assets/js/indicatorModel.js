@@ -55,7 +55,7 @@ var indicatorModel = function (options) {
   this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
 
-  console.log("a", this.data);
+  console.log("b", this.edgesData);
 
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
@@ -418,21 +418,25 @@ var indicatorModel = function (options) {
       },
 
       getColor = function(datasetIndex) {
-
+        var clonedColors = [];
         // offset if there is no headline data:
         if(!that.hasHeadline) {
           datasetIndex += 1;
+          clonedColors.push(colors[0]);
         } else{
-          colors = colors.slice(1,colors.length);
+
+          for (var i=1; i<=colors.length; i++){
+            clonedColors.push(colors[i]);
+          }
         }
 
         if(datasetIndex === 0) {
           return headlineColor;
         } else {
-          if(datasetIndex > colors.length) {
-            return colors[datasetIndex - 1 - colors.length];
+          if(datasetIndex > clonedColors.length) {
+            return clonedColors[datasetIndex - 1 - clonedColors.length];
           } else {
-            return colors[datasetIndex - 1];
+            return clonedColors[datasetIndex - 1];
           }
         }
 
