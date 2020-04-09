@@ -58,6 +58,7 @@ var indicatorModel = function (options) {
   console.log("a", this.allowedFields);
   console.log("b", this.selectedFields);
   console.log("c", this.validParentsByChild);
+  console.log("d", this.data);
 
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
