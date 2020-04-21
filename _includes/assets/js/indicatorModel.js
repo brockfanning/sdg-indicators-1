@@ -425,12 +425,12 @@ var indicatorModel = function (options) {
         // offset if there is no headline data:
         if(!that.hasHeadline) {
           datasetIndex += 1;
-          for (var i=0; i<=colors.length; i++){
+          for (var i=0; i<colors.length; i++){
             clonedColors.push(colors[i]);
           }
         } else{
 
-          for (var i=1; i<=colors.length; i++){
+          for (var i=1; i<colors.length; i++){
             clonedColors.push(colors[i]);
           }
         }
