@@ -16,29 +16,17 @@
         <!-- Title and meta description
         ================================================== -->
 
-        <!---#15 setCorrectTitle---start-------------------->
-        {% assign goalNumber = page.sdg_goal %}
-        {% assign goalShortKey = goalNumber | append: '-short' %}
-        {% assign goalShort = t.global_goals[goalShortKey] %}
         <title>
           {% if page.indicator %}
-            {{ t.general.indicator | escape }} {{ meta.indicator }} - {{ t.general.goal | escape }} {{ goal_number }}
-          {% elsif goalNumber %}
-            {{ t.general.goal | escape }} {{ goalNumber }} - {{ goalShort | escape }}
+            {{ page.t.general.indicator | escape }} {{ page.indicator.number }} - {{ page.t.general.goal | escape }} {{ page.goal.number }}
+          {% elsif page.goal %}
+            {{ page.t.general.goal | escape }} {{ page.goal.number }} - {{ page.goal.short | escape }}
           {% else %}
-            {{ t.general.title | escape }}
+            {{ site.title | escape }}
           {% endif %}
         </title>
-        <!---#15 setCorrectTitle---stop--------------------->
 
-        {% if page.indicator %}
-          <meta name="description" content= "{{ t.general.meta_indicator | escape }} {{ meta.indicator }} - {{ meta.indicator | get_indicator_name }}" >
-        {% elsif goal_number %}
-          <meta name="description" content= "{{ t.general.meta_goal | escape }} {{ goal_number }} - {{ goal_short }}" >
-        {% else %}
-          <meta name="description" content= "{{ t.general.meta | escape }}" >
-        {% endif %}
-
+        <meta name="description" content="">
         <meta property="og:description" content="">
         {% if site.environment == 'staging' %}
         <meta name="robots" content="noindex, nofollow">
