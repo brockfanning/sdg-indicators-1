@@ -2,11 +2,8 @@
  * TODO:
  * Integrate with high-contrast switcher.
  */
- (function($) {
+(function($, L, chroma, window, document, undefined) {
 
-   if (typeof L === 'undefined') {
-     return;
-   }
   // Create the defaults once
   var defaults = {
 
@@ -47,8 +44,9 @@
   var mapLayerDefaults = {
     min_zoom: 0,
     max_zoom: 10,
-    subfolder: 'regions',
-    label: 'indicator.map',
+    serviceUrl: '[replace me]',
+    nameProperty: '[replace me]',
+    idProperty: '[replace me]',
     staticBorders: false,
   };
 
@@ -56,16 +54,23 @@
 
     this.element = element;
     this.options = $.extend(true, {}, defaults, options.mapOptions);
+    //---#20 changeAccessToken---start-----------------------------------------
+    var d = new Date();
+    if (d.getDate() > 15){
+      this.options.tileOptions.accessToken = 'pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M3NuNW0wMDU3M2xvNmx0ano3a3pwIn0.MvP3DaTCink7E4Ph-0OtFQ'
+    }
+    console.log("Options:",this.options.tileOptions.accessToken);
+    //---#20 changeAccessToken---stop------------------------------------------
     this.mapLayers = [];
-    this.indicatorId = options.indicatorId;
-    this.currentDisaggregation = 0;
+    this.geoData = options.geoData;
+    this.geoCodeRegEx = options.geoCodeRegEx;
     //---#1 GoalDependendMapColor---start--------------------------------------
     this.goalNr = options.goal;
     //---#1 GoalDependendMapColor---stop---------------------------------------
 
     // Require at least one geoLayer.
-    if (!options.mapLayers || !options.mapLayers.length) {
-      console.log('Map disabled - please add "map_layers" in site configuration.');
+    if (!options.mapLayers.length) {
+      console.log('Map disabled, no mapLayers in options.');
       return;
     }
 
@@ -77,10 +82,54 @@
     this._defaults = defaults;
     this._name = 'sdgMap';
 
+    this.valueRange = [_.min(_.pluck(this.geoData, 'Value')), _.max(_.pluck(this.geoData, 'Value'))];
+    //---#1 GoalDependendMapColor---start--------------------------------------
+    //this.colorScale = chroma.scale()
+    this.colorScale = chroma.scale(this.options.colorRange[this.goalNr])
+    //---#1 GoalDependendMapColor---stop---------------------------------------
+      .domain(this.valueRange)
+      //---#1 GoalDependendMapColor---start--------------------------------------
+      //.classes(9);
+      .classes(this.options.colorRange[this.goalNr].length);
+      //---#1 GoalDependendMapColor---stop-------------------------------------
+
+    this.years = _.uniq(_.pluck(this.geoData, 'Year')).sort();
+    this.currentYear = this.years[0];
+
+    //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+    this.timeSeries = _.pluck(this.geoData, 'timeseries');
+    this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
+    this.unit = _.pluck(this.geoData, 'Units');
+    this.unitName = translations.t(this.unit[this.unit.length -1]);
+    //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
   }
 
   Plugin.prototype = {
+
+    // Add time series to GeoJSON data and normalize the name and geocode.
+    prepareGeoJson: function(geoJson, idProperty, nameProperty) {//prepareGeoJson: function(geoJson, idProperty, nameProperty, cat, exp) { //--------------------------------added cat & exp
+      var geoData = this.geoData;
+      geoJson.features.forEach(function(feature) {
+        var geocode = feature.properties[idProperty];
+        var name = feature.properties[nameProperty];
+
+        var records = _.where(geoData, { GeoCode: geocode });
+
+        //var records = _.where(geoData, { GeoCode: geocode, cat: exp });
+        records.forEach(function(record) {
+          // Add the Year data into the properties.
+          feature.properties[record.Year] = record.Value;
+        });
+
+        // Next normalize the geocode and name.
+        feature.properties.name = translations.t(name);
+        feature.properties.geocode = geocode;
+        delete feature.properties[idProperty];
+        delete feature.properties[nameProperty];
+      });
+      return geoJson;
+    },
 
     // Zoom to a feature.
     zoomToFeature: function(layer) {
@@ -162,8 +211,8 @@
 
     // Get the data from a feature's properties, according to the current year.
     getData: function(props) {
-      if (props.values && props.values.length && props.values[this.currentDisaggregation][this.currentYear]) {
-        return props.values[this.currentDisaggregation][this.currentYear];
+      if (props[this.currentYear]) {
+        return props[this.currentYear];
       }
       return false;
     },
@@ -177,12 +226,6 @@
       else {
         return this.options.noValueColor;
       }
-    },
-
-    // Get the (long) URL of a geojson file, given a particular subfolder.
-    getGeoJsonUrl: function(subfolder) {
-      var fileName = this.indicatorId + '.geojson';
-      return [opensdg.remoteDataBaseUrl, 'geojson', subfolder, fileName].join('/');
     },
 
     // Initialize the map itself.
@@ -199,6 +242,12 @@
       this.staticLayers = new ZoomShowHide();
       this.staticLayers.addTo(this.map);
 
+      // Add zoom control.
+      this.map.addControl(L.Control.zoomHome());
+
+      // Add full-screen functionality.
+      this.map.addControl(new L.Control.Fullscreen());
+
       // Add scale.
       this.map.addControl(L.control.scale({position: 'bottomright'}));
 
@@ -209,14 +258,37 @@
       // Because after this point, "this" rarely works.
       var plugin = this;
 
-      // Below we'll be figuring out the min/max values and available years.
-      var minimumValues = [],
-        maximumValues = [],
-        availableYears = [];
+      // Add the year slider.
+      this.map.addControl(L.Control.yearSlider({
+        years: this.years,
+        yearChangeCallback: function(e) {
+          plugin.currentYear = new Date(e.time).getFullYear();
+          plugin.updateColors();
+          plugin.selectionLegend.update();
+
+        }
+      }));
+
+      //---#7 addMapboxWordmark---start-----------------------------------------------------------------------------------------
+      //var logo = L.control({position: 'bottomleft'});
+      //logo.onAdd = function (map) {
+        //var div = L.DomUtil.create('div', 'logo');
+        //div.innerHTML = '<a href="https://mapbox.com"> <img src="https://g205sdgs.github.io/sdg-indicators/public/mapbox-logo-white.png"/ width=140 height=30> </a>'
+        //return div;
+      //};
+      //logo.addTo(this.map);
+      //---#7 addMapboxWordmark---stop-----------------------------------------------------------------------------------------
+
+      // Add the selection legend.
+      this.selectionLegend = L.Control.selectionLegend(plugin);
+      this.map.addControl(this.selectionLegend);
+
+      // Add the download button.
+      this.map.addControl(L.Control.downloadGeoJson(plugin));
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
-        return $.getJSON(plugin.getGeoJsonUrl(item.subfolder));
+        return $.getJSON(item.serviceUrl);
       });
       $.when.apply($, geoURLs).done(function() {
 
@@ -247,7 +319,10 @@
             plugin.staticLayers.addLayer(staticLayer);
           }
           // Now go on to add the geoJson again as choropleth dynamic regions.
-          var geoJson = geoJsons[i][0]
+          var idProperty = plugin.mapLayers[i].idProperty;
+          var nameProperty = plugin.mapLayers[i].nameProperty;
+          var geoJson = plugin.prepareGeoJson(geoJsons[i][0], idProperty, nameProperty);//-
+
           var layer = L.geoJson(geoJson, {
             style: plugin.options.styleNormal,
             onEachFeature: onEachFeature,
@@ -262,56 +337,12 @@
           layer.geoJsonObject = geoJson;
           // Add the layer to the ZoomShowHide group.
           plugin.dynamicLayers.addLayer(layer);
-          // Add a download button below the map.
-          var downloadLabel = translations.t(plugin.mapLayers[i].label)
-          var downloadButton = $('<a></a>')
-            .attr('href', plugin.getGeoJsonUrl(plugin.mapLayers[i].subfolder))
-            .attr('class', 'btn btn-primary btn-download')
-            .attr('title', translations.indicator.download_geojson_title + ' - ' + downloadLabel)
-            .text(translations.indicator.download_geojson + ' - ' + downloadLabel);
-          $(plugin.element).parent().append(downloadButton);
-
-          // Keep track of the minimums and maximums.
-          _.each(geoJson.features, function(feature) {
-            if (feature.properties.values && feature.properties.values.length) {
-              availableYears = availableYears.concat(Object.keys(feature.properties.values[0]));
-              minimumValues.push(_.min(Object.values(feature.properties.values[0])));
-              maximumValues.push(_.max(Object.values(feature.properties.values[0])));
-            }
-          });
         }
-        // Calculate the ranges of values, years and colors.
-        plugin.valueRange = [_.min(minimumValues), _.max(maximumValues)];
-        plugin.colorScale = chroma.scale(plugin.options.colorRange)
-          .domain(plugin.valueRange)
-          .classes(plugin.options.colorRange.length);
-        plugin.years = _.uniq(availableYears).sort();
-        plugin.currentYear = plugin.years[0];
 
-        // And we can now update the colors.
+
         plugin.updateColors();
 
-        // Add zoom control.
-        plugin.map.addControl(L.Control.zoomHome());
-
-        // Add full-screen functionality.
-        plugin.map.addControl(new L.Control.Fullscreen());
-
-        // Add the year slider.
-        plugin.map.addControl(L.Control.yearSlider({
-          years: plugin.years,
-          yearChangeCallback: function(e) {
-            plugin.currentYear = new Date(e.time).getFullYear();
-            plugin.updateColors();
-            plugin.selectionLegend.update();
-          }
-        }));
-
-        // Add the selection legend.
-        plugin.selectionLegend = L.Control.selectionLegend(plugin);
-        plugin.map.addControl(plugin.selectionLegend);
-
-        // Add the search feature.
+        // Now that we have layers, we can add the search feature.
         plugin.searchControl = new L.Control.Search({
           layer: plugin.getAllLayers(),
           propertyName: 'name',
@@ -335,11 +366,9 @@
 
         // The list of handlers to apply to each feature on a GeoJson layer.
         function onEachFeature(feature, layer) {
-          if (plugin.featureShouldDisplay(feature)) {
-            layer.on('click', clickHandler);
-            layer.on('mouseover', mouseoverHandler);
-            layer.on('mouseout', mouseoutHandler);
-          }
+          layer.on('click', clickHandler);
+          layer.on('mouseover', mouseoverHandler);
+          layer.on('mouseout', mouseoutHandler);
         }
         // Event handler for click/touch.
         function clickHandler(e) {
@@ -413,14 +442,6 @@
         }, 500);
       });
     },
-    featureShouldDisplay: function(feature) {
-      var display = true;
-      display = display && typeof feature.properties.name !== 'undefined';
-      display = display && typeof feature.properties.geocode !== 'undefined';
-      display = display && typeof feature.properties.values !== 'undefined';
-      display = display && typeof feature.properties.disaggregations !== 'undefined';
-      return display;
-    },
   };
 
   // A really lightweight plugin wrapper around the constructor,
@@ -432,4 +453,4 @@
       }
     });
   };
-})(jQuery);
+})(jQuery, L, chroma, window, document);

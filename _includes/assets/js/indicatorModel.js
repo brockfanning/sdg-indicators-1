@@ -13,7 +13,7 @@ var indicatorModel = function (options) {
   this.onFieldsStatusUpdated = new event(this);
   this.onFieldsCleared = new event(this);
   this.onSelectionUpdate = new event(this);
-  this.onStartValuesNeeded = new event(this);
+  this.onNoHeadlineData = new event(this);
 
   // json conversion:
   var convertJsonFormat = function(data) {
@@ -34,8 +34,7 @@ var indicatorModel = function (options) {
   this.country = options.country;
   this.indicatorId = options.indicatorId;
   this.shortIndicatorId = options.shortIndicatorId;
-  this.chartTitle = options.chartTitle,
-  this.chartTitles = options.chartTitles;
+  this.chartTitle = options.chartTitle;
   this.graphType = options.graphType;
   this.measurementUnit = options.measurementUnit;
   this.copyright = options.copyright;
@@ -52,9 +51,14 @@ var indicatorModel = function (options) {
   this.fieldValueStatuses = [];
   this.validParentsByChild = {};
   this.hasGeoData = false;
+  this.geoData = [];
+  this.geoCodeRegEx = options.geoCodeRegEx;
   this.showMap = options.showMap;
-  this.graphLimits = options.graphLimits;
-  this.stackedDisaggregation = options.stackedDisaggregation;
+
+  console.log("a", this.allowedFields);
+  console.log("b", this.selectedFields);
+  console.log("c", this.validParentsByChild);
+  console.log("d", this.data);
 
   // initialise the field information, unique fields and unique values for each field:
   (function initialise() {
@@ -69,6 +73,11 @@ var indicatorModel = function (options) {
 
     if(that.data[0].hasOwnProperty('GeoCode')) {
       that.hasGeoData = true;
+
+      // Year, GeoCode, Value
+      that.geoData = _.filter(that.data, function(dataItem) {
+        return dataItem.GeoCode;
+      });
     }
 
     if(that.data[0].hasOwnProperty('Units')) {
@@ -165,11 +174,6 @@ var indicatorModel = function (options) {
       return item;
     });
 
-    // Remove anything without a value (allowing for zero as a value).
-    that.data = _.filter(that.data, function(item) {
-      return item['Value'] || item['Value'] === 0;
-    });
-
     that.datasetObject = {
       fill: false,
       pointHoverRadius: 5,
@@ -189,9 +193,58 @@ var indicatorModel = function (options) {
     that.footerFields = _.pick(that.footerFields, _.identity);
   }());
 
-  // use custom colors
-  var colors = opensdg.chartColors(this.indicatorId);
-
+  //var headlineColor = '777777';
+  if (this.indicatorId.includes('_1-')){
+    var colors = ['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'];
+  }
+  else if(this.indicatorId.includes('_2-')){
+    var colors = ['e5b735', '896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'];
+  }
+  else if(this.indicatorId.includes('_3-')){
+    var colors = ['4c9f38', '2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'];
+  }
+  else if(this.indicatorId.includes('_4-')){
+    var colors = ['c5192d', '760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'];
+  }
+  else if(this.indicatorId.includes('_5-')){
+    var colors = ['ff3a21', 'b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'];
+  }
+  else if(this.indicatorId.includes('_6-')){
+    var colors = ['26bde2', '167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'];
+  }
+  else if(this.indicatorId.includes('_7-')){
+    var colors = ['fcc30b', '977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'];
+  }
+  else if(this.indicatorId.includes('_8-')){
+    var colors = ['a21942', '610f27', 'c7758d', '610F28', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'];
+  }
+  else if(this.indicatorId.includes('_9-')){
+    var colors = ['fd6925', '973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'];
+  }
+  else if(this.indicatorId.includes('_10-')){
+    var colors = ['dd1367', '840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'd5358b', '580729', 'f1a0c2'];
+  }
+  else if(this.indicatorId.includes('_11-')){
+    var colors = ['fd9d24', '653e0e', 'fed7a7', 'b16d19', 'fdba65', 'b14a1e', 'fd976b', '000000', 'fed2bf'];
+  }
+  else if(this.indicatorId.includes('_12-')){
+    var colors = ['c9992d', '785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'];
+  }
+  else if(this.indicatorId.includes('_13-')){
+    var colors = ['3f7e44', '254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'];
+  }
+  else if(this.indicatorId.includes('_14-')){
+    var colors = ['0a97d9', '065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'];
+  }
+  else if(this.indicatorId.includes('_15-')){
+    var colors = ['56c02b', '337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'];
+  }
+  else if(this.indicatorId.includes('_16-')){
+    var colors = ['00689d', '00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'];
+  }
+  else if(this.indicatorId.includes('_17-')){
+    var colors = ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656'];
+  };
   var headlineColor =colors[0];
   //SDG goal colors
   //['e5243b', 'e5b735', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367'];
@@ -288,17 +341,8 @@ var indicatorModel = function (options) {
     });
   };
 
-  this.updateChartTitle = function() {
-    // We only need to change anything if this indicator has multiple titles.
-    if (that.chartTitles && that.chartTitles.length > 0) {
-      var chartTitle = _.findWhere(that.chartTitles, { unit: that.selectedUnit });
-      that.chartTitle = (chartTitle) ? chartTitle.title : that.chartTitles[0].title;
-    }
-  }
-
   this.updateSelectedUnit = function(selectedUnit) {
     this.selectedUnit = selectedUnit;
-    this.updateChartTitle();
 
     // if fields are dependent on the unit, reset:
     this.getData({
@@ -362,14 +406,17 @@ var indicatorModel = function (options) {
         unitsChangeSeries: false
       }),
       fields = this.selectedFields,
+      selectedFieldTypes = _.pluck(fields, 'field'),
       datasets = [],
       that = this,
+      seriesData = [],
       headlineTable = undefined,
       datasetIndex = 0,
 
       getCombinationDescription = function(combination) {
         return _.map(Object.keys(combination), function(key) {
           return translations.t(combination[key]);
+          //return key + ' ' + combination[key];
         }).join(', ');
       },
 
@@ -397,29 +444,8 @@ var indicatorModel = function (options) {
             return clonedColors[datasetIndex - 1];
           }
         }
-      },
 
-      getBackground = function(datasetIndex) {
-        var color = getBackgroundColor(datasetIndex);
-        // offset if there is no headline data:
-        if(!this.hasHeadline) {
-          datasetIndex += 1;
-        }
-        if (datasetIndex > colors.length) {
-          color = getBackgroundPattern(color);
-        }
-        return color;
-      },
-
-      getBackgroundColor = function(datasetIndex) {
-        return '#' + getColor(datasetIndex);
-      },
-
-      getBackgroundPattern = function(color) {
-        if (window.pattern && typeof window.pattern.draw === 'function') {
-          return window.pattern.draw('diagonal', color);
-        }
-        return color;
+        return datasetIndex === 0 ? headlineColor : colors[datasetIndex];
       },
 
       getBorderDash = function(datasetIndex) {
@@ -427,16 +453,22 @@ var indicatorModel = function (options) {
         if(!this.hasHeadline) {
           datasetIndex += 1;
         }
+
+        // 0 -
         // the first dataset is the headline:
         return datasetIndex > colors.length ? [5, 5] : undefined;
       },
+      convertToDataset = function (data, combinationDescription /*field, fieldValue*/) {
+        // var fieldIndex = field ? _.findIndex(that.selectedFields, function (f) {
+        //     return f === field;
+        //   }) : undefined,
 
-      convertToDataset = function (data, combinationDescription, combination) {
-        var ds = _.extend({
+        var fieldIndex,
+          ds = _.extend({
 
             label: combinationDescription ? combinationDescription : translations.data.total, //that.country,
             borderColor: '#' + getColor(datasetIndex),
-            backgroundColor: getBackground(datasetIndex),
+            backgroundColor: '#' + getColor(datasetIndex),
             pointBorderColor: '#' + getColor(datasetIndex),
             borderDash: getBorderDash(datasetIndex),
             data: _.map(that.years, function (year) {
@@ -457,9 +489,11 @@ var indicatorModel = function (options) {
       fields = [].concat(fields);
     }
 
-    var matchedData = that.data;
+    var isSingleValueSelected = function() { return that.selectedFields.length === 1 && that.selectedFields[0].values.length === 1; },
+        matchedData = that.data;
 
     // filter the data:
+    //if(!isSingleValueSelected()) {
     if(that.selectedUnit) {
       matchedData = _.where(matchedData, { Units: that.selectedUnit});
     }
@@ -522,7 +556,7 @@ var indicatorModel = function (options) {
     var combinations = this.getCombinationData(this.selectedFields);
 
     var filteredDatasets = [];
-
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
     _.each(combinations, function(combination) {
       var filtered = _.filter(matchedData, function(dataItem) {
         var matched = true;
@@ -537,8 +571,7 @@ var indicatorModel = function (options) {
         // but some combinations may not have any data:
         filteredDatasets.push({
           data: filtered,
-          combinationDescription: getCombinationDescription(combination),
-          combination: combination,
+          combinationDescription: getCombinationDescription(combination)
         });
       }
     });
@@ -551,7 +584,7 @@ var indicatorModel = function (options) {
 
     _.chain(filteredDatasets)
       .sortBy(function(ds) { return ds.combinationDescription; })
-      .each(function(ds) { datasets.push(convertToDataset(ds.data, ds.combinationDescription, ds.combination)); });
+      .each(function(ds) { datasets.push(convertToDataset(ds.data, ds.combinationDescription)); });
 
     // convert datasets to tables:
     var selectionsTable = {
@@ -564,8 +597,6 @@ var indicatorModel = function (options) {
       })));
     });
 
-    this.updateChartTitle();
-
     this.onDataComplete.notify({
       datasetCountExceedsMax: datasetCountExceedsMax,
       datasets: datasetCountExceedsMax ? datasets.slice(0, maxDatasetCount) : datasets,
@@ -575,10 +606,7 @@ var indicatorModel = function (options) {
       indicatorId: this.indicatorId,
       shortIndicatorId: this.shortIndicatorId,
       selectedUnit: this.selectedUnit,
-      footerFields: this.footerFields,
-      graphLimits: this.graphLimits,
-      stackedDisaggregation: this.stackedDisaggregation,
-      chartTitle: this.chartTitle
+      footerFields: this.footerFields
     });
 
     if(options.initial || options.unitsChangeSeries) {
@@ -614,9 +642,11 @@ var indicatorModel = function (options) {
         allowedFields: this.allowedFields,
         edges: this.edgesData,
         hasGeoData: this.hasGeoData,
-        indicatorId: this.indicatorId,
+        geoData: this.geoData,
+        geoCodeRegEx: this.geoCodeRegEx,
         showMap: this.showMap,
         //---#1 GoalDependendMapColor---start------------------------------------------
+        indicatorId: this.indicatorId,
         title: this.chartTitle,
         //---#1 GoalDependendMapColor---stop-------------------------------------------
       });
@@ -628,10 +658,28 @@ var indicatorModel = function (options) {
       });
     }
 
-    if ((options.initial || options.unitsChangeSeries) && (this.startValues || !this.hasHeadline)) {
-      var startingFieldSelections = this.startValues,
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    if((options.initial || options.unitsChangeSeries) && !this.hasHeadline) {
+      // if there is no initial data, select some:
+
+      var minimumFieldSelections = {},
           forceUnit = false;
-      if (!startingFieldSelections) {
+      // First, do we have some already pre-configured from data_start_values?
+      if (this.startValues) {
+        // We need to confirm that these values are valid, and pair them up
+        // with disaggregation categories. The value, at this point, is a string
+        // which we assume to be pipe-delimited.
+        var valuesToLookFor = this.startValues.split('|');
+        // Match up each field value with a field.
+        _.each(this.fieldItemStates, function(fieldItem) {
+          _.each(fieldItem.values, function(fieldValue) {
+            if (_.contains(valuesToLookFor, fieldValue.value)) {
+              minimumFieldSelections[fieldItem.field] = fieldValue.value;
+            }
+          });
+        });
+      }
+      if (_.size(minimumFieldSelections) == 0) {
         // If we did not have any pre-configured start values, we calculate them.
         // We have to decide what filters will be selected, and in some cases it
         // may need to be multiple filters. So we find the smallest row (meaning,
@@ -652,23 +700,13 @@ var indicatorModel = function (options) {
         // But actually we want the top-priority sort to be the "size" of the
         // rows. In other words we want the row with the fewest number of fields.
         fieldData = _.sortBy(fieldData, function(item) { return _.size(item); });
-        // Convert to an array of objects with 'field' and 'value' keys.
-        startingFieldSelections = _.map(_.keys(fieldData[0]), function(key) {
-          return {
-            field: key,
-            value: fieldData[0][key]
-          };
-        });
-      }
-
-      var startingUnit = _.findWhere(startingFieldSelections, { field: 'Units' });
-      if (startingUnit) {
-        // If one of the starting field selections is a Unit, remember for later
-        // and remove it from the list.
-        forceUnit = startingUnit.value;
-        startingFieldSelections = _.filter(startingFieldSelections, function(item) {
-          return item.field !== 'Units';
-        });
+        minimumFieldSelections = fieldData[0];
+        // If we ended up finding something with "Units", we need to remove it
+        // before continuing and then remember to force it later.
+        if ('Units' in minimumFieldSelections) {
+          forceUnit = minimumFieldSelections['Units'];
+          delete minimumFieldSelections['Units'];
+        }
       }
 
       // Ensure that we only force a unit on the initial load.
@@ -676,10 +714,10 @@ var indicatorModel = function (options) {
         forceUnit = false;
       }
 
-      // Now that we are all sorted, we notify the view that there needs to be
-      // starting values, and pass along the info.
-      this.onStartValuesNeeded.notify({
-        startingFieldSelections: startingFieldSelections,
+      // Now that we are all sorted, we notify the view that there is no headline,
+      // and pass along the first row as the minimum field selections.
+      this.onNoHeadlineData.notify({
+        minimumFieldSelections: minimumFieldSelections,
         forceUnit: forceUnit
       });
     }
