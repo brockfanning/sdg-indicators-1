@@ -5,7 +5,7 @@ layout: page
 ---
 Dieses Impressum gilt auch für unseren [Twitter-Account](https://twitter.com/destatis).
 
-##Herausgeber
+## Herausgeber
 <b>Herausgeber der unter dem Account destatis.de veröffentlichten Website ist das
 Statistische Bundesamt, vertreten durch den Präsidenten Dr. Georg Thiel</b>
 
@@ -36,7 +36,7 @@ Statistisches Bundesamt (Destatis)
 [GitHub](https://github.com/)
 
 
-##Haftungsausschluss
+## Haftungsausschluss
 
 Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt recherchiert und implementiert. Fehler im Bearbeitungsvorgang sind dennoch nicht auszuschließen. Hinweise und Korrekturen senden Sie uns bitte über unser [Kontaktformular](https://www.destatis.de/DE/Service/Kontakt/Kontakt.html).
 
@@ -44,7 +44,7 @@ Eine Haftung für die Richtigkeit, Vollständigkeit und Aktualität dieser Webse
 
 Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise ("externe Links") auf die von anderen Anbietern bereitgehaltenen Inhalte. Die fremden Inhalte stammen weder vom Statistischen Bundesamt noch hat das Statistische Bundesamt die Möglichkeit, den Inhalt von Seiten Dritter zu beeinflussen. Die Inhalte fremder Seiten, auf die das Statistische Bundesamt mittels Links hinweist, spiegeln nicht die Meinung des Statistischen Bundesamts wider, sondern dienen lediglich der Information und der Darstellung von Zusammenhängen. Das Statistische Bundesamt haftet nicht für fremde Inhalte, auf die es lediglich im oben genannten Sinne hinweist. Die Verantwortlichkeit liegt alleine bei dem Anbieter der Inhalte. Bei Nutzungsausfällen der Website wegen technischer oder organisatorischer Störungen bestehen keinerlei Ansprüche - gleich welcher Art - gegen das Statistische Bundesamt.
 
-##Datenschutz
+## Datenschutz
 
 Mit diesen Hinweisen kommen wir unseren Informationspflichten nach Artikel 13 der Datenschutz-Grundverordnung (DS-GVO) bei der Erhebung personenbezogener Daten nach.
 
@@ -53,14 +53,14 @@ Im Zusammenhang mit der Nutzung des Kontaktformulars, der Nutzung sozialer sozia
 
 Im Zuge der Weiterentwicklung unserer Webseiten können auch Änderungen dieser Datenschutzerklärung erforderlich werden. Daher empfehlen wir Ihnen, sich diese Erklärung regelmäßig durchzulesen.
 
-###Personenbezogene Daten
+### Personenbezogene Daten
 
 Personenbezogene Daten sind Informationen zu Ihrer Person, wie zum Beispiel Ihr Name, Adresse, Postanschrift oder auch Ihr Nutzerverhalten, wenn dies nicht anonymisiert wird. Informationen, die nicht mit Ihrer Identität in Verbindung gebracht werden, fallen nicht darunter.
 
 Ihre Daten werden dadurch erhoben, dass Sie uns diese mitteilen. Dabei beruht die Verarbeitung auf Ihrer Einwilligung. Hierbei kann es sich zum Beispiel um Daten handeln, die Sie in ein Kontaktformular eingeben.
 
 
-###Soziale Medien
+### Soziale Medien
 
 Das Statistische Bundesamt nutzt den Kurznachrichtendienst Twitter.
 
@@ -71,7 +71,7 @@ Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen
 Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt Social Hub des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: 0049 (0)841 493 990-0; Fax: 0049 (0)841 493 990-10; Email: hallo@socialhub.io; Web: www.socialhub.io
 
 
-###Anfragen und Bestellungen über unseren Kunden- und Nutzerservice
+### Anfragen und Bestellungen über unseren Kunden- und Nutzerservice
 
 Neben der rein informatorischen Nutzung unserer Website bieten wir verschiedene Leistungen an, die Sie bei Interesse nutzen können. Dazu müssen Sie in der Regel weitere personen­bezogene Daten angeben, die wir zur Erbringung der jeweiligen Leistung nutzen und für die die zuvor genannten Grundsätze zur Daten­verarbeitung gelten.
 
@@ -80,22 +80,22 @@ Die von Ihnen im Kontaktformular angegebenen und von uns damit erhobenen persone
 Darüber hinaus halten wir Ihre Daten zum Zwecke der Kundenpflege (also etwa zu optimalen Bearbeitung weiterer Anfragen) oder die Durchführung von Kundenbefragungen vor. Die Grundlage für die Verarbeitung Ihrer Daten zu diesen Zwecken ist die von Ihnen abgegebene Einwilligung gemäß Artikel 6 Absatz 1 lit. a) DS-GVO. Diese Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.
 
 
-###Anfragen per E-Mail oder Telefon
+### Anfragen per E-Mail oder Telefon
 
 Wenn Sie Ihre Anfragen per E-Mail oder Telefon an uns richten, werden Ihre Angaben zur Beantwortung der Anfrage in unserem Kundenmanagement gespeichert. Dies erfolgt in Erfüllung unserer öffentlichen Aufgaben nach Artikel 6 Absatz 1 lit. e) DS-GVO i. V. m. § 3 BDSG. Sollte eine Anfrage kostenpflichtig sein, werden Sie darauf per E-Mail hingewiesen, es sei denn Ihre Anfrage enthält im Einzelfall bereits eine konkrete Bestellung mit den erforderlichen Vertragsbestandteilen. Die Verarbeitung basiert sodann auf Artikel 6 Absatz 1 lit. b) DS-GVO. Ihnen stehen ebenso die jeweils einschlägigen unten stehenden Rechte zu.
 
 
-###Minderjährigenschutz
+### Minderjährigenschutz
 
 Personen unter 18 Jahren sollten ohne Zustimmung der Eltern oder Erziehungsberechtigten keine personenbezogenen Daten an uns übermitteln. Wir fordern keine personenbezogenen Daten von Kindern und Jugendlichen an. Wissentlich sammeln wir solche Daten nicht und geben sie auch nicht weiter.
 
 
-###Links zu Webseiten anderer Anbieter
+### Links zu Webseiten anderer Anbieter
 
 Unser Online-Angebot enthält Links zu Webseiten anderer Anbieter. Wir haben keinen Einfluss darauf, dass diese Anbieter die Datenschutzbestimmungen einhalten.
 
 
-###Ihre Rechte
+### Ihre Rechte
 
 Sie haben nach der Datenschutz-Grundverordnung hinsichtlich der Sie betreffenden personenbezogenen Daten gegenüber uns bei Vorliegen der Voraussetzungen die folgenden Rechte auf:
 
@@ -109,7 +109,7 @@ Sie haben nach der Datenschutz-Grundverordnung hinsichtlich der Sie betreffenden
 Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen vor, haben Sie zudem das Recht, sich bei der Datenschutzaufsichtsbehörde -Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit – Husarenstraße 30- 53117 Bonn- über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren (Artikel 77 DS-GVO).
 
 
-###Kontaktdaten des Verantwortlichen
+### Kontaktdaten des Verantwortlichen
 
 Statistisches Bundesamt - Gustav-Stresemann-Ring 11 - D-65189 Wiesbaden – vertreten durch den [Präsidenten](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_praesident.html?nn=206200).
 Kontaktdaten des/der behördlichen Datenschutzbeauftragten
@@ -121,7 +121,7 @@ Telefon: +49 611 75 3929
 datenschutzbeauftragter@destatis.de
 
 
-##Kontaktaufnahme
+## Kontaktaufnahme
 
 Kommunikation via E-Mail kann Sicherheitslücken aufweisen. Beispielsweise können E-Mails auf ihrem Weg an die Mitarbeiter des Statistischen Bundesamts von versierten Internet-Nutzern aufgehalten, eingesehen und auch manipuliert werden. Daher sind über E-Mail ausnahmslos nur informelle Kontakte möglich. Rechtsverbindliche Erklärungen können auf diesem Wege derzeit nicht abgegeben werden. Sollten wir eine E-Mail von Ihnen erhalten, so gehen wir davon aus, dass wir zu einer Beantwortung per E-Mail berechtigt sind. Ansonsten müssen Sie ausdrücklich auf eine andere Art der Kommunikation verweisen.
 
