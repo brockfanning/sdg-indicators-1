@@ -115,8 +115,8 @@ Kontaktdaten des/der behördlichen Datenschutzbeauftragten
 
 Da uns Ihr Vertrauen wichtig ist, möchten wir Ihnen jederzeit Rede und Antwort bezüglich der Verarbeitung Ihrer personenbezogenen Daten stehen. Wenn Sie Fragen haben, die diese Datenschutzerklärung nicht beantworten konnte, wenden Sie sich bitte jederzeit an die behördliche Datenschutzbeauftragte.
 
-Datenschutzbeauftragte im Statistischen Bundesamt, 65180 Wiesbaden
-Telefon: +49 611 75 3929
+Datenschutzbeauftragte im Statistischen Bundesamt, 65180 Wiesbaden<br>
+Telefon: +49 611 75 3929<br>
 datenschutzbeauftragter@destatis.de
 
 
@@ -124,7 +124,7 @@ datenschutzbeauftragter@destatis.de
 
 Kommunikation via E-Mail kann Sicherheitslücken aufweisen. Beispielsweise können E-Mails auf ihrem Weg an die Mitarbeiter des Statistischen Bundesamts von versierten Internet-Nutzern aufgehalten, eingesehen und auch manipuliert werden. Daher sind über E-Mail ausnahmslos nur informelle Kontakte möglich. Rechtsverbindliche Erklärungen können auf diesem Wege derzeit nicht abgegeben werden. Sollten wir eine E-Mail von Ihnen erhalten, so gehen wir davon aus, dass wir zu einer Beantwortung per E-Mail berechtigt sind. Ansonsten müssen Sie ausdrücklich auf eine andere Art der Kommunikation verweisen.
 
-Kommunikation über De-Mail
+Kommunikation über De-Mail<br>
 In Abgrenzung zur üblichen E-Mail ermöglicht De-Mail eine rechtssichere Kommunikation. Bürgerinnen und Bürger sowie Unternehmen, die über ein De-Mail-Postfach verfügen, können über das Postfach poststelle@destatis.de-mail.de rechtswirksam mit dem Statistischen Bundesamt kommunizieren.
 
 
