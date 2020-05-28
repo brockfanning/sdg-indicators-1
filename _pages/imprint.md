@@ -6,32 +6,31 @@ layout: page
 Dieses Impressum gilt auch für unseren [Twitter-Account](https://twitter.com/destatis).
 
 ## Herausgeber
-<b>Herausgeber der unter dem Account destatis.de veröffentlichten Website ist das
-Statistische Bundesamt, vertreten durch den Präsidenten Dr. Georg Thiel</b>
-
+<b>Herausgeber der Website ist das Statistische Bundesamt, vertreten durch den Präsidenten Dr. Georg Thiel</b>
+<br>
 <b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundeministerium des Innern, für Bau und Heimat
-
+<br>
 Statistisches Bundesamt
 Gustav-Stresemann-Ring 11
 65189 Wiesbaden
-
+<br>
 Postfach-Anschrift:
 65180 Wiesbaden
-
+<br>
 [Kontaktformular](https://www.destatis.de/DE/Service/Kontakt/Kontakt.html)
-
+<br>
 Telefon: +49 (0)611 75-2405
 Telefax: +49 (0)611 72 40 00
-
+<br>
 E-Mail: info@destatis.de
 DE-Mail: poststelle@destatis.de-mail.de
-
+<br>
 <b>Redaktion:</b>
 E-Mail: sdg-indicators@destatis.de
-
+<br>
 <b>Inhalte/Produktion:</b>
 Statistisches Bundesamt (Destatis)
-
+<br>
 <b>Hosting:</b>
 [GitHub](https://github.com/)
 
