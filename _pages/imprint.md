@@ -47,7 +47,7 @@ Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise ("exte
 
 Mit diesen Hinweisen kommen wir unseren Informationspflichten nach Artikel 13 der Datenschutz-Grundverordnung (DS-GVO) bei der Erhebung personenbezogener Daten nach.
 
-Beim Zugriff auf die Nationale Berichtsplattform werden vom Statistischen Bundesamt keine personenbezogene Daten erhoben, Sie nutzen allerdings die Dienste des Anbieters GitHub. Die Datenschutzerklärung von GitHub finden Sie unter [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement). Als Webseiten-Besucher werden technische Informationen, auch die IP-Adresse, erfasst: diese kann ein personenbezogenes Datum sein. Personenbezogene Daten werden erfasst, wenn Sie einen Account anlegen.
+Beim Zugriff auf die Nationale Berichtsplattform werden vom Statistischen Bundesamt keine personenbezogenen Daten erhoben, Sie nutzen allerdings die Dienste des Anbieters GitHub. Die Datenschutzerklärung von GitHub finden Sie unter [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement). Als Webseiten-Besucher werden technische Informationen, auch die IP-Adresse, erfasst: diese kann ein personenbezogenes Datum sein. Personenbezogene Daten werden erfasst, wenn Sie einen Account anlegen.
 Im Zusammenhang mit der Nutzung des Kontaktformulars, der Nutzung sozialer sozialen Medien sowie des weiteren Internet-Angebotes des Statistischen Bundesamtes gilt die Datenschutzerklärung unter [https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html](https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html).
 
 Im Zuge der Weiterentwicklung unserer Webseiten können auch Änderungen dieser Datenschutzerklärung erforderlich werden. Daher empfehlen wir Ihnen, sich diese Erklärung regelmäßig durchzulesen.
@@ -63,9 +63,9 @@ Ihre Daten werden dadurch erhoben, dass Sie uns diese mitteilen. Dabei beruht di
 
 Das Statistische Bundesamt nutzt den Kurznachrichtendienst Twitter.
 
-Diese Funktionen werden angeboten durch die Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. Durch das Benutzen von Twitter und der Funktion "Re-Tweet" werden die von Ihnen besuchten Websites mit Ihrem Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter übertragen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Twitter unter: Version: https://twitter.com/privacy.
+Diese Funktionen werden angeboten durch die Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. Durch das Benutzen von Twitter und der Funktion "Re-Tweet" werden die von Ihnen besuchten Websites mit Ihrem Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter übertragen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Twitter unter: Version: [https://twitter.com/privacy](https://twitter.com/privacy).
 
-Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter https://twitter.com/account/settings ändern.
+Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter [https://twitter.com/account/settings](https://twitter.com/account/settings) ändern.
 
 Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt Social Hub des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: 0049 (0)841 493 990-0; Fax: 0049 (0)841 493 990-10; Email: hallo@socialhub.io; Web: www.socialhub.io
 
@@ -111,7 +111,8 @@ Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen
 ### Kontaktdaten des Verantwortlichen
 
 Statistisches Bundesamt - Gustav-Stresemann-Ring 11 - D-65189 Wiesbaden – vertreten durch den [Präsidenten](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_praesident.html?nn=206200).
-Kontaktdaten des/der behördlichen Datenschutzbeauftragten
+
+### Kontaktdaten des/der behördlichen Datenschutzbeauftragten
 
 Da uns Ihr Vertrauen wichtig ist, möchten wir Ihnen jederzeit Rede und Antwort bezüglich der Verarbeitung Ihrer personenbezogenen Daten stehen. Wenn Sie Fragen haben, die diese Datenschutzerklärung nicht beantworten konnte, wenden Sie sich bitte jederzeit an die behördliche Datenschutzbeauftragte.
 
