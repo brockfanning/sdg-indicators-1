@@ -12,7 +12,7 @@ baseurl: "/sdg-indicators" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: staging
-remotedatabaseurl: "https://G205SDGs.github.io/sdg-data"
+remote_data_prefix: "https://G205SDGs.github.io/sdg-data"
 # permalink: /news/:year/:month/:day/:title.html
 
 jekyll_get_json:
@@ -103,7 +103,7 @@ plugins:
   - jekyll-open-sdg-plugins
 
 # Use a remote Jekyll theme.
-remote_theme: open-sdg/open-sdg@0.9.4
+remote_theme: open-sdg/open-sdg@1.0.0-beta4
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
 
 custom_css:
