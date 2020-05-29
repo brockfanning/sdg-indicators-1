@@ -74,7 +74,6 @@ collections:
 
 # The list of languages that are translated. The first one is the default.
 languages:
-    - de
     - en
 
 # Menu
