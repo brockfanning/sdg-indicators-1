@@ -6,10 +6,11 @@
  */
 (function () {
   "use strict";
+
   if (typeof L === 'undefined') {
     return;
   }
-  
+
   L.Control.SelectionLegend = L.Control.extend({
 
     initialize: function(plugin) {
@@ -33,48 +34,30 @@
     },
 
     onAdd: function() {
-      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-      //var controlTpl = '' +
-      var controlTpl = '<span id="mapHead">{title}</span>' +
-      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
+      var controlTpl = '' +
         '<ul id="selection-list"></ul>' +
-        '<div class="legend-swatches">' + //bar
+        '<div class="legend-swatches">' +
           '{legendSwatches}' +
         '</div>' +
-        '<div class="legend-values">' + //values
+        '<div class="legend-values">' +
           '<span class="legend-value left">{lowValue}</span>' +
           '<span class="arrow left"></span>' +
           '<span class="legend-value right">{highValue}</span>' +
           '<span class="arrow right"></span>' +
         '</div>';
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
-      //---#1 GoalDependendMapColor---start---------------------------------------------------------------------------------------------------------------
-      //var swatchWidth = 100 / this.plugin.options.colorRange.length;
-      var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
-      //var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
-      var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) {
-      //---#1 GoalDependendMapColor---stop----------------------------------------------------------------------------------------------------------------
+      var swatchWidth = 100 / this.plugin.options.colorRange.length;
+      var swatches = this.plugin.options.colorRange.map(function(swatchColor) {
         return L.Util.template(swatchTpl, {
           width: swatchWidth,
           color: swatchColor,
         });
       }).join('');
       var div = L.DomUtil.create('div', 'selection-legend');
-
-      //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-      var headline = this.plugin.timeSeriesName
-      headline += ', <br>' + this.plugin.unitName;
-      //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
         legendSwatches: swatches,
-
-        //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-        title: headline,
-        //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-
       });
       return div;
     },
@@ -84,7 +67,7 @@
       var selectionTpl = '' +
         '<li class="{valueStatus}">' +
           '<span class="selection-name">{name}</span>' +
-          //'<span class="selection-value" style="left: {percentage}%;">{value}</span>' +
+          '<span class="selection-value" style="left: {percentage}%;">{value}</span>' +
           '<span class="selection-bar" style="width: {percentage}%;"></span>' +
           '<i class="selection-close fa fa-remove"></i>' +
         '</li>';

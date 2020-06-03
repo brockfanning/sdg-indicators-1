@@ -2,11 +2,12 @@
  * TODO:
  * Integrate with high-contrast switcher.
  */
- (function($) {
+(function($) {
 
-   if (typeof L === 'undefined') {
-     return;
-   }
+  if (typeof L === 'undefined') {
+    return;
+  }
+
   // Create the defaults once
   var defaults = {
 
@@ -19,7 +20,7 @@
     },
     // Zoom limits.
     minZoom: 5,
-    maxZoom: 15,
+    maxZoom: 10,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
     noValueColor: '#f0f0f0',
@@ -43,6 +44,7 @@
       dashArray: '5,5',
     },
   };
+
   // Defaults for each map layer.
   var mapLayerDefaults = {
     min_zoom: 0,
@@ -59,9 +61,6 @@
     this.mapLayers = [];
     this.indicatorId = options.indicatorId;
     this.currentDisaggregation = 0;
-    //---#1 GoalDependendMapColor---start--------------------------------------
-    this.goalNr = options.goal;
-    //---#1 GoalDependendMapColor---stop---------------------------------------
 
     // Require at least one geoLayer.
     if (!options.mapLayers || !options.mapLayers.length) {
@@ -187,13 +186,14 @@
 
     // Initialize the map itself.
     init: function() {
+
       // Create the map.
       this.map = L.map(this.element, {
         minZoom: this.options.minZoom,
         maxZoom: this.options.maxZoom,
         zoomControl: false,
       });
-      this.map.setView([51.9, 10.26],0);
+      this.map.setView([0, 0], 0);
       this.dynamicLayers = new ZoomShowHide();
       this.dynamicLayers.addTo(this.map);
       this.staticLayers = new ZoomShowHide();
@@ -201,7 +201,6 @@
 
       // Add scale.
       this.map.addControl(L.control.scale({position: 'bottomright'}));
-
 
       // Add tile imagery.
       L.tileLayer(this.options.tileURL, this.options.tileOptions).addTo(this.map);
@@ -211,8 +210,8 @@
 
       // Below we'll be figuring out the min/max values and available years.
       var minimumValues = [],
-        maximumValues = [],
-        availableYears = [];
+          maximumValues = [],
+          availableYears = [];
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
@@ -262,10 +261,12 @@
           layer.geoJsonObject = geoJson;
           // Add the layer to the ZoomShowHide group.
           plugin.dynamicLayers.addLayer(layer);
+
           // Add a download button below the map.
           var downloadLabel = translations.t(plugin.mapLayers[i].label)
           var downloadButton = $('<a></a>')
             .attr('href', plugin.getGeoJsonUrl(plugin.mapLayers[i].subfolder))
+            .attr('download', '')
             .attr('class', 'btn btn-primary btn-download')
             .attr('title', translations.indicator.download_geojson_title + ' - ' + downloadLabel)
             .text(translations.indicator.download_geojson + ' - ' + downloadLabel);
@@ -280,6 +281,7 @@
             }
           });
         }
+
         // Calculate the ranges of values, years and colors.
         plugin.valueRange = [_.min(minimumValues), _.max(maximumValues)];
         plugin.colorScale = chroma.scale(plugin.options.colorRange)
@@ -325,7 +327,6 @@
           },
           autoCollapse: true,
         });
-
         plugin.map.addControl(plugin.searchControl);
         // The search plugin messes up zoomShowHide, so we have to reset that
         // with this hacky method. Is there a better way?
@@ -413,6 +414,7 @@
         }, 500);
       });
     },
+
     featureShouldDisplay: function(feature) {
       var display = true;
       display = display && typeof feature.properties.name !== 'undefined';

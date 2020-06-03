@@ -73,71 +73,16 @@ var indicatorView = function (model, options) {
     }
 
     view_obj.createSelectionsTable(args);
+
     view_obj.updateChartTitle(args.chartTitle);
   });
 
-  this._model.onStartValuesNeeded.attach(function(sender, args) {
-    // Force a unit if necessary.
-    if (args && args.forceUnit) {
-      $('#units input[type="radio"]')
-        .filter('[value="' + args.forceUnit + '"]')
-        .first()
-        .click();
-    }
-    // Force particular minimum field selections if necessary. We have to delay
-    // this slightly to make it work...
-    if (args && args.startingFieldSelections && args.startingFieldSelections.length) {
-      function getClickFunction(fieldToSelect, fieldValue) {
-        return function() {
-          $('#fields .variable-options input[type="checkbox"]')
-            .filter('[data-field="' + fieldToSelect + '"]')
-            .filter('[value="' + fieldValue + '"]')
-            .filter(':not(:checked)')
-            .first()
-            .click();
-        }
-      }
-      args.startingFieldSelections.forEach(function(selection) {
-              setTimeout(getClickFunction(selection.field, selection.value), 500);
-            });
-    }
-    else {
-      // Fallback behavior - just click on the first one, whatever it is.
-      // Also needs to be delayed...
-      setTimeout(function() {
-        $('#fields .variable-options :checkbox:eq(0)').trigger('click');
-      }, 500);
-    }
-  });
+  this._model.onFieldsComplete.attach(function(sender, args) {
+    view_obj.initialiseFields(args);
 
-  this._model.onSeriesComplete.attach(function(sender, args) {
-    view_obj.initialiseSeries(args);
-
-    //---#1 GoalDependendMapColor---start--------------------------
-    if (args.indicatorId.includes('_1-')){var goalNr = 0;}
-    else if (args.indicatorId.includes('_2-')) {var goalNr = 1;}
-    else if (args.indicatorId.includes('_3-')) {var goalNr = 2;}
-    else if (args.indicatorId.includes('_4-')) {var goalNr = 3;}
-    else if (args.indicatorId.includes('_5-')) {var goalNr = 4;}
-    else if (args.indicatorId.includes('_6-')) {var goalNr = 5;}
-    else if (args.indicatorId.includes('_7-')) {var goalNr = 6;}
-    else if (args.indicatorId.includes('_8-')) {var goalNr = 7;}
-    else if (args.indicatorId.includes('_9-')) {var goalNr = 8;}
-    else if (args.indicatorId.includes('_10-')) {var goalNr = 9;}
-    else if (args.indicatorId.includes('_11-')) {var goalNr = 10;}
-    else if (args.indicatorId.includes('_12-')) {var goalNr = 11;}
-    else if (args.indicatorId.includes('_13-')) {var goalNr = 12;}
-    else if (args.indicatorId.includes('_14-')) {var goalNr = 13;}
-    else if (args.indicatorId.includes('_15-')) {var goalNr = 14;}
-    else if (args.indicatorId.includes('_16-')) {var goalNr = 15;}
-    else if (args.indicatorId.includes('_17-')) {var goalNr = 16;}
-    //---#1 GoalDependendMapColor---stop---------------------------
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
-            //---#1 GoalDependendMapColor---start--------------------------
-            //view_obj._mapView.initialise(args.geoData, args.geoCodeRegEx);
-            view_obj._mapView.initialise(args.indicatorId, goalNr);
-            //---#1 GoalDependendMapColor---stop---------------------------
+      view_obj._mapView.initialise(args.indicatorId);
     }
   });
 
@@ -294,8 +239,8 @@ var indicatorView = function (model, options) {
     }
   }
 
-  this.initialiseSeries = function(args) {
-    if(args.series.length) {
+  this.initialiseFields = function(args) {
+    if(args.fields.length) {
       var template = _.template($("#item_template").html());
 
       if(!$('button#clear').length) {
@@ -303,15 +248,15 @@ var indicatorView = function (model, options) {
       }
 
       $('#fields').html(template({
-        series: args.series,
+        fields: args.fields,
         allowedFields: args.allowedFields,
         edges: args.edges
       }));
 
-      $(this._rootElement).removeClass('no-series');
+      $(this._rootElement).removeClass('no-fields');
 
     } else {
-      $(this._rootElement).addClass('no-series');
+      $(this._rootElement).addClass('no-fields');
     }
   };
 
@@ -331,19 +276,18 @@ var indicatorView = function (model, options) {
   };
 
   this.alterChartConfig = function(config, info) {
-      opensdg.chartConfigAlterations.forEach(function(callback) {
-        callback(config, info);
-      });
-    };
+    opensdg.chartConfigAlterations.forEach(function(callback) {
+      callback(config, info);
+    });
+  };
 
-    this.updateChartTitle = function(chartTitle) {
-      if (typeof chartTitle !== 'undefined') {
-        $('.chart-title').text(chartTitle);
-      }
+  this.updateChartTitle = function(chartTitle) {
+    if (typeof chartTitle !== 'undefined') {
+      $('.chart-title').text(chartTitle);
     }
+  }
 
   this.updatePlot = function(chartInfo) {
-
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
 
     if(chartInfo.selectedUnit) {
@@ -369,6 +313,7 @@ var indicatorView = function (model, options) {
 
     view_obj.updateChartDownloadButton(chartInfo.selectionsTable);
   };
+
 
 
   this.createPlot = function (chartInfo) {
@@ -417,7 +362,7 @@ var indicatorView = function (model, options) {
 
             _.each(chart.data.datasets, function(dataset, datasetIndex) {
               text.push('<li data-datasetindex="' + datasetIndex + '">');
-              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.backgroundColor + '">');
+              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
@@ -426,7 +371,6 @@ var indicatorView = function (model, options) {
             text.push('</ul>');
             return text.join('');
         },
-
         legend: {
           display: false
         },
@@ -475,7 +419,8 @@ var indicatorView = function (model, options) {
     $("#btnSave").click(function() {
       var filename = chartInfo.indicatorId + '.png',
           element = document.getElementById('chart-canvas'),
-          height = element.clientHeight + 25,
+          footer = document.getElementById('selectionChartFooter'),
+          height = element.clientHeight + 25 + ((footer) ? footer.clientHeight : 0),
           width = element.clientWidth + 25;
       var options = {
         // These options fix the height, width, and position.
@@ -612,11 +557,7 @@ var indicatorView = function (model, options) {
   };
 
   this.createSelectionsTable = function(chartInfo) {
-    //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
-    var tableUnit = (chartInfo.selectedUnit && !chartInfo.footerFields[translations.indicator.unit_of_measurement]) ? translations.t(chartInfo.selectedUnit) : '';
-    //this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
-    this.createTable(chartInfo.selectionsTable, tableUnit, chartInfo.indicatorId, '#selectionsTable', true);
-    //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
+    this.createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', true);
     this.createTableFooter('selectionTableFooter', chartInfo.footerFields, '#selectionsTable');
     this.createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#selectionsTable');
     this.createSourceButton(chartInfo.shortIndicatorId, '#selectionsTable');
@@ -712,11 +653,7 @@ var indicatorView = function (model, options) {
     }));
   }
 
-  //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
-  //this.createTable = function(table, indicatorId, el) {
-  this.createTable = function(table, tableUnit, indicatorId, el) {
-  //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
-
+  this.createTable = function(table, indicatorId, el) {
 
     options = options || {};
     var that = this,
@@ -738,10 +675,7 @@ var indicatorView = function (model, options) {
       var getHeading = function(heading, index) {
         var span = '<span class="sort" />';
         var span_heading = '<span>' + translations.t(heading) + '</span>';
-        //---#19 addUnitToTableHeaderIfNeeded---start---------------------------------------------------
-        //return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
-        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading + ((tableUnit == '') ? '' : ('<br>(' + tableUnit)+')');
-        //---#19 addUnitToTableHeaderIfNeeded---stop----------------------------------------------------
+        return (!index || heading.toLowerCase() == 'units') ? span_heading + span : span + span_heading;
       };
 
       table.headings.forEach(function (heading, index) {
