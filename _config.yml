@@ -111,3 +111,6 @@ goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
 
 custom_js:
   - /assets/js/custom.js
+
+graph_color_set: 'goal'
+graph_color_number: 9
