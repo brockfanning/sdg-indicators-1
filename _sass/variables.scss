@@ -12,9 +12,7 @@ $status-backgroundColor-inprogress: #f0ad4e;
 $status-backgroundColor-notstarted: #E27874;
 $status-backgroundColor-notapplicable: #B7B7B7;
 
-//$text-color: #333;
-//$color-dark: black;
-//$color-light: white;
-//$backgroundColor: green;
-//$link-color: #337ab7;
-//$footer-text-color: #f6b0b2;
+$status-color-complete: $text-color;
+$status-color-inprogress: $text-color;
+$status-color-notstarted: $text-color;
+$status-color-notapplicable: $text-color;
