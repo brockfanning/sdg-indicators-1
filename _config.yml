@@ -91,9 +91,9 @@ menu:
 
 
 footer_menu:
-  - path: mailto:my-email-address@example.com
+  - path: https://www.destatis.de/DE/Service/Kontakt/Kontakt.html #mailto:my-email-address@example.com
     translation_key: menu.contact_us
-  - path: https://twitter.com/MyTwitterAccount
+  - path: https://twitter.com/destatis?lang=de
     translation_key: general.twitter
 
 # Configure the text (or "translation key") to be used on the
