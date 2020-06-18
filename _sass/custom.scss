@@ -16,10 +16,11 @@
        color: white;
        border-color: transparent;
        margin-bottom: 5px;
+       padding-top: 6px;
+       padding-bottom: 6px;
      }
      &.navigation-btn:hover {
        background-color: darken($background-c,10%);
-       color: white;
      }
    }
  }
