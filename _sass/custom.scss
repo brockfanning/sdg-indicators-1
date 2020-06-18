@@ -17,8 +17,8 @@
        border-color: transparent;
        margin-bottom: 5px;
      }
-     &.navigation-btn {
-       background-color: darken($background-c,20%);
+     &.navigation-btn:hover {
+       background-color: darken($background-c,10%);
        color: white;
      }
    }
