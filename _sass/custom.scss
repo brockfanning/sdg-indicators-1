@@ -4,6 +4,27 @@
  * This file left blank intentionally. Implementations of Open SDG can use
  * a similarly named file for custom styles.
  */
+
+ @for $i from 1 through length($goal-banner-backgroundColors) {
+   $background-c: nth($goal-banner-backgroundColors, $i);
+   .goal-#{$i} {
+     &.goal-banner {
+       background-color: $background-c;
+     }
+     &.navigation-btn {
+       background-color: $background-c;
+       color: white;
+     }
+     
+   }
+ }
+
+ .goal-banner {
+   h1, p {
+     color: $goal-banner-color;
+   }
+ }
+
  .G1-background {
    background-color: #E5243B;
    border-color: transparent;
