@@ -58,10 +58,17 @@
 
         <!--Add Btn to link to DNS Page-->
         <li class="nav-link">
-          <a href="https://sustainabledevelopment-deutschland.github.io/{{ page.language }}">
-            <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="{{ page.t.general.link_dns }}" alt="Link DNS" style="width:24px;height:24px;"/>
-            <span class="hidden-sm hidden-md hidden-lg">DNS-{{ page.t.menu.platform }}</span>
-          </a>
+          {% if page.language == "de" %}
+            <a href="https://sustainabledevelopment-deutschland.github.io">
+              <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="{{ page.t.general.link_dns }}" alt="Link DNS" style="width:24px;height:24px;"/>
+              <span class="hidden-sm hidden-md hidden-lg">DNS-{{ page.t.menu.platform }}</span>
+            </a>
+          {% else %}
+            <a href="https://sustainabledevelopment-deutschland.github.io/{{ page.language }}">
+              <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="{{ page.t.general.link_dns }}" alt="Link DNS" style="width:24px;height:24px;"/>
+              <span class="hidden-sm hidden-md hidden-lg">DNS-{{ page.t.menu.platform }}</span>
+            </a>
+          {% endif %}
         </li>
         <!--     -->
 
