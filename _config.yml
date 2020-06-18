@@ -95,6 +95,10 @@ footer_menu:
     translation_key: menu.contact_us
   - path: https://twitter.com/destatis?lang=de
     translation_key: general.twitter
+  - path: /faq/
+    translation_key: menu.faq
+  - path: /imprint/
+    translation_key: menu.imprint
 
 # Configure the text (or "translation key") to be used on the
 # non-global metadata tab.
