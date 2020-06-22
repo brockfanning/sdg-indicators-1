@@ -5,6 +5,7 @@
  * a similarly named file for custom styles.
  */
 
+/*#2.1 Navigation Buttond */
  @for $i from 1 through length($goal-banner-backgroundColors) {
    $background-c: nth($goal-banner-backgroundColors, $i);
    .goal-#{$i} {
@@ -30,10 +31,10 @@
      color: $goal-banner-color;
    }
  }
+/*#2.1*/
 
-
+/*#4.1 Keinen Rahmen um die farbigen Balken im Reportingstatus*/
  .goal-stats {
-     border: 1px solid $color-dark;
      font-size: 0;
      margin-top:10px;
      & span {
@@ -42,3 +43,4 @@
        font-weight: bold;
      }
    }
+/*4.1*/
