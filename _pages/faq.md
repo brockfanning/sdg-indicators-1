@@ -29,22 +29,3 @@ In diesen Fällen wird nach neuen Datenquellen gesucht oder es müssen die beste
 
 ## Können andere Länder diese Website kopieren?
 Die Website kann von anderen Staaten frei verwendet werden, um eine eigene Berichtsplattform zu erstellen. Es gelten die Bedingungen für die Nutzung von [GitHub](https://github.com/). Weitere Informationen finden Sie unter [Technische Hinweise](https://g205sdgs.github.io/sdg-indicators/guidance/).
-
-<!-- DO NOT REMOVE ANYTHING BELOW THIS LINE -->
-<script type='text/javascript'>
-document.addEventListener("DOMContentLoaded", function () {
-  $('#main-content h2').addClass('roleHeader');
- 	$('#main-content h2').attr({
- 	  'tabindex': 0,
- 	  'role': 'button'
- 	});
- 	$('.roleHeader').click(function () {
- 	  $(this).nextUntil('h2').stop(true, true).slideToggle();
-	 }).nextUntil('h2').hide();
-	 $('.roleHeader').keypress(function (e) {
- 	  if (e.which == 13) { // Enter key pressed
-			   $(this).trigger('click');
-		  }
-	 });
-})
- </script>

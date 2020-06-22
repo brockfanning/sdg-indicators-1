@@ -29,22 +29,3 @@ Disaggregation is used to assess an indicator in more detail by dividing it into
 
 ## Can other countries copy this website?
 The website may be used by other countries to build their own national reporting platform. Conditions for using Github apply. For more information please visit [guidance](https://g205sdgs.github.io/sdg-indicators/en/guidance/).
-
-<!-- DO NOT REMOVE ANYTHING BELOW THIS LINE -->
-<script type='text/javascript'>
-document.addEventListener("DOMContentLoaded", function () {
-  $('#main-content h2').addClass('roleHeader');
- 	$('#main-content h2').attr({
- 	  'tabindex': 0,
- 	  'role': 'button'
- 	});
- 	$('.roleHeader').click(function () {
- 	  $(this).nextUntil('h2').stop(true, true).slideToggle();
-	 }).nextUntil('h2').hide();
-	 $('.roleHeader').keypress(function (e) {
- 	  if (e.which == 13) { // Enter key pressed
-			   $(this).trigger('click');
-		  }
-	 });
-})
- </script>
