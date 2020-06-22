@@ -30,3 +30,15 @@
      color: $goal-banner-color;
    }
  }
+
+
+ .goal-stats {
+     border: 1px solid $color-dark;
+     font-size: 0;
+     margin-top:10px;
+     & span {
+       display: inline-block;
+       height: 10px;
+       font-weight: bold;
+     }
+   }
