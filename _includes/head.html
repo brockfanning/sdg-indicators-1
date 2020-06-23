@@ -16,17 +16,26 @@
         <!-- Title and meta description
         ================================================== -->
 
+        <!---#15 setCorrectTitle---start-------------------->
         <title>
           {% if page.indicator %}
             {{ page.t.general.indicator | escape }} {{ page.indicator.number }} - {{ page.t.general.goal | escape }} {{ page.goal.number }}
           {% elsif page.goal %}
             {{ page.t.general.goal | escape }} {{ page.goal.number }} - {{ page.goal.short | escape }}
           {% else %}
-            {{ site.title | escape }}
+            {{ page.t.general.title | escape }}
           {% endif %}
         </title>
+        <!---#15 setCorrectTitle---stop--------------------->
 
-        <meta name="description" content="">
+        {% if page.indicator %}
+          <meta name="description" content= "{{ page.t.general.meta_indicator | escape }} {{ meta.indicator }} - {{ meta.indicator | get_indicator_name }}" >
+        {% elsif goal_number %}
+          <meta name="description" content= "{{ page.t.general.meta_goal | escape }} {{ page.goal.number }} - {{ page.goal.short }}" >
+        {% else %}
+          <meta name="description" content= "{{ page.t.general.meta | escape }}" >
+        {% endif %}
+
         <meta property="og:description" content="">
         {% if site.environment == 'staging' %}
         <meta name="robots" content="noindex, nofollow">
