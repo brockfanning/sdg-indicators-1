@@ -77,6 +77,8 @@
     this._name = 'sdgMap';
 
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
+    this.geoData = options.geoData;
+    this.geoCodeRegEx = options.geoCodeRegEx;
     this.timeSeries = _.pluck(this.geoData, 'timeseries');
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
