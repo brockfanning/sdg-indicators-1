@@ -14,7 +14,7 @@
         {% if indicator_metadata.field.scope != 'add_info' %}
         <!--#22 additionalDataAsEmbedded---stop----------->
 
-          {% if meta[indicator_metadata.name] %}
+          {% if page.indicator[indicator_metadata.name] %}
 
             <th scope="row">{{ metadata_label }}</th>
 
