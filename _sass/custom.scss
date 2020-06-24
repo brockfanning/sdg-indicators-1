@@ -30,7 +30,7 @@
  .goal-banner {
    h1, p {
      color: $goal-banner-color;
-     @media screen and (min-width: 769px) {
+     @media screen and (min-width: 300px) {
        font-size:2vw;
      }
    }
