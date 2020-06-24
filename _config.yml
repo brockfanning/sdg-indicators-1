@@ -104,6 +104,9 @@ footer_menu:
 # non-global metadata tab.
 non_global_metadata: indicator.national_metadata
 
+
+hide_empty_metadata: true
+
 plugins:
   - jekyll-remote-theme
   - jekyll-open-sdg-plugins
