@@ -48,7 +48,7 @@ Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise ("exte
 Mit diesen Hinweisen kommen wir unseren Informationspflichten nach Artikel 13 der Datenschutz-Grundverordnung (DS-GVO) bei der Erhebung personenbezogener Daten nach.
 
 Beim Zugriff auf die Nationale Berichtsplattform werden vom Statistischen Bundesamt keine personenbezogenen Daten erhoben, Sie nutzen allerdings die Dienste des Anbieters GitHub. Die Datenschutzerklärung von GitHub finden Sie unter [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement). Als Webseiten-Besucher werden technische Informationen, auch die IP-Adresse, erfasst: diese kann ein personenbezogenes Datum sein. Personenbezogene Daten werden erfasst, wenn Sie einen Account anlegen.
-Im Zusammenhang mit der Nutzung des Kontaktformulars, der Nutzung sozialer sozialen Medien sowie des weiteren Internet-Angebotes des Statistischen Bundesamtes gilt die Datenschutzerklärung unter [https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html](https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html).
+Im Zusammenhang mit der Nutzung des Kontaktformulars, der Nutzung sozialen Medien sowie des weiteren Internet-Angebotes des Statistischen Bundesamtes gilt die Datenschutzerklärung unter [https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html](https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html).
 
 Im Zuge der Weiterentwicklung unserer Webseiten können auch Änderungen dieser Datenschutzerklärung erforderlich werden. Daher empfehlen wir Ihnen, sich diese Erklärung regelmäßig durchzulesen.
 
@@ -58,6 +58,12 @@ Personenbezogene Daten sind Informationen zu Ihrer Person, wie zum Beispiel Ihr 
 
 Ihre Daten werden dadurch erhoben, dass Sie uns diese mitteilen. Dabei beruht die Verarbeitung auf Ihrer Einwilligung. Hierbei kann es sich zum Beispiel um Daten handeln, die Sie in ein Kontaktformular eingeben.
 
+### Einsatz von Cookies
+
+Auf diesen Seiten kommen Cookies zum Einsatz. Diese sind zur optimalen Bereitstellung unseres Internetangebots technisch erforderlich. Der Einsatz dieser Cookies erfolgt auf der Grundlage des Art. 6 Absatz 1 lit. e DSGVO in Verbindung mit § 3 Bundesdatenschutzgesetz (BDSG).
+
+Die meisten Internetbrowser sind so eingestellt, dass sie Cookies automatisch akzeptieren. Sie können das Speichern von Cookies jedoch deaktivieren oder Ihren Browser so einstellen, dass Cookies nur für die Dauer der jeweiligen Verbindung zum Internet gespeichert werden.
+Sollten Sie eine Browsererweiterung nutzen, die die Ablage unserer Cookies verhindert, respektieren wir dies selbstverständlich. Cookies werden in diesem Fall nicht abgelegt. Wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.
 
 ### Soziale Medien
 
@@ -117,7 +123,7 @@ Statistisches Bundesamt - Gustav-Stresemann-Ring 11 - D-65189 Wiesbaden – vert
 Da uns Ihr Vertrauen wichtig ist, möchten wir Ihnen jederzeit Rede und Antwort bezüglich der Verarbeitung Ihrer personenbezogenen Daten stehen. Wenn Sie Fragen haben, die diese Datenschutzerklärung nicht beantworten konnte, wenden Sie sich bitte jederzeit an die behördliche Datenschutzbeauftragte.
 
 Datenschutzbeauftragte im Statistischen Bundesamt, 65180 Wiesbaden<br>
-Telefon: +49 611 75 3929<br>
+Telefon: +49 611 75 4449<br>
 datenschutzbeauftragter@destatis.de
 
 
