@@ -76,13 +76,11 @@ Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen
 Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt Social Hub des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: 0049 (0)841 493 990-0; Fax: 0049 (0)841 493 990-10; Email: hallo@socialhub.io; Web: www.socialhub.io
 
 
-### Anfragen und Bestellungen über unseren Kunden- und Nutzerservice
+### Anfragen über unseren Nutzerservice
 
-Neben der rein informatorischen Nutzung unserer Website bieten wir verschiedene Leistungen an, die Sie bei Interesse nutzen können. Dazu müssen Sie in der Regel weitere personen­bezogene Daten angeben, die wir zur Erbringung der jeweiligen Leistung nutzen und für die die zuvor genannten Grundsätze zur Daten­verarbeitung gelten.
+Die von Ihnen im Kontaktformular angegebenen und von uns damit erhobenen personenbezogenen Daten werden elektronisch gespeichert. Diese Angaben benötigen wir zur Beantwortung der Anfrage in Erfüllung unserer öffentlichen Aufgaben nach Artikel 6 Absatz 1 lit. e) DS-GVO i. V. m. § 3 Bundesdatenschutzgesetz (BDSG).
 
-Die von Ihnen im Kontaktformular angegebenen und von uns damit erhobenen personenbezogenen Daten werden elektronisch gespeichert. Diese Angaben benötigen wir zur Beantwortung der Anfrage in Erfüllung unserer öffentlichen Aufgaben nach Artikel 6 Absatz 1 lit. e) DS-GVO i. V. m. § 3 Bundesdatenschutzgesetz (BDSG). Die Daten Ihrer Anfrage werden anonymisiert für Nutzeranalysen zur Optimierung unserer Informationsangebote herangezogen.
-
-Darüber hinaus halten wir Ihre Daten zum Zwecke der Kundenpflege (also etwa zu optimalen Bearbeitung weiterer Anfragen) oder die Durchführung von Kundenbefragungen vor. Die Grundlage für die Verarbeitung Ihrer Daten zu diesen Zwecken ist die von Ihnen abgegebene Einwilligung gemäß Artikel 6 Absatz 1 lit. a) DS-GVO. Diese Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.
+Darüber hinaus halten wir Ihre Daten zum Zwecke der Kundenpflege (also etwa zu optimalen Bearbeitung weiterer Anfragen) vor. Die Grundlage für die Verarbeitung Ihrer Daten zu diesen Zwecken ist die von Ihnen abgegebene Einwilligung gemäß Artikel 6 Absatz 1 lit. a) DS-GVO. Diese Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.
 
 
 ### Anfragen per E-Mail oder Telefon
@@ -116,7 +114,7 @@ Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen
 
 ### Kontaktdaten des Verantwortlichen
 
-Statistisches Bundesamt - Gustav-Stresemann-Ring 11 - D-65189 Wiesbaden – vertreten durch den [Präsidenten](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_praesident.html?nn=206200).
+Statistisches Bundesamt - Gustav-Stresemann-Ring 11 - D-65189 Wiesbaden – vertreten durch den [Präsidenten](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
 
 ### Kontaktdaten des/der behördlichen Datenschutzbeauftragten
 
