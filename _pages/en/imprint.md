@@ -32,21 +32,19 @@ For data protection notes with regards to the use of our contact form, social me
 
 Personal data is information about yourself, such as your name, address, postal address or user behaviour, if the latter is not anonymised. This does not include information which cannot be related to you.
 
-We collect your data when you give them to us. In that case, the processing of your data is based on your consent. You may have entered such data in a contact form or confirmed that you accept a cookie.
+We collect your data when you give them to us. In that case, the processing of your data is based on your consent. You may have entered such data in a contact form.
 
 ### Use of cookies
 
 We use cookies on its web pages. Most browsers are set to accept cookies automatically. However, you can deactivate the storage of cookies or set your browser to store cookies only for the respective internet session.
 
-If you use a browser extension which prevents the setting of our cookies, we will of course accept your decision. Then no cookies will be placed and your visit to this website will not be tracked. Please note that you may not be able in this case to make full use of all the features of this website.
-
-If you do not agree to your data being processed, you can place the opt-out cookie in your browser and, as a consequence, Matomo will not collect any usage data. The opt-out has to be activated every time you visit our website.
+If you use a browser extension which prevents the setting of our cookies, we will of course accept your decision. Then no cookies will be placed. Please note that you may not be able in this case to make full use of all the features of this website.
 
 ### Social Media
 
 The Federal Statistical Office uses the Twitter messaging service.
 
-ts functions are offered by Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. If you use Twitter and the re-tweet function, the websites you visit will be linked with your Twitter account and revealed to other users. Data will also be passed on to Twitter. Please note that we, the provider of the website content, do not know the data which are passed on or how Twitter uses them. For more information on the subject please refer to Twitter's privacy policy. [https://twitter.com/privacy](https://twitter.com/privacy).
+Its functions are offered by Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. If you use Twitter and the re-tweet function, the websites you visit will be linked with your Twitter account and revealed to other users. Data will also be passed on to Twitter. Please note that we, the provider of the website content, do not know the data which are passed on or how Twitter uses them. For more information on the subject please refer to Twitter's privacy policy. [https://twitter.com/privacy](https://twitter.com/privacy).
 
 You can change the Twitter privacy settings for your account at [https://twitter.com/account/settings](https://twitter.com/account/settings).
 
