@@ -51,3 +51,13 @@ body{
   background: $backgroundColor;
   padding-top: 15px;
 }
+
+
+#imgDown{
+  z-index:0;
+}
+
+#imgUp{
+  position: absolute; top:15px; left:20px;
+  z-index:1;
+}
