@@ -64,11 +64,11 @@ body{
 
 
 #imgDown{
-  position: absolute; 
+  position: absolute; top:15px; left:20px;
   z-index:0;
 }
 
 #imgUp{
-  position: absolute;
+  position: relative;
   z-index:1;
 }
