@@ -11,5 +11,7 @@ Obwohl die SDG-Indikatoren vorrangig der internationalen und nicht der nationale
 In einigen Fällen liegen für Deutschland Daten mit geringfügigen methodischen Abweichungen gegenüber den international vereinbarten Definitionen vor. In anderen Fällen sind dagegen nur Zeitreihen mit größeren Abweichungen zur global festgelegten Berechnungsmethodik verfügbar. Dies kann dazu führen, dass die zuständigen internationalen Organisationen zur Sicherstellung der internationalen Vergleichbarkeit Anpassungen an den bereitgestellten Daten vornehmen. Entsprechend können die Zeitreihen, die in der [globalen SDG-Datenbank](https://unstats.un.org/sdgs/indicators/database/) für Deutschland zu finden sind, von den hier bereitgestellten Zeitreihen abweichen. Inwiefern die veröffentlichten Daten der globalen Berechnungsmethodik entsprechen, ist unter dem Punkt „Vergleichbarkeit mit UN-Metadaten“ unter jedem Indikator beschrieben.
 
 
-<div id="imgDown"><img src="https://g205sdgs.github.io/sdg-indicators/public/testImg.PNG" alt="Test"/></div>
-<div id="imgUp"><img src="https://g205sdgs.github.io/sdg-indicators/public/testImgInfo.PNG" alt="Test"/></div>
+
+<div class="imgWrap">
+  <img src="https://g205sdgs.github.io/sdg-indicators/public/testImgInfo.PNG" id="imgUp" alt="Test"/>
+</div>

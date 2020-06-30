@@ -55,7 +55,8 @@ body{
 
 
 .imgWrap{
-  background: url(g205sdgs.github.io/sdg-indicators/public/testImgInfo.PNG) no-repeat;
+  background: url("g205sdgs.github.io/sdg-indicators/public/testImgInfo.PNG");
+  position: absolute;
 }
 
 
@@ -69,6 +70,6 @@ body{
 }
 
 #imgUp{
-  position: relative;  top:150px; left:200px
+  position: absolute;
   z-index:1;
 }
