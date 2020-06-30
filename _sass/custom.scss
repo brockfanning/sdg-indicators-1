@@ -53,7 +53,18 @@ body{
 }
 
 
+
+.imgWrap{
+  background:url("https://g205sdgs.github.io/sdg-indicators/public/testImgInfo.PNG") no-repeat;
+}
+
+
+
+
+
+
 #imgDown{
+  position: absolute; top:15px; left:20px;
   z-index:0;
 }
 
