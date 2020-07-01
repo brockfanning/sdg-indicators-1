@@ -83,7 +83,7 @@
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[this.unit.length -1]);
-    console.log("b: timeseries", tthis.timeSeries);
+    console.log("b: timeseries", this.timeSeries);
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
   }
