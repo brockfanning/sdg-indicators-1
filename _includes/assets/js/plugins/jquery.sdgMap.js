@@ -319,6 +319,7 @@
         }));
 
         // Add the selection legend.
+        console.log("plugin",plugin);
         plugin.selectionLegend = L.Control.selectionLegend(plugin);
         plugin.map.addControl(plugin.selectionLegend);
 
