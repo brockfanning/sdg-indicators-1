@@ -1,7 +1,6 @@
 {% include head.html %}
 {% include header.html %}
 
-console.log("language:", page.language)
 
 {% if page.language == "de" %}
   {%- assign indicator_singular = page.t.general.indicator -%}
@@ -18,7 +17,7 @@ console.log("language:", page.language)
     {%- assign extra_fields = true -%}
   {%- endfor -%}
 
-  <h1>{{ page.t.status.reporting_status }}</h1>
+  <h1>{{ page.t.status.reporting_status }}{{ page.language }}</h1>
 
   {%- assign overall = site.data.reporting.overall -%}
   <div class="goal goal-overall">
