@@ -87,7 +87,7 @@
 
     var title = 'mapTitle_' + options.indicatorId
     var unit = 'mapUnit_' + options.indicatorId
-    this.timeSeriesName = translations.t(title);
+    this.timeSeriesName = translations.indicator[title];
     this.unitName = translations.t(unit);
 
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
