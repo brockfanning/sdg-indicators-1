@@ -9,9 +9,3 @@ Ziel der nationalen Berichtsplattform (NRP) ist die Bereitstellung von Daten fü
 Obwohl die SDG-Indikatoren vorrangig der internationalen und nicht der nationalen Messung der Zielerreichung dienen sollen, lassen sich viele der globalen Indikatoren auch national berechnen. Die hier vorliegende Zusammenstellung der für Deutschland verfügbaren Indikatoren basiert sowohl auf Daten der amtlichen Statistik als auch auf anderen Quellen. Für eine Vielzahl der globalen Indikatoren sind Zeitreihen auf nationaler Ebene verfügbar und werden hier auf der nationalen Berichtsplattform veröffentlicht. Dass nicht zu allen der global vereinbarten Indikatoren statistische Daten vorliegen, hat mehrere Ursachen: Bestimmte international relevante Indikatoren lassen sich nicht sinnvoll für Deutschland berechnen oder können nicht statistisch gemessen, sondern nur politisch beantwortet werden. Für andere Indikatoren liegen noch nicht alle notwendigen statistischen Ausgangsdaten vor.
 
 In einigen Fällen liegen für Deutschland Daten mit geringfügigen methodischen Abweichungen gegenüber den international vereinbarten Definitionen vor. In anderen Fällen sind dagegen nur Zeitreihen mit größeren Abweichungen zur global festgelegten Berechnungsmethodik verfügbar. Dies kann dazu führen, dass die zuständigen internationalen Organisationen zur Sicherstellung der internationalen Vergleichbarkeit Anpassungen an den bereitgestellten Daten vornehmen. Entsprechend können die Zeitreihen, die in der [globalen SDG-Datenbank](https://unstats.un.org/sdgs/indicators/database/) für Deutschland zu finden sind, von den hier bereitgestellten Zeitreihen abweichen. Inwiefern die veröffentlichten Daten der globalen Berechnungsmethodik entsprechen, ist unter dem Punkt „Vergleichbarkeit mit UN-Metadaten“ unter jedem Indikator beschrieben.
-
-
-
-<div class="imgWrap">
-  <img src="https://g205sdgs.github.io/sdg-indicators/public/testImgInfo.PNG" id="imgUp" alt="Test"/>
-</div>
