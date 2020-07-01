@@ -80,7 +80,7 @@ var indicatorView = function (model, options) {
   this._model.onFieldsComplete.attach(function(sender, args) {
     view_obj.initialiseFields(args);
 
-    console.log("args", arg);
+    console.log("args", args);
 
     if(args.hasGeoData && args.showMap) {
       view_obj._mapView = new mapView();
