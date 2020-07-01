@@ -17,13 +17,13 @@
     {%- assign extra_fields = true -%}
   {%- endfor -%}
 
-  <h1>{{ page.t.status.reporting_status }}{{ page.language }}</h1>
+  <h1>{{ page.t.status.reporting_status }}</h1>
 
   {%- assign overall = site.data.reporting.overall -%}
   <div class="goal goal-overall">
       <div class="details">
         <h2 class="status-goal">
-            {{ page.t.status.overall_reporting_status }} <span class="total"><span>{{ overall.totals.total }}</span></span> {{ indicators_plural }}
+            {{ page.t.status.overall_reporting_status }}<span class="total"><span>{{ overall.totals.total }}</span></span> {{ indicators_plural }}
         </h2>
         <div class="summary">
           <div class="statuses">
