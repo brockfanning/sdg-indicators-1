@@ -75,7 +75,7 @@
 
     this._defaults = defaults;
     this._name = 'sdgMap';
-    console.log("a: options", this.options);
+    console.log("a: element", this.element);
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
     this.geoData = options.geoData;
     this.geoCodeRegEx = options.geoCodeRegEx;
@@ -83,7 +83,7 @@
     this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
     this.unit = _.pluck(this.geoData, 'Units');
     this.unitName = translations.t(this.unit[this.unit.length -1]);
-    console.log("b: timeseries", this.timeSeries);
+    console.log("b: timeseries", this.timeSeriesName);
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
   }
