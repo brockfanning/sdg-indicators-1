@@ -85,10 +85,10 @@
     // this.unitName = translations.t(this.unit[this.unit.length -1]);
     // console.log("b: timeseries", this.timeSeriesName);
 
-    var title = 'mapTitle_' + options.indicatorId
-    var unit = 'mapUnit_' + options.indicatorId
-    this.timeSeriesName = translations.indicator[title];
-    this.unitName = translations.t(unit);
+    this.title = 'mapTitle_' + options.indicatorId
+    this.unit = 'mapUnit_' + options.indicatorId
+    this.timeSeriesName = translations.indicator[this.title];
+    this.unitName = translations.t(this.unit);
 
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
