@@ -1,6 +1,8 @@
 {% include head.html %}
 {% include header.html %}
 
+console.log("language:", page.language)
+
 {% if page.language == "de" %}
   {%- assign indicator_singular = page.t.general.indicator -%}
   {%- assign indicators_plural = page.t.general.indicators -%}
