@@ -75,15 +75,20 @@
 
     this._defaults = defaults;
     this._name = 'sdgMap';
-    console.log("a: element", this.element);
+
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-    this.geoData = options.geoData;
-    this.geoCodeRegEx = options.geoCodeRegEx;
-    this.timeSeries = _.pluck(this.geoData, 'timeseries');
-    this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    this.unit = _.pluck(this.geoData, 'Units');
-    this.unitName = translations.t(this.unit[this.unit.length -1]);
-    console.log("b: timeseries", this.timeSeriesName);
+    // this.geoData = options.geoData;
+    // this.geoCodeRegEx = options.geoCodeRegEx;
+    // this.timeSeries = _.pluck(this.geoData, 'timeseries');
+    // this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
+    // this.unit = _.pluck(this.geoData, 'Units');
+    // this.unitName = translations.t(this.unit[this.unit.length -1]);
+    // console.log("b: timeseries", this.timeSeriesName);
+
+
+    this.timeSeriesName = translations.t('mapTitle',options.indicatorId);
+    this.unitName = translations.t('mapUnit',options.indicatorId);
+
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
   }
