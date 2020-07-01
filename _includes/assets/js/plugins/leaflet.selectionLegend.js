@@ -62,8 +62,7 @@
       var headline = this.plugin.timeSeriesName
       headline += ', <br>' + this.plugin.unitName;
       //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
-      console.log("headline",headline);
-      
+
       div.innerHTML = L.Util.template(controlTpl, {
         lowValue: this.plugin.valueRange[0],
         highValue: this.plugin.valueRange[1],
