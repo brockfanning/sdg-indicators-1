@@ -1,8 +1,13 @@
 {% include head.html %}
 {% include header.html %}
 
-{%- assign indicator_singular = page.t.general.indicator | downcase -%}
-{%- assign indicators_plural = page.t.general.indicators | downcase -%}
+{% if page.language == "de" %}
+  {%- assign indicator_singular = page.t.general.indicator -%}
+  {%- assign indicators_plural = page.t.general.indicators -%}
+{% else %}
+  {%- assign indicator_singular = page.t.general.indicator | downcase -%}
+  {%- assign indicators_plural = page.t.general.indicators | downcase -%}
+{% endif %}
 
 <div id="main-content" class="container reportingstatus">
 
