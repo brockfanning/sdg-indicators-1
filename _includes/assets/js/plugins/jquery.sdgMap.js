@@ -86,8 +86,8 @@
     // console.log("b: timeseries", this.timeSeriesName);
 
 
-    this.timeSeriesName = translations.t('mapTitle',options.indicatorId);
-    this.unitName = translations.t('mapUnit',options.indicatorId);
+    this.timeSeriesName = translations.t('mapTitle_',options.indicatorId);
+    this.unitName = translations.t('mapUnit_',options.indicatorId);
 
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
