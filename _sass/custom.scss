@@ -12,6 +12,10 @@
      &.goal-banner {
        background-color: $background-c;
      }
+     &.sub-goal-banner {
+       height: 5px;
+       background-color: darken($background-c,10%);
+     }
      &.navigation-btn {
        background-color: $background-c;
        color: white;
