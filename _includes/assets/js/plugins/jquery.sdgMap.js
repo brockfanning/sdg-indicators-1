@@ -88,11 +88,11 @@
     // this.title = 'mapTitle_' + options.indicatorId
     // this.unit = 'mapUnit_' + options.indicatorId
     // this.timeSeriesName = translations.indicator[this.title];
-    this.unitName = translations.t(this.unit);
-    
 
-    this.timeSeriesName = opensdg.maptitles(this.indicatorId);
 
+
+    this.timeSeriesName = opensdg.maptitles(this.indicatorId)[0];
+    this.unitName = opensdg.maptitles(this.indicatorId)[0];
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
   }
