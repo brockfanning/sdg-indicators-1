@@ -92,7 +92,7 @@
 
 
     this.timeSeriesName = opensdg.maptitles(this.indicatorId)[0];
-    this.unitName = opensdg.maptitles(this.indicatorId)[0];
+    this.unitName = opensdg.maptitles(this.indicatorId)[1];
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
     this.init();
   }

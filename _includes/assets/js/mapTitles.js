@@ -5,6 +5,6 @@ opensdg.maptitles = function(indicatorId) {
     this.mapUnit = "TestUnit"
   }
 
-  return this.mapTitle, this.mapUnit ;
+  return [this.mapTitle, this.mapUnit] ;
 
 };
