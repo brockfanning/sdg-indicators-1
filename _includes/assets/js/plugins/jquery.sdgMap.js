@@ -89,6 +89,7 @@
     // this.unit = 'mapUnit_' + options.indicatorId
     // this.timeSeriesName = translations.indicator[this.title];
     this.unitName = translations.t(this.unit);
+    console.log("language:", page.language);
 
     this.timeSeriesName = opensdg.maptitles(this.indicatorId);
 
