@@ -80,14 +80,27 @@ languages:
 # Menu
 menu:
   # Use these to customise the main navigation.
+  # - path: /
+  #   translation_key: general.goals
+  # - path: /reporting-status/
+  #   translation_key: menu.reporting_status
+  # - path: /about/
+  #   translation_key: menu.about
+  # - path: /guidance/
+  #   translation_key: menu.guidance
+
   - path: /
-    translation_key: general.goals
+    translation_key: general.17goals
   - path: /reporting-status/
     translation_key: menu.reporting_status
-  - path: /about/
-    translation_key: menu.about
-  - path: /guidance/
-    translation_key: menu.guidance
+  - path: /about_platform/
+    translation_key: menu.about_platform
+  - path: /about_navigation/
+    translation_key: menu.about_navigation
+  - path: /about_guidance/
+    translation_key: menu.about_guidance
+
+
 
 
 footer_menu:
