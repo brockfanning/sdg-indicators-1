@@ -47,11 +47,11 @@
           {%- endif -%}
             {% if item.path contains "about_" %}
               <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-sm hidden-md hidden-lg">
-                <a href="{{ page.baseurl }}{{ item.path }}">{{ Über: }}{{ item.translation_key | t }}</a>
+                <a href="{{ page.baseurl }}{{ item.path }}">Über: {{ item.translation_key | t }}</a>
               </li>
             {% elsif item.path contains "facts_" %}
               <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-sm hidden-md hidden-lg">
-                <a href="{{ page.baseurl }}{{ item.path }}">{{ Wissenswertes: }}{{ item.translation_key | t }}</a>
+                <a href="{{ page.baseurl }}{{ item.path }}">Wissenswertes: {{ item.translation_key | t }}</a>
               </li>
             {% else %}
               <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
@@ -83,7 +83,7 @@
             {%- endfor -%}
           </ul>
         </li>
-        
+
         <li class="nav-link visible-sm visible-md visible-lg">
           <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;" style="margin-right: 0px;">
             <span class="language-toggle-text">{{ page.t.menu.facts }}</span>
