@@ -90,7 +90,7 @@ menu:
   #   translation_key: menu.guidance
 
   - path: /
-    translation_key: general.17goals
+    translation_key: general.seventeen_goals
   - path: /reporting-status/
     translation_key: menu.reporting_status
   - path: /about_platform/
