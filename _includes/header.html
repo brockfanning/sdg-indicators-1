@@ -35,7 +35,7 @@
 
       {% include search.html %}
 
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu">
+      
         {%- if site.menu -%}
           {%- assign current_path_no_slash = page.url | remove: '/' -%}
           {%- for item in site.menu -%}
