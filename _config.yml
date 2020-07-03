@@ -99,7 +99,10 @@ menu:
     translation_key: menu.about_navigation
   - path: /about_guidance/
     translation_key: menu.about_guidance
-
+  - path: /facts_agenda/
+    translation_key: menu.facts_agenda
+  - path: /facts_dns/
+    translation_key: menu.facts_dns
 
 
 
