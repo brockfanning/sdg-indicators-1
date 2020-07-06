@@ -15,11 +15,11 @@ opensdg.dataRounding = function(value) {
 };
 
 
-opensdg.dataRoundingDp = function(value; dcmplc) {
+opensdg.dataRoundingDp = function(value, dcmplc) {
   if (value == null) {
     return value
   }
   else{
     return value.toFixed(dcmplc)
   }
-}
+};
