@@ -47,7 +47,7 @@ function prepareData(rows) {
       // For rounding, use a function that can be set on the global opensdg
       // object, for easier control: opensdg.dataRounding()
       if (typeof opensdg.dataRounding === 'function') {
-        if (typeof opensdg.dataRoundingDp === 'function' & item.dcmplc != null){
+        if (typeof opensdg.dataRoundingDp === 'function' && item.dcmplc != null){
           item.Value = opensdg.dataRoundingDp(item.Value);
         }
         else{
