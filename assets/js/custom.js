@@ -13,3 +13,13 @@ opensdg.dataRounding = function(value) {
     return value
   }
 };
+
+
+opensdg.dataRoundingDp = function(value; dcmplc) {
+  if (value == null) {
+    return value
+  }
+  else{
+    return value.toFixed(dcmplc)
+  }
+}
