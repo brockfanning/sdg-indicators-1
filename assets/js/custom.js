@@ -19,7 +19,7 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
   if (value == null) {
     return value
   }
-  else{
+  else {
     return value.toFixed(dcmplc)
   }
 };
