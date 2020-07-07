@@ -41,18 +41,17 @@ function getHeadline(selectableFields, rows) {
  */
 function prepareData(rows) {
   return rows.map(function(item) {
-    console.log("type", typeof opensdg.dataRoundingDp);
     if (item[VALUE_COLUMN] != 0) {
       // For rounding, use a function that can be set on the global opensdg
       // object, for easier control: opensdg.dataRounding()
       if (typeof opensdg.dataRounding === 'function') {
-        // if (typeof opensdg.dataRoundingDp === 'function' && item.dcmplc){
-        //   item.Value = opensdg.dataRoundingDp(item.Value, item.dcmplc);
-        // }
-        // else {
-        //   item.Value = opensdg.dataRounding(item.Value);
-        // }
-        item.Value = opensdg.dataRounding(item.Value);
+        if (typeof opensdg.dataRoundingDp === 'function' && item.dcmplc){
+          item.Value = opensdg.dataRoundingDp(item.Value, item.dcmplc);
+        }
+        else {
+          item.Value = opensdg.dataRounding(item.Value);
+        }
+        //item.Value = opensdg.dataRounding(item.Value);
       }
     }
 
