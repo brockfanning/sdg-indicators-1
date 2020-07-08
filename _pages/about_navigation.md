@@ -8,7 +8,7 @@ layout: page
 
 Wie auf der Eingangsseite von „Über uns“ bereits erwähnt, gibt es zwei Teile dieser Berichtsplattform. Der Bereich der Plattform, auf dem Sie sich gerade bewegen, stellt die Indikatoren der SDGs dar, den [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/) (SDGs). Der andere Bereich wird für die [Indikatoren der nationale Nachhaltigkeitsstrategie Deutschlands](https://sustainabledevelopment-deutschland.github.io/) (DNS) genutzt.
 
-Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den DNS-Indikatoren der nationalen Nachhaltigkeitsstrategie Deutschlands: [<img src="https://Nachhaltige-Entwicklung-Deutschland.github.io/open-sdg-site-starter/assets/img/about/wheel.png" alt="Wheel">](https://sustainabledevelopment-germany.github.io)
+Neben dem Suchfeld oben rechts auf dieser Seite gibt es einen Direktlink zur Startseite der nationalen Berichtsplattform zu den DNS-Indikatoren der nationalen Nachhaltigkeitsstrategie Deutschlands: [<img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
 
 ## Struktur der SDG-Seite
 
