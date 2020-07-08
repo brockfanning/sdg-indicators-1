@@ -77,3 +77,33 @@ body{
   font-weight: bold;
 }
 //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
+
+// color of data tab text is white on yellow in hc
+.nav-tabs {
+   border-bottom: 1px solid $indicator-tabs-borderColor;
+   .nav-item {
+     background: none;
+     border: none;
+     a {
+       border: none;
+       color: $color-dark;
+     }
+     &.active {
+       a {
+         border: 1px solid $indicator-tabs-borderColor;
+         border-bottom: 0;
+       }
+     }
+     &:not(.active){
+       a{
+         background-color: $indicator-tabs-backgroundColor-inactive;
+         &:hover{
+           text-decoration: underline;
+         }
+       }
+     }
+     &.contrast-heigh {
+       color: $color-dark;
+     }
+   }
+ }
