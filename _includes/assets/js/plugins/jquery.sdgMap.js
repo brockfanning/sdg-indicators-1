@@ -77,23 +77,10 @@
     this._name = 'sdgMap';
 
     //---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-    // this.geoData = options.geoData;
-    // this.geoCodeRegEx = options.geoCodeRegEx;
-    // this.timeSeries = _.pluck(this.geoData, 'timeseries');
-    // this.timeSeriesName = translations.t(this.timeSeries[this.timeSeries.length -1]);
-    // this.unit = _.pluck(this.geoData, 'Units');
-    // this.unitName = translations.t(this.unit[this.unit.length -1]);
-    // console.log("b: timeseries", this.timeSeriesName);
-
-    // this.title = 'mapTitle_' + options.indicatorId
-    // this.unit = 'mapUnit_' + options.indicatorId
-    // this.timeSeriesName = translations.indicator[this.title];
-
-
-
     this.timeSeriesName = opensdg.maptitles(this.indicatorId)[0];
     this.unitName = opensdg.maptitles(this.indicatorId)[1];
     //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
+
     this.init();
   }
 
@@ -105,32 +92,32 @@
     },
 
     // Build content for a tooltip.
-   getTooltipContent(feature) {
-     var tooltipContent = feature.properties.name;
-     var tooltipData = this.getData(feature.properties);
-     if (tooltipData) {
-       tooltipContent += ': ' + tooltipData;
-     }
-     return tooltipContent;
-   },
+    getTooltipContent(feature) {
+      var tooltipContent = feature.properties.name;
+      var tooltipData = this.getData(feature.properties);
+      if (tooltipData) {
+        tooltipContent += ': ' + tooltipData;
+      }
+      return tooltipContent;
+    },
 
-   // Update a tooltip.
-   updateTooltip: function(layer) {
-     if (layer.getTooltip()) {
-       var tooltipContent = this.getTooltipContent(layer.feature);
-       layer.setTooltipContent(tooltipContent);
-     }
-   },
+    // Update a tooltip.
+    updateTooltip: function(layer) {
+      if (layer.getTooltip()) {
+        var tooltipContent = this.getTooltipContent(layer.feature);
+        layer.setTooltipContent(tooltipContent);
+      }
+    },
 
-   // Create tooltip.
-   createTooltip: function(layer) {
-     if (!layer.getTooltip()) {
-       var tooltipContent = this.getTooltipContent(layer.feature);
-       layer.bindTooltip(tooltipContent, {
-         permanent: true,
-       }).addTo(this.map);
-     }
-   },
+    // Create tooltip.
+    createTooltip: function(layer) {
+      if (!layer.getTooltip()) {
+        var tooltipContent = this.getTooltipContent(layer.feature);
+        layer.bindTooltip(tooltipContent, {
+          permanent: true,
+        }).addTo(this.map);
+      }
+    },
 
     // Select a feature.
     highlightFeature: function(layer) {
@@ -195,7 +182,6 @@
         });
       });
     },
-
 
     // Update the tooltips of the selected Features on the map.
     updateTooltips: function() {
@@ -357,7 +343,6 @@
         }));
 
         // Add the selection legend.
-        console.log("plugin",plugin);
         plugin.selectionLegend = L.Control.selectionLegend(plugin);
         plugin.map.addControl(plugin.selectionLegend);
 
