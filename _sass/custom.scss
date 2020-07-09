@@ -96,6 +96,7 @@ body{
     color: $status-color-inprogress;
   }
   &.notstarted {
+    border: 0px;
     color: $status-color-notstarted;
   }
   &.notapplicable {
