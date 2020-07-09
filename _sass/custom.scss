@@ -77,3 +77,42 @@ body{
   font-weight: bold;
 }
 //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
+
+
+#main-content {
+  .statuses {
+
+    strong {
+      font-weight: normal;
+    }
+    > div {
+      display: inline-block;
+
+      margin-right: 10px;
+
+      .status {
+        display: inline-block;
+        margin-right: 3px;
+        padding: 2px 5px;
+        border-radius: 4px;
+
+        width: 40px;
+        text-align: center;
+        font-size: 16px;
+
+        &.complete {
+          color: $status-color-complete;
+        }
+        &.inprogress {
+          color: $status-color-inprogress;
+        }
+        &.notstarted {
+          color: $status-color-notstarted;
+        }
+        &.notapplicable {
+          color: $status-color-notapplicable;
+        }
+      }
+    }
+  }
+}
