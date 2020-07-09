@@ -89,6 +89,7 @@ body{
   //font-size: 16px;
 
   &.complete {
+    border: 0px;
     color: $status-color-complete;
   }
   &.inprogress {
