@@ -1,4 +1,4 @@
----
+  ---
 title: Agenda 2030 und nationale Statistikämter
 permalink: /facts_agenda/
 layout: page
@@ -6,8 +6,7 @@ layout: page
 
 ## Die VN-Nachhaltigkeitsziele
 
-
-<figure style="width: 20%; margin-left: 10px;"><img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/agenda1.png" alt="Abbildung 1: Logo der SDGs" style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px;"><figcaption style="margin-bottom:20px;"><small>Abb. 1: Ein Logo der SDGs</small></figcaption></figure> Die [Agenda 2030 für nachhaltige Entwicklung](https://www.un.org/sustainabledevelopment/development-agenda/) ist ein globaler Aktionsplan der Vereinten Nationen (VN) für den Planeten, die Menschen und deren Wohlstand, der von der VN-Generalversammlung im September 2015 verabschiedet worden ist. Mit der Agenda 2030 haben die Mitgliedstaaten der VN einen Fahrplan für eine nachhaltige Umgestaltung von Gesellschaft, Wirtschaft und Umwelt bis zum Jahr 2030 entwickelt. Bestandteil der Agenda 2030 sind 17 globale Ziele unterteilt in 169 Unterziele und über 240 Indikatoren. Die Ziele heißen im Englischen Sustainable Development Goals und werden mit SDGs abgekürzt (Abb. 1).
+<figure style="width: 20%; margin-left: 10px; float: right border: 1px solid #ddd; border-radius: 4px;"><img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/agenda1.png" alt="Abbildung 1: Logo der SDGs" style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px;"><figcaption style="margin-bottom:20px;"><small>Abb. 1: Ein Logo der SDGs</small></figcaption></figure> Die [Agenda 2030 für nachhaltige Entwicklung](https://www.un.org/sustainabledevelopment/development-agenda/) ist ein globaler Aktionsplan der Vereinten Nationen (VN) für den Planeten, die Menschen und deren Wohlstand, der von der VN-Generalversammlung im September 2015 verabschiedet worden ist. Mit der Agenda 2030 haben die Mitgliedstaaten der VN einen Fahrplan für eine nachhaltige Umgestaltung von Gesellschaft, Wirtschaft und Umwelt bis zum Jahr 2030 entwickelt. Bestandteil der Agenda 2030 sind 17 globale Ziele unterteilt in 169 Unterziele und über 240 Indikatoren. Die Ziele heißen im Englischen Sustainable Development Goals und werden mit SDGs abgekürzt (Abb. 1).
 
 ## Überprüfung der Zielerreichung
 
