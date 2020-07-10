@@ -129,7 +129,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: open-sdg/open-sdg@master
-remote_theme: open-sdg/brockfanning@goal-page-status-css
+remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
 
 
