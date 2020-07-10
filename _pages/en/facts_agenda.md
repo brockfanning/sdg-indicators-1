@@ -1,6 +1,6 @@
 ---
 title: DNS
-permalink: /en/facts_dns/
+permalink: /en/facts_agenda/
 language: en
 layout: page
 ---
