@@ -12,7 +12,16 @@ $status-backgroundColor-inprogress: #f0ad4e;
 $status-backgroundColor-notstarted: #E27874;
 $status-backgroundColor-notapplicable: #B7B7B7;
 
-$status-color-complete: black;
-$status-color-inprogress: black;
-$status-color-notstarted: black;
-$status-color-notapplicable: black;
+$status-color-complete: green;
+$status-color-inprogress: green;
+$status-color-notstarted: green;
+$status-color-notapplicable: green;
+
+$status-border-complete: none !default;
+$status-border-inprogress: none !default;
+$status-border-notstarted: none !default;
+$status-border-notapplicable: none !default;
+$status-border-complete-highContrast: none !default;
+$status-border-inprogress-highContrast: none !default;
+$status-border-notstarted-highContrast: 1px solid $color-light-highContrast !default;
+$status-border-notapplicable-highContrast: none !default;
