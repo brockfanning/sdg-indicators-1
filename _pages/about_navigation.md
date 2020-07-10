@@ -15,7 +15,7 @@ Neben dem Suchfeld oben rechts auf dieser Seite finden Sie den Direktlink zur St
 Die SDG-Seite der Plattform ist nach Zielen, Unterzielen und den dazugehörigen Indikatoren gegliedert (siehe auch Abb. 1).
 
 <br>
-<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/target_page.png" alt="Abbildung 1: Aufbau der Unterziel-Seiten" class="responsiveImg">
+<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/target_page.PNG" alt="Abbildung 1: Aufbau der Unterziel-Seiten" class="responsiveImg">
 
 <p style="text-align:center">
 <small> Abb. 1: Beispiel für die Gliederung der SDGs anhand von Ziel 11 „Nachhaltige Städte und Gemeinden“ (Stand 07/2020)</small>
@@ -31,7 +31,7 @@ Linkerhand werden, je nach Indikator, verschiedene Auswahlmenüs angezeigt. Das 
 Die Entwicklung der Zeitreihe wird in einer Grafik visualisiert. Auf dem zweiten Reiter neben „Grafik“ können zugrunde liegenden Daten hinter der Grafik und alle anderen verfügbaren Daten der Auswahlmenüs als Tabelle eingesehen werden (siehe auch Abb. 2).
 
 <br>
-<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/indicator_page.png" alt="Abbildung 2: Aufbau der Indikator-Seiten" class="responsiveImg">
+<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/indicator_page.PNG" alt="Abbildung 2: Aufbau der Indikator-Seiten" class="responsiveImg">
 
 <p style="text-align:center">
 <small> Abb. 2: Beispiel für die Darstellung der SDG-Indikatoren anhand von Indikator 11.7.1 (Stand 04/2020)</small>
@@ -59,7 +59,7 @@ Etwa die Hälfte der DNS-Indikatoren sind ähnlich oder deckungsgleich zu den SD
 Es gibt jedoch auch Unterschiede. Die Bezeichnung der Indikatoren der DNS und insbesondere ihre Nummerierung sind nicht identisch mit denen der SDG-Indikatoren. Wenn ein Indikator der SDGs mit einem Indikator der DNS vergleichbar ist, ist dies über eine Schaltfläche mit Direktlink zum jeweiligen Indikator kenntlich gemacht (Abb. 3).
 
 <br>
-<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/navigation_dns.png" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg">
+<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/navigation_dns.PNG" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg">
 
 <p style="text-align:center">
 <small> Abb. 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie (Stand 07/2020)</small>
