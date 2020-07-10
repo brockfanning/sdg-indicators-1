@@ -78,29 +78,17 @@ body{
 }
 //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
-.status {
-  //display: inline-block;
-  //margin-right: 3px;
-  //padding: 2px 5px;
-  border-radius: 3px;
-
-  //width: 40px;
-  //text-align: center;
-  //font-size: 16px;
-
-  &.complete {
-    border: 0px;
-    color: $status-color-complete;
-  }
-  &.inprogress {
-    color: $status-color-inprogress;
-  }
-  &.notstarted {
-    border: 0px;
-    color: $status-color-notstarted;
-  }
-  &.notapplicable {
-    color: $status-color-notapplicable;
-  }
+.responsiveImg {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
-
+.responsiveSubtitle{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

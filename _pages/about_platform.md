@@ -23,7 +23,7 @@ Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der VN gegliedert.
 
 </div>
 
-##Ziel und Hintergrund
+## Ziel und Hintergrund
 
 Die SDGs sind in der Agenda 2030 verankert, die 2015 von der Generalversammlung der VN und somit im Einvernehmen aller Mitgliedsstaaten verabschiedet wurde. Die Agenda schafft die Grundlage, um weltweiten wirtschaftlichen Fortschritt im Einklang mit sozialer Gerechtigkeit und im Rahmen der ökologischen Grenzen der Erde zu gestalten.
 
