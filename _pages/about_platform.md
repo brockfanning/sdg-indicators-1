@@ -4,7 +4,7 @@ permalink: /about_platform/
 layout: page
 ---
 
-Es gibt zwei Teile dieser Berichtsplattform. Der Bereich der Plattform, auf dem Sie sich gerade bewegen, stellt das Indikatorenset zu den sogenannten [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/), den Zielen der Agenda 2030 der Vereinten Nationen (VN) dar. Im zweiten Bereich werden die [Indikatoren der nationale Nachhaltigkeitsstrategie Deutschlands](https://sustainabledevelopment-deutschland.github.io/) (DNS) bereitgestellt. In beiden Bereichen stehen die Zeitreihen zu den Indikatoren für interessierte Nutzerinnen und Nutzer zum Download zur Verfügung.
+Es gibt zwei Teile dieser Berichtsplattform. Der Bereich der Plattform, auf dem Sie sich gerade bewegen, stellt das Indikatorenset zu den sogenannten [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/), den Zielen der Agenda 2030 der Vereinten Nationen (VN) dar. Im zweiten Bereich werden die Indikatoren der [deutschen Nachhaltigkeitsstrategie](https://sustainabledevelopment-deutschland.github.io/) (DNS) bereitgestellt. In beiden Bereichen stehen die Zeitreihen zu den Indikatoren für interessierte Nutzerinnen und Nutzer zum Download zur Verfügung.
 
 Neben dem Suchfeld oben rechts auf dieser Seite finden Sie den Direktlink zur Startseite des anderen Bereichs der nationalen Berichtsplattform zu den Indikatoren der DNS: [<img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS Wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
 
@@ -37,9 +37,9 @@ Das Statistische Bundesamt ist für die Koordination und Veröffentlichung natio
 </p>
 
 In einigen Fällen liegen für Deutschland Daten mit geringfügigen methodischen Abweichungen gegenüber den Vorgaben der zuständigen Custodian Agencies vor.
-In anderen Fällen sind dagegen nur Zeitreihen mit größeren Abweichungen zur global festgelegten Berechnungsmethodik verfügbar (Mehr dazu finden Sie in der Kategorie „Über uns“ unter [Navigation](https://sustainabledevelopment-germany.github.io/about_navigation) im Abschnitt globale Metadaten). Dies kann dazu führen, dass die jeweiligen Custodian Agencies zur Sicherstellung der internationalen Vergleichbarkeit die bereitgestellten Daten anpassen. Entsprechend können die Zeitreihen, die in der [globalen SDG-Datenbank für Deutschland](https://unstats.un.org/sdgs/indicators/database/) zu finden sind, von den hier bereitgestellten Zeitreihen abweichen.
+In anderen Fällen sind dagegen nur Zeitreihen mit größeren Abweichungen zur global festgelegten Berechnungsmethodik verfügbar (Mehr dazu finden Sie in der Kategorie „Über uns“ und [Navigation](https://sustainabledevelopment-germany.github.io/about_navigation) im Abschnitt globale Metadaten). Dies kann dazu führen, dass die jeweiligen Custodian Agencies zur Sicherstellung der internationalen Vergleichbarkeit die bereitgestellten Daten anpassen. Entsprechend können die Zeitreihen, die in der [globalen SDG-Datenbank für Deutschland](https://unstats.un.org/sdgs/indicators/database/) zu finden sind, von den hier bereitgestellten Zeitreihen abweichen.
 
-## Mögliche Änderungen bis 2026
+## Mögliche Änderungen bis 2030
 
 Das bestehende Indikatorenset durchläuft zwei große Revisionsrunden in den Jahren 2020 (bereits abgeschlossen) und 2025. Die [IAEG-SDG](https://unstats.un.org/sdgs/iaeg-sdgs/) (Inter-Agency and Expert Group on Sustainable Development Goal Indicators) ist mit der Koordination dieser Revisionen beauftragt. Durch die Revisionen besteht unter anderem die Möglichkeit, dass zum bestehenden Set neue Indikatoren hinzukommen, ersetzt oder aber auch herausgenommen werden können. Die Änderungen werden so zügig wie möglich auf unserer Berichtsplattform eingepflegt.
 
