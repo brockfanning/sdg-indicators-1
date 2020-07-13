@@ -59,7 +59,7 @@ Approximately half of the DNS indicators are similar or congruent with SDG indic
 However, there are also differences. The name and especially the numbering of the DNS indicators is not identical with the SDG indicators. If there is a DNS indicator comparable to an SDG indicator, there is a button on the indicator page with a direct link to the respective indictor (figure 3).
 
 br>
-<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/navigation_dns.PNG" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg">
+<img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/navigation_dns.PNG" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg">
 
 <p style="text-align:center">
 <small> Figure 3: Position of the direct link to similar or congruent indicators in SDGs and DNS (as of 07/2020)</small>
