@@ -7,7 +7,7 @@ layout: page
 
 There are two sections of this reporting platform. The one where you are currently located displays the indicator set of the [Sustainable Development Goals of the United Nations (UN) Agenda 2030](https://www.un.org/sustainabledevelopment/sustainable-development-goals/). The other section of the platform provides the indicators of the [German Sustainable Development Strategy](https://www.bundesregierung.de/breg-en/issues/sustainability/) (Deutsche Nachhaltigkeitsstrategie, DNS). In both sections the time series on the respective indicators can be downloaded by interested visitors.
 
-Next to the search box in the upper right corner of this page there is a direct link to the starting page of the national reporting platform to the indicator section on the German Sustainability Development Strategy:[<img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS Wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
+Next to the search box in the upper right corner of this page there is a direct link to the starting page of the national reporting platform to the indicator section on the German Sustainability Development Strategy: [<img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS Wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
 
 Both sets of indicators are organised according to the 17 goals of the UN-Agenda 2030. Thus, the symbols and the colouring of the 17 goals that are used here and on the DNS-part of the reporting platform (figures 1 and 2) are copyright protected by the United Nations.
 
