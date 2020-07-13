@@ -37,7 +37,7 @@ Das Statistische Bundesamt ist für die Koordination und Veröffentlichung natio
 </p>
 
 In einigen Fällen liegen für Deutschland Daten mit geringfügigen methodischen Abweichungen gegenüber den Vorgaben der zuständigen Custodian Agencies vor.
-In anderen Fällen sind dagegen nur Zeitreihen mit größeren Abweichungen zur global festgelegten Berechnungsmethodik verfügbar (Mehr dazu finden Sie in der Kategorie „Über uns“ und [Navigation](https://sustainabledevelopment-germany.github.io/about_navigation) im Abschnitt globale Metadaten). Dies kann dazu führen, dass die jeweiligen Custodian Agencies zur Sicherstellung der internationalen Vergleichbarkeit die bereitgestellten Daten anpassen. Entsprechend können die Zeitreihen, die in der [globalen SDG-Datenbank für Deutschland](https://unstats.un.org/sdgs/indicators/database/) zu finden sind, von den hier bereitgestellten Zeitreihen abweichen.
+In anderen Fällen sind dagegen nur Zeitreihen mit größeren Abweichungen zur global festgelegten Berechnungsmethodik verfügbar (Mehr dazu finden Sie in der Kategorie „Über uns“ und [Navigation](https://sustainabledevelopment-germany.github.io/about_navigation) im Abschnitt globale Metadaten). Dies kann dazu führen, dass die jeweiligen Custodian Agencies zur Sicherstellung der internationalen Vergleichbarkeit die bereitgestellten Daten anpassen. Entsprechend können die Zeitreihen, die in der [globalen SDG-Datenbank](https://unstats.un.org/sdgs/indicators/database/) zu finden sind, von den hier bereitgestellten Zeitreihen abweichen.
 
 ## Mögliche Änderungen bis 2030
 
