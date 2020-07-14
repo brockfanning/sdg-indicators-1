@@ -56,9 +56,9 @@ There are several overlaps in content in between the indicators of the Sustainab
 
 Approximately half of the DNS indicators are similar or congruent with SDG indicators. Furthermore, both indicator sets are structured according to the 17 Goals of the UN agenda 2030, since the DNS represents the national implementation of the global agenda. More information about the DNS you can find in the category “Interesting Facts” and [DNS](https://sustainabledevelopment-germany.github.io/en/sdg-indicators/facts_dns/).
 
-However, there are also differences. The name and especially the numbering of the DNS indicators is not identical with the SDG indicators. If there is a DNS indicator comparable to an SDG indicator, there is a button on the indicator page with a direct link to the respective indictor (figure 3).
+However, there are also differences. The name and especially the numbering of the DNS indicators is not identical with the SDG indicators. If there is a DNS indicator comparable to an SDG indicator, there is a button on the indicator page with a direct link to the respective indicator (figure 3).
 
-br>
+<br>
 <img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/navigation_dns.PNG" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg">
 
 <p style="text-align:center">

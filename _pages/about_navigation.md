@@ -6,7 +6,7 @@ layout: page
 
 ## Aufbau der Berichtsplattform
 
-Es gibt zwei Teile dieser Berichtsplattform. Der Bereich der Plattform, auf dem Sie sich gerade bewegen, stellt das Indikatorenset zu den sogenannten [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/), den Zielen der Agenda 2030 der Vereinten Nationen (VN) dar. Im zweiten Bereich werden die Indikatoren der [Deutschen Nachhaltigkeitsstrategie](https://sustainabledevelopment-deutschland.github.io/) (DNS) bereitgestellt. In beiden Bereichen stehen die Zeitreihen zu den Indikatoren für interessierte Nutzerinnen und Nutzer zum Download zur Verfügung.
+Es gibt zwei Teile dieser Berichtsplattform. Der Bereich der Plattform, auf dem Sie sich gerade bewegen, stellt das Indikatorenset zu den sogenannten [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/), den Zielen der Agenda 2030 der Vereinten Nationen (VN) dar. Im zweiten Bereich werden die Indikatoren der [Deutschen Nachhaltigkeitsstrategie](https://www.bundesregierung.de/breg-de/themen/nachhaltigkeitspolitik/eine-strategie-begleitet-uns/die-deutsche-nachhaltigkeitsstrategie) (DNS) bereitgestellt. In beiden Bereichen stehen die Zeitreihen zu den Indikatoren für interessierte Nutzerinnen und Nutzer zum Download zur Verfügung.
 
 Neben dem Suchfeld oben rechts auf dieser Seite finden Sie den Direktlink zur Startseite des anderen Bereichs der nationalen Berichtsplattform zu den Indikatoren der DNS: [<img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS Wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
 
