@@ -1,7 +1,7 @@
 # This files contains overrides of _config.yml for the production site.
 
 # Site settings
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "https://sustainabledevelopment-germany.github.io/" # the subpath of your site, e.g. /blog
 environment: production
 remotedatabaseurl: "https://sustainabledevelopment-germany.github.io/sdg-data-pub/"
 jekyll_get_json:
