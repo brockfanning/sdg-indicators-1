@@ -47,15 +47,15 @@
           {%- endif -%}
             {% if item.path contains "about_" %}
               <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-sm hidden-md hidden-lg">
-                <a href="{{ page.baseurl }}{{ item.path }}">{{ page.t.menu.about_short }}: {{ item.translation_key | t }}</a>
+                <a href="{{ page.baseurl }}{{ item_path }}">{{ page.t.menu.about_short }}: {{ item.translation_key | t }}</a>
               </li>
             {% elsif item.path contains "facts_" %}
               <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-sm hidden-md hidden-lg">
-                <a href="{{ page.baseurl }}{{ item.path }}">{{ page.t.menu.facts}}: {{ item.translation_key | t }}</a>
+                <a href="{{ page.baseurl }}{{ item_path }}">{{ page.t.menu.facts}}: {{ item.translation_key | t }}</a>
               </li>
             {% else %}
               <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-                <a href="{{ page.baseurl }}{{ item.path }}">{{ item.translation_key | t }}</a>
+                <a href="{{ page.baseurl }}{{ item_path }}">{{ item.translation_key | t }}</a>
               </li>
             {% endif %}
           {%- endfor -%}
@@ -77,7 +77,7 @@
                     {%- assign item_path = item_path | slice: 1, item_path.size -%}
                   {%- endif -%}
                   <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-                    <a href="{{ page.baseurl }}{{ item.path }}">{{ item.translation_key | t }}</a>
+                    <a href="{{ page.baseurl }}{{ item_path }}">{{ item.translation_key | t }}</a>
                   </li>
               {% endif %}
             {%- endfor -%}
@@ -100,7 +100,7 @@
                     {%- assign item_path = item_path | slice: 1, item_path.size -%}
                   {%- endif -%}
                   <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-                    <a href="{{ page.baseurl }}{{ item.path }}">{{ item.translation_key | t }}</a>
+                    <a href="{{ page.baseurl }}{{ item_path }}">{{ item.translation_key | t }}</a>
                   </li>
               {% endif %}
             {%- endfor -%}
