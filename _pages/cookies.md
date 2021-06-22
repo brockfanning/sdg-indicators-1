@@ -3,30 +3,29 @@ layout: page
 title: Cookies on sdgdata.gov.uk
 permalink: /cookies/
 ---
-Cookies are files saved on your phone, tablet or computer when you visit a website.
+{% include custom/cookie-page-success.html %}
 
-We use cookies to store information about how you use the sdgdata.gov.uk website, such as the pages you visit.
+Cookies are small files saved on your phone, tablet or computer when you visit a website.
 
-We use 2 types of cookie:
-- [Cookies that measure website use](#cookies-that-measure-website-use)
-- [Strictly necessary cookies](#strictly-necessary-cookies)
+We use cookies to store information about how you use this website, such as the pages you visit.
 
-## Cookies that measure website use
+We use 2 types of cookies. You can choose which cookies you’re happy for us to use.
 
-We use Google Analytics and Hotjar software to collect anonymised information about how you use sdgdata.gov.uk. We do this to help make sure the site is meeting the needs of its users and to help us make improvements to the site.
+## Cookies that measure website use (analytics cookies)
 
-We do not allow Google or Hotjar to use or share the data about how you use this site.
+We use Google Analytics and Hotjar to collect information about how you use the website. We use this data to help make the website better.
 
-### Google Analytics
+Google Analytics and Hotjar set cookies that store anonymised information about:
 
-Google Analytics stores information about:
+* how you got to the website
+* the pages you visit on the website and how long you spend on them
+* what you click on while you’re visiting the website
+* the way you use a page (for example, what you concentrate on and where you click and scroll)
+* whether you have participated in a Hotjar survey
 
-- how you got to the site
-- the pages you visit and how long you spend on them
-- what you click on while you are visiting
-- the way in which you interact with a page
+We do not allow Google or Hotjar to use or share the information about how you use this website.
 
-{% include custom/details-open.html label="Cookies set by Google Analytics" %}
+{% capture analytics_table %}
 <table class="table">
   <colgroup>
     <col class="twenty" />
@@ -56,38 +55,6 @@ Google Analytics stores information about:
       <td>Used to throttle the request rate to limit the colllection of data</td>
       <td>1 minute</td>
     </tr>
-  </tbody>
-</table>
-{% include custom/details-close.html %}
-
-For further details, please see [Google’s privacy policy](https://www.google.com/policies/privacy/).
-
-You can [opt out of Google Analytics tracking by following these instructions](https://tools.google.com/dlpage/gaoptout).
-
-### Hotjar
-
-Hotjar stores information about:
-
-- whether you have participated in a Hotjar survey
-- the way in which you interact with a page
-- what you click on while you are visiting the site
-
-#### Cookies set by Hotjar
-
-<table class="table">
-  <colgroup>
-    <col class="twenty" />
-    <col class="fourtyfive" />
-    <col class="ten" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Purpose</th>
-      <th>Expires</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>_hjClosedSurveyInvites</td>
       <td>Tell us whether a Hotjar survey invite has been closed to stop it displaying again</td>
@@ -150,61 +117,18 @@ Hotjar stores information about:
     </tr>
   </tbody>
 </table>
+{% endcapture %}
+{% include custom/details.html label="List of cookies that measure website use" content=analytics_table %}
 
-For further details, please see [Hotjar’s privacy policy](https://www.hotjar.com/privacy).
+{% include custom/cookie-page-analytics.html %}
 
-You can [opt out of Hotjar tracking by following these instructions](https://www.hotjar.com/legal/policies/do-not-track/).
+## Essential cookies
 
-## Strictly necessary cookies
+Essential cookies keep your information secure whilst you use the website.
 
-These essential cookies do things like remember your site contrast settings.
+They always need to be on.
 
-They always need to be on to allow the website to function properly.
-
-### Cloudflare
-
-Cloudflare is used to protect the website and improve performance and reliability.
-
-Cloudflare stores information about:
-
-- how frequently a user makes requests
-- whether a user has been identified as making malicious requests
-
-#### Cookies set by Cloudflare
-
-<table class="table">
-  <colgroup>
-    <col class="twenty" />
-    <col class="fourtyfive" />
-    <col class="ten" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Purpose</th>
-      <th>Expires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>_cfduid</td>
-      <td>Help us detect malicious visitors to our website and minimises blocking of legitimate users</td>
-      <td>30 days</td>
-    </tr>
-  </tbody>
-</table>
-
-
-For further details, please see [Cloudflare's privacy policy](https://www.cloudflare.com/en-gb/privacypolicy/).
-
-### Contrast setting
-
-When visiting sdgdata.gov.uk, you can choose to view the website in high contrast mode.
-
-We will set cookies so that your computer remembers which version of the site you want to use.
-
-#### Cookies set by sdgdata.gov.uk
-
+{% capture essential_table %}
 <table class="table">
   <colgroup>
     <col class="twenty" />
@@ -224,10 +148,22 @@ We will set cookies so that your computer remembers which version of the site yo
       <td>Retains active state of accessibility services</td>
       <td>1 year</td>
     </tr>
+    <tr>
+      <td>cookie_settings</td>
+      <td>Retains choices from this form to save your cookie preferences</td>
+      <td>1 year</td>
+    </tr>
   </tbody>
 </table>
+{% endcapture %}
+{% include custom/details.html label="List of essential cookies" content=essential_table %}
 
-## Contacting the website
-If you have any questions about this cookies statement, the practices of this site, or your dealings with this website, you can [contact us at sustainabledevelopment@ons.gov.uk](mailto:sustainabledevelopment@ons.gov.uk).
+## Surveys
 
-{% include custom/cookie-consent-form.html %}
+We use [SurveyMonkey](https://www.surveymonkey.co.uk/) to collect feedback about the website, and recruit participants to take part in user research activities (for example, usability testing). If you complete either of these surveys, SurveyMonkey will [save extra cookies](https://www.surveymonkey.co.uk/mp/legal/cookies/) to track your progress on their website.
+
+## How we use the information we collect
+
+To find out how we collect, store and use information about you or your visit, see our privacy policy.
+
+{% include custom/cookie-page-submit.html %}

@@ -1,12 +1,8 @@
-{% comment %}
-These components are tweaked slightly from GDS in order to add ids
-and style="display:none".
-{% endcomment %}
-<div id="cookie-notice" style="display: none" class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on [name of service]">
+<div id="cookie-banner" style="display: none" class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on sdgdata.gov.uk">
   <div class="govuk-cookie-banner__message govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on [name of service]</h2>
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on sdgdata.gov.uk</h2>
 
         <div class="govuk-cookie-banner__content">
           <p>We use some essential cookies to make this service work.</p>
@@ -26,12 +22,12 @@ and style="display:none".
     </div>
   </div>
 </div>
-<div id="cookie-notice-accept" style="display: none" class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on [name of service]">
+<div id="cookie-banner-accept" style="display: none" class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on sdgdata.gov.uk">
   <div class="govuk-cookie-banner__message govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-cookie-banner__content">
-          <p>You’ve accepted additional cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
+          <p>You’ve accepted additional cookies. You can <a class="govuk-link" href="{{ site.baseurl }}/cookies">change your cookie settings</a> at any time.</p>
         </div>
       </div>
     </div>
@@ -43,12 +39,12 @@ and style="display:none".
     </div>
   </div>
 </div>
-<div id="cookie-notice-reject" style="display: none" class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on [name of service]">
+<div id="cookie-banner-reject" style="display: none" class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on sdgdata.gov.uk">
   <div class="govuk-cookie-banner__message govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-cookie-banner__content">
-          <p>You’ve rejected additional cookies. You can <a class="govuk-link" href="#">change your cookie settings</a> at any time.</p>
+          <p>You’ve rejected additional cookies. You can <a class="govuk-link" href="{{ site.baseurl }}/cookies">change your cookie settings</a> at any time.</p>
         </div>
       </div>
     </div>

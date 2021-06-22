@@ -12,3 +12,8 @@ body {
     border: none;
     background: #f3f2f1 url("../img/sdgbg.png") bottom left repeat-x;
 }
+
+.govuk-fieldset__legend {
+    // Override Bootstrap's underlining.
+    border-bottom: none;
+}

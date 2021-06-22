@@ -1,13 +1,14 @@
 {% comment %}
 This file is overridden in order to include cookie-consent-notice.html
-and govuk-body-open.html.
+and govuk-body-open.html. It would be helpful to have Open SDG updated
+to allow these customisations in an easier way with less overriding.
 {% endcomment %}
 
 {% include multilingual-js.html key="header" %}
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">{{ page.t.header.skip_link }}</a>
 
-{% include custom/govuk-body-open.html %}
-{% include custom/govuk-cookie-banner.html %}
+{% include custom/body-open.html %}
+{% include custom/cookie-banner.html %}
 
 <div id="disclaimer">
   {% include components/dev-disclaimer.html %}

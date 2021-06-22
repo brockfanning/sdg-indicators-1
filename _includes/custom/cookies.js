@@ -1,18 +1,18 @@
 var manager = klaro.getManager(),
     consents = manager.loadConsents(),
-    $cookieNotice = $('#cookie-notice'),
-    $cookieForm = $('.cookie-form'),
-    $confirmationAccept = $('#cookie-notice-accept'),
-    $confirmationReject = $('#cookie-notice-reject');
+    $cookieBanner = $('#cookie-banner'),
+    $confirmationAccept = $('#cookie-banner-accept'),
+    $confirmationReject = $('#cookie-banner-reject'),
+    $cookiePageSubmit = $('#cookie-page-submit');
 
 if (!manager.confirmed) {
-  $cookieNotice.show();
+  $cookieBanner.show();
   $('#cookie-accept').click(function() {
     if (typeof consents['google-analytics'] !== 'undefined') {
       consents['google-analytics'] = true;
     }
     manager.saveAndApplyConsents();
-    $cookieNotice.hide();
+    $cookieBanner.hide();
     $confirmationAccept.show();
   });
   $('#cookie-reject').click(function() {
@@ -20,7 +20,7 @@ if (!manager.confirmed) {
       consents['google-analytics'] = false;
     }
     manager.saveAndApplyConsents();
-    $cookieNotice.hide();
+    $cookieBanner.hide();
     $confirmationReject.show();
   });
   $('#hide-accept').click(function(e) {
@@ -33,17 +33,20 @@ if (!manager.confirmed) {
   });
 }
 
-if ($cookieForm.length > 0) {
-  var $cookieFormSubmit = $('#cookie-form-submit-button'),
-      $cookieFormElement = $cookieForm.find('form'),
-      $analyticsYes = $('#analytics-cookies'),
+if ($cookiePageSubmit.length > 0) {
+  var $analyticsYes = $('#analytics-cookies'),
+      $cookiePageSuccess = $('#cookie-page-success'),
+      $cookiePageGoBack = $('#cookie-page-go-back'),
       saveCookieSettings = function(e) {
         e.preventDefault();
         if (typeof consents['google-analytics'] !== 'undefined') {
           consents['google-analytics'] = Boolean($analyticsYes.prop('checked'));
         }
         manager.saveAndApplyConsents();
-        alert('Confirmation message TBD');
+        $cookiePageSuccess.show();
+        $([document.documentElement, document.body]).animate({
+          scrollTop: $cookiePageSuccess.offset().top
+        }, 500);
       };
 
   // Set pre-selected options.
@@ -51,6 +54,16 @@ if ($cookieForm.length > 0) {
     $analyticsYes.prop('checked', Boolean(consents['google-analytics']));
   }
 
-  $cookieFormSubmit.click(saveCookieSettings);
-  $cookieFormElement.submit(saveCookieSettings);
+  $cookiePageSubmit.click(saveCookieSettings);
+
+  // For semantics and accessibility, wrap the page in a form and add
+  // a submit handler.
+  $('#main-content > div').first().wrap('<form id="cookie-page-form" novalidate></form>');
+  $('#cookie-page-form').submit(saveCookieSettings);
+
+  // Go back behavior.
+  $cookiePageGoBack.click(function(e) {
+    e.preventDefault();
+    window.history.back();
+  });
 }
