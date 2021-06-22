@@ -46,7 +46,7 @@ if ($cookiePageSubmit.length > 0) {
         $cookiePageSuccess.show();
         $([document.documentElement, document.body]).animate({
           scrollTop: $cookiePageSuccess.offset().top
-        }, 500);
+        }, 500, 'swing', function() { $cookiePageGoBack.focus(); });
       };
 
   // Set pre-selected options.
