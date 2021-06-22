@@ -1,11 +1,13 @@
 {% comment %}
 This file is overridden in order to include cookie-consent-notice.html
+and govuk-body-open.html.
 {% endcomment %}
 
 {% include multilingual-js.html key="header" %}
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">{{ page.t.header.skip_link }}</a>
 
-{% include custom/cookie-consent-notice.html %}
+{% include custom/govuk-body-open.html %}
+{% include custom/govuk-cookie-banner.html %}
 
 <div id="disclaimer">
   {% include components/dev-disclaimer.html %}

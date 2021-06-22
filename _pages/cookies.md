@@ -26,8 +26,7 @@ Google Analytics stores information about:
 - what you click on while you are visiting
 - the way in which you interact with a page
 
-#### Cookies set by Google Analytics
-
+{% include custom/details-open.html label="Cookies set by Google Analytics" %}
 <table class="table">
   <colgroup>
     <col class="twenty" />
@@ -59,6 +58,7 @@ Google Analytics stores information about:
     </tr>
   </tbody>
 </table>
+{% include custom/details-close.html %}
 
 For further details, please see [Google’s privacy policy](https://www.google.com/policies/privacy/).
 
